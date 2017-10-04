@@ -1,5 +1,8 @@
 {
     "plugins": [
-        "highlight"
+        "highlight",
+        "navigation",
+        "copy-code",
+        "api"
     ]
 }
