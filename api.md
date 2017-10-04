@@ -1,0 +1,11 @@
+~~~[api]
+get:/url
+*string:id=默认值#说明文字
+name#说明文字
+<<<
+success
+阿萨德
+<<<
+error
+阿萨德
+~~~
