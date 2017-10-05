@@ -1,2 +1,2 @@
-* [空白目录](default.md)
+* [目录](default.md)
 * [python](python.md)

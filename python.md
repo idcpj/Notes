@@ -1,5 +1,5 @@
 
-# Vagrant
+# 1.Vagrant
 
 ---
 
@@ -8,20 +8,20 @@
 ---
 
 ### 流程
-1.  添加虚拟机
+#### 1.  添加虚拟机
     1.  `vagrant box add centos/7` 官网下载
     2.  添加镜像 下载xxx.box  `vagrant box add centos_test centos.box`
-3. `vagrant init`   初始化
+#### 3. `vagrant init`   初始化
     * 新建**centos_7_64**目录
     *  在该目录下 `vagrant init`
-4. `vagrant up` 启动
+#### 4. `vagrant up` 启动
 5. 修改`Vagrantfile`文件的配置
 [x] 速度 
     ```
  	config.vm.synced_folder ".","/vagrant",type:"virtualbox"
 	config.vm.network "public_network", ip: "192.168.0.17"
     ``` 
-    
+
     [你好](http://www.kancloud.cn/explore)
     
 **错误处理**
