@@ -1,126 +1,141 @@
-
-# Vagrant
-
----
+# 基础语法
 
 [TOC]
 
----
+## 基础
+###  安装
+**window**
 
-### 流程
-
-#### 1.  添加虚拟机
-    1.  `vagrant box add centos/7` 官网下载
-    2.  添加镜像 下载xxx.box  `vagrant box add centos_test centos.box`
-
-#### 3. `vagrant init`   初始化
-    新建**centos_7_64**目录
-    在该目录下 `vagrant init`
-   
-#### 4. `vagrant up` 启动
-5. 修改`Vagrantfile`文件的配置
-[x] 速度 
-    ```
- 	config.vm.synced_folder ".","/vagrant",type:"virtualbox"
-	config.vm.network "public_network", ip: "192.168.0.17"
-    ``` 
-
-    [你好](http://www.kancloud.cn/explore)
+>下载 : [地址](https://www.python.org/downloads/)
+> 安装时,选择导入到PATH中
     
-**错误处理**
-1. `vagrant up` 时,`/sbin/mount.vboxsf: mounting failed with the error: No such device`
+**Linux**
 
-    在宿主机命令窗口安装 `vagrant plugin install vagrant-bindfs`
+>安装ipython
+可以通过table进行语句搜索
     
----
+### 模块管理
 
-### 端口转发 
-    方法一: 通过virtual Box  配置
-                在设置->网络/端口转发
-    方法二: 在vagrant 配置文件中配置
-                在宿主对应文件夹下 的vagrant 
-    		    	Vagrant.configure("2") do |config|
-                      # ...
-                      config.vm.network "forwarded_port", guest: 80, host: 8080
-                    end
-    注意:host 的端口号 必须大于 1024
+#### 安装
+`pip install pillow`
+#### 删除
+`pip uninstall pillow`
+#### 管理
+ **pymysq**
+ `pip install` 
+ **ipython**
+```
+yum install -y python-setuptools.noarch     
+easy_install pip   
+yum install gcc libffi-devel python-devel openssl-devel -y
+pip install ipython`
+```
+## 技巧
 
----
+### 元组赋值
 
-### 优化  
-1. 优化虚拟机
-```
-config.vm.provider "virtualbox" do |vb|
-		#虚拟机名称
-		vb.name = "ubuntu_box"
-		#虚拟机主机名
-		config.vm.hostname = "ubox"
-		#配置虚拟机内存和CPU
-		vb.memory = "1024"
-		vb.cpus=2
-  end
-```
+    s = ("hello",'word');
+    a,b=s
+    print(a,b) #hello word
+    
+### 切片
 
-2. 自动更新源
+	L = range(1, 101)
+    print L[4::5][-10::]  #最后10个5的倍数。
+    
+### *args 和**kw的区别
 ```
-config.vm.provision "shell", inline: <<-SHELL
-    sudo yum -y update
-    cd /etc/yum.repos.d
-	sudo mv CentOS-Base.repo CentOS-Base.repo.bak
-	sudo wget http://mirrors.163.com/.help/CentOS-Base-163.repo
-	sudo yum clean all
-	sudo  yum makecache
-SHELL
+def name(*args, **kw):
+    print(*args)     # hello word
+    print(args)      # ('hello', 'word') 
+    print(*kw)       # name age
+    print(kw)        # {'name': 'cpj', 'age': '12'}
+	
+name('hello', 'word', name="cpj", age="12")
 ```
-3. 同步文件
-    [官方说明][1]
+### 给类型增加属性
 
 ```
-1. ngnix
-    sudo /etc/ngnix/ngnix.conf
-    	http{
-    		sendfile off;
-    	}
-
-2. apache 
-    默认已关
-    EnableSendfile Off
+class Person(object):
+    def __init__(self, name, gender, **kw):
+        self.name=name
+        self.gender = gender
+        for k , v in kw.iteritems():
+            setattr(self,k,v)
+                        
+p = Person('Bob', 'Male', age=18, course='Python')
 ```
----
-###打包###
-`vagrant package --output xxx.box --base 虚拟机名称`
+### 实现__xx__方法
 
+对象中的`__enter__` ,` __call__`,`__exit__`等方法必须得在对象中实现才可以用
+
+### for循环
+```
+    for i in range(1,6):
+        print(i)
+```
+
+### `__name__`作用
+
+	#打印入口文件
+		print(__name__) #__main__
         
----
-### 推荐版本!  
+	# test3.py 
+		print(__name__)
+    #在入口文件引入 test3
+    #输出:test3
 
-- vagrant_1.8.6
-- VirtualBox-5.1.22-115126-Win
+### 获取命令行参数
 
+```python
+#文件
+import sys
+if __name__ =='__main__':
+    for arg in sys.argv:
+        print(arg)
+        
+#命令窗口
+python test2.py 0 1 2 3 
 
-----------
+test2.py
+0
+10
+1
+```
 
+### 转码
 
-### 常用命令  
+    a = unicode.encode(u'慕课','utf-8')
+    print(a) #b'\xe6\x85\x95\xe8\xaf\xbe
+    
+### 特定编码写入或读取
 
-|命令|说明|
-|---|---|
-|vagrant box list|查看box列表|
-|vagrant box  add|新增一个box|
-|vagrant box  reomve|删除制定box|
-|vagrant box list|查看box列表|
+	import codecs
+    f = codecs.open("test.txt",'w','utf-8')
+    
+### `__init__.py` 文件用法
+```
+#目录结构
+	Phone
+        ├ Isdn.py 	
+        ├ G3.py 	
+        ├ _init__.py
+        
+# _init__.py文件
+    from Pots import Pots
+    from Isdn import Isdn
+    from G3 import G3
+    
+# 导入import Phone时就可以共用Pots,Isdn等的包
+```
+### python3.x 与python2.x的字符串区别
+    #在2.7中
+    #字符串生成使用u
+        a = 'hello word'
+        type(a) #str
+        
+        a = u'hello word'
+        type(a) #unicode
 
-
-----------
-
-|命令|说明|
-|---|---|
-|vagrant init|初始化box|
-|vagrant up|启动虚拟机|
-|vagrant ssh|登录虚拟机|
-|vagrant suspend|休眠|
-|vagrant halt|关闭虚拟机|
-|vagrant reload|重启,更新配置|
-
-
-  [1]: https://www.vagrantup.com/docs/synced-folders/virtualbox.html
+   	#在3.0中
+    str 都是unicode
