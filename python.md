@@ -1,5 +1,5 @@
 
-# 1.Vagrant
+# Vagrant
 
 ---
 
@@ -8,12 +8,15 @@
 ---
 
 ### 流程
+
 #### 1.  添加虚拟机
     1.  `vagrant box add centos/7` 官网下载
     2.  添加镜像 下载xxx.box  `vagrant box add centos_test centos.box`
+
 #### 3. `vagrant init`   初始化
-    * 新建**centos_7_64**目录
-    *  在该目录下 `vagrant init`
+    新建**centos_7_64**目录
+    在该目录下 `vagrant init`
+   
 #### 4. `vagrant up` 启动
 5. 修改`Vagrantfile`文件的配置
 [x] 速度 
