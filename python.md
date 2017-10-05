@@ -139,3 +139,25 @@ test2.py
 
    	#在3.0中
     str 都是unicode
+    
+### 迭代
+```
+L = ['Adam', 'Lisa', 'Bart', 'Paul']	
+T = ('Adam', 'Lisa', 'Bart', 'Paul')
+S = set(L)
+for index, name in enumerate(T,1):
+    print(index, '-', name)
+```
+> 数组,元祖set,都可以通过`enumerate`打出索引与值
+
+*字典迭代*
+```
+D = {'a':'A','b':'B'}
+for key,value in D.items():
+    print(key,'-',value)
+```
+### 生成器
+```
+for i in xrange(10):
+    print i 
+```     
