@@ -1,15 +1,15 @@
 
-#Vagrant
-标签:Linux
+# Vagrant
 
 ---
 
 [TOC]
 
-* * * * *
+---
+
 ### 流程
-1. 添加虚拟机
-    1. `vagrant box add centos/7` 官网下载
+1.  添加虚拟机
+    1.  `vagrant box add centos/7` 官网下载
     2.  添加镜像 下载xxx.box  `vagrant box add centos_test centos.box`
 3. `vagrant init`   初始化
     * 新建**centos_7_64**目录
@@ -31,7 +31,7 @@
     
 ---
 
-###端口转发###
+### 端口转发 
     方法一: 通过virtual Box  配置
                 在设置->网络/端口转发
     方法二: 在vagrant 配置文件中配置
@@ -44,7 +44,7 @@
 
 ---
 
-### 优化 ###
+### 优化  
 1. 优化虚拟机
 ```
 config.vm.provider "virtualbox" do |vb|
@@ -89,7 +89,7 @@ SHELL
 
         
 ---
-### 推荐版本! ###
+### 推荐版本!  
 
 - vagrant_1.8.6
 - VirtualBox-5.1.22-115126-Win
@@ -98,7 +98,7 @@ SHELL
 ----------
 
 
-### 常用命令 ###
+### 常用命令  
 
 |命令|说明|
 |---|---|

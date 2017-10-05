@@ -1,4 +1,2 @@
 * [空白目录](default.md)
-* [第一张](第一张.md)
-    * [阿萨德](阿萨德.md)
-* [api](api.md)
+* [python](python.md)
