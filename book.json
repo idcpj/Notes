@@ -2,8 +2,6 @@
     "plugins": [
         "highlight",
         "navigation",
-        "copy-code",
-        "api",
-        "ad"
+        "copy-code"
     ]
 }

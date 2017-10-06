@@ -126,8 +126,35 @@ D = {'a':'A','b':'B'}
 for key,value in D.items():
     print(key,'-',value)
 ```
+
 ### 生成器
 ```
 for i in xrange(10):
     print i 
-```     
+```    
+
+### 字典/集合 解析
+```
+my_dict = {i: i * i for i in xrange(100)} 
+my_set = {i * 15 for i in xrange(100)}~~~[api]
+get:/url
+*string:id=默认值#说明文字
+name#说明文字
+<<<
+success
+
+<<<
+error
+
+~~~
+
+```
+
+### 对Python表达式求值
+    import ast 
+    my_list = ast.literal_eval(expr)  
+    
+### 三元运算符
+    result = (2,1)[3==3]    ->1
+    result = 1 if 3==3 else 2   ->1
+    
