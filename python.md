@@ -1,35 +1,5 @@
-# 基础语法
-
 [TOC]
 
-## 基础
-###  安装
-**window**
-
->下载 : [地址](https://www.python.org/downloads/)
-> 安装时,选择导入到PATH中
-    
-**Linux**
-
->安装ipython
-可以通过table进行语句搜索
-    
-### 模块管理
-
-#### 安装
-`pip install pillow`
-#### 删除
-`pip uninstall pillow`
-#### 管理
- **pymysq**
- `pip install` 
- **ipython**
-```
-yum install -y python-setuptools.noarch     
-easy_install pip   
-yum install gcc libffi-devel python-devel openssl-devel -y
-pip install ipython`
-```
 ## 技巧
 
 ### 元组赋值
