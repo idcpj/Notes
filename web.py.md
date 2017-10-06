@@ -58,7 +58,7 @@ class index:
 
 ### 响应处理
 
-### 模版文件读取
+#### 模版文件读取
 ```
 #python文件
 
@@ -80,7 +80,7 @@ app.run()
     $def with(name)
     <input type="text" name="username" value="$name">  
 ```
-### 结果数据获取
+#### 结果数据获取
 ```python
 config = {'host': '127.0.0.1', 'port': 3306, 'user': 'root', 'password': 'root', 'db': 'imooc_o2o',
                         'charset': 'utf8mb4', 'cursorclass': pymysql.cursors.DictCursor, }
