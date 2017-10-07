@@ -158,3 +158,26 @@ error
     result = (2,1)[3==3]    ->1
     result = 1 if 3==3 else 2   ->1
     
+### 正则
+    str = "imooc python Imooc"
+	print(re.search('python',str).group()) #python
+    print(re.findall('imo+c',str,re.I))  # ['imooc', 'Imooc']
+    print(re.sub('imooc','imoc',str))	# imoc python imoc
+
+### 字典转json字符串
+    dict = {'name':'cpj','age':'12'}
+    print(json.dumps(dict))
+
+### 事件钩子
+```
+def hook_reponse():
+    print("this is a hook")
+
+def demo(name,hook=None):
+    if hook is not None:
+        eval(hook)()  # 把字符串转为函数
+    print(" hello "+name)
+
+demo('cpj',hook='hook_reponse')
+```
+
