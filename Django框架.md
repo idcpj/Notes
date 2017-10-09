@@ -105,14 +105,16 @@ python manage.py makemigrations blog  [可选] - 命令负责保存你的模型�
 python manage.py migrate	-负责将改变提交到数据库
 
 #注意:若没有在主键,那么在生成文件中会自动创建主键
-
+```
+3. 打印sql 
+```
 python manage.py sqlmigrate blog 0001   -0001即migrations目录生成的id
 
 #输出
 CREATE TABLE "blog_article" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "title" varchar(32) NOT NULL, "content" text NULL);
 
-
 ```
+
 4. 获取数据 
 `/blog/views.py`中
 ```
@@ -156,17 +158,18 @@ python manager.py shell
 from django.db import connection  
 cursor = connection.cursor()  
 ```
-
 ### admin管理
 1. 创建admin ` python manage.py createsuperuser `
 2. `localhost:8000/admin/` Admin入口
 3. 修改setting.py 中 `LANGUAGE_CODE= 'zh_Hans'`
 4. 注册models
 ```
-from blog.models import Article
-
-admin.site.register(Article)
+class ArticleAdmin(admin.ModelAdmin):
+    list_display = ('title', 'content')  #admin中显示title 和content列表
+    list_filter = ('pub_time',)  # 过滤器	类似分组
+admin.site.register(Article,ArticleAdmin)
 ```
+
 5. 修改数据默认显示名称
 ```
 class Article(models.Model):
@@ -176,7 +179,7 @@ class Article(models.Model):
     def __str__(self):   # 添加魔术方法
         return self.title
 ```
-## 模版渲染
+### 模版渲染
 ```python
 #列表数据
 Article = models.Article.objects.all()
@@ -191,4 +194,49 @@ Article = models.Article.objects.all()
 article = models.Article.objects.get(pk=article_id)
     return render(request,'blog/article_page.html',{'article':article})
 ```
->注:objects必须大写
+>注:objects必须加`s`
+
+#### 超链接的两种渲染
+方法一(推荐)
+```
+href="/blog/details/{{article.id}}"
+```
+方法二
+```python
+#语法
+{% url "app_name:url_name" param %}
+
+-->  `app_name`  在`url(r'^blog/', include('blog.urls',namespace='blog'))`配置
+-->  `url_name` 在  `url(r'^details/(?P<article_id>\d)$', views.article_page,name='article_page'),`
+
+#实例
+{% url 'blog:article_page' article.id %}
+```
+#### 表单处理
+1. 在`form`表单中加入`{% csrf_token %}`
+2. 接受参数并跳转首页
+```
+#查
+article = models.Article.objects.get(pk=id)
+#增
+models.Article.objects.create(title=title, content=content)
+#改
+article = models.Article.objects.get(pk=id)
+article.content = content
+article.sav	e()
+#删
+ Article = models.Article.objects.get(pk=2)
+Article.delete()
+```
+
+#### Django Shell
+>用命令行操作数据
+```
+#启动
+python manage.py shell
+
+#实例
+from blog.models import Article
+Article.objects.all()   #打印所有Article数据
+
+```
