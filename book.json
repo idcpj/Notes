@@ -2,6 +2,7 @@
     "plugins": [
         "highlight",
         "navigation",
-        "copy-code"
+        "copy-code",
+        "api"
     ]
 }
