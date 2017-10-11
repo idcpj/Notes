@@ -75,4 +75,4 @@ http://idea.liyang.io
 |  `'hello word'.log`  |  按 table 变为  console.log('helloword'); |
 |  CTRL+T  |   翻译英文 |
 |  Alt+Shift+D |   与剪切板对比 |
-
+ 
