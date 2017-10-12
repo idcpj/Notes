@@ -181,3 +181,7 @@ def demo(name,hook=None):
 demo('cpj',hook='hook_reponse')
 ```
 
+### 编码问题
+>python3.5，在window下,新文件的默认编码是gbk
+>`open("output.html",'w',encoding='utf-8')`得用encode规定打开写入文件的格式
+>mac和linux 都是utf-8 所以无需encoding
