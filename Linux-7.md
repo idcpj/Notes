@@ -11,6 +11,7 @@ crtl+u  从光标所在位置删除到行首
 ps      查看进程
 man ls  查看帮助手册
 Ctrl+z/fg   切换后台/切换到前台
+cat /etc/group | grep -E "shiyanlou"	搜索并打印某个文件
 ```
 ## 设置命令别名
 - 设置临时别名
@@ -148,7 +149,7 @@ reboot 关机
 |/usr/log/|软件或系统的日志|
 |/usr/log/|软件或系统的日志|
 
-![LInux目录树图](http://linux.vbird.org/linux_basic/0210filepermission//centos7_0210filepermission_4.jpg)
+![LInux目录树图](https://dn-anything-about-doc.qbox.me/linux_base/4-1.png)
 
 ---
 

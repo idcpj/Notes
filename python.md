@@ -185,3 +185,11 @@ demo('cpj',hook='hook_reponse')
 >python3.5，在window下,新文件的默认编码是gbk
 >`open("output.html",'w',encoding='utf-8')`得用encode规定打开写入文件的格式
 >mac和linux 都是utf-8 所以无需encoding
+
+### 同时遍历两个数组
+```
+ a = ['Pradeepto', 'Kushal']
+ b = ['OpenSUSE', 'Fedora']
+ for x, y in zip(a, b):
+     print("{} uses {}".format(x, y))
+```
