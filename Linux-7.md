@@ -25,7 +25,7 @@ ll -a
 vim .bashrc
     alias rm='rm -i'
     alias cp='cp -i'
-    alias mv='mv -i'
+    alias mv='mv -i'centos7 lamp配置
     alias lsl='ll -a'  #新增
 
 ```
