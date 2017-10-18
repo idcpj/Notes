@@ -22,5 +22,6 @@
 * [前端](前端.md)
     * [微信小程序](微信小程序.md)
     * [Vue](Vue.md)
+    * [前端技巧](前端技巧.md)
 * [软件](软件.md)
     * [PHPStorm](PHPStorm.md)
