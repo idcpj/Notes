@@ -15,6 +15,7 @@
 * [PHP](PHP.md)
 * [服务器](服务器.md)
     * [Linux/7](Linux-7.md)
+    * [Vim](vim.md)
     * [vagrant](vagrant.md)
     * [Mysql](Mysql.md)
     * [centos7 lamp配置](centos7lamp配置.md)
