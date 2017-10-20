@@ -12,6 +12,7 @@ ps      查看进程
 man ls  查看帮助手册
 Ctrl+z/fg   切换后台/切换到前台
 cat /etc/group | grep -E "shiyanlou"	搜索并打印某个文件
+echo "test" >> file1		把test 写入file1 文件中
 ```
 ## 设置命令别名
 - 设置临时别名
