@@ -438,5 +438,30 @@ Command (m for help): q  #离开  不保存操作
 ```
 ## 用fdisk 新增分割槽
 ```
+[root@study ~]# gdisk /dev/vda 
+Command (? for help): p
+Number Start (sector) End (sector) Size Code Name
+   1 2048 6143 2.0 MiB EF02
+   2 6144 2103295 1024.0 MiB 0700
+   3 2103296         65026047    30.0 GiB 8E00
+ #找出最后一个sector的号码是很重要的！
 
+Command (? for help): ?   #查一下增加分割的指令为何 
+Command (? for help): n   #就是这个！所以开始新增的行为！
+Partition number (4-128, default 4): 4   #预设就是4号，所以也能enter即可！
+First sector (34-83886046, default = 65026048 ) or {+-}size{KMGTP}: 65026048   #也能enter 
+Last sector (65026048-83886046, default = 83886046 ) or {+-}size{KMGTP}: +1G  #决不要enter 
+#这个地方可有趣了！我们不需要自己去计算磁区号码，透过+容量的这个方式，
+# 就可以让gdisk 主动去帮你算出最接近你需要的容量的磁区号码喔！
+
+Current type is ' Linux filesystem '
+Hex code or GUID (L to show codes, Enter = 8300 ): #使用预设值即可～直接enter下去！
+#这里在让你选择未来这个分割槽预计使用的档案系统！预设都是Linux档案系统的8300啰！
+
+Command (? for help): p
+Number Start (sector) End (sector) Size Code Name
+   1 2048 6143 2.0 MiB EF02
+   2 6144 2103295 1024.0 MiB 0700
+   3 2103296 65026047 30.0 GiB 8E00
+   4 65026048 67123199 1024.0 MiB 8300 Linux filesystem
 ```
