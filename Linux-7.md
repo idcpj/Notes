@@ -465,3 +465,47 @@ Number Start (sector) End (sector) Size Code Name
    3 2103296 65026047 30.0 GiB 8E00
    4 65026048 67123199 1024.0 MiB 8300 Linux filesystem
 ```
+
+##  压缩
+```
+*.Z         compress 程式壓縮的檔案；
+*.zip       zip 程式壓縮的檔案；
+*.gz        gzip 程式壓縮的檔案；
+*.bz2       bzip2 程式壓縮的檔案；
+*.xz        xz 程式壓縮的檔案；
+*.tar       tar 程式打包的資料，並沒有壓縮過；
+*.tar.gz    tar 程式打包的檔案，其中並且經過 gzip 的壓縮
+*.tar.bz2   tar 程式打包的檔案，其中並且經過 bzip2 的壓縮
+*.tar.xz    tar 程式打包的檔案，其中並且經過 xz 的壓縮
+```
+### 针对单一档案
+#### gzip
+```
+#压缩
+gzip  test2.txt.gz 
+
+#加压缩
+gzip -d test2.txt.gz 
+```
+#### bash,xz
+```bash
+bzip2 ,xz 等命令  压缩参数相同
+
+#压缩效率比
+xz>bzip2>gzip
+
+#压缩时间比
+xz<bzip2<gzip
+```
+### 打包指令： tar
+
+```
+-c ：建立打包档案，可搭配-v 来察看过程中被打包的档名(filename)
+-z ：透过gzip 的支援进行压缩/解压缩：此时档名最好为*.tar.gz
+-j ：透过bzip2 的支援进行压缩/解压缩：此时档名最好为*.tar.bz2
+
+
+压缩：tar -j c v -f filename.tar.bz2要被压缩的档案或目录名称
+查询：tar -j t v -f filename.tar.bz2
+解压缩：tar -j x v -f filename.tar.bz2 -C欲解压缩的目录
+```
