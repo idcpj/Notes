@@ -499,13 +499,41 @@ xz<bzip2<gzip
 ```
 ### 打包指令： tar
 
-```
+```bash
 -c ：建立打包档案，可搭配-v 来察看过程中被打包的档名(filename)
+-t ：察看打包档案的内容含有哪些档名，重点在察看『档名』就是了；
+-x ：解打包或解压缩的功能，可以搭配-C (大写) 在特定目录解开
+      特别留意的是， -c, -t, -x 不可同时出现在一串指令列中。
 -z ：透过gzip 的支援进行压缩/解压缩：此时档名最好为*.tar.gz
 -j ：透过bzip2 的支援进行压缩/解压缩：此时档名最好为*.tar.bz2
+-J ：透过xz 的支援进行压缩/解压缩：此时档名最好为*.tar.xz
+      特别留意， -z, -j, -J 不可以同时出现在一串指令列中
+-v ：在压缩/解压缩的过程中，将正在处理的档名显示出来！
+-f filename：-f 后面要立刻接要被处理的档名！建议-f 单独写一个选项啰！(比较不会忘记)
+-C 目录：这个选项用在解压缩，若要在特定目录解压缩，可以使用这个选项。
 
+其他后续练习会使用到的选项介绍：
+-p(小写) ：保留备份资料的原本权限与属性，常用于备份(-c)重要的设定档
+-P(大写) ：保留绝对路径，亦即允许备份资料中含有根目录存在之意；
+--exclude=FILE：在压缩的过程中，不要将FILE 打包！ 
 
-压缩：tar -j c v -f filename.tar.bz2要被压缩的档案或目录名称
-查询：tar -j t v -f filename.tar.bz2
-解压缩：tar -j x v -f filename.tar.bz2 -C欲解压缩的目录
+压缩：tar -jcv -f filename.tar.bz2   要被压缩的档案或目录名称
+查询：tar -jtv -f filename.tar.bz2
+解压缩：tar -jxv -f filename.tar.bz2  -C欲解压缩的目录
+
+#如果使用 -z
+tar -zcv -f filename.tar.bz2
+
+#demo
+压缩etc目录,加time 可以显示压缩时间
+time tar -zpcv -f /root/etc.tar.gz /etc 
+查看压缩的文件
+tar -ztv -f /root/etc.tar.gz 
+压缩到指定目录
+tar -jxv -f /root/etc.tar.bz2 -C /tmp 
+
 ```
+>注意:文件名得自己取,压缩查看都得配合
+> `-z`对应  ` tar.gz`后缀
+> `-j` 对应 `bz2`后缀
+>  `-J` 对应 `.tar.xz`后缀
