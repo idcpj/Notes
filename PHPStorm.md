@@ -20,18 +20,19 @@ http://idea.liyang.io
 
 		xdebug.profiler_output_dir="D:\phpStudy\tmp\xdebug"
 		xdebug.trace_output_dir="D:\phpStudy\tmp\xdebug"
-		zend_extension="D:\phpStudy\php\php-5.4.45\ext\php_xdebug.dll"
+		zend_extension="D:\phpStudy\php\php-5.4.45\ext\php_xdebug.dll"   写自己的文件路径
 		xdebug.remote_enable = On
 		xdebug.remote_handler = dbgp
 		xdebug.remote_host= localhost
 		xdebug.remote_port = 9000
 		xdebug.idekey = PHPSTORM
+>开启查看phpinfo  是否存在debug
     
 2. 下载chrome插件
 		[点击跳转](https://chrome.google.com/webstore/detail/jetbrains-ide-support/hmhgeddbohgjknpmjagkdomcpobmllji)
         
 3. [详细教程](https://segmentfault.com/a/1190000004175313)
-设置->php->server->9000端口
+设置->语言框架->php->debug->9000端口
 		
 4. 新建一个测试
 
