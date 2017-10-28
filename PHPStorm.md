@@ -5,14 +5,12 @@
 http://idea.liyang.io
 
 ## 汉化和配置
-汉化替换lib下文件,文件在oneDrive
+汉化替换lib下文件
+文件在oneDrive
 
 ## 连接Mysql
 >view->工具窗口->database
 >若无法下载驱动,在XML文件中mysql的地址:[下载](http://download.jetbrains.com/idea/jdbc-drivers/mysql-connector-java-5.1.35-bin.jar)
-
-## 生成随机字母
-`lorem100 生成百个单词`
 
 ## 开启phpstorm调试模式
 
@@ -26,7 +24,7 @@ http://idea.liyang.io
 		xdebug.remote_host= localhost
 		xdebug.remote_port = 9000
 		xdebug.idekey = PHPSTORM
->开启查看phpinfo  是否存在debug
+>查看phpinfo  是否存在debug
     
 2. 下载chrome插件
 		[点击跳转](https://chrome.google.com/webstore/detail/jetbrains-ide-support/hmhgeddbohgjknpmjagkdomcpobmllji)
@@ -60,9 +58,10 @@ http://idea.liyang.io
     openssl.cafile='D:\phpStudy\php\php-5.5.38\verify\cacert.pem'
 ```
 5. 重启软件
-6. 
-## 命令行启动php
-把环境变量中填入 php 的路径
+
+ 
+## 生成随机字母
+`lorem100 生成百个单词`
 
 
 ## 快捷键
@@ -76,4 +75,4 @@ http://idea.liyang.io
 |  `'hello word'.log`  |  按 table 变为  console.log('helloword'); |
 |  CTRL+T  |   翻译英文 |
 |  Alt+Shift+D |   与剪切板对比 |
- 
+
