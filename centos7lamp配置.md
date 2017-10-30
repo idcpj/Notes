@@ -22,6 +22,11 @@ systemctl restart httpd
 systemctl stop httpd
 #开启启动
 systemctl enable httpd.service
+
+#设置目录权限
+把目录分组设置成httpd.conf中相同的用户:组名
+如    chown  -R www:www  .
+
 ```
 ### 安装mysql数据库
 

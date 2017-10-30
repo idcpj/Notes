@@ -37,6 +37,13 @@ $ git config --global user.email "schacon@gmail.com"
 `git branch -d/–D 分值名`       			删除分支`-D`强制删除(合并完分支后,即可删除) 
 `git reset --hard HEAD^`  		撤销合并
 `git diff 分支1 分支2`    查看分支的区别    
+```
+服务器 强制同步代码库的代码
+git fetch --all
+git reset --hard origin/master
+
+```
+
 
 >'*' 星号标识了你当工作在哪个分支下
 >创建新分支后 需要 `git add `  在 `git commit` 才可上传
@@ -56,8 +63,4 @@ $ git config --global user.email "schacon@gmail.com"
 `git pull` or `git push ssh://yourserver.com/~you/proj.git master`  如何推送失败,得下`pull`合并公共仓库的代码,在推送
 
 > 路径可以是目录路径 ssh
-
-
-## Git标签
-
 
