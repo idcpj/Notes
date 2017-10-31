@@ -19,6 +19,7 @@
     * [vagrant](vagrant.md)
     * [Mysql](Mysql.md)
     * [centos7 lamp配置](centos7lamp配置.md)
+    * [Tmux](Tmux.md)
     * [git](git.md)
 * [前端](前端.md)
     * [微信小程序](微信小程序.md)
