@@ -16,7 +16,7 @@ echo "test" >> file1		把test 写入file1 文件中
 whereis php		包所在路径
 which php		执行命令所在目录
 ```
-## 设置命令别名
+## 设置别名 [alias]
 - 设置临时别名
 ```
 alias www='cd /var/www' 
