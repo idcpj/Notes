@@ -3,9 +3,10 @@
 ## 在Bash命令行的命令
 
 `tmux ls`											列出所有未退出的session
-`tmux attach`									返回到已经打开的session
+`tmux attach -t session_name`			打开session
 `tmux new -s my-session-name`		创建session
 `tmux new -s my-session-name -d`		创建一个后台session
+`tmux kill-server`				删除错误
 
 ## 窗格
 `Ctrl+b %`  		垂直窗格
@@ -13,7 +14,7 @@
 
 ## 窗口
 
-`Ctrl+b c` 	 										新建窗口
+`Ctrl+b c` 	 										在session回话中,新建窗口
 `Ctrl+b 数字，Ctrl+B 方向键`			切换窗口
 
 ## 回话
