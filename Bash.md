@@ -9,3 +9,18 @@ cd /tmp
 $ source demo.sh  
 ```
 
+
+## 变量
+```bash
+#赋值
+$ name="cpj"
+
+#输出
+$ echo $name 或${name}
+>> cpj
+
+#取消
+$ unset name
+
+```
+
