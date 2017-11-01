@@ -15,6 +15,7 @@ cat /etc/group | grep -E "shiyanlou"	搜索并打印某个文件
 echo "test" >> file1		把test 写入file1 文件中
 whereis php		包所在路径
 which php		执行命令所在目录
+commad ; commad    多条命令之间用 ;  连接
 ```
 ## 设置别名 [alias]
 - 设置临时别名
@@ -23,13 +24,11 @@ alias www='cd /var/www'
 ```
 -  永久别名
 ```
-cd ~
-ll -a
-vim .bashrc
-    alias rm='rm -i'
-    alias cp='cp -i'
-    alias mv='mv -i'centos7 lamp配置
-    alias lsl='ll -a'  #新增
+vim /etc/profile.d/alias_bash.sh
+#内容
+alias h='history'
+
+source /etc/profile.d/alias_bash.sh 	
 
 ```
 ## 杀掉进程
@@ -53,12 +52,15 @@ cp -a       复制
 ln -s       创建链接
                     -s 创建软链接   相当于windows的快捷方式
 ```
-## 搜索内容
+## 历史命令：history
+>提示 alias h='history'
 ```
-/hello	    向下搜索
-?hello      向上搜索  
-n, N	    在/或?搜索时 按n 继续搜索 按N反向搜索
+history [n]   显示前n 条的历史
+history [-c]    清空历史
+!n					执行第n条的指令
 ```
+
+
 ## 开关机操作
 ```
     shutdown 
@@ -72,6 +74,13 @@ shutdown -h +10
 shutdown -r now
 reboot 关机
 ```
+## 欢迎界面
+```
+vim /etc/motd 
+
+欢迎使用本服务器,连接后自动展示此段文字
+```
+
 ## 文件/文件夹权限
 ### chgrp 改变组
 ```
