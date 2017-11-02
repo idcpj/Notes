@@ -103,19 +103,13 @@ $ unset name
 ```
 |数设定方式 |	str 没有设定 |	str 为空字串 |	str 已设定非为空字串|
 |---|---|---|---|
-|var=${str-expr} |	var=expr	var= | |	var=$str|
-|var=${str:-expr}	 |var=expr	 |var=expr	 | var=$str|
-|var=${str+expr}	 |var= |	var=expr |	var=expr|
-|var=${str:+expr}	 |var= | 	var= |	var=expr|
-|var=${str=expr}	 |str=expr |
-|var=expr |	str不变|
-|var= |	str不变|
-|var=$str|
-|var=${str:=expr}	str=expr |
-|var=expr	str=expr |
-|var=expr	str不变|
-|var=$str|
-|var=${str?expr}	expr 输出至stderr	var=	var=$str|
-|var=${str:?expr}	expr 输出至stderr	expr 输出至stderr	var=$str|
+|var=${str-expr} |	var=expr|		var= | var=$str|
+|var=${str:-expr} |	var=expr|		var=expr | var=$str|
+|var=${str+expr} |	var=	|		var=expr | var=expr|
+|var=${str:+expr}} |	var=|		var= | var=expr|
+|var=${str=expr} |	str=expr,var=expr|		str 不变,var= | str 不变,var=$str|
+|var=${str:=expr} |		str=expr,var=expr|		str=expr,var=expr | str 不变,var=$str|
+|var=${str?expr} |		exp 输出至 stderr|		var= | var=$str|
+|var=${str:?expr} |		exp 输出至 stderr|		expr 輸出至 stderr | var=$str|
 
 
