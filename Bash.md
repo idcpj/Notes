@@ -55,7 +55,7 @@ read -p "Please input your first name: " firstname       #提示使用者输入 
 read -p "Please input your last name: " lastname        #提示使用者输入 
 echo -e "\nYour full name is: ${firstname} ${ lastname}" #结果由萤幕输出
 ```
-## 生成日期文件
+### 生成日期文件
 ```bash
 #!/bin/bash
 # Program:
@@ -113,3 +113,9 @@ $ unset name
 |var=${str:?expr} |		exp 输出至 stderr|		expr 輸出至 stderr | var=$str|
 
 
+## script 的执行方式差异(source, sh script, ./script)
+### script
+`script filename.sh` 执行的文件如果有对变量赋值,在bash 中 该变量值不存在
+
+### source 
+在父程序中执行
