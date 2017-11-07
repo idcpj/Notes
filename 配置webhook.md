@@ -1,14 +1,9 @@
 
 ## 修改php.ini
 ```bash
-
-	
 vim /usr/local/php/etc/php.ini
 
- #搜索disable_function 将其中的 exec 和 shell_exec 删除。
- 
-
-
+#搜索disable_function 将其中的 exec 和 shell_exec 删除。
 ```
 
 ## webhook.php
