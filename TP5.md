@@ -38,10 +38,10 @@ try{
 }
 ```
 >获取当前模块,控制器,操作
-```
-dump($request->module());//index  --获取当前模块
-dump($request->controller());//Index --获取控制器名
-dump($request->action());//index   --获取当前操作名
+```php
+dump($request->module());		//  获取当前模块
+dump($request->controller());		// 获取控制器名
+dump($request->action());		//   获取当前操作名
 ```
 
 >
