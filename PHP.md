@@ -1,5 +1,10 @@
 [TOC]
 
+## 定时备份
+如果 `php /data/www/demo/index.php  app sendApi cron`  无法备份,
+可以使用访问地址的形式 `curl  http://www.demo.com/app/sendapi/cron`
+
+
 ## https双向认证
 
 ```php
