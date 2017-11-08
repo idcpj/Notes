@@ -44,6 +44,9 @@ dump($request->controller());//Index --获取控制器名
 dump($request->action());//index   --获取当前操作名
 ```
 
+>
+
+
 
 ## 安装
 ### git 安装
