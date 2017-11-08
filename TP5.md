@@ -37,6 +37,12 @@ try{
     dump($e->getMessage());
 }
 ```
+>获取当前模块,控制器,操作
+```
+dump($request->module());//index  --获取当前模块
+dump($request->controller());//Index --获取控制器名
+dump($request->action());//index   --获取当前操作名
+```
 
 
 ## 安装
@@ -68,4 +74,29 @@ config/extra/databases.php
 调节`app_status`的值`office`或`home`的参数.选择不同配置.
 在不同场景下 databases 的设置不同
 
-### 模块配置
+## 路由
+**在新建的config/config.php中开启路由**
+```
+// 是否开启路由
+'url_route_on'           => true,
+// 是否强制使用路由
+'url_route_must'         => false,
+```
+
+**在新建config/route.php**
+```php
+//route.php
+    return array(
+    'news/:id/:age' =>'index/index/demo',  
+);
+//控制器中
+public function demo($id,$age)
+{
+    return "id:{$id} age:{$age} ";
+}
+//访问地址
+http://www.tp5.com/news/5/10
+//生成url
+在配置了路由规则后
+echo url('index/index/demo',['id'=>5,'age'=>10]);  //news/5.html
+```
