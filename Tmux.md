@@ -6,7 +6,7 @@
 `tmux attach -t session_name`			打开session
 `tmux new -s my-session-name`		创建session
 `tmux new -s my-session-name -d`		创建一个后台session
-`tmux kill-server`				删除错误
+`tmux kill-server`				删除
 
 ## 窗格
 `Ctrl+b %`  		垂直窗格
