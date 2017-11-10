@@ -67,13 +67,13 @@ http://idea.liyang.io
 ## 快捷键
 |   `Shift+Ctrl+Alt+N` |  全局搜索类  |
 | --- | --- |
-|  Alt+J  |   选中相同代码 |
-|  Shift+Ctrl+Alt+J |   一次全部选中 |
-|  Ctrl+Alt+T   |   环绕生成 |
-|  F2  |   导航错误位置 |
-|  Shift+F1  |   查找外部文档 |
+| ` Alt+J`  |   选中相同代码 |
+|  `Shift+Ctrl+Alt+J` |   一次全部选中 |
+|  `Ctrl+Alt+T`   |   环绕生成 |
+| ` F2`  |   导航错误位置 |
+|  `Shift+F1`  |   查找外部文档 |
 |  `'hello word'.log`  |  按 table 变为  console.log('helloword'); |
-|  CTRL+T  |   翻译英文 |
-|  Alt+Shift+D |   与剪切板对比 |
-|  Alt+Shift+D |   与剪切板对比 |
+|  `CTRL+T ` |   翻译英文 |
+|  `Alt+Shift+D` |   与剪切板对比 |
+|  `Ctrl + Alt + ->` |   与剪切板对比 |
 
