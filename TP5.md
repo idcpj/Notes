@@ -122,3 +122,19 @@ return  view();
 ```
 
 ### 配置文件
+```php
+'view_replace_str'=>[
+    '__123__'=>'一二三',
+]
+
+#在模版中
+<h3>__123__</h3>  			#输出为一二三
+```
+```php
+#官方自带
+<h3>__URL__</h3>  			#输出/index/index
+<h3>__STATIC__</h3> 	    #输出/static
+<h3>__CSS__</h3>  			#输出  /static/css
+<h3>__JS__</h3>  			#输出  /static/js
+```
+
