@@ -122,4 +122,3 @@ return  view();
 ```
 
 ### 配置文件
-![](images/screenshot_1510306117691.png)
