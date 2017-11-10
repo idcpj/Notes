@@ -103,3 +103,21 @@ http://www.tp5.com/news/5/10
 在配置了路由规则后
 echo url('index/index/demo',['id'=>5,'age'=>10]);  //news/5.html
 ```
+## 视图
+### 模版位置
+默认路径,在index模块下
+```
+view/index/index.html
+return  view();
+```
+### 四种赋值总结
+```php
+1. $this->assign('key', 'value');
+2. $this->view-> keyname = 'value';
+3. return $this->fetch('html模板名', [
+       'key'   => 'value',
+       'key2' => 'value2'
+]);
+4. View::share('key', 'value'); # 使用该方法必须先 use think\View;
+```
+
