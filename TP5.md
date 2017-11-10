@@ -121,3 +121,5 @@ return  view();
 4. View::share('key', 'value'); # 使用该方法必须先 use think\View;
 ```
 
+### 配置文件
+![](images/screenshot_1510306117691.png)
