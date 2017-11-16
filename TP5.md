@@ -44,7 +44,19 @@ dump($request->controller());		// 获取控制器名
 dump($request->action());		//   获取当前操作名
 ```
 
->
+>获取请求中的数据
+```
+$this->request->post('tid/a');
+```
+>善于运用 闭包
+```
+return SlideItemModel::all(function($query){
+    $query->where(array('slide_id'=>$sid,'status'=>1))->order('list_order desc')->field('id,image');
+});
+```
+
+>![配置目录格式](images/371400619-581858ef3ed37_articlex.png)
+
 
 
 
