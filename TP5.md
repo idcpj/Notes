@@ -43,6 +43,7 @@ $loan->show_app = $loan->getData('show_app')==1?0:1;
 $loan->save();
 ```
 
+
 >![配置目录格式](images/371400619-581858ef3ed37_articlex.png)
 
 
@@ -138,3 +139,33 @@ return  view();
 <h3>__JS__</h3>  			#输出  /static/js
 ```
 
+## 静态增删改查操作
+
+### 增
+```
+$user = User::create([
+    'name'  =>  'thinkphp',
+    'email' =>  'thinkphp@qq.com'
+]);
+echo $user->email;
+echo $user->id; // 获取自增ID
+```
+### 删
+
+### 改
+
+#### 查找并更新 
+```
+$user = User::get(1);
+$user->name     = 'thinkphp';
+$user->save();
+```
+
+#### 直接更新数据
+```
+User::update(['id' => 1, 'name' => 'thinkphp']);
+```
+### 复杂界面更新
+```
+User::where(['status'=>1,'name'=>'cpj'])->update(['name' => 'thinkphp']);
+```
