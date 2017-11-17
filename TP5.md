@@ -48,12 +48,14 @@ dump($request->action());		//   获取当前操作名
 ```
 $this->request->post('tid/a');
 ```
->善于运用 闭包
-```
-return SlideItemModel::all(function($query){
-    $query->where(array('slide_id'=>$sid,'status'=>1))->order('list_order desc')->field('id,image');
+>善于运用 闭包(在闭包中传值)
+```php
+return SlideItemModel::all(function($query) use($id){
+    $query->where(array('slide_id'=>$id,'status'=>1))->order('list_order desc')->field('id,image');
 });
 ```
+
+
 
 >![配置目录格式](images/371400619-581858ef3ed37_articlex.png)
 
