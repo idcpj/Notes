@@ -3,59 +3,45 @@
 ## 技巧
 >自带.htaccess  无效
 
-修改为: `			RewriteRule ^(.*)$ index.php/$1 [QSA,PT,L]  -->  RewriteRule ^(.*)$ index.php?/$1 [QSA,PT,L]`
+修改为: `RewriteRule ^(.*)$ index.php/$1 [QSA,PT,L]  -->  RewriteRule ^(.*)$ index.php?/$1 [QSA,PT,L]`
 
->入口文件绑定
-```
-define('BIND_MODULE','admin');	
-define('BIND_CONTROLLER','Index');
-define('BIND_ACTION','index');
-```
 
->创建新的入口文件
-```php
-//把index.php 内如复制到api.php
-//浏览器访问 http://www.xxx.com/api.php
-define('BIND_MODULE','api');  // -->api.php 只能访问api模块
-define('BIND_MODULE','api/index'); 
-```
 
->控制器输出
 
-return 可以代替echo 输出 推荐使用return 输出
 
->事务回滚函数
-```php
-try{
-    $db=Db::name('test');
-    $arr=[
-        "INSERT`dp_test`(`username`,`password`,`inttes`)VALUE('cpjinsert','passwor','1123')",
-        "update`dp_test`set`username`='cpjupdate34'WHERE`id`=1",
-    ];
-    $res=$db->batchQuery($arr);
-}catch(\Exception$e){
-    dump($e->getMessage());
-}
-```
->获取当前模块,控制器,操作
-```php
-dump($request->module());		//  获取当前模块
-dump($request->controller());		// 获取控制器名
-dump($request->action());		//   获取当前操作名
-```
-
->获取请求中的数据
+>获取请求中的数据  (类 name="id[]" form元素)
 ```
 $this->request->post('tid/a');
 ```
->善于运用 闭包(在闭包中传值)
+
+>善于运用 闭包(在闭包中传值)  且模型中用静态方法
 ```php
-return SlideItemModel::all(function($query) use($id){
-    $query->where(array('slide_id'=>$id,'status'=>1))->order('list_order desc')->field('id,image');
-});
+public static function getLoan($where=array(),$page=0,$sizePage=10,$order=''){
+		$list  = LoanModel::all(function($query) use($where,$page,$sizePage,$order){
+			$query->where($where)->page($page,$sizePage)->field('id,name,img,min_money,max_money,loan_rate,tip');
+			if(!empty($order)){
+				$query->order($order);
+			}
+
+		});
+}
+```
+>自定义字段
+```
+//$data 为该条记录数组
+public function getLoanRateAttr($value,$data){
+		$loan = LoanModel::get($data['id']);
+		$value = "参考".$loan['time_type']."利率:  ".strval($value)."%";
+		return  $value;
+}
 ```
 
-
+>更新字段
+```
+$loan = LoanModel::get($id);
+$loan->show_app = $loan->getData('show_app')==1?0:1;
+$loan->save();
+```
 
 >![配置目录格式](images/371400619-581858ef3ed37_articlex.png)
 
