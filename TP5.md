@@ -222,16 +222,16 @@ $list = User::all(function($query){
 ```
 
 ### 一对一关联
-#### 隐藏关联的数组
+#### 隐藏关联的数组,绑定父元素 加别名
 ```
 //模型中方法,注意使用return进行
 public function Reloan(){
     //外键id  reloanModel 的外键id
-    return $this->hasOne('ReloanModel','lid')->bind('tid');
+    return $this->hasOne('ReloanModel','lid')->bind('tid');  //->bind('username'=>'name')  把name改为username
 }
 //调用
 LoanModel::get(8,'reloan')->hidden(['reloan'])     //hidden 先用bind绑定到父类 然后用hidden 隐藏关联表
-LoanModel::all(8,'reloan')->hidden(['reloan'])
+LoanModel::all(8,'reloan')->hidden(['reloan','users'])
 ```
 ####  更新关联表
 ```
