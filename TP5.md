@@ -229,6 +229,6 @@ public function Reloan(){
     return $this->hasOne('ReloanModel','lid')->bind('tid');
 }
 //调用
-LoanModel::get(8,'reloan')
-LoanModel::all(8,'reloan')
+LoanModel::get(8,'reloan')->hidden(['reloan'])     //hidden 先用bind绑定到父类 然后用hidden 隐藏关联表
+LoanModel::all(8,'reloan')->hidden(['reloan'])
 ```
