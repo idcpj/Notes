@@ -43,8 +43,17 @@ $loan->show_app = $loan->getData('show_app')==1?0:1;
 $loan->save();
 ```
 
+>获取原始数据
+```php
+$user = User::get(1);
+// 获取原始字段数据
+echo $user->getData('status');
+// 获取全部原始数据
+dump($user->getData());
+```
 
->![配置目录格式](images/371400619-581858ef3ed37_articlex.png)
+>目录结构
+![配置目录格式](images/371400619-581858ef3ed37_articlex.png)
 
 
 
@@ -151,6 +160,18 @@ echo $user->email;
 echo $user->id; // 获取自增ID
 ```
 ### 删
+#### 根据主键删除
+```
+User::destroy(1);
+//或
+User::destroy([1,2,3]);
+```
+#### 条件删除
+```
+User::destroy(['status' => 0]);
+//或
+User::where('id','>',10)->delete();
+```
 
 ### 改
 
@@ -168,4 +189,46 @@ User::update(['id' => 1, 'name' => 'thinkphp']);
 ### 复杂界面更新
 ```
 User::where(['status'=>1,'name'=>'cpj'])->update(['name' => 'thinkphp']);
+```
+
+### 查
+#### 获取单个数据
+```
+$user = User::get(1);
+echo $user->name;
+
+// 使用数组查询
+$user = User::get(['name' => 'thinkphp']);
+
+// 使用闭包查询
+$user = User::get(function($query){
+    $query->where('name', 'thinkphp');
+});
+echo $user->name;
+```
+
+#### 获取多个数据
+```
+// 或者使用数组
+$list = User::all([1,2,3]);
+
+// 使用条件查询(只能对where操作)
+$list = User::all(['status'=>1]);
+
+//闭包 比条件查找强大
+$list = User::all(function($query){
+    $query->where('status', 1)->limit(3)->order('id', 'asc');
+});
+```
+
+### 一对一关联
+```
+//模型中方法,注意使用return进行
+public function Reloan(){
+    //外键id  reloanModel 的外键id
+    return $this->hasOne('ReloanModel','lid')->bind('tid');
+}
+//调用
+LoanModel::get(8,'reloan')
+LoanModel::all(8,'reloan')
 ```
