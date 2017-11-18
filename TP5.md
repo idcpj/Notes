@@ -222,6 +222,7 @@ $list = User::all(function($query){
 ```
 
 ### 一对一关联
+#### 隐藏关联的数组
 ```
 //模型中方法,注意使用return进行
 public function Reloan(){
@@ -231,4 +232,10 @@ public function Reloan(){
 //调用
 LoanModel::get(8,'reloan')->hidden(['reloan'])     //hidden 先用bind绑定到父类 然后用hidden 隐藏关联表
 LoanModel::all(8,'reloan')->hidden(['reloan'])
+```
+####  更新关联表
+```
+$loan = LoanModel::get(8);
+$loan->reloan->tid=12;
+$loan->reloan->save();
 ```
