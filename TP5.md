@@ -7,14 +7,12 @@
 
 
 
-
-
->获取请求中的数据  (类 name="id[]" form元素)
+### 获取请求中的数据  (类 name="id[]" form元素)
 ```
 $this->request->post('tid/a');
 ```
 
->善于运用 闭包(在闭包中传值)  且模型中用静态方法
+### 善于运用 闭包(在闭包中传值)  且模型中用静态方法
 ```php
 public static function getLoan($where=array(),$page=0,$sizePage=10,$order=''){
 		$list  = LoanModel::all(function($query) use($where,$page,$sizePage,$order){
@@ -26,7 +24,7 @@ public static function getLoan($where=array(),$page=0,$sizePage=10,$order=''){
 		});
 }
 ```
->自定义字段
+### 自定义字段
 ```
 //$data 为该条记录数组
 public function getLoanRateAttr($value,$data){
@@ -36,14 +34,14 @@ public function getLoanRateAttr($value,$data){
 }
 ```
 
->更新字段
+### 更新字段
 ```
 $loan = LoanModel::get($id);
 $loan->show_app = $loan->getData('show_app')==1?0:1;
 $loan->save();
 ```
 
->获取原始数据
+### 获取原始数据
 ```php
 $user = User::get(1);
 // 获取原始字段数据
@@ -52,14 +50,14 @@ echo $user->getData('status');
 dump($user->getData());
 ```
 
->查询某条记录的某个值  
+### 查询某条记录的某个值  
 ```
 //使用 ->value
 $loanTypeId = LoanTypeModel::where(['name' => $loanTypeId])->value('id');
 //返回  3
 ```
 
->目录结构
+### 目录结构
 ![配置目录格式](images/371400619-581858ef3ed37_articlex.png)
 
 
