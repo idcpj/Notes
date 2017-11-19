@@ -52,6 +52,13 @@ echo $user->getData('status');
 dump($user->getData());
 ```
 
+>查询某条记录的某个值  
+```
+//使用 ->value
+$loanTypeId = LoanTypeModel::where(['name' => $loanTypeId])->value('id');
+//返回  3
+```
+
 >目录结构
 ![配置目录格式](images/371400619-581858ef3ed37_articlex.png)
 
