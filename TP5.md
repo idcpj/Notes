@@ -15,13 +15,13 @@ $this->request->post('tid/a');
 ###  闭包(在闭包中传值)  且模型中用静态方法
 ```php
 public static function getLoan($where=array(),$page=0,$sizePage=10,$order=''){
-		$list  = LoanModel::all(function($query) use($where,$page,$sizePage,$order){
-			$query->where($where)->page($page,$sizePage)->field('id,name,img,min_money,max_money,loan_rate,tip');
-			if(!empty($order)){
-				$query->order($order);
-			}
+    $list  = LoanModel::all(function($query) use($where,$page,$sizePage,$order){
+        $query->where($where)->page($page,$sizePage)->field('id,name,img,min_money,max_money,loan_rate,tip');
+        if(!empty($order)){
+            $query->order($order);
+        }
 
-		});
+    });
 }
 ```
 ### 自定义字段
