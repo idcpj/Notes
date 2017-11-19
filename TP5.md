@@ -24,7 +24,7 @@ public static function getLoan($where=array(),$page=0,$sizePage=10,$order=''){
     });
 }
 ```
-### 自定义字段
+### 自定义不存在的字段
 ```
 //$data 为该条记录数组
 public function getLoanRateAttr($value,$data){
