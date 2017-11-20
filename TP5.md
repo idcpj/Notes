@@ -56,6 +56,13 @@ dump($user->getData());
 $loanTypeId = LoanTypeModel::where(['name' => $loanTypeId])->value('id');
 //返回  3
 ```
+### 带条件分页
+```
+$loanData = LoanModel::where($where)->paginate(10,false,[
+    'query'=>$this->request->param(),
+]);
+```
+
 
 ### 目录结构
 ![配置目录格式](images/371400619-581858ef3ed37_articlex.png)
