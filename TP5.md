@@ -292,7 +292,9 @@ $loan->reloan->save();
 #### 文件上传
 ```
 //配置文件位置
-cmf/common.php ->function cmf_get_upload_setting(){}
+
+cmf 上传设置中可进行设置
+
 //admin.js 包含封装的js
 
 //应用
