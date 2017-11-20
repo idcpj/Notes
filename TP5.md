@@ -74,6 +74,12 @@ try{
     show($e->getMessage(),10004);
 }
 ```
+### 追加关联数组(紧接在数组后)
+```
+//只是针对 单条记录
+$order = OrderModel::get(1)->appendRelationAttr('loan', 'max_money,min_money');
+
+```
 
 ### 目录结构
 ![配置目录格式](images/371400619-581858ef3ed37_articlex.png)
