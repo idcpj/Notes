@@ -34,7 +34,7 @@ public function getLoanRateAttr($value,$data){
 }
 ```
 
-### 更新字段
+### 更个别新字段
 ```
 $loan = LoanModel::get($id);
 $loan->show_app = $loan->getData('show_app')==1?0:1;
