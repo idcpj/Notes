@@ -262,6 +262,7 @@ public function Reloan(){
 LoanModel::get(8,'reloan')->hidden(['reloan'])     //hidden 先用bind绑定到父类 然后用hidden 隐藏关联表
 LoanModel::all(8,'reloan')->hidden(['reloan','users'])
 ```
+
 ####  更新关联表
 ```
 $loan = LoanModel::get(8);
