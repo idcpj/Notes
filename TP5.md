@@ -286,3 +286,16 @@ $loan = LoanModel::get(8);
 $loan->reloan->tid=12;
 $loan->reloan->save();
 ```
+
+### thinkcmf 5.0 技巧
+
+#### 文件上传
+```
+//配置文件位置
+cmf/common.php ->function cmf_get_upload_setting(){}
+//admin.js 包含封装的js
+
+//应用
+<a href="javascript:uploadOne('apk上传','#thumb','file');" class="btn btn-sm btn-default">选择文件</a>
+
+```
