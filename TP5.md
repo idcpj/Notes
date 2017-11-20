@@ -54,14 +54,17 @@ dump($user->getData());
 ```
 //使用 ->value
 $loanTypeId = LoanTypeModel::where(['name' => $loanTypeId])->value('id');
-//返回  3
+//返回  字符串 3
+//如果是colunm  则是对多条记录返回值
 ```
+
 ### 带条件分页
 ```
 $loanData = LoanModel::where($where)->paginate(10,false,[
     'query'=>$this->request->param(),
 ]);
 ```
+
 ### 插入前检查字段名
 
 ```
@@ -80,6 +83,15 @@ try{
 $order = OrderModel::get(1)->appendRelationAttr('loan', 'max_money,min_money');
 
 ```
+### 在模版中关联表中字段
+```html
+<volist name="list" id="vo">
+        <!--关联member表中的name用户姓名-->
+        <!--只需要在该模型中有member的关联即可-->
+        <td>{$vo.member.name}</td>
+</volist>
+```
+
 
 ### 目录结构
 ![配置目录格式](images/371400619-581858ef3ed37_articlex.png)
