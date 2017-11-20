@@ -62,7 +62,18 @@ $loanData = LoanModel::where($where)->paginate(10,false,[
     'query'=>$this->request->param(),
 ]);
 ```
+### 插入前检查字段名
 
+```
+fields_strict'  => true, //检查字段名
+
+//异常可以用异常捕获
+try{
+    OrderModel::create($saveData);
+} catch(\Exception $e){
+    show($e->getMessage(),10004);
+}
+```
 
 ### 目录结构
 ![配置目录格式](images/371400619-581858ef3ed37_articlex.png)
