@@ -84,10 +84,15 @@ $order = OrderModel::get(1)->appendRelationAttr('loan', 'max_money,min_money');
 
 ```
 ### 在模版中关联表中字段
-```html
+```
+
+//关联member表
+public function member(){
+    return $this->hasOne('MemberModel','uid','uid')->bind(['username'=>'name']);
+}
+
 <volist name="list" id="vo">
-        <!--关联member表中的name用户姓名-->
-        <!--只需要在该模型中有member的关联即可-->
+        <!--输出member表中姓名-->
         <td>{$vo.member.name}</td>
 </volist>
 ```
