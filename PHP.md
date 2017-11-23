@@ -71,3 +71,21 @@ function curl_post_ssl($url,$data){
 `openssl pkcs12 -in certificate.pfx -out certificate.cer -nodes`
 
 >PXF转PEM后certificate.cer文件包含认证证书和私钥，需要把它们分开存储才能使用。
+
+
+## 非静态方法转静态
+```
+//在方法中加入 newstatic()
+public static function queryOneTrans($paramData){
+    $beiyi = new static();
+
+    $Debit = array();
+    $Debit['merchantID'] = $beiyi->_merchantID; //商户id
+    $beiyi->outlog("返回值",$fetchPost);
+    $beiyi->_result($fetchPost);
+
+}
+
+//demo
+BeiyiYanZheng::queryOneTrans($paramData);
+```
