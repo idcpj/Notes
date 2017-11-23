@@ -28,6 +28,7 @@
     * [微信小程序](微信小程序.md)
     * [Vue](Vue.md)
     * [前端技巧](前端技巧.md)
+    * [JQuery](JQuery.md)
 * [软件](软件.md)
     * [PHPStorm](PHPStorm.md)
     * [PyCharm](PyCharm.md)
