@@ -30,4 +30,5 @@
     * [前端技巧](前端技巧.md)
 * [软件](软件.md)
     * [PHPStorm](PHPStorm.md)
+    * [PyCharm](PyCharm.md)
     * [常用软件列表](常用软件列表.md)
