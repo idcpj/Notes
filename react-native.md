@@ -15,3 +15,4 @@
 
 >初始化项目后检查是否有设备(虚拟机或真机)连接 `adb  devices`
 >启动`react-native run-android`
+>推荐IED  Webstorm
