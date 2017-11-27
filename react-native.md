@@ -9,4 +9,4 @@
 如果发现`gradle-2.14.1-all.zip`下载缓慢,可查看[知乎](https://www.zhihu.com/question/37810416)帮助
 虚拟机下载[genymotion](https://www.genymotion.com/download/)并下载5.1安卓版本的
 
->初始化项目后检查是否有设备(虚拟机或真机)连接 `adb adb devices`
+>初始化项目后检查是否有设备(虚拟机或真机)连接 `adb  devices`
