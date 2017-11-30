@@ -1,7 +1,7 @@
 [TOC]
 
 
->Composer.json配置文件说明 [网址](http://blog.csdn.net/hel12he/article/details/46503875)
+>Composer.json配置文件说明 [网址](http://blog.csdn.net/pugongyinglhl/article/details/59521275)
 
 
 
