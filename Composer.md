@@ -17,4 +17,4 @@
 
 ### 配置自动更新
 
->参考网址[网址](http://blog.csdn.net/xionggang1024/article/details/77162007)
+>参考官方教程网址[网址](http://blog.csdn.net/xionggang1024/article/details/77162007)
