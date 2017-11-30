@@ -11,7 +11,7 @@
 文件安装位置
 `C:\Users\cc\.gradle\wrapper\dists\gradle-2.14.1-all\8bnwg5hd3w55iofp58khbp6yv`
 
-推荐虚拟机
+**推荐虚拟机**
 下载[genymotion](https://www.genymotion.com/download/)并下载5.1安卓版本的
 
 >初始化项目后检查是否有设备(虚拟机或真机)连接 `adb  devices`
