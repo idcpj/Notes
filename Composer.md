@@ -1,7 +1,9 @@
 [TOC]
 
 
->Composer.json配置文件说明 [网址](http://blog.csdn.net/pugongyinglhl/article/details/59521275)
+---
+> packagist [包管理网站](https://packagist.org/packages/)
+---
 
 
 
@@ -18,3 +20,7 @@
 ### 配置自动更新
 
 >参考官方教程网址[网址](http://blog.csdn.net/xionggang1024/article/details/77162007)
+
+### 其他
+>Composer.json配置文件说明 [网址](http://blog.csdn.net/pugongyinglhl/article/details/59521275)
+
