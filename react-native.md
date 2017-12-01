@@ -21,5 +21,5 @@
 
 ## 技巧
 
-安装phpstorm 插件  **react** 即可 
+安装phpstorm 插件  搜索 **react**  
 虚拟机双击`r`可刷新状态
