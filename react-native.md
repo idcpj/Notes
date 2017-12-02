@@ -19,7 +19,9 @@
 >推荐IED ` Webstorm`或`PHPStrom`
 
 
-## 技巧
+## 测试技巧
 
 安装phpstorm 插件  搜索 **react**  
 虚拟机双击`r`可刷新状态
+
+## 技巧
