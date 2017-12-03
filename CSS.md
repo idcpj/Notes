@@ -1,6 +1,7 @@
 [TOC]
 
 ## flex弹性布局
+
 ```css
 .partent{
     display:flex; 
@@ -9,4 +10,4 @@
    // justify-content:center;水平显示
 }
 ```
-
+>参考阮一峰[网址](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
