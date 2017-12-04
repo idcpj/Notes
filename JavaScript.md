@@ -13,3 +13,9 @@ function foo() {
 
 foo.call({ id: 42 });  //id：42
 ```
+**对象的简介写法**
+```
+let name='cpj'
+let age = 12
+{name,age} //{name: "cpj", age: 12}
+```
