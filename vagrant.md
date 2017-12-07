@@ -11,6 +11,10 @@
 3. `vagrant init`   初始化
     * 新建**centos_7_64**目录
     *  在该目录下 `vagrant init`
+    在到centos_7_64目录的`vagrant`文件 修改
+    ```
+    config.vm.box = "centos/7"   修改对应的box
+    ```
 4. `vagrant up` 启动
 5. 修改`Vagrantfile`文件的配置
 [x] 速度 
