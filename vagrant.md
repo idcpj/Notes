@@ -17,7 +17,7 @@
     ```
 4. `vagrant up` 启动
 5. 修改`Vagrantfile`文件的配置
-[x] 速度 
+
     ```
  	config.vm.synced_folder ".","/vagrant",type:"virtualbox"
 	config.vm.network "public_network", ip: "192.168.0.17"
@@ -83,7 +83,7 @@ SHELL
     EnableSendfile Off
 ```
 ---
-###打包###
+### 打包  
 `vagrant package --output xxx.box --base 虚拟机名称`
 
         
