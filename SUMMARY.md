@@ -36,6 +36,7 @@
     * [PHPStorm](PHPStorm.md)
     * [PyCharm](PyCharm.md)
     * [常用软件列表](常用软件列表.md)
+    * [MAC常用配置](MAC常用配置.md)
 * [App端](App端.md)
     * [react-native](react-native.md)
 * [JavaScript](JavaScript.md)
