@@ -50,6 +50,7 @@ brew cask install quicklook-pat		//brew cask install quicklook-pat
 
 **AppCleaner**  一个小应用程序，让你彻底卸载不需要的应用程序 [官网](http://freemacsoft.net/appcleaner/)
 
+**FinderGo Finder** 中快速打开终端，定位到目录
 **Cleaner for Xcode**  Xcode 的清理工具，清理几十G应该不是问题
 
 **BetterZip 3**     压缩解压缩工具支持格式 ZIP、TAR、TGZ、TBZ、TXZ (new)、7-ZIP、RAR。
