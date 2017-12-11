@@ -1,18 +1,17 @@
 
 [TOC]
 
-    
+   
+## 软件下载
+
+先通过`brew search xxx `  进行查找  然后通过 `brew cask install xxx`  或 `brew install xxx ` 安装
     
 ## 解除对sudo对限制
 `El Capitan` 加入了`Rootless`机制
-
 重启按住 Command+R，进入恢复模式，打开Terminal。
 
-`csrutil disable`
-
-重启即可。如果要恢复默认，那么
-
-`csrutil enable`
+`csrutil disable`   关闭
+`csrutil enable`    开启
 
 
 ## MAC软件
