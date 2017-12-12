@@ -33,3 +33,15 @@ function writeLog($msg){
 
 
 ```
+
+## 手动同步
+
+直接覆盖git上的代码.
+```
+#! /bin/bash
+cd /data/wwwroot/wjdd/
+git fetch --all
+git reset --hard origin/master
+chown -R www:www .
+chmod 777 index.php
+```
