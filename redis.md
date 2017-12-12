@@ -11,7 +11,7 @@ $redis->ping()  //输出PONG 为正常  ,错误会报 RedisException 异常
 //字符串操作
 $redis->set("tutorial-name", "Redis tutorial");
 $redis->get("tutorial-name");
-
+$redis->delete("tutorial-name");
 
 //List(列表) 操作
 $redis->lpush("tutorial-list", "Redis",'Oracle');
