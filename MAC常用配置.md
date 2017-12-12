@@ -27,7 +27,7 @@ brew cask install quicklook-json  		//格式化预览JSON文件
 brew cask install quicklook-csv       //预览.CSV文件
 brew cask install betterzipql			// 预览BetterZip软件的压缩格式文件
 brew cask install qlimagesize		//显示图像大小和分辨率
-brew cask install quicklook-pat		//brew cask install quicklook-pat
+brew cask install quicklook-pat		//预览Adobe Photoshop图案文件
 ```
 
 
