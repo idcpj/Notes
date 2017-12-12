@@ -17,6 +17,7 @@
     * [TP5](TP5.md)
         * [taglib-自制标签](自制标签.md)
     * [Composer使用及创建](Composer.md)
+    * [redis](redis.md)
 * [服务器](服务器.md)
     * [Linux/7](Linux-7.md)
     * [Vim](vim.md)
