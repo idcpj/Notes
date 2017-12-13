@@ -1,7 +1,9 @@
 [TOC]
 
+>[官网手册](http://php.net/manual/zh/memcache.add.php)  
 ## demo
 
+>
 ```
 $memcache = new Memcache;             //创建一个memcache对象
 $memcache->connect('localhost', 11211) or die ("Could not connect"); //连接Memcached服务器
