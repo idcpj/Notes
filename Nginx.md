@@ -59,3 +59,14 @@ upstream test {
     server localhost:8081;
 }
 ```
+
+### fair（第三方）
+
+按后端服务器的响应时间来分配请求，响应时间短的优先分配。
+```
+upstream backend { 
+    fair; 
+    server localhost:8080;
+    server localhost:8081;
+}
+```
