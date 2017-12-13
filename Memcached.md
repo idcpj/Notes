@@ -1,6 +1,6 @@
 [TOC]
 
->[官网手册](http://php.net/manual/zh/memcache.add.php)  
+> [官网手册](http://php.net/manual/zh/memcache.add.php)  
 ## demo
 
 >
