@@ -13,4 +13,7 @@ echo $memcache->get('key1');   //从内存中取出key的值
 $memcache->add('key10', 'value');
 $memcache->add('key10', 'value1');
 echo $memcache->get('key10');//value  add 不会进行覆盖
+
+$memcache->set('name', array('cpj','age'=>17,'233'));
+var_dump($memcache->get('name'));   //可输出数组
 ```
