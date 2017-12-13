@@ -70,3 +70,30 @@ upstream backend {
     server localhost:8081;
 }
 ```
+
+### url_hash（第三方）
+按访问url的hash结果来分配请求，使每个url定向到同一个后端服务器，后端服务器为缓存时比较有效。 在upstream中加入hash语句，server语句中不能写入weight等其他的参数，hash_method是使用的hash算法。
+```
+upstream backend { 
+    hash $request_uri; 
+    hash_method crc32; 
+    server localhost:8080;
+    server localhost:8081;
+} 
+```
+
+## HTTP服务器
+```
+server {
+    listen       80;                                                         
+    server_name  localhost;                                               
+    client_max_body_size 1024M;
+
+
+    location / {
+           root   e:wwwroot;
+           index  index.html;
+       }
+}
+```
+> 这样如果访问http://localhost 就会默认访问到E盘wwwroot目录下面的index.html，如果一个网站只是静态页面的话，那么就可以通过这种方式来实现部署。
