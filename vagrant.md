@@ -6,8 +6,8 @@
 
 ### 流程
 1. 添加虚拟机
-    1. `vagrant box add centos/7` 官网下载
-    2.  添加镜像 下载xxx.box  `vagrant box add centos_test centos.box`
+    1. `vagrant box add centos/7` 官网下载  `centos/7` 为官网包
+    2.  添加镜像 下载xxx.box  `vagrant box add centos_test /Downloads/centos7.box`  cetnos_test 名称可随意
 3. `vagrant init  cetnos/7`   初始化
     * 新建**centos_7_64**目录
     *  在该目录下 `vagrant init  cetnos/7 `
