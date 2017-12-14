@@ -97,3 +97,41 @@ server {
 }
 ```
 > 这样如果访问http://localhost 就会默认访问到E盘wwwroot目录下面的index.html，如果一个网站只是静态页面的话，那么就可以通过这种方式来实现部署。
+
+### 动静分离
+```
+server {  
+  listen       80;  
+  server_name  localhost;  
+
+  location / {  
+      root   e:wwwroot;  
+      index  index.html;  
+  }  
+
+  # 所有静态请求都由nginx处理，存放目录为html  
+  location ~ .(gif|jpg|jpeg|png|bmp|swf|css|js)$ {  
+      root    e:wwwroot;  
+  }  
+
+  # 所有动态请求都转发给tomcat处理  
+  location ~ .(jsp|do)$ {  
+      proxy_pass  http://test;  
+  }  
+
+  error_page   500 502 503 504  /50x.html;  
+  location = /50x.html {  
+      root   e:wwwroot;  
+  }  
+}  
+```
+
+> 当访问gif,jpeg时 直接访问`e:wwwroot; `,正则自行配置
+
+
+## 热启动
+Nginx重新读取配置的命令
+
+`nginx -s reload  `
+
+
