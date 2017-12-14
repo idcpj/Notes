@@ -1,5 +1,11 @@
 [TOC]
 
+##  一键安装php开发环境 
+
+[oneinstack](https://oneinstack.com/install/)
+
+## 手动安装
+
 ### 更换源
 ```
 cd /etc/yum.repos.d
