@@ -23,6 +23,15 @@
 	config.vm.network "public_network", ip: "192.168.0.17"
     ``` 
     
+6. 连接虚拟机
+```
+window 用户登录
+主机：127.0.0.1
+端口号：2222
+用户名：vagrant
+密码：私钥
+```
+
 **错误处理**
 1. `vagrant up` 时,`/sbin/mount.vboxsf: mounting failed with the error: No such device`
 
