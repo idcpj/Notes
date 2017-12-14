@@ -30,6 +30,9 @@ window 用户登录
 端口号：2222
 用户名：vagrant
 密码：私钥
+
+mac 
+vagrant ssh
 ```
 
 **错误处理**
