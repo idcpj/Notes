@@ -31,7 +31,8 @@ window 用户登录
 用户名：vagrant
 密码：私钥
 
-mac 
+mac 用户登录
+
 vagrant ssh
 ```
 
