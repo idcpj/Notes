@@ -16,6 +16,7 @@ echo "test" >> file1		把test 写入file1 文件中
 whereis php		包所在路径
 which php		执行命令所在目录
 commad ; commad    多条命令之间用 ;  连接
+tail -f /data/www/run.log/   不断刷新日志输入
 ```
 ## 设置别名 [alias]
 - 设置临时别名
