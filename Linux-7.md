@@ -485,7 +485,7 @@ Number Start (sector) End (sector) Size Code Name
 *.bz2       bzip2 程式壓縮的檔案；
 *.xz        xz 程式壓縮的檔案；
 *.tar       tar 程式打包的資料，並沒有壓縮過；
-*.tar.gz    tar 程式打包的檔案，其中並且經過 gzip 的壓縮
+*.tar.gz    tar 程式打包的檔案，其中並且經過 gzip 的壓縮				解压 tar -zxvf
 *.tar.bz2   tar 程式打包的檔案，其中並且經過 bzip2 的壓縮
 *.tar.xz    tar 程式打包的檔案，其中並且經過 xz 的壓縮
 ```
