@@ -21,13 +21,13 @@ yum makecache
 #安装
 yum install httpd -y   
 #启动
-systemctl start httpd   
+sudo systemctl start httpd   
 #重启
-systemctl restart httpd
+sudo systemctl restart httpd
 #停止
-systemctl stop httpd
+sudo systemctl stop httpd
 #开启启动
-systemctl enable httpd.service
+sudo systemctl enable httpd.service
 
 #设置目录权限
 把目录分组设置成httpd.conf中相同的用户:组名
