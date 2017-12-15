@@ -99,13 +99,6 @@ SHELL
 `vagrant package --output xxx.box --base 虚拟机名称`
 
         
----
-### 推荐版本! 
-
-- vagrant_1.8.6
-- VirtualBox-5.1.22-115126-Win
-
-
 ----------
 
 
