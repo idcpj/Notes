@@ -548,3 +548,6 @@ tar -jxv -f /root/etc.tar.bz2 -C /tmp
 > `-z`对应  ` tar.gz`后缀
 > `-j` 对应 `bz2`后缀
 >  `-J` 对应 `.tar.xz`后缀
+
+
+## Shell Script
