@@ -6,44 +6,7 @@
 
 
 ## https双向认证
-
-```php
-function curl_post_ssl($url,$data){
-			$tuCurl = curl_init();
-			curl_setopt($tuCurl, CURLOPT_URL, $url);
-			//curl_setopt($tuCurl, CURLOPT_PORT , 443);
-			curl_setopt($tuCurl, CURLOPT_VERBOSE, 0);
-			curl_setopt($tuCurl, CURLOPT_HEADER, 0);
-			curl_setopt($tuCurl, CURLOPT_SSLVERSION, 1);
-
-			curl_setopt($tuCurl,CURLOPT_SSLCERT,$this->_certUrl);  //-----BEGIN CERTIFICATE-----
-			curl_setopt($tuCurl, CURLOPT_SSLCERTTYPE,"PEM");    //
-			//curl_setopt($tuCurl,CURLOPT_SSLCERTPASSWD,$this->_keyPwd);      //证书密码
-
-			curl_setopt($tuCurl,CURLOPT_SSLKEY,$this->_priKey);       // -----BEGIN RSA PRIVATE KEY-----
-			curl_setopt($tuCurl, CURLOPT_SSLKEYPASSWD,$this->_keyPwd);
-			curl_setopt($tuCurl, CURLOPT_SSLKEYTYPE,"PEM");
-
-			//curl_setopt($tuCurl, CURLOPT_CAINFO,$this->_certUrl);//-----BEGIN PUBLIC KEY-----
-
-			curl_setopt($tuCurl, CURLOPT_POST, 1);
-			curl_setopt($tuCurl, CURLOPT_RETURNTRANSFER, 1);//是否返回数据流
-			curl_setopt($tuCurl, CURLOPT_SSL_VERIFYPEER, 0);
-
-			curl_setopt($tuCurl, CURLOPT_POSTFIELDS, $data);
-			//curl_setopt($tuCurl, CURLOPT_HTTPHEADER, array("Content-Type: text/xml","SOAPAction: \"/soap/action/query\"", "Content-length: ".strlen($data)));
-
-			$tuData = curl_exec($tuCurl);
-			if(!curl_errno($tuCurl)){
-				//$info = curl_getinfo($tuCurl);
-				//echo 'Took ' . $info['total_time'] . ' seconds to send a request to ' . $info['url'];
-			} else {
-				echo 'Curl 错误: ' . curl_error($tuCurl);
-			}
-			curl_close($tuCurl);
-			return $tuData;
-		}
-```
+查看我的[github](https://github.com/idcpj/phplib/blob/master/src/Phplib/Curl.php)
 
 ## 证书转换
 **PEM to DER**
