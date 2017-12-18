@@ -73,7 +73,7 @@ read -p "Please input (Y/N): " yn
 [ "${yn}" == "N" -o "${yn}" == "n" ] && echo "Oh, interrupt!" && exit 0
 echo "I don't know what your choice is" && exit 0
 ```
->`-o` 或运算符  
+>`-o` 或运算符  可用`||` 替换
 >`[□"$HOME"□==□"$MAIL"□]`  比较运算时,`□` 必须为不能为空,且必是空格
 >在中括号[] 内的每个元件都需要有空白键来分隔；
 在中括号内的变数，最好都以双引号括号起来；
@@ -106,3 +106,35 @@ The 2nd parameter ==> haha                <==第二个参数
 
 ### if .... then
 
+```
+if [条件判断式]; then
+	当条件判断式成立时，可以进行的指令工作内容；
+fi    <==将if反过来写，就成为fi啦！结束if之意！
+```
+单提条件判断
+```
+read -p "Please input (Y/N): " yn
+
+if [ "${yn}" == "Y" ] || [ "${yn}" == "y" ]; then
+	echo "OK, continue"
+	exit 0
+fi
+if [ "${yn}" == "N" ] || [ "${yn}" == "n" ]; then
+	echo "Oh, interrupt!"
+	exit 0
+fi
+echo "I don't know what your choice is" && exit 0
+```
+
+多条件判断
+```
+read -p "Please input (Y/N): " yn
+
+if [ "${yn}" == "Y" ] || [ "${yn}" == "y" ]; then
+	echo "OK, continue"
+elif [ "${yn}" == "N" ] || [ "${yn}" == "n" ]; then
+	echo "Oh, interrupt!"
+else
+	echo "I don't know what your choice is"
+fi
+```
