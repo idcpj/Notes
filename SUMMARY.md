@@ -22,6 +22,7 @@
     * [Memcached](Memcached.md)
 * [服务器](服务器.md)
     * [Linux/7](Linux-7.md)
+        * [shell](shell.md)
     * [Vim](vim.md)
     * [vagrant](vagrant.md)
     * [Mysql](Mysql.md)
