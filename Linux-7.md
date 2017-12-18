@@ -6,17 +6,30 @@
 ## 常用快捷键
 ```
 cd -    进入上次目录(在目录中切换)
+
 crtl+r  **在历史命令中搜索**/再次按搜索下一个匹配的命令
+
 crtl+u  从光标所在位置删除到行首
+
 ps      查看进程
+
 man ls  查看帮助手册
+
 Ctrl+z/fg   切换后台/切换到前台
+
 cat /etc/group | grep -E "shiyanlou"	搜索并打印某个文件
-echo "test" >> file1		把test 写入file1 文件中
+
+echo "test" >> file1		把test 写入file1 文件中已追加的形式
+echo "test" > file1      已重新写入的形式
+
 whereis php		包所在路径
+
 which php		执行命令所在目录
+
 commad ; commad    多条命令之间用 ;  连接
+
 tail -f /data/www/run.log/   不断刷新日志输入
+
 ```
 ## 设置别名 [alias]
 - 设置临时别名
