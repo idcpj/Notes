@@ -29,6 +29,20 @@ chmod a+x hello.sh;
 >第一行#!/bin/bash在宣告这个script使用的shell名称：
 >主要环境变数的宣告：将一些重要的环境变数设定好,如PATH与LAN,直接使用外部指令
 
+## source, sh script, ./script
+`sh script` 与 `./script` 只是是否文件是执行文件的区别,如果,则可直接使用`./script`
+`source` 与`sh script`  `source`在父程序中执行,即执行的变量会保留在父程序中
+```
+[dmtsai@study bin]$ source showname.sh 
+Please input your first name: VBird 
+Please input your last name:   Tsai
+
+Your full name is: VBird Tsai 
+[dmtsai@study bin]$ echo ${firstname} ${lastname} 
+VBird Tsai   <==嘿嘿！有资料产生喔！
+```
+
+
 ## 对谈式脚本
 
 ```
@@ -41,8 +55,46 @@ chmod a+x hello.sh;
 PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 export PATH
 
-read -p "Please input your first name: " firstname       #提示使用者输入 
+read -p "Please input your first name: " firstname       #提示使用者输入 把值赋值给firstname
 read -p "Please input your last name: " lastname        #提示使用者输入 
 echo -e "\nYour full name is: ${firstname} ${ lastname}" #结果由萤幕输出
 ```
->
+## 各种符号的运用
+
+### 判断符号 `[ ]`
+判断为空
+`[ -z "${HOME}" ] ; echo $?`
+不为空 输出`1` 为空 `0`
+
+判断相等
+```
+read -p "Please input (Y/N): " yn
+[ "${yn}" == "Y" -o "${yn}" == "y" ] && echo "OK, continue" && exit 0
+[ "${yn}" == "N" -o "${yn}" == "n" ] && echo "Oh, interrupt!" && exit 0
+echo "I don't know what your choice is" && exit 0
+```
+>`-o` 或运算符  
+>`[□"$HOME"□==□"$MAIL"□]`  比较运算时,`□` 必须为不能为空,且必是空格
+>在中括号[] 内的每个元件都需要有空白键来分隔；
+在中括号内的变数，最好都以双引号括号起来；
+在中括号内的常数，最好都以单或双引号括号起来。
+
+### 命令行中传参数
+```
+echo "The script name is ==> ${0}"
+echo "Total parameter number is ==> $#"
+[ "$#" -lt 2 ] && echo "The number of parameter is less than 2. Stop here." && exit 0
+echo "Your whole parameter is ==> '$@'"
+echo "The 1st parameter ==> ${1}"
+echo "The 2nd parameter ==> ${2}"
+```
+
+执行结果
+```
+[dmtsai@study bin]$ sh how_paras.sh theone haha quot 
+The script name is ==> how_paras.sh        <==档名 
+Total parameter number is ==> 3                   <==果然有三个参数 
+Your whole parameter is == > 'theone haha quot' <==参数的内容全部 
+The 1st parameter ==> theone              <==第一个参数 
+The 2nd parameter ==> haha                <==第二个参数
+```
