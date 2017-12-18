@@ -21,6 +21,10 @@ exit 0
 #执行
 sh hello.sh
 #输出  Hello World !
+
+#如果赋予执行权限可直接使用
+chmod a+x hello.sh; 
+./hello.sh
 ```
 >第一行#!/bin/bash在宣告这个script使用的shell名称：
 >主要环境变数的宣告：将一些重要的环境变数设定好,如PATH与LAN,直接使用外部指令
