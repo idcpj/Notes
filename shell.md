@@ -138,3 +138,35 @@ else
 	echo "I don't know what your choice is"
 fi
 ```
+
+### case ..... esac
+```shell
+case $变数名称in    <==关键字为case ，还有变数前有钱字号 
+  "第一个变数内容" )    <==每个变数内容建议用双引号括起来，关键字则为小括号)
+	程式段
+	;;             <==每个类别结尾使用两个连续的分号来处理！
+  "第二个变数内容" )
+	程式段
+	;; 
+  * )                   <==最后一个变数内容都会用*来代表所有其他值
+	不包含第一个变数内容与第二个变数内容的其他程式执行段
+	exit 1
+	;; 
+esac                   <==最终的case结尾！『反过来写』思考一下！
+```
+
+
+demo
+```
+case ${1} in
+  "hello")
+	echo "Hello, how are you ?"
+	;;
+  "")
+	echo "You MUST input parameters, ex> {${0} someword}"
+	;;
+  *)    #其实就相当于万用字元，0~无穷多个任意字元之意！
+	echo "Usage ${0} {hello}"
+	;;
+esac
+```
