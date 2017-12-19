@@ -10,6 +10,7 @@
  - 软件
  - App端
 
-此为php个人常用库 可用`compoer ` 安装
+此为php个人常用库 可用`compoer ` 安装,详情查看 README.md
+
 本人 github https://github.com/idcpj/phplib
 
