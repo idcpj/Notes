@@ -58,13 +58,15 @@ source /etc/profile.d/alias_bash.sh
 ## 文件处理
 ```
 mkdir -p    递归创建目录
-cp -a       复制  
-                    -r   复制目录
-                    -p  连带文件属性复制
-                    -d   若源文件是链接文件.则复制链接属性
-                    -a  相当于  -pdr(前三个相加)
+
+cp  -a       复制  
+    -r   复制目录
+    -p  连带文件属性复制
+    -d   若源文件是链接文件.则复制链接属性
+    -a  相当于  -pdr(前三个相加)
+    
 ln -s       创建链接
-                    -s 创建软链接   相当于windows的快捷方式
+    s 创建软链接   相当于windows的快捷方式
 ```
 ## 历史命令：history
 >提示 alias h='history'
