@@ -15,7 +15,9 @@ ps      查看进程
 
 man ls  查看帮助手册
 
-Ctrl+z/fg   切换后台/切换到前台
+Ctrl+z/  切到后台
+jobs	 查看
+fg   [jobs对应id]   如fg 1 切换到前台
 
 cat /etc/group | grep -E "shiyanlou"	搜索并打印某个文件
 
@@ -29,6 +31,7 @@ which php		执行命令所在目录
 commad ; commad    多条命令之间用 ;  连接
 
 tail -f /data/www/run.log/   不断刷新日志输入
+
 
 ```
 ## 设置别名 [alias]
