@@ -2,7 +2,7 @@
 
 主要涉及一下内容
 
-- Python
+ - Python
  - javascript
  - PHP
  - 服务器
