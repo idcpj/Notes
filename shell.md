@@ -45,7 +45,7 @@ VBird Tsai   <==嘿嘿！有资料产生喔！
 
 ## 对谈式脚本
 
-```
+```bash
 [dmtsai@study bin]$ vim showname.sh 
 #!/bin/bash
 # Program:
@@ -67,7 +67,7 @@ echo -e "\nYour full name is: ${firstname} ${ lastname}" #结果由萤幕输出
 不为空 输出`1` 为空 `0`
 
 判断相等
-```
+```bash
 read -p "Please input (Y/N): " yn
 [ "${yn}" == "Y" -o "${yn}" == "y" ] && echo "OK, continue" && exit 0
 [ "${yn}" == "N" -o "${yn}" == "n" ] && echo "Oh, interrupt!" && exit 0
@@ -80,7 +80,7 @@ echo "I don't know what your choice is" && exit 0
 在中括号内的常数，最好都以单或双引号括号起来。
 
 ### 命令行中传参数
-```
+```bash
 echo "The script name is ==> ${0}"
 echo "Total parameter number is ==> $#"
 [ "$#" -lt 2 ] && echo "The number of parameter is less than 2. Stop here." && exit 0
@@ -116,7 +116,7 @@ if [条件判断式]; then
 fi    <==将if反过来写，就成为fi啦！结束if之意！
 ```
 单提条件判断
-```
+```bash
 read -p "Please input (Y/N): " yn
 
 if [ "${yn}" == "Y" ] || [ "${yn}" == "y" ]; then
@@ -131,7 +131,7 @@ echo "I don't know what your choice is" && exit 0
 ```
 
 多条件判断
-```
+```bash
 read -p "Please input (Y/N): " yn
 
 if [ "${yn}" == "Y" ] || [ "${yn}" == "y" ]; then
@@ -144,7 +144,7 @@ fi
 ```
 
 ### case ..... esac
-```shell
+```bash
 case $变数名称in    <==关键字为case ，还有变数前有钱字号 
   "第一个变数内容" )    <==每个变数内容建议用双引号括起来，关键字则为小括号)
 	程式段
