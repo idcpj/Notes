@@ -175,7 +175,7 @@ case ${1} in
 esac
 ```
 
-### for...do...done 
+### for...do...done 的固定循环
 
 ```
 
@@ -193,3 +193,39 @@ do
 done
 ```
 一次输出`dog `,`cat`,`elephant`
+
+### for...do...done 的数值处理
+
+```
+for ((初始值;限制值;执行步阶))
+do
+	程式段
+done
+```
+demo
+```
+read -p "Please input a number, I will count for 1+2+...+your_input: " nu
+
+s=0
+for (( i=1; i<=${nu}; i=i+1 ))
+do
+	s=$((${s}+${i}))
+done
+echo "The result of '1+2+3+...+${nu}' is ==> ${s}"
+```
+
+### shell script 的追踪与debug
+```
+
+[dmtsai@study ~]$ sh [-nvx] scripts.sh 
+选项与参数：
+-n ：不要执行script，仅查询语法的问题；
+-v ：再执行sccript 前，先将scripts 的内容输出到萤幕上；
+-x ：将使用到的script 内容显示到萤幕上，这是很有用的参数！
+```
+demo 
+```
+按步执行
+sh -x demo1.sh 
+
+```
