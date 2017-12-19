@@ -31,6 +31,7 @@
     * [Bash](Bash.md)
     * [git](git.md)
     * [Nginx](Nginx.md)
+    * [Mac配置php环境](Mac配置php环境.md)
 * [前端](前端.md)
     * [微信小程序](微信小程序.md)
     * [Vue](Vue.md)
