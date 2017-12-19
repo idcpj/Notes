@@ -174,3 +174,22 @@ case ${1} in
 	;;
 esac
 ```
+
+### for...do...done 
+
+```
+
+for var in con1 con2 con3 ...
+do
+	程式段
+done
+```
+
+demo
+```
+for animal in dog cat elephant
+do
+	echo "There are ${animal}s.... "
+done
+```
+一次输出`dog `,`cat`,`elephant`
