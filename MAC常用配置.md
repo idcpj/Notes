@@ -36,8 +36,6 @@ brew cask install quicklook-pat		//预览Adobe Photoshop图案文件
 
 **iterm2**    更好的命令行窗口	[官网](http://www.iterm2.com/)
 
-
-
 **Oh my zsh**    拥有大量的有用的功能，助手，插件，主题，等特性的命令行工具插件	 [官网](http://ohmyz.sh/) 
 
 
@@ -63,3 +61,5 @@ brew cask install quicklook-pat		//预览Adobe Photoshop图案文件
 **Charles Mac**   用于HTTP信息抓包工具
 
 **CodeRunner**   无需安装环境直接运行各种语言代码
+
+## 其他配置
