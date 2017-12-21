@@ -5,7 +5,7 @@
 ## 环境配置
 `sudo vim /etc/apache2/httpd.conf`
 
-注释
+取消注释
 
 `＃LoadModule php5_module libexec/apache2/libphp5.so`
 
