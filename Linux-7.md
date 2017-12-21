@@ -40,6 +40,8 @@ tail -f /data/www/run.log/   不断刷新日志输入
 alias www='cd /var/www' 
 ```
 -  永久别名
+
+> 更改~/.bashrc或/etc/bashrc，前者是针对单用户，后者针对全局用户
 ```
 vim /etc/profile.d/alias_bash.sh
 #内容
