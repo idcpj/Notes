@@ -20,6 +20,12 @@
 
     ```
  	config.vm.synced_folder ".","/vagrant",type:"virtualbox"
+    
+    //如果是没有同步没有权限的文件用如下方法 (适合window)
+    config.vm.synced_folder "bin", "/usr/local/bin", type: "rsync",
+    rsync__exclude: ".git/",
+    rsync__args: ["--verbose", "--rsync-path='sudo rsync'", "--archive", "--delete", "-z"]
+    
      #这种方式可以用主机上的mysql管理软件连接虚拟机的mysql
 	config.vm.network "public_network", ip: "192.168.0.17"
     ``` 
