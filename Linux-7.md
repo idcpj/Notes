@@ -32,6 +32,7 @@ commad ; commad    多条命令之间用 ;  连接
 
 tail -f /data/www/run.log/   不断刷新日志输入
 
+[vagrant@localhost src]$ LANG="zh_CN.UTF-8"	#临时切换为中文环境
 
 ```
 ## 设置别名 [alias]
