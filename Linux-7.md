@@ -104,6 +104,8 @@ vim /etc/motd
 ```
 
 ## 文件/文件夹权限
+
+
 ### chgrp 改变组
 ```
 -rw-rw-r--. 1 vagrant vagrant 15 Aug 17 08:34 test

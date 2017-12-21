@@ -20,6 +20,7 @@
 
     ```
  	config.vm.synced_folder ".","/vagrant",type:"virtualbox"
+     #这种方式可以用主机上的mysql管理软件连接虚拟机的mysql
 	config.vm.network "public_network", ip: "192.168.0.17"
     ``` 
     
