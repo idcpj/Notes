@@ -43,5 +43,6 @@
     * [常用软件列表](常用软件列表.md)
     * [MAC常用配置](MAC常用配置.md)
         * [Mac配置php环境](Mac配置php环境.md)
+        * [MAC 配置 shadowsocks](MAC配置shadowsocks.md)
 * [App端](App端.md)
     * [react-native](react-native.md)
