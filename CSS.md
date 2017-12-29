@@ -22,9 +22,14 @@
 
 **justify-content   项目在主轴的方向**
 `flex-start | flex-end | center | space-between (两端对齐) | space-around(每个项目两侧的间隔相等);`
+![justify-content](images/20171229_135448.jpg =200x300)
+
+---
 
 **align-items  项目在交叉轴上如何对齐**
 `flex-start | flex-end | center | baseline | stretch;`
+![align-items](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071011.png =200x200)
+---
 ### 项目属性
 **flex-grow 所占比例**
 `flex-grow: <number>; /* default 0 */`
