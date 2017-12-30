@@ -63,3 +63,12 @@ brew cask install quicklook-pat		//预览Adobe Photoshop图案文件
 **CodeRunner**   无需安装环境直接运行各种语言代码
 
 ## 其他配置
+### 永久配置别名
+`vim ~/.bashrc`
+输入内容
+```
+alias ll='ls -l'
+alias la='ls -la'
+```
+执行生效
+`source .bashrc`
