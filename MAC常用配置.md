@@ -72,3 +72,11 @@ alias la='ls -la'
 ```
 执行生效
 `source .bashrc`
+如果不行
+```
+~/.bash_profile
+#在里面加入一行：
+source ~/.bashrc
+```
+>`.bash_profile`文件是用户登陆终端的时候会自动执行的文件
+`······```···

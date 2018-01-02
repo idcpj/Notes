@@ -29,7 +29,6 @@
 **align-items  项目在交叉轴上如何对齐**
 `flex-start | flex-end | center | baseline | stretch;`
 ![align-items](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071011.png =200x200)
----
 ### 项目属性
 **flex-grow 所占比例**
 `flex-grow: <number>; /* default 0 */`
