@@ -45,5 +45,6 @@
         * [Mac配置php环境](Mac配置php环境.md)
         * [MAC 配置 shadowsocks](MAC配置shadowsocks.md)
         * [Mac 配置 Python 和Python3](Mac配置Python和Python3.md)
+        * [Sublime Text配置](SublimeText配置.md)
 * [App端](App端.md)
     * [react-native](react-native.md)
