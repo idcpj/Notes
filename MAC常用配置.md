@@ -25,7 +25,6 @@ brew cask install qlcolorcode    //在预览源代码文件，高亮代码
 brew cask install qlmarkdown		//Markdown文件转换成静态页面预览
 brew cask install quicklook-json  		//格式化预览JSON文件
 brew cask install quicklook-csv       //预览.CSV文件
-brew cask install betterzipql			// 预览BetterZip软件的压缩格式文件
 brew cask install qlimagesize		//显示图像大小和分辨率
 brew cask install quicklook-pat		//预览Adobe Photoshop图案文件
 ```
@@ -52,11 +51,7 @@ brew cask install quicklook-pat		//预览Adobe Photoshop图案文件
 
 **BetterZip 3**     压缩解压缩工具支持格式 ZIP、TAR、TGZ、TBZ、TXZ (new)、7-ZIP、RAR。
 
-**The Unarchiver**   解压许多不同种类的归档压缩文件。 Open-Source Software Freeware
-
 **Alfred**   效率神器
-
-**ShiftIt**   窗口位置和大小管理软件。
 
 **Charles Mac**   用于HTTP信息抓包工具
 
@@ -65,13 +60,8 @@ brew cask install quicklook-pat		//预览Adobe Photoshop图案文件
 ## 其他配置
 ### 永久配置别名
 `vim ~/.bashrc`
-输入内容
-```
-alias ll='ls -l'
-alias la='ls -la'
-```
-执行生效
-`source .bashrc`
+输入内容`alias ll='ls -l'`
+执行生效`source .bashrc`
 如果不行
 ```
 ~/.bash_profile
@@ -79,4 +69,3 @@ alias la='ls -la'
 source ~/.bashrc
 ```
 >`.bash_profile`文件是用户登陆终端的时候会自动执行的文件
-`······```···
