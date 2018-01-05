@@ -33,7 +33,7 @@
 plugins=(  git autojump osx)
 ```
 **git**
-例如 gco=’git checkout’、gd=’git diff’、gst=’git status’、g=’git’等等，熟练使用可以大大减少 git 的命令长度，命令内容可以参考~/.oh-my-zsh/plugins/git/git.plugin.zsh
+例如 `gco=’git checkout’、gd=’git diff’、gst=’git status’、g=’git’`等等，命令内容可以参考`~/.oh-my-zsh/plugins/git/git.plugin.zsh`
 
 **os**
 tab 增强
