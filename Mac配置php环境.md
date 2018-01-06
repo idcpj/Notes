@@ -1,6 +1,6 @@
 [TOC]
 
->参考网站 [环境配置(简书)](http://cdn2.jianshu.io/p/681397e16aec) ,  [Mysql安装(简书)](http://www.jianshu.com/p/3996f6a2fa45)
+>参考网站 [环境配置](http://www.devzhang.com/14526754330295.html)
 
 ## 环境配置
 `sudo vim /etc/apache2/httpd.conf`
