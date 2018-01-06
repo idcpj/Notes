@@ -27,6 +27,7 @@ brew cask install quicklook-json  		//格式化预览JSON文件
 brew cask install quicklook-csv       //预览.CSV文件
 brew cask install qlimagesize		//显示图像大小和分辨率
 brew cask install quicklook-pat		//预览Adobe Photoshop图案文件
+brew cask install launchrocket      //在系统偏好设置即可启动apache,mysql等
 ```
 
 
@@ -56,6 +57,7 @@ brew cask install quicklook-pat		//预览Adobe Photoshop图案文件
 **Charles Mac**   用于HTTP信息抓包工具
 
 **CodeRunner**   无需安装环境直接运行各种语言代码
+
 
 ## 其他配置
 ### 永久配置别名

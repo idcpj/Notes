@@ -95,6 +95,14 @@ date.timezone = PRC
 display_errors = On
 
 ```
+## brew 安装php
+[参考网站](http://www.devzhang.com/14526754330295.html)
+```
+brew update
+brew tap homebrew/php
+brew install php55
+```
+
 
 ## 安装 Mysql
 
