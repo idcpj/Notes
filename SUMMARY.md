@@ -47,5 +47,6 @@
         * [Mac 配置 Python 和Python3](Mac配置Python和Python3.md)
         * [Sublime Text配置](SublimeText配置.md)
         * [配置 Oh My Zsh+ iTerm2](配置OhMyZsh.md)
+        * [配置 Sublime Text3](配置Atom.md)
 * [App端](App端.md)
     * [react-native](react-native.md)
