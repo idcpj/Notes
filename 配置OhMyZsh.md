@@ -3,6 +3,7 @@
 > 主要流程配置 [参考网站](https://www.jianshu.com/p/7de00c73a2bb)
 > 参考配置网站[知乎](https://zhuanlan.zhihu.com/mactalk/19556676)
 >  zsh[主题预览](https://github.com/robbyrussell/oh-my-zsh/wiki/Themes#agnoster)
+>  开源项目[github-oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 
 
 ## 前期
