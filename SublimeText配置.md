@@ -21,7 +21,8 @@
 	高亮括号配对
 3. ChineseLocalization
 	中文补丁
-    
+4. ini
+	ini语法高亮
     
 ## 快捷键
 
