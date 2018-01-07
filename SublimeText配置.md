@@ -19,6 +19,8 @@
 1. Emmet
 2. BracketHighlighter
 	高亮括号配对
+3. ChineseLocalization
+	中文补丁
     
     
 ## 快捷键
