@@ -43,6 +43,7 @@
     * [常用软件列表](常用软件列表.md)
     * [MAC常用软件及简单配置](MAC常用配置.md)
         * [Mac配置php环境](Mac配置php环境.md)
+            * [phpstrom 配置 xdebug](phpstrom配置xdebug.md)
         * [MAC 配置 shadowsocks](MAC配置shadowsocks.md)
         * [Mac 配置 Python 和Python3](Mac配置Python和Python3.md)
         * [Sublime Text配置](SublimeText配置.md)
