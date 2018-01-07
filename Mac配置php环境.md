@@ -1,7 +1,7 @@
 [TOC]
 
 >参考网站 [环境配置](http://www.devzhang.com/14526754330295.html)
->参考二[brew 安装环境](http://www.phpfensi.com/php/20150414/9254.html)
+>参考二[brew 安装环境多php版本](http://www.phpfensi.com/php/20150414/9254.html)
 
 ## 安装软件
 ```
