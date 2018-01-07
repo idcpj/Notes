@@ -86,15 +86,12 @@ DocumentRoot "/Users/MyMacName/Web"
 </VirtualHost>
 
 <VirtualHost *:80>
-    DocumentRoot "/Users/idpcj/Web/demo"
-    ServerName www.demo.com
-    <Directory "/Users/idcpj/Web/demo">
-    Options Indexes
-    AllowOverride None
-    Order deny,allow
-    Allow from all
-    </Directory>
- </VirtualHost>
+    ServerAdmin webmaster@dummy-host.example.com
+    DocumentRoot "/Users/idcpj/Web/demo"
+    ServerName  www.demo.com
+    ErrorLog "/Users/idcpj/Web/demo/error.log"
+    CustomLog "/Users/idcpj/Web/demo/CustomLog.log" common
+</VirtualHost>
 ```
 
 编辑host
