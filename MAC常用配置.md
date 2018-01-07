@@ -27,7 +27,8 @@ brew cask install quicklook-json  		//格式化预览JSON文件
 brew cask install quicklook-csv       //预览.CSV文件
 brew cask install qlimagesize		//显示图像大小和分辨率
 brew cask install quicklook-pat		//预览Adobe Photoshop图案文件
-brew cask install BetterZipQL
+brew cask install betterzipQL      //预览压缩文件
+brew cask install qlimagesize   //标题栏中显示图片分辨率及文件大小
 brew cask install launchrocket      //在系统偏好设置即可启动apache,mysql等
 ```
 

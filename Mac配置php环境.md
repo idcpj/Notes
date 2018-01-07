@@ -80,6 +80,11 @@ DocumentRoot "/Users/MyMacName/Web"
 
 站点实例
 ```
+<VirtualHost _default_:80>
+    DocumentRoot "/Users/idcpj/Web"
+    ServerName  localhost
+</VirtualHost>
+
 <VirtualHost *:80>
     DocumentRoot "/Users/idpcj/Web/demo"
     ServerName www.demo.com
