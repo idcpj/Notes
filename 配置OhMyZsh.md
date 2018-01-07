@@ -63,7 +63,7 @@ alias ll='ls -l'
 alias la='ls -a'
 alias vi='vim'
 alias grep="grep --color=auto"
-alias -s gz='tar -xzvf'   
+alias -s gz='tar -xzvf'     #自动解压后缀为 gz 的压缩包
 alias -s tgz='tar -xzvf'
 alias -s zip='unzip'
 alias -s bz2='tar -xjvf'
