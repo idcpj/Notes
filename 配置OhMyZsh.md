@@ -67,4 +67,14 @@ alias -s gz='tar -xzvf'
 alias -s tgz='tar -xzvf'
 alias -s zip='unzip'
 alias -s bz2='tar -xjvf'
+alias -s html=sub   # xx.html在 sublimt 中打开,前提是设置了sub 命令
+alias -s rb=sub     # 在命令行直接输入 ruby 文件，会在 TextMate 中打开
+alias -s py=sub       # 在命令行直接输入 python 文件，会用 vim 中打开，以下类似
+alias -s js=sub
+alias -s php=sub
+alias -s css=sub
+alias -s php=sub
+alias -s c=vi
+alias -s java=vi
+alias -s txt=vi
 ```
