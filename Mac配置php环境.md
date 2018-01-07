@@ -1,17 +1,40 @@
 [TOC]
 
 >参考网站 [环境配置](http://www.devzhang.com/14526754330295.html)
+>参考二[brew 安装环境](http://www.phpfensi.com/php/20150414/9254.html)
 
-## 环境配置
-`sudo vim /etc/apache2/httpd.conf`
+## 安装软件
+```
+brew tap homebrew/apache
+brew tap homebrew/php
 
-取消注释
+brew install httpd24
+brew install php55 --with-apache --with-gmp --with-imap --with-tidy --with-debug
+brew install mysql
+```
 
-`＃LoadModule php5_module libexec/apache2/libphp5.so`
 
-添加 index.php
+
+
+## 环境apache
+`vim /usr/local/etc/apache2/2.4/httpd.conf`
 
 ```
+LoadModule php5_module /usr/local/Cellar/php5x/5.5.xx/libexec/apache2/libphp5.so
+<IfModule mod_php5.c>
+
+    AddType application/x-httpd-php .php
+    AddType application/x-httpd-php-source .phps
+
+    <IfModule mod_dir.c>
+        DirectoryIndex index.html index.php
+    </IfModule>
+</IfModule>
+
+#更改端口
+Listen 80
+
+#添加 index.php
 <IfModule dir_module>
      DirectoryIndex index.html index.php
 </IfModule>
@@ -82,10 +105,10 @@ sudo vim /private/etc/hosts
 ## php.ini 优化
 
 复制
-`sudo cp /private/etc/php.ini.default /private/etc/php.ini`
+`sudo cp /usr/local/etc/php/5.5/php.ini /usr/local/etc/php/5.5/php.ini.bank`
 
 编辑
-`sudo vim /private/etc/php.ini
+`sudo vim /usr/local/etc/php/5.5/php.ini
 `
 
 设置
@@ -95,14 +118,6 @@ date.timezone = PRC
 display_errors = On
 
 ```
-## brew 安装php
-[参考网站](http://www.devzhang.com/14526754330295.html)
-```
-brew update
-brew tap homebrew/php
-brew install php55
-```
-
 
 ## 安装 Mysql
 
