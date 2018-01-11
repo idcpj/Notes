@@ -47,7 +47,7 @@ brew cask install launchrocket      //在系统偏好设置即可启动apache,my
 
 **Klib**   全新的 Kindle、iBooks 标注管理工具。  [官网](http://klib.me/cn/)
 
-**AppCleaner**  一个小应用程序，让你彻底卸载不需要的应用程序 [官网](http://freemacsoft.net/appcleaner/)
+**AppCleaner**  彻底卸载不需要的应用程序 [官网](http://freemacsoft.net/appcleaner/)
 
 **FinderGo Finder** 中快速打开终端，定位到目录
 **Cleaner for Xcode**  Xcode 的清理工具，清理几十G应该不是问题
