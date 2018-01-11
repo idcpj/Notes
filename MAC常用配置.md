@@ -19,7 +19,7 @@
 [官网](https://brew.sh/index_zh-cn.html)
 
 ```
-brew install  mycli       //为MySQL命令行客户端，提供语法高亮和提示功能的工具
+brew install  mycli       //   mycli -uroot -proot  为MySQL命令行客户端，提供语法高亮和提示功能的工具
 brew cask install qlstephen   //可以让您查看没有文件扩展名的纯文本文件
 brew cask install qlcolorcode    //在预览源代码文件，高亮代码
 brew cask install qlmarkdown		//Markdown文件转换成静态页面预览
