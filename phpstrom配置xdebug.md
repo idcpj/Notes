@@ -6,7 +6,7 @@
 brew install php55-xdebug
 ```
 
-在`/usr/local/etc/php/5.5/php.ini`
+在`/usr/local/etc/php/5.5/conf.d/ext-xdebug.ini`
 
 ```
 [xdebug]
