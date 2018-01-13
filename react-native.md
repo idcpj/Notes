@@ -10,6 +10,8 @@
 如果自动下载`gradle-2.14.1-all.zip`[下载](http://services.gradle.org/distributions/gradle-2.14.1-all.zip)失败,请手动
 文件安装位置
 `C:\Users\cc\.gradle\wrapper\dists\gradle-2.14.1-all\8bnwg5hd3w55iofp58khbp6yv`
+mac 安装位置
+`/Users/idcpj/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/`
 
 **推荐虚拟机**
 下载[genymotion](https://www.genymotion.com/download/)并下载5.1安卓版本的
@@ -25,3 +27,4 @@
 虚拟机双击`r`可刷新状态
 
 ## 技巧
+1. 摇一摇手机,打开`enable Live Reload`
