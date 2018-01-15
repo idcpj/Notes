@@ -8,6 +8,7 @@
 使用命令备份时,需要注意的地方.
 1. 文件权限是否限制
 2. 如果php输出地方为相对路径,则保存的地方在 服务器 cd ~ 目录下,所以务必使用 绝对路径
+
 >定时备份参看 [地址](https://www.kancloud.cn/martist/ma_zhao_liu/373726)
 
 ## https双向认证
@@ -43,7 +44,7 @@
 
 ## 非静态方法转静态
 ```
-//在方法中加入 newstatic()
+//在方法中加入 new static()
 public static function queryOneTrans($paramData){
     $beiyi = new static();
 
