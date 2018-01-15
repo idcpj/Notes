@@ -21,6 +21,7 @@
     * [Composer使用及创建](Composer.md)
     * [redis](redis.md)
     * [Memcached](Memcached.md)
+    * [flush-刷新缓存](flush-刷新缓存.md)
 * [服务器](服务器.md)
     * [Linux/7](Linux-7.md)
         * [shell](shell.md)
