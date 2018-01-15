@@ -5,6 +5,7 @@
  1. 官方文档
 [开发文档](http://reactnative.cn/docs/0.50/getting-started.html#content)
 2. 推荐可视化 react-natice 工具 [DECO](https://www.decoide.org/)
+3. phpstrom 安装 `React Native Console` 插件
 ## 安装
 
 参考文档 [搭建开发环境](http://reactnative.cn/docs/0.50/getting-started.html#content)
