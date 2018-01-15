@@ -13,6 +13,7 @@
     * [web.py框架](web.py.md)
     * [Django框架](Django框架.md)
 * [js/jQuery](JavaScript.md)
+    * [Jquery](Jquery.md)
 * [PHP](PHP.md)
     * [配置webhook.php](配置webhook.md)
     * [TP5](TP5.md)
