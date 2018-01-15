@@ -13,12 +13,17 @@
 mac 安装位置
 `/Users/idcpj/.gradle/wrapper/dists/gradle-2.14.1-all/8bnwg5hd3w55iofp58khbp6yv/`
 
-**推荐虚拟机**
-下载[genymotion](https://www.genymotion.com/download/)并下载5.1安卓版本的
+## MAC 准备工作
 
->初始化项目后检查是否有设备(虚拟机或真机)连接 `adb  devices`
->启动`react-native run-android`
->推荐IED ` Webstorm`或`PHPStrom`
+启动Xcode，并在Xcode | Preferences | Locations菜单中检查一下是否装有某个版本的Command Line Tools
+
+Mac 的ios虚拟机 使用`commamd + d` 打开调试界面
+
+## android 准备工作
+
+在命令行中启动虚拟机
+`emulator -avd a7`  -a7 为虚拟机名
+
 
 
 ## 测试技巧

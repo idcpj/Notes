@@ -58,3 +58,11 @@ public static function queryOneTrans($paramData){
 //demo
 BeiyiYanZheng::queryOneTrans($paramData);
 ```
+
+## 重要操作避免程序操作超时或断开
+```
+ini_set("max_execution_time", 0);
+set_time_limit(0);
+ini_set('memory_limit', '128M');
+ignore_user_abort(true);
+```
