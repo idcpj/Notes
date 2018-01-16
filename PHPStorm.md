@@ -78,4 +78,5 @@ http://idea.liyang.io
 |  `Ctrl + Alt + ->` |   与剪切板对比 |
 |`ctrl+shift+n`| 搜索文件位置|
 | `ctrl+n`|    更多功能,如给属性添加Getters and Setters |
+|`ctrl+shift+alt+n`| 快速打开指定的方法|
 
