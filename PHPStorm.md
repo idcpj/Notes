@@ -76,4 +76,6 @@ http://idea.liyang.io
 |  `CTRL+T ` |   翻译英文 |
 |  `Alt+Shift+D` |   与剪切板对比 |
 |  `Ctrl + Alt + ->` |   与剪切板对比 |
+|`ctrl+shift+n`| 搜索文件位置|
+| `ctrl+n`|    更多功能,如给属性添加Getters and Setters |
 
