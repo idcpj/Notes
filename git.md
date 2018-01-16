@@ -17,7 +17,7 @@ $ git config --global user.email "schacon@gmail.com"
 ### 新建项目
 ` git init`    初始化
 `git status`  查看状态
-`git add .` or `git add filename` 	 添加所有/`filename`文件
+`git add .` /  `git add filename` 	 添加所有 / `filename`文件
 ` git commit -m "提交说明"`    添加到本地仓库
 `git remote add origin https://github.com/idcpj/shiyanlou.git`   连接到远程服务器
 `git push origin master`  推送到远程服务器
