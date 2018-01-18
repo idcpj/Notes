@@ -73,7 +73,7 @@ au FileType java,php setl tabstop=4
 set hlsearch
 
 " 检测文件的类型
-filetype on
+filetype off
 filetype plugin on
 filetype indent on
 
@@ -114,7 +114,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-
+Plugin 'gmarik/Vundle.vim'
 " Plugin 'tpope/vim-surround'
 " Plugin 'scrooloose/nerdtree'
 Plugin 'Lokaltog/vim-powerline'
@@ -125,3 +125,21 @@ call vundle#end()
 filetype plugin indent on
 
 ```
+
+## YouCompleteMe 代码提示插件
+
+`brew install macvim`
+在当前shell中 如：“.zshrc”
+`alias vim='mvim -v'`
+1. 在 .vimrc 中添加如下内容。位置在 call vundle#begin() 和 call vundle#end() 之间。
+`Bundle 'Valloric/YouCompleteMe'`
+2. 安装YouCompleteMe
+`brew install CMake`
+3. 在vim中使用`:BundleInstall`
+4. 编译YouCompleteMe，可选择哪些语言代码不全
+```
+cd ~/.vim/bundle/YouCompleteMe
+./install.py --help
+./install.py --all    #安装全部
+```
+
