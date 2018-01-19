@@ -14,6 +14,7 @@
     * [Django框架](Django框架.md)
 * [js/jQuery](JavaScript.md)
     * [Jquery](Jquery.md)
+        * [jQuery插件](jQuery插件.md)
 * [PHP](PHP.md)
     * [配置webhook.php](配置webhook.md)
     * [TP5](TP5.md)
