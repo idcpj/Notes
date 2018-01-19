@@ -55,4 +55,5 @@
         * [配置 Sublime Text3](配置Atom.md)
         * [MAC 配置 Vim](MAC配置Vim.md)
 * [App端](App端.md)
-    * [react-native](react-native.md)
+    * [react-native-配置](react-native.md)
+        * [基础知识](基础知识.md)
