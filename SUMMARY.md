@@ -33,6 +33,7 @@
     * [Nginx](Nginx.md)
     * [Docker](Docker.md)
     * [Apache-伪静态和重定向](Apache-伪静态和重定向.md)
+    * [搭建shadowsocksR](搭建shadowsocksR.md)
 * [前端](前端.md)
     * [微信小程序](微信小程序.md)
     * [Vue](Vue.md)
