@@ -43,6 +43,13 @@ git fetch --all
 git reset --hard origin/master
 
 ```
+### 回退版本
+
+`git reset --hard HEAD^` 回退上一个版本
+`git reset --hard HEAD^^` 回退上上一个版本
+`git reset --hard HEAD~100` 回退上100一个版本
+
+
 
 
 >'*' 星号标识了你当工作在哪个分支下
