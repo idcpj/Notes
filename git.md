@@ -48,8 +48,8 @@ git reset --hard origin/master
 `git reset --hard HEAD^` 回退上一个版本
 `git reset --hard HEAD^^` 回退上上一个版本
 `git reset --hard HEAD~100` 回退上100一个版本
-
-
+`git reset --hard 3628164`  回退到commit id  的 ommit id只需写前几位,`git log` 可查看你commit id
+要重返未来，用git reflog查看命令历史，以便确定要回到未来的哪个版本。
 
 
 >'*' 星号标识了你当工作在哪个分支下
