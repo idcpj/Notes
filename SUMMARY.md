@@ -56,6 +56,7 @@
         * [配置 Oh My Zsh+ iTerm2](配置OhMyZsh.md)
         * [配置 Sublime Text3](配置Atom.md)
         * [MAC 配置 Vim](MAC配置Vim.md)
+    * [Intellij IDEA](IntellijIDEA.md)
 * [App端](App端.md)
     * [react-native-配置](react-native.md)
         * [基础知识](基础知识.md)
