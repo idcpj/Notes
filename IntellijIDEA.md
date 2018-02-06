@@ -6,7 +6,7 @@
 ## 创建项目
 文件->new->java 模块->选择Project SDK（如何没有new一个新的 选择到目录即可）->create project from template
 
-## 技巧
+## table 技巧
 |代码|效果|
 |---|---|
 |`main`| `public static void main(String[] args) {    }`|
@@ -16,3 +16,9 @@
 |`"hello word".sout`  | `System.out.println("hello word");`|
 |`values.iter`|`for (String value : values) {        }`|
 |`100.fori`|`for (int i = 0; i < 100; i++) { }`|
+
+
+## Alt+Enter 技巧
+|代码|选项|效果|
+|---|---|
+|`System.out.println("name："+name+",age："+age);`|Replace'+'with'String.format()'|`System.out.printf("name：%s,age：%d%n", name, age);`|
