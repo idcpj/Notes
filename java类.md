@@ -26,3 +26,23 @@ public class UserForMe {
 ## 方法的重载
 同一个类中包含了两个以上方法名相同、方法参数的个数、顺序或类型不同的方法，则称为方法的重载
 当调用被重载的方法时， Java 会根据参数的个数和类型来判断应该调用哪个重载方法，参数完全匹配的方法将被执行
+
+## static 静态方法
+```
+// Main.java
+public class Main {
+    public static void main(String[] args) {
+        System.out.println(UserForMe.from);  //china
+        System.out.println(UserForMe.sayHello()); //hello word
+    }
+
+}
+
+//UserForMe.java
+public class UserForMe {
+    static String from="china";
+    public static String sayHello() {
+        return "hello word";
+    }
+}
+```
