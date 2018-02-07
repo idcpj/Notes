@@ -23,10 +23,18 @@
 |---|---|
 |`System.out.println("name："+name+",age："+age);`|Replace'+'with'String.format()'|`System.out.printf("name：%s,age：%d%n", name, age);`|
 
-## 条件断点
+## 调试
+### 条件断点
 ```
 //打上断点 ，并且右键断点 在条件中输入 i==50，此时，在i50时，会进行中断
 for (int i = 0; i < 100; i++) {
             System.out.println(i);
         }
+```
+### 配置调试
+在运行/调试配置中，添加程序参数
+```
+public static void main(String[] args) {
+    System.out.println(args[0]); //cpj
+}
 ```
