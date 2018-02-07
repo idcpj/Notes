@@ -92,7 +92,7 @@ public class HelloWorld {
 
 ## 内部类
 
-1. 调用内部类
+### 调用内部类
 要使用内部类,需要首先对主类进行实例化,在实例化内部类
 ```
 //外部类HelloWorld
@@ -115,7 +115,7 @@ public class HelloWorld {
 	}
 }
 ```
-2. 内部类调用外部类属性
+### 内部类调用外部类属性
 如何具有相同属性,内部类需要加`this`,进行访问
 ```
 public class Inner {
@@ -128,3 +128,30 @@ public class Inner {
     }
 }
 ```
+
+### 静态内部类
+```
+public class HelloWorld {
+    private static int score = 84;
+    
+    // 创建静态内部类
+	public static class SInner {
+        int score = 91;
+        
+		public void show() {
+			System.out.println("访问外部类中的score：" +  HelloWorld.score);  //调用外部类
+			System.out.println("访问内部类中的score：" + score);
+		}
+	}
+
+	// 测试静态内部类
+	public static void main(String[] args) {
+        SInner si = new SInner();
+		si.show();
+	}
+}
+```
+
+### 方法内部类
+内部类定义在外部方法中
+
