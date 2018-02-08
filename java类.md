@@ -154,4 +154,28 @@ public class HelloWorld {
 
 ### 方法内部类
 内部类定义在外部方法中
-
+```
+public class HelloWorld {
+    private String name = "爱慕课";
+    
+    public void show() { 
+		// 定义方法内部类
+		class MInner {
+			int score = 83;
+			public int getScore() {
+				return score + 10;
+			}
+		}
+        
+        MInner mi = new MInner();
+		int newScore = mi.getScore();
+		System.out.println("姓名：" + name + "\n加分后的成绩：" + newScore);
+	}
+    
+	// 测试方法内部类
+	public static void main(String[] args) {
+        HelloWorld  mo = new HelloWorld();
+		mo.show();
+	}
+}
+```
