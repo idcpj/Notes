@@ -24,6 +24,7 @@
     * [java 数组](java数组.md)
     * [java 类](java类.md)
     * [java 包](java包.md)
+    * [java 异常](java异常.md)
 * [服务器](服务器.md)
     * [Linux/7](Linux-7.md)
         * [shell](shell.md)

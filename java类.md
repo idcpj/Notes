@@ -179,3 +179,100 @@ public class HelloWorld {
 	}
 }
 ```
+## final 关键字
+1. 修饰变量 ->变量的值只能赋值一次,常量
+2. 修饰类->该类不允许被继承
+3. 修饰方法->该方法不允许被覆盖
+4. 修饰属性->  二选一(类的初始化必须有值或者构造方法中赋值)
+
+## super关键字
+1. 可以调用父类的属性 `super.age`
+2. 可以调用父类的方法 `super.eat()`
+3. 调用子类的构造方法相当于隐式的在子类构造方法中调用``super()`
+```java
+public Dofg(){
+	super();
+    System.out.println("hello word")
+}
+```
+
+## Object()类
+所有类的父类
+常用Object类中的方法
+
+**toString()**
+print 直接打印出是类的内存地址
+
+**equals()  - 比较两个类的是否指向同一个内存地址**
+```
+Dog dog  = new Dog();
+Dog dog2  = new Dog();
+//返回false,因为内存地址不相同 类似dog ==dog2
+if(dog.equals(dog2)){
+	return true;
+}else{
+	return false;
+}
+```
+
+## 多态
+1. 引用多态
+```
+public static void main(String[] args){
+	Animal obj1 = new Animal(); //父类的应用指向本类
+    Animal obj2 = new Dog();  //父类的应用指向子类
+    Dog obj3 = new Animal();  //子类应用父类错误
+}
+```
+2. 方法多态
+3. 应用类型转换
+向上类型转换(隐私/自动类型转换),是小类型到大类型的转换
+向下类型转换(强制类型转换),大类型到小类型
+```
+Dog dog = new Dog();
+Animal animal = dog; // 自动类型提升,向上转换
+Dog dog2 = (Dog) animal; //向下类型转换 强制类型转换
+
+//Cat cat = (Cat) animal;  因为不存在Cat 类,所以转换失败
+//可以通过 Instanceof 做判断
+
+if ( animal instanceof Cat){
+	Cat cat = (Cat) animal;
+}else{
+	System.out.println("无法进行类型转换");
+}
+
+//为了保证程序的安全性 类型转换时,都时候instanceof 做验证
+if(animal instanceof Dog ){
+	Dog dog2 = (Dog) animal; 
+}else{
+	//todo
+}
+```
+
+## 接口
+1. 普通继承
+```
+public class SmartPhone extends Telphone implementsIPlayGame{
+	//todo
+}
+```
+2. 匿名内部类
+```
+// 方法一
+IPlayGame ip3 = new IPlayGame(){
+	public void playGame(){
+    	System.out.println("使用匿名内部类实现接口")
+    }
+}
+ip3.playGame();
+
+//方法二
+new IPlayGame{
+	public void playGame(){
+    	System.out.println("使用匿名内部类实现接口");
+    }
+}.playGame();
+
+```
+
