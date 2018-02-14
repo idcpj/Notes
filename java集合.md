@@ -77,6 +77,9 @@ public class Listtest {
         //删除
         coursesToSelect.remove(1);
         
+        //排序
+        Collections.sort(coursesToSelect);
+        
          //批量删除
         Course[] courses = {(Course) coursesToSelect.get(0), (Course) coursesToSelect.get(3)};
         coursesToSelect.removeAll(Arrays.asList(courses));
