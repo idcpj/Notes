@@ -300,4 +300,17 @@ int i =2;
 Integer m = new Integer(5);
 Inter n = new Integer("8");
 ```
-
+### Java 中基本类型和包装类之间的转换
+在 JDK1.5 引入自动装箱和拆箱的机制后
+1. 装箱
+```
+int i =10;
+Integer x = new Integer(i); //手动装箱
+Integer y = i;  //自动装箱
+```
+2. 拆箱
+```
+Integer j = new Ineger(8);
+int m = j.intValue();//手动拆为int类型
+int n = 5+j; //自动拆为int类型
+```
