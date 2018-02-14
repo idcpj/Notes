@@ -4,6 +4,8 @@
 存储一个元素集合
 Collection接口又有3种子类型，List、Set和Queue
 ### List-有序
+[简书参考网址](https://www.jianshu.com/p/25aa92f8d681)
+
 对于需要快速插入，删除元素，应该使用LinkedList。
 对于需要快速随机访问元素，应该使用ArrayList。
 对于“单线程环境” 或者 “多线程环境，但List仅仅只会被单个线程操作”，此时应该使用非同步的类(如ArrayList)。
@@ -62,6 +64,15 @@ public class Listtest {
         
         //修改List的元素
         coursesToSelect.set(3,new Course("7","Php"));
+        
+        //比较
+		//从Course 中取出的返回为true
+        Course course = lists.get(0);
+        System.out.println(lists.contains(course));//true
+        //new 的值返回为false
+        System.out.println(lists.contains(new Course("1","php")));//false ,
+        //如果类型为字符串，整数等类型，则可以lists.contains("hello")
+        
         
         //删除
         coursesToSelect.remove(1);
@@ -162,6 +173,7 @@ for (String s: set) {
 
 
 ## Map - 键值对
+[简书参考网址](https://www.jianshu.com/p/5f9ba40fbc4d);
 ```
 //赋值
 HashMap<Integer,String> h = new HashMap<Integer,String>();
@@ -182,5 +194,10 @@ maps.remove(1);
 
 //修改
 maps.put(3,"hello word");
-## 
+
+//是否有某个key值
+maps.containsKey(3);
+
+//是否包含某个value值
+maps.containsValue("heihei")；
 ```
