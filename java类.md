@@ -276,3 +276,28 @@ new IPlayGame{
 
 ```
 
+## 包装类
+例如 int、float、double、boolean、char 等。基本数据类型是不具备对象的特性的，为了让基本数据类型也具备对象的特性， Java 为每个基本数据类型都提供了一个包装类
+|基本类型| 对应到包装类|
+|---|---|
+|byte|Byte|
+|short|Short|
+|int|Integer|
+|long|Long|
+|float|Float|
+|double|Double|
+|char|Charcter|
+|boolean|Boolean|
+
+如 Integer类型
+两个构造方法
+|构造方法|说明|
+|---|---|
+|`Integer (int value)`| 创建一个Integer对象，表示指定到int值|
+|`Integer (String s)`|创建一个Integer对象，表示String参数所指示到int值|
+```
+int i =2;
+Integer m = new Integer(5);
+Inter n = new Integer("8");
+```
+
