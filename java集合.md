@@ -1,9 +1,16 @@
 [TOC]
 
-## Collection
+## Collection  -数组
 存储一个元素集合
 Collection接口又有3种子类型，List、Set和Queue
 ### List-有序
+对于需要快速插入，删除元素，应该使用LinkedList。
+对于需要快速随机访问元素，应该使用ArrayList。
+对于“单线程环境” 或者 “多线程环境，但List仅仅只会被单个线程操作”，此时应该使用非同步的类(如ArrayList)。
+```java
+LinkedList linkedList = new LinkedList();
+ArrayList arrayList = new ArrayList();
+```
 ```
 //设置Course 类
 public class Course {
@@ -154,5 +161,26 @@ for (String s: set) {
 ```
 
 
-## Map
-存储键/值对映射
+## Map - 键值对
+```
+//赋值
+HashMap<Integer,String> h = new HashMap<Integer,String>();
+h.put(3, "heihei");
+h.put(4, "haha");
+h.put(8, "xyy");
+
+//for循环
+Set<Integer> s = h.keySet();  //获取所有key
+for(Integer i:s){
+    System.out.println(i+","+h.get(i));
+}
+//java8中的lamda表达式
+map.forEach((k,v)->System.out.println( k + " : " + v));
+
+//删除
+maps.remove(1);
+
+//修改
+maps.put(3,"hello word");
+## 
+```
