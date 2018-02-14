@@ -78,7 +78,7 @@ public class Listtest {
         coursesToSelect.remove(1);
         
         //排序
-        Collections.sort(coursesToSelect);
+        Collections.sort(coursesToSelect); //只能排字符串，整数范型 ，排列方式 0-9 -> A-Z -> a-z
         
          //批量删除
         Course[] courses = {(Course) coursesToSelect.get(0), (Course) coursesToSelect.get(3)};
@@ -89,6 +89,8 @@ public class Listtest {
 
 
 #### 范型
+即“参数化类型
+
 1. 不使用范型
 ```
 public List coursesToSelect;
@@ -203,4 +205,52 @@ maps.containsKey(3);
 
 //是否包含某个value值
 maps.containsValue("heihei")；
+```
+
+## Comparable & Comparator
+使某个类可比较，如把**人**这个类按身高比较
+### Comparable - 默认比较规则
+1. 其实现类需实现compareTo()方法
+2. compareTo() 方法返回正数表示大，负数表示小，0表示相等
+```
+//继承 Comparable接口，并实现compareTo()方法
+public class Course implements Comparable<Course>{
+    public String id;
+    public String name;
+
+    public Course(String id,String name){
+        this.id = id;
+        this.name = name;
+    }
+
+    @Override
+    public int compareTo(Course course) {
+        return this.id.compareTo(course.id);
+    }
+}
+
+//调用
+Course cr1 = new Course("4", "数据结构");
+coursesToSelect.add(cr1); //调用List  的add方法把数据放入List中
+
+Course cr2 = new Course("2", "C语言");
+coursesToSelect.add(cr2);
+        
+Collections.sort(coursesToSelect); //注意字符串类型比较 1000 回在200 签名，是从第一个字符开始比较。
+
+```
+
+### Comparator - 临时比较规则
+1. 用于定义临时比较规则，而不是默认比较规则
+2. 其实现类需要实现compare()方法
+```
+//定义一个Comparator 类
+public class CouserComparator implements Comparator<Course> {
+    @Override
+    public int compare(Course course, Course t1) {
+        return course.id.compareTo(t1.id);
+    }
+}
+//调用
+Collections.sort(coursesToSelect,new CouserComparator());
 ```
