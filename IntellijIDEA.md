@@ -8,6 +8,7 @@
 网址 : [github](https://github.com/ewen0930/IntelliJ-IDEA-Chinese)
 
 ## 创建项目
+[参考网址](http://blog.csdn.net/qq_27093465/article/details/52795186)
 文件->new->java 模块->选择Project SDK（如何没有new一个新的 选择到目录即可）->create project from template
 
 ## table 技巧
