@@ -1,5 +1,9 @@
 [TOC]
 
+## 破解
+[简书教程](https://www.jianshu.com/p/3c87487e7121)
+[破解网站](http://idea.lanyus.com/)
+
 ## 汉化
 网址 : [github](https://github.com/ewen0930/IntelliJ-IDEA-Chinese)
 
