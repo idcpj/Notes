@@ -60,7 +60,7 @@ brew cask install launchrocket      //在系统偏好设置即可启动apache,my
 
 **CodeRunner**   无需安装环境直接运行各种语言代码
 
-**让电脑识别 NTFS **  [简书地址](https://www.jianshu.com/p/6abf7946f56b) 推荐第三个
+**让电脑识别 NTFS**  [简书地址](https://www.jianshu.com/p/6abf7946f56b) 推荐第三个
 
 ## 其他配置
 ### 永久配置别名
