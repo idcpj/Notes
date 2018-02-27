@@ -2,8 +2,7 @@
 [TOC]
 
 ## 激活地址
-http://idea.liyang.io
-
+新教程[教程地址](http://www.imsxm.com/jetbrains-license-server.html)
 ## 汉化和配置
 汉化替换lib下文件
 文件在oneDrive
