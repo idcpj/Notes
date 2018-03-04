@@ -35,12 +35,6 @@ brew cask install launchrocket      //在系统偏好设置即可启动apache,my
 
 **cakebrew**  界面版homebrew	[官网](https://www.cakebrew.com/)
 
-
-**iterm2**    更好的命令行窗口	[官网](http://www.iterm2.com/)
-
-**Oh my zsh**    拥有大量的有用的功能，助手，插件，主题，等特性的命令行工具插件	 [官网](http://ohmyz.sh/) 
-
-
 **ndm**    查看本地`npm`安装的包客户端软件 [官网](https://720kb.github.io/ndm/)
 
 **Sparkle**    可视化网页设计工具。	 [官网](https://sparkleapp.com/)  
@@ -49,20 +43,14 @@ brew cask install launchrocket      //在系统偏好设置即可启动apache,my
 
 **AppCleaner**  彻底卸载不需要的应用程序 [官网](http://freemacsoft.net/appcleaner/)
 
-**FinderGo Finder** 中快速打开终端，定位到目录
-**Cleaner for Xcode**  Xcode 的清理工具，清理几十G应该不是问题
-
-**BetterZip 3**     压缩解压缩工具支持格式 ZIP、TAR、TGZ、TBZ、TXZ (new)、7-ZIP、RAR。
-
 **Alfred**   效率神器
-
-**Charles Mac**   用于HTTP信息抓包工具
 
 **CodeRunner**   无需安装环境直接运行各种语言代码
 
 **让电脑识别 NTFS**  [简书地址](https://www.jianshu.com/p/6abf7946f56b) 推荐第三个
 
 ## 其他配置
+
 ### 永久配置别名
 `vim ~/.bashrc`
 输入内容`alias ll='ls -l'`
@@ -74,3 +62,9 @@ brew cask install launchrocket      //在系统偏好设置即可启动apache,my
 source ~/.bashrc
 ```
 >`.bash_profile`文件是用户登陆终端的时候会自动执行的文件
+
+## 多线程下载
+`brew install axel`
+
+下载 - 高速下载百度云
+`axel -n 30 http://www.demo.com`
