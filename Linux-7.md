@@ -356,6 +356,7 @@ find [PATH] [option] [action]
 例子
 find / -mtime 0                 将过去系统上面24小时内有更动过内容(mtime)的档案列出
 find /etc -newer /etc/passwd    寻找/etc底下的档案，如果档案日期比/etc/passwd新就列出 
+find -name 		搜索文件
 ```
 ![find 相关的时间参数意义](http://linux.vbird.org/linux_basic/0220filemanager/find_time.gif)
 
