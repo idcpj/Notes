@@ -16,6 +16,13 @@
 通过查看 ` vim /usr/local/bin/` 查看`python`和`pip2` 对应的但执行方式
 >可以在`/usr/local/bin/` 把2去掉
 
+## 手动创建软连接到 /usr/local/bin
+demo 
+```
+ln -s ../Cellar/python@2/2.7.14_1/bin/python2 python2    
+ln -s ../Cellar/python@2/2.7.14_1/bin/pip2 pip2
+```
+
 ## 修改执行命令的路径
 `vim /etc/path`
 ```
