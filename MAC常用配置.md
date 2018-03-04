@@ -49,6 +49,9 @@ brew cask install launchrocket      //在系统偏好设置即可启动apache,my
 
 **让电脑识别 NTFS**  [简书地址](https://www.jianshu.com/p/6abf7946f56b) 推荐第三个
 
+**Aria2GUI** 下载快速  可以突破百度云限制
+在添加任务时候选择最大连接数为30 左右
+
 ## 其他配置
 
 ### 永久配置别名
