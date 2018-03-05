@@ -34,6 +34,8 @@ tail -f /data/www/run.log/   不断刷新日志输入
 
 [vagrant@localhost src]$ LANG="zh_CN.UTF-8"	#临时切换为中文环境
 
+chmod +x test.php   ->   ./test.php  给他执行权限,可直接执行
+
 ```
 ## 设置别名 [alias]
 - 设置临时别名
