@@ -2,10 +2,10 @@
 
 ## 插件
 
-**jquery.form.js  - 表单提交**
+### jquery.form.js  - 表单提交
 [github链接](https://github.com/jquery-form/form)
 
-**lightBox  -  图片顺序预览**
+### lightBox  -  图片顺序预览
 [github链接](https://github.com/lokesh/lightbox2/)
 ```
 $("#divPics a").lightBox({
@@ -15,7 +15,7 @@ $("#divPics a").lightBox({
 })
 ```
 
-**jqzoom.js  -   图片放大**
+### jqzoom.js  -   图片放大
 ```
 $("jqzoom").jqzoom({ //绑定图片放大插件jqzoom
     zoomWidth: 123, //小图片所选区域的宽
@@ -24,5 +24,5 @@ $("jqzoom").jqzoom({ //绑定图片放大插件jqzoom
 });
 ```
 
-**contextmenu  -  右键菜单**
+### contextmenu  -  右键菜单
 [github连接](https://github.com/swisnl/jQuery-contextMenu)
