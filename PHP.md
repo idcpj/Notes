@@ -1,7 +1,7 @@
 [TOC]
 
 
->定时备份参看 [地址](https://www.kancloud.cn/martist/ma_zhao_liu/373726)
+
 
 ## https双向认证
 查看我的[github](https://github.com/idcpj/phplib/blob/master/src/Phplib/Curl.php)
@@ -44,11 +44,9 @@ BeiyiYanZheng::queryOneTrans($paramData);
 ```
 ini_set("max_execution_time", 0);
 set_time_limit(0);
-ini_set('memory_limit', '128M');
 ignore_user_abort(true);
+ini_set('memory_limit', '128M');
 ```
-
-
 
 ## 商城框架
 [Opencart](http://www.opencartchina.com/)
