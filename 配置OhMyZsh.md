@@ -43,7 +43,6 @@ tab 增强
 `brew install autojump`
 
 ## 使用技巧
-1. 兼容 bash
 2. 强大的历史纪录功能:输入cd 用上下箭头可以翻阅你执行的所有 cd 命令
 3. 能拼写纠正` cd document` ->` cd Document`
 4. 各种补全：路径补全、命令补全，命令参数补全，插件内容补全等等。

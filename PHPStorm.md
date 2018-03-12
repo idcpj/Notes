@@ -6,6 +6,7 @@
 ## 汉化和配置
 汉化替换lib下文件
 文件在oneDrive
+## mac 卡顿设置
 
 ## 连接Mysql
 >view->工具窗口->database
