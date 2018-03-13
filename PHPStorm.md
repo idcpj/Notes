@@ -31,13 +31,8 @@
         
 3. [详细教程](https://segmentfault.com/a/1190000004175313)
 设置->语言框架->php->debug->9000端口
-		
-4. 新建一个测试
 
-    点击工具栏中的调试->编辑配置
-    添加 php web Application
-    右侧server中,添加本地域名,端口号
-    start url 填写框架的入口文件或需要调试的文件
+在编辑配置中  添加 **php web Application**
     
 ## compser
 
