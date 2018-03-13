@@ -64,9 +64,11 @@
 `lorem100 生成百个单词`
 
 
-## 快捷键
-|   `Shift+Ctrl+Alt+N` |  全局搜索类  |
+
+## window快捷键 - 自定义
+|快捷键|说明|
 | --- | --- |
+|   `Shift+Ctrl+Alt+N` |  全局搜索类  |
 | ` Alt+J`  |   选中相同代码 |
 |  `Shift+Ctrl+Alt+J` |   一次全部选中 |
 |  `Ctrl+Alt+T`   |   环绕生成 |
@@ -80,3 +82,12 @@
 | `ctrl+n`|    更多功能,如给属性添加Getters and Setters |
 |`ctrl+shift+alt+n`| 快速打开指定的方法|
 
+## mac 快捷键 - 自定义
+|快捷键|说明|
+| --- | --- |
+| `command +q`|  扩展选取|
+|`command + del`| 删除行|
+|`command + w`| 关闭当前选项卡|
+|`command + control +  w`| 关闭所有选项卡  |
+|`optioon + j`| 添加下一匹配的选项|
+|`command +control+  j`| 匹配所有的选项|
