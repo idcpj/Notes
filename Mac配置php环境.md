@@ -31,6 +31,10 @@ LoadModule php5_module /usr/local/Cellar/php5x/5.5.xx/libexec/apache2/libphp5.so
     </IfModule>
 </IfModule>
 
+# 重写规则
+LoadModule rewrite_module lib/httpd/modules/mod_rewrite.so
+所有的字符 " AllowOverride ", 将 AllowOverride None 替换成为 AllowOverride All
+
 #更改端口
 Listen 80
 
