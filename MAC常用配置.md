@@ -71,3 +71,15 @@ source ~/.bashrc
 
 下载 - 高速下载百度云
 `axel -n 30 http://www.demo.com`
+
+## mac 命令
+2. Finder 卡死了？用 `killall Finder` 「重启」它；
+3. 下载大文件时不希望电脑自动休眠，但需要关闭屏幕？用 `pmset displaysleep` ；
+4. 演示 PPT、设计稿时，想让屏幕多亮一会儿：`caffeinate -t 3600`；
+5. 让通知快点消失：`defaults write com.apple.notificationcenterui bannerTime 3；`
+6. 使不活动的图标进入半透明状态：
+`defaults write com.apple.dock showhidden -bool TRUE; killall Dock`
+7. 让 Dock 瞬间出现/消失：
+`defaults write com.apple.dock autohide-time-modifier -int 0;killall Dock`
+8. 在 Launchpad 里放下更多图标（注意，这条命令会重新排列 Launchpad 图标顺序）：
+`defaults write com.apple.dock springboard-columns -int 8; defaults write com.apple.dock springboard-rows -int 7; defaults write com.apple.dock ResetLaunchPad -bool TRUE; killall Dock`
