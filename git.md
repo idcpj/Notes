@@ -37,11 +37,18 @@ $ git config --global user.email "schacon@gmail.com"
 `git branch -d/–D 分值名`       			删除分支`-D`强制删除(合并完分支后,即可删除) 
 `git reset --hard HEAD^`  		撤销合并
 `git diff 分支1 分支2`    查看分支的区别    
-```
-服务器 强制同步代码库的代码
-git fetch --all
-git reset --hard origin/master
 
+### 服务器合并冲突
+1. 保留服务器上做的改动
+```
+$ git stash
+$ git pull
+$ git stash pop
+```
+2. 	完全覆盖本地
+```
+$ git reset --hard
+$ git pull
 ```
 ### 回退版本
 
