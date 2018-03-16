@@ -100,7 +100,7 @@
 ### 修改 Project 栏的颜色
 
 1. [ Color ide 插件](https://plugins.jetbrains.com/plugin/7055-color-ide)
-2. 通过本地`install plugin from disk `安装
+2. 通过本地`Preferences>Plugin >install plugin from disk `安装
 
 ### 修改文件类型图标
 1. 打开 `Preferences>Plugin`，点击 `Browse repositorie`s 然后搜索 `Material Theme UI`；
