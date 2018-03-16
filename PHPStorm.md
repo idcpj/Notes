@@ -97,7 +97,7 @@
   Windows 中的目录好像是 Users/用户名/PhpStorm2016.3/config/colors；
 6. 重启 PhpStrom，在 Preferences>Editor>Color&Fonts 中选择指定的主题；
 
-### 修改 Project 栏的颜色
+### 修改 Project 栏的颜色(2017以上 无效)
 
 1. [ Color ide 插件](https://plugins.jetbrains.com/plugin/7055-color-ide)
 2. 通过本地`Preferences>Plugin >install plugin from disk `安装
