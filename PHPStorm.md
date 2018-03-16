@@ -106,3 +106,5 @@
 1. 打开 `Preferences>Plugin`，点击 `Browse repositorie`s 然后搜索 `Material Theme UI`；
 2. 重启
 
+![](images/20180316_153342.jpg =1500x)
+![](images/20180316_153356.jpg)
