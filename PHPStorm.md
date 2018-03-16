@@ -86,3 +86,23 @@
 |`command + control +  w`| 关闭所有选项卡  |
 |`optioon + j`| 添加下一匹配的选项|
 |`command +control+  j`| 匹配所有的选项|
+
+## ide界面
+### 选择主题
+
+1. [Daylerees](http://daylerees.github.io/) 选择主题 推荐 [Peacock]
+2. [github](https://github.com/daylerees/colour-schemes/tree/master/jetbrains)  下载主题
+3. 复制地址 `https://raw.githubusercontent.com/daylerees/colour-schemes/master/jetbrains/peacock.icls`
+4. 在 mac 中，打开 ~/Library/Preferences/PhpStorm2016.3/colors 文件夹，使用 wget 下载该主题；
+  Windows 中的目录好像是 Users/用户名/PhpStorm2016.3/config/colors；
+6. 重启 PhpStrom，在 Preferences>Editor>Color&Fonts 中选择指定的主题；
+
+### 修改 Project 栏的颜色
+
+1. [ Color ide 插件](https://plugins.jetbrains.com/plugin/7055-color-ide)
+2. 通过本地`install plugin from disk `安装
+
+### 修改文件类型图标
+1. 打开 `Preferences>Plugin`，点击 `Browse repositorie`s 然后搜索 `Material Theme UI`；
+2. 重启
+
