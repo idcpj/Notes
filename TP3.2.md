@@ -27,3 +27,14 @@ if (!$member->create($this->postData)){ //  如果为$_POST提交则不选在cre
 $member->add();
     
 ```
+
+## 打印某类日志
+```
+define("APP_DEBUG", false);  //必须关闭调试模式,不然,会有多余日志类型
+
+封装好的日志类
+function writelog($msg){
+	C('LOG_PATH',C("LOG_PATH").'debug');
+	\Think\Log::record($msg,\Think\Log::DEBUG,true);
+}
+```
