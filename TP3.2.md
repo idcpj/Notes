@@ -34,7 +34,7 @@ define("APP_DEBUG", false);  //必须关闭调试模式,不然,会有多余日�
 
 封装好的日志类
 function writelog($msg){
-	C('LOG_PATH',C("LOG_PATH").'debug');
+	C('LOG_PATH',C("LOG_PATH").'debug/');
 	\Think\Log::record($msg,\Think\Log::DEBUG,true);
 }
 ```
