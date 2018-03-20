@@ -7,7 +7,8 @@
 [中文参考文档](https://morvanzhou.github.io/tutorials/python-basic/tkinter/)
 ---
 
-## 选项
+
+## 选项属性
 ```python
 activebackground, activeforeground	-颜色
 #当按钮被激活时所使用的颜色。
@@ -89,7 +90,7 @@ compound
 ```
 
 
-## 组件的三种使用方式
+## 组件的三种调用
 ```
 import tkinter as tk
 
