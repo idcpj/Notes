@@ -7,7 +7,8 @@ protected $_validate  = array (
     array('name','2,6','申请人姓名不能为空',self::MUST_VALIDATE,'length'),
     array('phone','/^0?(13|14|15|17|18|19)[0-9]{9}$/','手机格式不正确',self::MUST_VALIDATE,'regex'),
     array('marital',array('未婚','已婚','离婚'),'婚姻内容不正确',self::VALUE_VALIDATE,'in'),
-    array('address','1,20','地址内容不正确',self::VALUE_VALIDATE,'length'),
+    array('other_userid','1,50','渠道方订单格式错误',self::VALUE_VALIDATE,'length'),
+	array('other_userid','require','渠道方订单重复',self::VALUE_VALIDATE,'unique'),  //同一个字段可多次验证
 );
 
 //验证后的操作
