@@ -12,7 +12,7 @@ return array(
 #即可自动加载模块名下的user.php和email.php
 ```
 ## mysql的查询缓存 cache
-可通过在config.php 设置 `DATA_CACHE_TIME` 值来设置默认值.设置方法见[2](/book/idcpj/python/preview/TP3.2.md#_2) ,原默认值为0,即永久缓存
+可通过在config.php 设置 `DATA_CACHE_TIME` 值来设置默认值.设置方法见[2](#_2) ,原默认值为0,即永久缓存
 ```
 //加key值可提高效率 也可通过 S('channel') 调用`
 M("channel")->cache('channel',10)->select();
