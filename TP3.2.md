@@ -1,6 +1,7 @@
 [TOC]
 
 ## 配置设置
+使用`C()`函数调用,可调用数组
 1.配置目录为`模块名/Conf/config.php`
 2.导入自定义的配置如`user.php等`
 ```
@@ -10,6 +11,16 @@ return array(
 	);
 #即可自动加载模块名下的user.php和email.php
 ```
+## mysql的查询缓存 cache
+可通过在config.php 设置 `DATA_CACHE_TIME` 值来设置默认值.设置方法见[2](https://www.kancloud.cn/book/idcpj/python/edit#_2) ,原默认值为0,即永久缓存
+```
+//加key值可提高效率 也可通过 S('channel') 调用`
+M("channel")->cache('channel',10)->select();
+
+
+```
+
+
 
 ## 自动验证
 model 模型中
