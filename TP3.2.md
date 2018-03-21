@@ -38,3 +38,24 @@ function writelog($msg){
 	\Think\Log::record($msg,\Think\Log::DEBUG,true);
 }
 ```
+
+## 行为标签的使用方法
+在`application/Common/Behavior`中添加行为
+```
+class DemoBehavior extends Behavior {
+
+    // 行为扩展的执行入口必须是run
+    public function run(&$content){
+    	print_r("hello word");
+    }
+}
+```
+在`application/Common/Conf/tags.php`中添加标签
+```
+return array( // 添加下面一行定义即可
+    'app_init' => array(
+        'Common\Behavior\InitHookBehavior',
+        'Common\Behavior\DemoBehavior',
+    ),
+)
+```
