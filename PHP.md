@@ -51,3 +51,29 @@ ini_set('memory_limit', '128M');
 ## 商城框架
 [Opencart](http://www.opencartchina.com/)
 [prestashop](http://doc.prestashop.com/display/PS17/Getting+started+with+theme+development)
+
+
+## ping++ 网页支付技巧
+把[\Pingpp\Charge::create()](https://github.com/PingPlusPlus/pingpp-php/blob/master/example/recharge/recharge.php) 方法生成的json对象[pingpp.createPayment](https://www.pingxx.com/docs/client/web)
+```js
+
+//\Pingpp\Charge::create()返回的json变为js对象
+var object={
+    "id": "ch_LO0800TKunLGCy9ufHHmLmPS",
+    "object": "charge",
+    ...
+}
+pingpp.createPayment(object, function(result, err){
+	 // 可按需使用 alert 方法弹出 log
+    console.log(result);
+    console.log(err.msg);
+    console.log(err.extra);
+    if (result == "success") {
+    	// 只有微信公众号 (wx_pub)、QQ 公众号 (qpay_pub)支付成功的结果会在这里返回，其他的支付结果都会跳转到 extra 中对应的 URL
+    } else if (result == "fail") {
+        // Ping++ 对象不正确或者微信公众号 / QQ公众号支付失败时会在此处返回
+    } else if (result == "cancel") {
+        // 微信公众号支付取消支付
+    }
+});
+```

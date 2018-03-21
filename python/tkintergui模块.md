@@ -173,3 +173,54 @@ app.mainloop()
 ```
 ![](../images/屏幕快照2018-03-1922.42.48.png)
 ![](../images/屏幕快照2018-03-1922.42.52.png)
+
+## Checkbutton 组件
+```
+varInt = tk.IntVar() #初始化一个整数变量
+#variable 值选中切为1,取消且为0
+
+check = tk.Checkbutton(app, text='hello word',variable=varInt)
+check.pack()
+
+lable = tk.Label(app, textvariable=varInt) 
+lable.pack()
+```
+## Radiobutton 组件
+```
+import tkinter as tk
+
+app = tk.Tk()
+app.title("Fish Demo")  # 窗口标题
+group = tk.LabelFrame(app, text='最好的语言是什么', padx=5, pady=5)
+group.pack(padx=10, pady=10)
+
+langs = [
+    ('php', 2),
+    ('python', 3),
+    ('java', 4),
+    ('oc', 5),
+]
+
+v = tk.IntVar()
+v.set(2)  # 设置默认值为php
+for lang, num in langs:
+    b = tk.Radiobutton(group, text=lang, value=num, variable=v, indicatoron=tk.FALSE)
+    b.pack(fill='x')
+
+app.mainloop()
+```
+![](../images/屏幕快照2018-03-2021.16.46.png)
+
+## Entry组件
+```
+import tkinter as tk
+
+app = tk.Tk()
+app.title("Fish Demo")  # 窗口标题
+
+enter = tk.Entry(app)
+enter.delete(0, tk.END)  # 先清空输入框内容
+enter.insert(0, "请输入内容")  # 0表示从第几个字符插入内容
+enter.pack(padx=20, pady=20)
+app.mainloop()
+```
