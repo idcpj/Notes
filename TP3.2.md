@@ -1,5 +1,16 @@
 [TOC]
 
+## 配置设置
+1.配置目录为`模块名/Conf/config.php`
+2.导入自定义的配置如`user.php等`
+```
+#在模块名/Conf/config.php中
+return array(
+		'LOAD_EXT_CONFIG' => 'user,email',
+	);
+#即可自动加载模块名下的user.php和email.php
+```
+
 ## 自动验证
 model 模型中
 ```
