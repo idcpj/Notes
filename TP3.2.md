@@ -24,6 +24,23 @@ return array(
 	    'DATA_CACHE_TIME'=>60  //缓存时间为60秒
 	);
 ```
+
+## 用视图进行多表查询 ViewModel
+```
+在模块下的Model目录
+class ChannelViewModel extends ViewModel{
+    protected $viewFields=array(
+        'Channel'=>array('id','channel_name','token','_type'=>'RIGHT'), //right对应下表的
+        'Member'=>array('name','idcard','_on'=>'Channel.id=Member.channel_id')
+
+    );
+}
+
+在控制器中调用
+D("ChannelView")->where(array('id' => 47))->select() 以普通视图一样
+```
+
+
 ##  更新操作
 1. 方法一
 ```php
@@ -115,5 +132,13 @@ return array( // 添加下面一行定义即可
         'Common\Behavior\DemoBehavior',
     ),
 )
+```
+
+## T() 函数获取模版地址
+```
+T([资源://][模块@][主题/][控制器/]操作,[视图分层])
+T('Public/menu');  //当前模块
+
+$this->display(T('Admin@Public/menu'));
 ```
 
