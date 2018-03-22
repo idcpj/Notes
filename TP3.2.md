@@ -24,7 +24,36 @@ return array(
 	    'DATA_CACHE_TIME'=>60  //缓存时间为60秒
 	);
 ```
+##  更新操作
+1. 方法一
+```php
 
+$channelData =D("Channel")->where(array('id'=>1));
+//判断是否有值
+if(!$channelData->find()){
+	$this->error(暂无数据);
+}
+$channel->status=1;
+$channel->save()
+```
+2. 方法二
+```
+$channel = D("Channel");
+//直接在参数中写入主键,则视为更新
+$data=array(
+    'id'=>1,
+    'create_time'=>111,
+    'update_time'=>1112,
+    'token'=>'',
+);
+
+if(!$channel->create($data)){
+    $this->error($channel->getError());
+}else{
+    $channel->save();
+}
+
+```
 
 
 ## 自动验证
@@ -48,6 +77,7 @@ protected $_auto=array(
 控制器中
 ```
 $member = D("Member");
+//注意有 ! 号
 if (!$member->create($this->postData)){ //  如果为$_POST提交则不选在create中传入数据
     $this->error(303,$member->getError());
 }
