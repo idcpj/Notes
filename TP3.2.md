@@ -102,7 +102,7 @@ $member->add();
     
 ```
 
-## 打印某类日志
+## 指定打印某类日志
 ```
 define("APP_DEBUG", false);  //必须关闭调试模式,不然,会有多余日志类型
 
@@ -142,3 +142,25 @@ T('Public/menu');  //当前模块
 $this->display(T('Admin@Public/menu'));
 ```
 
+## 在模版中插入 include
+```
+<include  file="admin/demo" /> #admin模块下的 demo,并不在某个控制器对应目录下
+```
+1. 传值方式一,在表中输入值
+```
+<include  file="admin/demo"  title="hellol word"/>
+demo.html中
+
+<p>[title]</p>
+```
+2. 如果是同一变量名,无需传值
+```
+<!--如果在住模版中有 $lists,则无需传值-->
+<foreach name="lists" item="vo">
+    <tr>
+        <td>{$vo.id} </td>
+        <td>{$vo.name}</td>
+    </tr>
+</foreach>
+
+```
