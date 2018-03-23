@@ -164,3 +164,43 @@ demo.html中
 </foreach>
 
 ```
+
+## RESTFul APi 接口
+[参考文档](https://www.kancloud.cn/manual/thinkphp/1879)
+>如果某控制器为纯接口形式,则也可继承该方法,而无需设置
+
+在模块名/userController  控制器中 创建继承RestController的方法
+```
+class UserController extends RestController{
+    protected $allowMethod    = array('get','post','put','delete'); // REST允许的请求类型列表
+    protected $allowType      = array('html','xml','json'); // REST允许请求的资源类型列表
+
+    Public function index(){
+        switch($this->_method){
+            case 'get':
+            	//todo
+                $this->response(array('name'=>'cpj','age'=>12),'json',200);
+                break;
+            case 'put':
+            	//todo
+                $this->response(array('name'=>'cpj','age'=>12),'json',200);
+                break;
+            case 'post':
+            	//todo
+                $this->response(array('msg'=>'提交成功'),'json',200);
+                break;
+            case 'delete':
+            	//todo
+                $this->response(array('msg'=>'删除成功'),'json',200);
+                break;
+        }
+    }
+}
+```
+在data/conf/route.php 中添加 路由映射
+```
+return array (
+	'User/:id'=>array('User/index'),
+);
+```
+访问 `delete` 形式方法 `http://www.mapi.com/user/2`  则提示删除成功
