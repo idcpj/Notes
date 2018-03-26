@@ -204,3 +204,29 @@ return array (
 );
 ```
 访问 `delete` 形式方法 `http://www.mapi.com/user/2`  则提示删除成功
+
+
+## 生成静态缓存
+>[查考文档](https://www.kancloud.cn/manual/thinkphp/1839)
+
+在模块或commom /Conf/config.php中配额,
+
+```
+return array(
+	'HTML_CACHE_ON'     =>    true, // 开启静态缓存
+	'HTML_CACHE_TIME'   =>    60,   // 全局静态缓存有效期（秒）
+	'HTML_FILE_SUFFIX'  =>    '.html', // 设置静态缓存文件后缀
+	'HTML_CACHE_RULES' => array(
+		// 定义静态缓存规则
+		'*'=>array('{:module}/{:controller}/{:action}/{$_SERVER.REQUEST_URI|md5}'),//生成的文件路径,只要注意同样一个页面生成的路径一样即可
+	)
+);
+```
+生成静态文件后,如果存在静态文件,则提前与调用操作方法
+```
+public function show(){
+    echo "hello word";  //存在静态缓存,则hello word 不会输出
+    //todo
+    $this->display();
+}
+```
