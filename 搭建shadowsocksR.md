@@ -35,3 +35,17 @@ wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsoc
 ![](images/26113970_1447433778698543_1362431041300832678_n.png)
 ![](images/25659871_1447434328698488_2389430533679312129_n.jpg)
 **注意default-allow-http和default-allow-https 都需要点进去分别设置的**
+
+## ssh 连接google 云
+1. 本地通过私钥登录
+[查看简书](https://www.jianshu.com/p/57e85cf3e50b)
+2. 通过密码登录
+因为google 把密码验证登录关了，需要自行打开
+```bash
+$ sudo vi /etc/ssh/sshd_config
+PasswordAuthentication yes 
+:wq!
+
+# 改完要重启 ssh 服务
+$ sudo service sshd restart
+```
