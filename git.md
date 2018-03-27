@@ -6,7 +6,7 @@
 ```
 $ git config --global user.name "Scott Chacon"
 $ git config --global user.email "schacon@gmail.com"
-```
+```123
 >查看 `cat ~/.gitconfig`
 >
 
