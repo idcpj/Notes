@@ -34,7 +34,7 @@ $ git config --global user.email "schacon@gmail.com"
 `git status` 查看冲突文件 
 `vim 冲突文件` 去掉`<<<<<<`  手动合并内容
 `git add 冲突文件`和`git commit` 提交修改后的文件
-`git branch -d/–D 分值名`       			删除分支`-D`强制删除(合并完分支后,即可删除) 
+`git branch -d/–D 分支名`       			删除分支`-D`强制删除(合并完分支后,即可删除) 
 `git reset --hard HEAD^`  		撤销合并
 `git diff 分支1 分支2`    查看分支的区别    
 
