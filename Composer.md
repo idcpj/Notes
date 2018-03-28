@@ -3,6 +3,7 @@
 
 ---
 > packagist [包管理网站](https://packagist.org/packages/)
+> [composer官网]()
 ---
 
 
@@ -24,3 +25,32 @@
 ### 其他
 >Composer.json配置文件说明 [网址](http://blog.csdn.net/pugongyinglhl/article/details/59521275)
 
+
+## 使用composer
+
+### 安装
+1. 局部安装
+将[下载composer.exe](https://getcomposer.org/download/)安装在自定义目录,平添加到环境路径
+2. 使用镜像-[参考网站](https://pkg.phpcomposer.com/)
+	1.在全局配置镜像(推荐)
+	在命令行中输入:
+	`composer config -g repo.packagist composer https://packagist.phpcomposer.com`
+    
+	2. 修改项目镜像
+	在项目根目录
+    `composer config repo.packagist composer https://packagist.phpcomposer.com`
+    你也可以手动添加镜像地址到composer.json文件
+        ```
+        "repositories": {
+            "packagist": {
+                "type": "composer",
+                "url": "https://packagist.phpcomposer.com"
+            }
+        }
+        ```
+3. 出现ssl 报错
+参考此[网站](http://www.ituring.com.cn/article/261281)
+
+## 安装composer 包
+1. 包存在composer.json中
+`php composer.phar install` 或` composer.phar install`
