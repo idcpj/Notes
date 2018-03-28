@@ -8,8 +8,8 @@ echo 'Begin ...<br />';
 for( $i = 0 ; $i < 10 ; $i++ )
 {
     echo $i . '<br />';
-    flush();
     ob_flush();
+    flush();
     sleep(1);
 }
 echo 'End ...<br />';
@@ -24,4 +24,4 @@ echo 'End ...<br />';
 |`ob_end_clean()` |	清空ob缓存内容，并关闭ob缓存|
 |`ob_flush()` |	将ob缓存的内容强制输出到程序缓存，不关闭ob缓存,不在ob_get_content中|
 |`ob_end_flush()` |	将ob缓存的内容强制输出到程序缓存，并关闭ob缓存|
-|`flush()` |	强制把程序缓存的内容输出到浏览器缓存里面 ob_flush()后使用flush(),可以把内容输出到浏览器|
+|`flush()` |	 ob_flush()后使用flush(),可以强制输出内容|
