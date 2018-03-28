@@ -39,6 +39,7 @@
     * [vagrant](vagrant.md)
     * [Mysql](Mysql.md)
     * [centos7 lamp配置](centos7lamp配置.md)
+        * [oneinstack 一件配置](oneinstack一件配置.md)
     * [Tmux](Tmux.md)
     * [Bash](Bash.md)
     * [git](git.md)

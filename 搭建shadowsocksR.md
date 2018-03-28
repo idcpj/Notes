@@ -37,7 +37,12 @@ wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsoc
 **注意default-allow-http和default-allow-https 都需要点进去分别设置的**
 
 ## ssh 连接google 云
-1. 本地通过私钥登录
+1. 首先设置密码
+```
+$ sudo passwd ${whoami} // 下面以 user 代替 ${whoami}
+$ sudo passwd root
+```
+3. 本地通过私钥登录
 [查看简书](https://www.jianshu.com/p/57e85cf3e50b)
 2. 通过密码登录
 因为google 把密码验证登录关了，需要自行打开
