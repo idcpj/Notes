@@ -50,6 +50,11 @@ service redis-server {start|stop|status|restart|reload}
 #Memcached:
 service memcached {start|stop|status|restart|reload}
 ```
+## 更新卸载主键
+```
+./upgrade.sh  #更新
+./uninstall.sh  #卸载
+```
 
 ## Opcache的缓存问题
 如果使用Opcache 缓存,代码上传后,需要间隔2~3分钟才能生效
