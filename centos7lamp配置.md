@@ -27,6 +27,20 @@ sudo systemctl stop httpd
 #开启启动
 sudo systemctl enable httpd.service
 
+vi /etc/httpd/conf/httpd.conf  //进入配置文件
+找到
+
+<Directory />
+AllowOverride none
+Require all denied
+</Directory >
+
+修改为：
+<Directory />
+AllowOverride none
+Require all granted
+</Directory >
+
 #设置目录权限
 把目录分组设置成httpd.conf中相同的用户:组名
 如    chown  -R www:www  .

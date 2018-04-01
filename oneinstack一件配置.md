@@ -50,7 +50,7 @@ service redis-server {start|stop|status|restart|reload}
 #Memcached:
 service memcached {start|stop|status|restart|reload}
 ```
-## 更新卸载主键
+## 更新卸载组件
 ```
 ./upgrade.sh  #更新
 ./uninstall.sh  #卸载
