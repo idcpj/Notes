@@ -71,7 +71,7 @@
     * [Mac 配置 Python 和Python3](Mac配置Python和Python3.md)
     * [Sublime Text配置](SublimeText配置.md)
     * [配置 Oh My Zsh+ iTerm2](配置OhMyZsh.md)
-        * [iTerm2 配置ssh](iTerm2配置ssh.md)
+        * [iTerm2 自动登陆 ssh](iTerm2配置ssh.md)
     * [配置 Sublime Text3](配置Atom.md)
     * [MAC 配置 Vim](MAC配置Vim.md)
     * [brew](brew.md)
