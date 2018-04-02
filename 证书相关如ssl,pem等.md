@@ -76,8 +76,11 @@ PEM转为DER
 DER转为PEM
 `openssl x509 -in cert.crt -inform der -outform pem -out cert.pem`
 
+替换的参数可根据生成时所用参数参考
 要转换KEY文件把x509换成rsa,
-要转CSR的话,把x509换成req...
+要转CSR的话,把x509换成req
+要转PFX/P12的话,把x509换成pkcs12
+
 
 ### 获得证书
 ### 向权威证书颁发机构申请证书
