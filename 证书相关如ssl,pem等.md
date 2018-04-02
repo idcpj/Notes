@@ -1,6 +1,7 @@
 [TOC]
 
 > [参考网站](http://www.cnblogs.com/guogangj/p/4118605.html)
+> [HTTPS证书转换成PEM格式](https://help.aliyun.com/knowledge_detail/40526.html)
 
 ## SSL 与OpenSSL 区别
 SSL 是一个加密算法,属于理论,OpenSSL 是这个算法的一个实现
