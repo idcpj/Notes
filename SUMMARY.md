@@ -45,6 +45,7 @@
     * [Bash](Bash.md)
     * [git](git.md)
         * [具体使用场景](具体使用场景.md)
+        * [git 无序输入密码教程](git无序输入密码教程.md)
     * [Nginx](Nginx.md)
     * [Docker](Docker.md)
     * [Apache-伪静态和重定向](Apache-伪静态和重定向.md)
