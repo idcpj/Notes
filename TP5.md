@@ -5,6 +5,20 @@
 
 修改为: `RewriteRule ^(.*)$ index.php/$1 [QSA,PT,L]  -->  RewriteRule ^(.*)$ index.php?/$1 [QSA,PT,L]`
 
+## Nginx 无法识别url
+> [参考url](http://www.sou-xun.com/show/1395199.html)
+```
+location / {
+            index  index.html index.htm index.php;
+            #autoindex  on;
+            
+            # 加入此行代码
+          if (!-e $request_filename) {
+            rewrite  ^(.*)$  /index.php?s=/$1  last;
+            break;
+          }
+        }
+```
 
 
 ### 获取请求中的数据  (类 name="id[]" form元素)
