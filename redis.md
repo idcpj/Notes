@@ -5,6 +5,14 @@
 
 ## 安装
 `choco install redis`
+
+php 安装redis 模块
+[参考网址](https://segmentfault.com/a/1190000011725819)
+
+## 5.6 nts-版
+[php_redis](https://windows.php.net/downloads/pecl/releases/redis/2.2.7/php_redis-2.2.7-5.6-nts-vc11-x86.zip)
+[php_igbinary](https://windows.php.net/downloads/pecl/releases/igbinary/2.0.1/php_igbinary-2.0.1-5.6-nts-vc11-x86.zip)
+
 ## 开启
 ```
 //进入目录
