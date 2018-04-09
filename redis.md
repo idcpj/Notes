@@ -1,6 +1,7 @@
 
 [TOC]
 
+>[phpredis中文手册](http://www.cnblogs.com/ikodota/archive/2012/03/05/php_redis_cn.html)
 > [php操作Redis-简书](https://www.jianshu.com/p/02d4d3f91e73)
 
 ## 安装
