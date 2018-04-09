@@ -1,6 +1,6 @@
 [TOC]
 
-## chocolatey -window的包管理器
+## 安装
 [官网](https://chocolatey.org/install)
 [参考教程]
 以管理员权限
@@ -18,13 +18,26 @@
 6.nodejs
 7.virtualbox
 8.notepadplusplus
-9.wechat
-choco install -y php composer tim jdk8 tim vagrant virtualbox googlechrome nodejs notepadplusplus wechat
+9.wechat 
+10.clover  四叶草
+choco install -y php composer tim jdk8 tim vagrant virtualbox googlechrome nodejs notepadplusplus wechat clover
 
 ```
 
-## 安装指定版本
+### 安装指定版本
 ```
 choco install phpstorm --version 2017.2.4
-
 ```
+
+## 升级
+### 升级到最高
+`choco upgrade phpstorm `
+
+### 升级到指定版本
+`choco upgrade phpstorm --version 2017.3.6`
+
+## 疑问
+>去检查报错中提供的信息、
+
+1. 如出现验证失败
+`choco install -y --ignore-checksums  wechat`
