@@ -46,8 +46,9 @@ $redis->delete("tutorial-name");
 
 //存入多个值
 $array_mset=array('first_key'=>'first_val',
-	                  'second_key'=>'second_val',
-	                  'third_key'=>'third_val');
+                  'second_key'=>'second_val',
+                  'third_key'=>'third_val'
+                  );
 $redis->mset($array_mset); #用MSET一次储存多个值
 print_r($redis->get('third_key')); // third_val
 
