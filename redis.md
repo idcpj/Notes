@@ -3,6 +3,28 @@
 
 > [phpredis中文手册](http://www.cnblogs.com/ikodota/archive/2012/03/05/php_redis_cn.html)
 
+## 安装
+`choco install redis`
+## 开启
+```
+//进入目录
+cd C:\Program Files\Redis
+//开启 没有报错则说明成功
+redis-server.exe conf/redis.conf
+```
+## 命令中测试
+打开新命令行窗口
+```
+//连接
+redis-cli.exe -h 127.0.0.1 -p 6379
+
+//赋值
+set test "hello word"
+
+//取值
+get test
+```
+
 ## demo
 ```
 $redis = new Redis();
