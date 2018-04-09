@@ -22,3 +22,9 @@
 choco install -y php composer tim jdk8 tim vagrant virtualbox googlechrome nodejs notepadplusplus wechat
 
 ```
+
+## 安装指定版本
+```
+choco install phpstorm --version 2017.2.4
+
+```
