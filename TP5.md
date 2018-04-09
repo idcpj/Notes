@@ -2,8 +2,11 @@
 
 ## 技巧
 >自带.htaccess  无效
-
-修改为: `RewriteRule ^(.*)$ index.php/$1 [QSA,PT,L]  -->  RewriteRule ^(.*)$ index.php?/$1 [QSA,PT,L]`
+```
+`RewriteRule ^(.*)$ index.php/$1 [QSA,PT,L]  
+修改为
+RewriteRule ^(.*)$ index.php?/$1 [QSA,PT,L]`
+```
 
 ## Nginx 无法识别url
 > [参考url](http://www.sou-xun.com/show/1395199.html)
