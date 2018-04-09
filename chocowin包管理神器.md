@@ -20,7 +20,11 @@
 8.notepadplusplus
 9.wechat 
 10.clover  四叶草
-choco install -y php composer tim jdk8 tim vagrant virtualbox googlechrome nodejs notepadplusplus wechat clover
+11.adobe-creative-cloud
+12.boostnote   笔记
+
+
+choco install -y php composer tim jdk8 tim vagrant virtualbox googlechrome nodejs notepadplusplus wechat clover adobe-creative-cloud boostnote
 
 ```
 
