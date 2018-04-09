@@ -19,7 +19,7 @@
     * [TP5](TP5.md)
         * [taglib-自制标签](自制标签.md)
     * [TP3.2](TP3.2.md)
-    * [redis](redis.md)
+    * [Redis](redis.md)
     * [Composer使用及创建](Composer.md)
     * [Memcached](Memcached.md)
     * [flush-刷新缓存](flush-刷新缓存.md)
