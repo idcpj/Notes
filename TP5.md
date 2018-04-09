@@ -227,7 +227,15 @@ $user = User::get(function($query){
     $query->where('name', 'thinkphp');
 });
 echo $user->name;
+
+//通过条件查询整条数据
+$data=M('Test')->getByName('白俊遥');
+
+//通过条件查询该条数据中的某个值
+M('Test')->getFieldByName('白俊遥','avatar');  //demo.jpg
+
 ```
+
 
 #### 获取多个数据
 ```
