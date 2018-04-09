@@ -9,7 +9,7 @@
 php 安装redis 模块
 [参考网址](https://segmentfault.com/a/1190000011725819)
 
-## 5.6 nts-版
+### 5.6 nts-版
 [php_redis模块](https://windows.php.net/downloads/pecl/releases/redis/2.2.7/php_redis-2.2.7-5.6-nts-vc11-x86.zip)
 [php_igbinary 模块](https://windows.php.net/downloads/pecl/releases/igbinary/2.0.1/php_igbinary-2.0.1-5.6-nts-vc11-x86.zip)
 
