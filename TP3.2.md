@@ -71,7 +71,23 @@ if(!$channel->create($data)){
 }
 
 ```
+##  查询操作
+```php
+//符合条件的一个值
+D("test")->where(['age'=>11])->getField('id');  //return  String 2
 
+//查询符合条件的多个值,第二个参数加true
+D("test")->where(['age'=>11])->getField('id',true);  //return  array ( 0 => '2', 1 => '3')
+
+//相同条件的记录条数操作和数据获得
+$testDb = M("test")->where(['age'=>'11']);
+$testClone =clone $testDb;
+dump($testClone->count()); //取得条数
+dump($testDb->select());    //取得数据
+
+//通过条件查询字段
+M('read_adv_media')->getFieldById($id,'aid');
+```
 
 ## 自动验证
 model 模型中
