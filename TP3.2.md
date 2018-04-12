@@ -40,8 +40,8 @@ class ChannelViewModel extends ViewModel{
 D("ChannelView")->where(array('id' => 47))->select() 以普通视图一样
 ```
 
-
-##  更新操作
+## 数据库操作
+###  更新操作
 1. 方法一
 ```php
 
@@ -71,7 +71,7 @@ if(!$channel->create($data)){
 }
 
 ```
-##  查询操作
+###  查询操作
 ```php
 //符合条件的一个值
 D("test")->where(['age'=>11])->getField('id');  //return  String 2
@@ -89,7 +89,7 @@ dump($testDb->select());    //取得数据
 M('read_adv_media')->getFieldById($id,'aid');
 ```
 
-## 自动验证
+### 自动验证
 model 模型中
 ```
 protected $_validate  = array (
