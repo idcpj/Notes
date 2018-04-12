@@ -25,6 +25,7 @@
     * [flush-刷新缓存](flush-刷新缓存.md)
     * [crontable 定时任务](crontable定时任务.md)
     * [常用正则](常用正则.md)
+    * [PHP 代码简洁之道](PHP代码简洁之道（PHPCleanCode）.md)
 * [Java](Java.md)
     * [java 数组](java数组.md)
     * [java 类](java类.md)
