@@ -41,8 +41,20 @@ D("ChannelView")->where(array('id' => 47))->select() 以普通视图一样
 ```
 
 ## 数据库操作
+
+### 添加操作
+```php
+
+
+if(!$channel->create($data)){
+    $this->error($channel->getError());
+}else{
+    $channel->add();
+}
+```
+
 ###  更新操作
-1. 方法一
+1. 方法一,不使用create 方法
 ```php
 
 $channelData =D("Channel")->where(array('id'=>1));
