@@ -50,7 +50,7 @@ $channelData =D("Channel")->where(array('id'=>1));
 if(!$channelData->find()){
 	$this->error(暂无数据);
 }
-$channel->status=1;
+$channel->status=1;  //没有报错后继续赋值
 $channel->save()
 ```
 2. 方法二
@@ -86,7 +86,7 @@ dump($testClone->count()); //取得条数
 dump($testDb->select());    //取得数据
 
 //通过条件查询字段
-M('read_adv_media')->getFieldById($id,'aid');
+M('read_adv_media')->getFieldById($id,'aid');  //return string 12
 ```
 
 ### 自动验证
