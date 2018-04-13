@@ -28,3 +28,23 @@ function test_alter(&$item1, $key, $prefix){
 array_walk($fruits, 'test_alter', ['name'=>'cpj']);
 print_r($fruits); //[ 'd' => 'cpj: lemon', 'a' => 'cpj: orange', 'b' => 'cpj: banana', 'c' => 'cpj: apple',]
 ```
+### array_walk_recursive 
+可引用  可赋值 
+```
+$sweet = array('a' => 'apple', 'b' => 'banana');
+$fruits = array('sweet' => $sweet, 'sour' => 'lemon');
+
+function test_print(&$item, $key,$prefix){
+    $item = "new-".$prefix['name'].'-'.$key;
+}
+
+array_walk_recursive($fruits, 'test_print',['name'=>'cpj']);
+var_export($fruits);
+
+/*[ 'sweet' => [
+    'a' => 'new-cpj-a',
+            'b' => 'new-cpj-b',
+        ],
+    'sour' => 'new-cpj-sour',
+]*/
+```

@@ -200,7 +200,7 @@ function createMenu(MenuConfig $config): void
 }
 ```
 
-## 函数应该只做一件事情
+### 函数应该只做一件事情
 
 
 不好的:
@@ -236,3 +236,223 @@ function isClientActive(int $client): bool
     return $clientRecord->isActive();
 }
 ```
+
+###  不要使用单例模式
+
+单例模式是个 反模式。 以下转述 Brian Button 的观点：
+
+1. 单例模式常用于 全局实例， 这么做为什么不好呢？ 因为在你的代码里 你隐藏了应用的依赖关系，而没有通过接口公开依赖2. 关系 。避免全局的东西扩散使用是一种 代码味道.
+3. 单例模式违反了 单一责任原则： 依据的事实就是 单例模式自己控制自身的创建和生命周期.
+4. 单例模式天生就导致代码紧 耦合。这使得在许多情况下用伪造的数据 难于测试。
+5. 单例模式的状态会留存于应用的整个生命周期。 这会对测试产生第二次打击，你只能让被严令需要测试的代码运行不了收场，根本不能进行单元测试。为何？因为每一个单元测试应该彼此独立。
+
+### 封装条件语句
+
+不友好的:
+```
+if ($article->state === 'published') {
+    // ...
+}
+```
+友好的:
+```
+if ($article->isPublished()) {
+    // ...
+}
+```
+
+### 避免使用条件语句
+
+不好的:
+```
+class Airplane
+{
+    // ...
+
+    public function getCruisingAltitude(): int
+    {
+        switch ($this->type) {
+            case '777':
+                return $this->getMaxAltitude() - $this->getPassengerCount();
+            case 'Air Force One':
+                return $this->getMaxAltitude();
+            case 'Cessna':
+                return $this->getMaxAltitude() - $this->getFuelExpenditure();
+        }
+    }
+}
+```
+好的:
+> 这些类可放在同一个文件中,通过取不同的命名空间即可
+```
+interface Airplane
+{
+    // ...
+
+    public function getCruisingAltitude(): int;
+}
+
+class Boeing777 implements Airplane
+{
+    // ...
+
+    public function getCruisingAltitude(): int
+    {
+        return $this->getMaxAltitude() - $this->getPassengerCount();
+    }
+}
+
+class AirForceOne implements Airplane
+{
+    // ...
+
+    public function getCruisingAltitude(): int
+    {
+        return $this->getMaxAltitude();
+    }
+}
+
+class Cessna implements Airplane
+{
+    // ...
+
+    public function getCruisingAltitude(): int
+    {
+        return $this->getMaxAltitude() - $this->getFuelExpenditure();
+    }
+}
+```
+
+## 对象和数据结构
+
+### 使用对象封装
+使用对象封装,而不是直接对属性值进行操作
+不好的:
+```
+class BankAccount
+{
+    public $balance = 1000;
+}
+
+$bankAccount = new BankAccount();
+
+// Buy shoes...
+$bankAccount->balance -= 100;
+```
+
+好的:
+
+```
+class BankAccount
+{
+    private $balance;
+
+    public function __construct(int $balance = 1000)
+    {
+      $this->balance = $balance;
+    }
+
+    public function withdraw(int $amount): void
+    {
+        if ($amount > $this->balance) {
+            throw new \Exception('Amount greater than available balance.');
+        }
+
+        $this->balance -= $amount;
+    }
+
+    public function deposit(int $amount): void
+    {
+        $this->balance += $amount;
+    }
+
+    public function getBalance(): int
+    {
+        return $this->balance;
+    }
+}
+
+$bankAccount = new BankAccount();
+
+// Buy shoes...
+$bankAccount->withdraw($shoesPrice);
+
+// Get balance
+$balance = $bankAccount->getBalance();
+```
+
+## 类
+
+## 组合优于继承
+> 我们应该尽量优先选择组合而不是继承的方式。使用继承和组合都有很多好处。
+这个准则的主要意义在于当你本能的使用继承时，试着思考一下组合是否能更好对你的需求建模。
+
+答案依赖于你的问题，当然下面有一些何时继承比组合更好的说明：
+
+你的继承表达了“是一个”而不是“有一个”的关系（例如人类“是”动物，而用户“有”用户详情）。
+你可以复用基类的代码（人类可以像动物一样移动）。
+你想通过修改基类对所有派生类做全局的修改（当动物移动时，修改它们的能量消耗）。
+
+糟糕的:
+```
+class Employee {
+    private $name;
+    private $email;
+
+    public function __construct(string $name, string $email){
+        $this->name = $name;
+        $this->email = $email;
+    }
+
+    // ...
+}
+// 不好，因为Employees "有" taxdata
+// 而EmployeeTaxData不是Employee类型的
+
+class EmployeeTaxData extends Employee {
+    private $ssn;
+    private $salary;
+
+    public function __construct(string $name, string $email, string $ssn, string $salary){
+        parent::__construct($name, $email);
+
+        $this->ssn = $ssn;
+        $this->salary = $salary;
+    }
+
+}
+```
+棒棒哒:
+```
+class EmployeeTaxData{
+    private $ssn;
+    private $salary;
+
+    public function __construct(string $ssn, string $salary){
+        $this->ssn = $ssn;
+        $this->salary = $salary;
+    }
+}
+
+class Employee{
+    private $name;
+    private $email;
+    private $taxData;
+
+    public function __construct(string $name, string $email)    {
+        $this->name = $name;
+        $this->email = $email;
+    }
+
+    public function setTaxData(string $ssn, string $salary)    {
+        $this->taxData = new EmployeeTaxData($ssn, $salary);
+    }
+
+}
+```
+
+### 避免流式接口
+
+既避免链式调用,
+如tp中
+`D("dmeo")->where([])->find();`
