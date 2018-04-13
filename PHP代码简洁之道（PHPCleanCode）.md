@@ -4,7 +4,10 @@
 
 > PHP版本>7.1.*
 
-## 数字可读
+
+## 变量
+
+### 数字可读
 
 不好：
 ```
@@ -28,7 +31,7 @@ if ($user->access & User::ACCESS_UPDATE) {
 }
 ```
 
-## 正则
+### 正则
 一般：
 ```
 $address = 'One Infinite Loop, Cupertino 95014';
@@ -48,7 +51,7 @@ preg_match($cityZipCodeRegex, $address, $matches);
 saveCityZipCode($matches['city'], $matches['zipCode']);
 ```
 
-## 避免嵌套太深
+### 避免嵌套太深
 写执行报错
 
 不好：
@@ -85,7 +88,7 @@ function fibonacci(int $n): int
     return fibonacci($n - 1) + fibonacci($n - 2);
 }
 ```
-## 避免心理映射
+### 避免心理映射
 不好：
 ```
 $l = ['Austin', 'New York', 'San Francisco'];
@@ -116,7 +119,7 @@ foreach ($locations as $location) {
 }
 ```
 
-## 不要增加不需要的上下文
+### 不要增加不需要的上下文
 小坏坏：
 ```
 class Car
@@ -137,5 +140,99 @@ class Car
     public $color;
 
     //...
+}
+```
+
+### 使用默认参数而不是使用短路运算或者是条件判断
+不好的做法:
+
+**这是不太好的因为 $breweryName 可以是 NULL.**
+```
+function createMicrobrewery($breweryName = 'Hipster Brew Co.'): void
+{
+    // ...
+}
+```
+好的做法:
+
+ 类型提示 而且可以**保证 $breweryName 不会为空 NULL.**
+```
+function createMicrobrewery(string $breweryName = 'Hipster Brew Co.'): void
+{
+    // ...
+}
+```
+## 函数
+
+### 函数参数（2 个或更少）
+
+不友好的:
+```
+function createMenu(string $title, string $body, string $buttonText, bool $cancellable): void
+{
+    // ...
+}
+```
+友好的:
+把多个参数变为 对象传入
+
+```
+//----------*创建对象*-------//
+class MenuConfig
+{
+    public $title;
+    public $body;
+    public $buttonText;
+    public $cancellable = false;
+}
+
+//----------*实例化对象*-------//
+$config = new MenuConfig();
+$config->title = 'Foo';
+$config->body = 'Bar';
+$config->buttonText = 'Baz';
+$config->cancellable = true;
+
+//----------*闯入对象*-------//
+function createMenu(MenuConfig $config): void
+{
+    // ...
+}
+```
+
+## 函数应该只做一件事情
+
+
+不好的:
+```
+function emailClients(array $clients): void
+{
+    foreach ($clients as $client) {
+        $clientRecord = $db->find($client);
+        if ($clientRecord->isActive()) {
+            email($client);
+        }
+    }
+}
+```
+
+好的:
+```
+function emailClients(array $clients): void
+{
+    $activeClients = activeClients($clients);
+    array_walk($activeClients, 'email');
+}
+
+function activeClients(array $clients): array
+{
+    return array_filter($clients, 'isClientActive');
+}
+
+function isClientActive(int $client): bool
+{
+    $clientRecord = $db->find($client);
+
+    return $clientRecord->isActive();
 }
 ```
