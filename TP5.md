@@ -8,7 +8,7 @@
 RewriteRule ^(.*)$ index.php?/$1 [QSA,PT,L]`
 ```
 
-## Nginx 无法识别url
+### Nginx 无法识别url
 > [参考url](http://www.sou-xun.com/show/1395199.html)
 ```
 location / {
