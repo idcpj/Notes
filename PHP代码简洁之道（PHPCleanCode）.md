@@ -456,3 +456,6 @@ class Employee{
 既避免链式调用,
 如tp中
 `D("dmeo")->where([])->find();`
+
+
+### 别写重复代码 (DRY)
