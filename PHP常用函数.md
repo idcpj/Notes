@@ -6,7 +6,7 @@
 ### array_walk
 1. 引用传值
 
-```
+```php
 $fruits = array("d" => "lemon", "a" => "orange", "b" => "banana", "c" => "apple");
 
 function test_print(&$item2, $key)
