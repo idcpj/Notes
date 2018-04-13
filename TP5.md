@@ -51,12 +51,6 @@ public function getLoanRateAttr($value,$data){
 }
 ```
 
-### 更新个别字段
-```
-$loan = LoanModel::get($id);
-$loan->show_app = $loan->getData('show_app')==1?0:1;
-$loan->save();
-```
 
 ### 获取原始数据
 ```php
@@ -211,6 +205,13 @@ User::update(['id' => 1, 'name' => 'thinkphp']);
 #### 复杂界面更新
 ```
 User::where(['status'=>1,'name'=>'cpj'])->update(['name' => 'thinkphp']);
+```
+
+### 更新个别字段
+```
+$loan = LoanModel::get($id);
+$loan->show_app = $loan->getData('show_app')==1?0:1;
+$loan->save();
 ```
 
 ### 查
