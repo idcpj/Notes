@@ -9,12 +9,22 @@
 ```php
 $fruits = array("d" => "lemon", "a" => "orange", "b" => "banana", "c" => "apple");
 
-function test_print(&$item2, $key)
-{
+function test_print(&$item2, $key){
     $item2=$key. "-".$item2;   //key 不可赋新值
 }
 array_walk($fruits, 'test_print');
 print_r($fruits);//	 ['d' => 'd-lemon', 'a' => 'a-orange', 'b' => 'b-banana', 'c' => 'c-apple',]
 
 ```
+2. 传参赋值,可传字符串,数组
+```php
+$fruits = array("d" => "lemon", "a" => "orange", "b" => "banana", "c" => "apple");
 
+function test_alter(&$item1, $key, $prefix){
+    //$item1 = "{$prefix['name']}: $item1";
+    $item1 = "{$prefix['name']}: $item1";
+}
+
+array_walk($fruits, 'test_alter', ['name'=>'cpj']);
+print_r($fruits); //[ 'd' => 'cpj: lemon', 'a' => 'cpj: orange', 'b' => 'cpj: banana', 'c' => 'cpj: apple',]
+```
