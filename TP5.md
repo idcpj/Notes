@@ -298,3 +298,34 @@ cmf 上传设置可在后台进行设置
 {include file="public/footer" /}
 ```
 3. 在view 的其他目录中只需要写相关信息  不需要在用include 引入head头和fllter
+
+
+## 模型验证 validate
+### 独立验证
+```
+$data     = [
+    'email' => 'thinkphp@qq.com',
+];
+$validata = [
+    'name|姓名'  => 'require|max:25',
+    'email|邮箱' => 'email',
+];
+$result   = $this->validate($data, $validata);
+if(true !== $result){
+    // 验证失败 输出错误信息
+    dump($result);//姓名不能为空
+}
+```
+### 建立公共validata 方便参数认证
+
+在app/common/param中 简历 验证器
+```
+$data     = [
+    'email' => 'thinkphp@qq.com',
+];
+
+$result =$this->validate($data,'param.vali_user');
+if(true!==$result){
+    halt($result);//用户名必须
+}
+```
