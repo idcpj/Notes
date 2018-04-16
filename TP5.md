@@ -281,4 +281,20 @@ cmf 上传设置可在后台进行设置
 <a href="javascript:uploadOne('apk上传','#thumb','file');" class="btn btn-sm btn-default">选择文件</a>
 
 ```
+## 模板布局 layout
 
+1. 开启 layout
+```
+'template'  =>  [
+    'layout_on'     =>  true,
+    'layout_name' => 'layout',
+    'layout_item' => '{__CONTENT__}',
+]
+```
+2. view 的根目录建立layout.html 文件,并写入一下内容
+```
+{include file="public/header" /}
+ {__CONTENT__}
+{include file="public/footer" /}
+```
+3. 在view 的其他目录中只需要写相关信息  不需要在用include 引入head头和fllter

@@ -19,6 +19,7 @@
     * [配置webhook.php](配置webhook.md)
     * [TP5](TP5.md)
         * [taglib-自制标签](自制标签.md)
+        * [migrations   数据库迁移](migrations数据库迁移.md)
     * [TP3.2](TP3.2.md)
     * [Redis](redis.md)
     * [Composer使用及创建](Composer.md)
