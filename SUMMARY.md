@@ -23,6 +23,7 @@
     * [TP3.2](TP3.2.md)
     * [Redis](redis.md)
     * [Composer使用及创建](Composer.md)
+        * [常用composer 包](常用composer包.md)
     * [Memcached](Memcached.md)
     * [flush-刷新缓存](flush-刷新缓存.md)
     * [crontable 定时任务](crontable定时任务.md)
