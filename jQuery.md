@@ -1,7 +1,8 @@
 [TOC]
 
 
-## 设置默认值
+## 设置select 的默认值  
+只需要在select 属性添加`default `属性即可
 ```
 <form action="./" method="get">
 
