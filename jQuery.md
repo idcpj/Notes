@@ -1,5 +1,30 @@
 [TOC]
 
+
+## 设置默认值
+```
+<form action="./" method="get">
+
+<select name="type"  default="{$_GET['type']}">
+    <option value="1">11</option>
+    <option value="2">22</option>
+    <option value="3">333</option>
+</select>
+
+<input type="submit" value="提交">
+</form>
+
+<script>
+$(function(){
+    // 调整默认选择内容
+    $("select").each(function(index, element) {
+        $(element).find("option[value='"+$(this).attr('default')+"']").attr('selected','selected');
+    });
+});
+</script>
+
+```
+
 ## 设置/获取内容
 ```js
 //设置内容
