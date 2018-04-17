@@ -26,6 +26,23 @@ $(function(){
 
 ```
 
+## 原生点击提示信息
+```
+ function bh_msg_tips(msg){
+    var oMask = document.createElement("div");
+    oMask.id = "bh_msg_lay";
+    oMask.style.position="fixed";
+    oMask.style.left="0";
+    oMask.style.top="50%";
+    oMask.style.zIndex="100";
+    oMask.style.textAlign="center";
+    oMask.style.width="100%";
+    oMask.innerHTML =  "<span style='background: rgba(0, 0, 0, 0.65);color: #fff;padding: 10px 15px;border-radius: 3px; font-size: 14px;'>" + msg + "</span>";
+    document.body.appendChild(oMask);
+    setTimeout(function(){$("#bh_msg_lay").remove();},2000);
+}
+```
+
 ## 设置/获取内容
 ```js
 //设置内容
