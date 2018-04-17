@@ -51,3 +51,25 @@ echo $factory->email;
 [omnipay-unionpay](https://github.com/lokielse/omnipay-unionpay) - 银联支付
 [omnipay-alipay](https://github.com/lokielse/omnipay-alipay) - 支付宝支付
 [omnipay-pingpp](https://github.com/phoenixg/omnipay-pingpp) - ping++聚合支付
+
+
+## 文件
+
+### 文件上传
+`composer requrie  verot/class.upload.php`
+```
+$handle = new upload($_FILES['image_field']);
+if ($handle->uploaded) {
+  $handle->file_new_name_body   = 'image_resized';
+  $handle->image_resize         = true;
+  $handle->image_x              = 100;
+  $handle->image_ratio_y        = true;
+  $handle->process('/home/user/files/');
+  if ($handle->processed) {
+    echo 'image resized';
+    $handle->clean();
+  } else {
+    echo 'error : ' . $handle->error;
+  }
+}
+```
