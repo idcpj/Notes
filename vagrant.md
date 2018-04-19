@@ -5,7 +5,7 @@
 [TOC]
 # 推荐版本
 vagrant  1.8.6
-VirtualBox-5.1.8
+VirtualBox 5.1.8
 
 ### 流程
 1. 添加虚拟机
