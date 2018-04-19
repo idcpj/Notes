@@ -25,7 +25,8 @@ return array(
 	);
 ```
 
-## 用视图进行多表查询 ViewModel
+## 用视图模型进行多表查询 ViewModel
+关联表
 ```
 在模块下的Model目录
 class ChannelViewModel extends ViewModel{
@@ -162,6 +163,37 @@ return array( // 添加下面一行定义即可
 )
 ```
 
+## 查询范围,可定义多个scope
+在model模型中
+```
+protected $_scope = array(
+     'normal'=>array(
+         'where'=>array('status'=>1),
+         'field'=>'id,title',
+         'limit'=>10,
+     ),
+);
+```
+调用
+`$Model->scope('normal')->limit(8)->order('id desc')->select();`
+
+## 数据表关联,可以查询范围连用
+### 一对多关联
+```
+class BookModel extends RelationModel{
+    protected $_link=[
+        'book_episodes'=>[                      //关联表名
+            'mapping_type'=>self::HAS_MANY,
+            'foreign_key'=>'bid',
+            'mapping_fields'=>'ji_no,title',
+            'mapping_limit'=>'20',
+            'mapping_order'=>'ji_no asc'
+            //'parent_key'=>'id',  主表id,
+            //'condition'=>'',  复杂查询条件
+        ]
+}
+```
+
 ## T() 函数获取模版地址
 ```
 T([资源://][模块@][主题/][控制器/]操作,[视图分层])
@@ -169,6 +201,8 @@ T('Public/menu');  //当前模块
 
 $this->display(T('Admin@Public/menu'));
 ```
+
+
 
 ## 在模版中插入 include
 ```

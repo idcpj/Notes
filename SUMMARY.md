@@ -69,6 +69,7 @@
     * [Intellij IDEA](IntellijIDEA.md)
     * [Android Studio](AndroidStudio.md)
     * [常用软件列表](常用软件列表.md)
+    * [BaiduPCS-Go](BaiduPCS-Go.md)
 * [MAC](MAC常用配置.md)
     * [Mac配置php环境](Mac配置php环境.md)
         * [phpstrom 配置 xdebug](phpstrom配置xdebug.md)
