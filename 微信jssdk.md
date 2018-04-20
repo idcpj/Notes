@@ -1,5 +1,6 @@
 [TOC]
-> [参考网址](https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1421141115)
+> [官网jssdk的接口参考网址](https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1421141115)
+> [下载官网demo](http://demo.open.weixin.qq.com/jssdk/sample.zip)中的`jssdk.php`和`sample.php`
 
 
 ## 绑定域名
