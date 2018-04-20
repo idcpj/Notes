@@ -63,6 +63,7 @@
     * [jQuery](jQuery.md)
         * [JQuery插件](JQuery插件.md)
     * [HTML](HTML.md)
+    * [微信 jssdk](微信jssdk.md)
 * [软件](软件.md)
     * [PHPStorm](PHPStorm.md)
     * [PyCharm](PyCharm.md)
