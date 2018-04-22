@@ -10,6 +10,7 @@ brew outdated   		#检查老版本
 brew upgrade   			#更新所有应用
 brew upgrade 应用名 		#更新某个应用
 brew cleanup					#删除应用的旧版本和缓存删除
+brew doctor				#检查
 ```
 ## 更新cask 应用
 ```
