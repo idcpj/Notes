@@ -63,7 +63,7 @@ install ok: channel://pear.php.net/DB-1.9.2
 ```
 pecl info redis
 
-pecl install redis
+pecl install redis  ## 安装后将redis.ini放入php.ini中
 pecl unisntall redis
 
 pecl list 查看安装的列表
