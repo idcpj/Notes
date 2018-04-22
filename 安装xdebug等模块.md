@@ -8,7 +8,7 @@
 > [参考网址](https://blog.csdn.net/maxsky/article/details/79788447)
 
 下载,对应php版本
-在` /usr/local/lib/php/` 这个目录下新建一个 `php71` 文件夹，将刚刚编译的 xdebug.so 扔进来
+在` /usr/local/lib/php/` 新建一个 `php71` 文件夹，放入 `xdebug.so` 
 
 配置参数
 
