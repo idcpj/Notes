@@ -1,6 +1,17 @@
 [TOC]
 > [pecl 官网](http://pecl.php.net/)
 
+## 手动修改php-config的extension_dir路径
+```
+which php-config
+
+vim /usr/bin/php-config  
+
+# 修改路径
+extension_dir='/usr/local/Cellar/php@7.1/7.1.16_1/lib/ext'
+
+```
+
 ## xdebug
 > [参考网址](https://blog.csdn.net/maxsky/article/details/79788447)
 
