@@ -5,6 +5,10 @@
 推荐放置的路径
 `/usr/local/Cellar/php@7.1/7.1.16_1/lib/php/20160303`
 
+## 像xdebug的配置
+复杂配置的模块剋放入conf.d中,会自动还在此目录
+`/usr/local/etc/php/7.1/conf.d`
+
 ## 设置安装路径和引入路径
 ### php-config中设置安装路径
 
