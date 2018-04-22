@@ -25,6 +25,16 @@ xdebug.profiler_enable=On
 xdebug.var_display_max_children=512
 xdebug.var_display_max_data=2048
 xdebug.var_display_max_depth=8
+
+xdebug.remote_autostart=on
+ 12 xdebug.remote_enable=on
+ 13 xdebug.remote_enable=1
+ 14 xdebug.remote_mode="req"
+ 15 xdebug.remote_log="/var/log/xdebug.log"
+ 16 xdebug.remote_port=9000
+ 17 xdebug.remote_handler="dbgp"
+ 18 xdebug.idekey="PhpStorm"
+ 
 ```
 2. 编译安装
 看参考网址
