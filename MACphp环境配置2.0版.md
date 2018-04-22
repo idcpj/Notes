@@ -70,8 +70,23 @@ LoadModule php7_module        /usr/local/opt/php71/libexec/apache2/libphp7.so
 强制重启apache
 `sudo apachectl -k restart`
 
-### 手动切换apache php版本
+## 手动切换apache php版本
 ```
 #LoadModule php5_module        /usr/local/opt/php55/libexec/apache2/libphp5.so
 LoadModule php7_module        /usr/local/opt/php71/libexec/apache2/libphp7.so
 ```
+## 脚本切换php版本
+在`/usr/local/bin`中添加`sphp` 文件写入 [github脚本](https://gist.github.com/w00fz/142b6b19750ea6979137b963df959d11)的内容
+```
+并赋予执行权限
+chmod +x /usr/local/bin/sphp
+```
+
+切换后,apache 和命令行中的php版本都回变化
+
+```bash
+sphp 55 
+# sphp 71  
+```
+
+

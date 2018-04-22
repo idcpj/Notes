@@ -24,3 +24,4 @@ httpd   86723 _www    4u  IPv6 0x1817cbf642aa1a7      0t0  TCP *:http (LISTEN)
 
 重启
 `udo apachectl restart`
+
