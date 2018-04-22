@@ -74,7 +74,7 @@
 * [MAC](MAC常用配置.md)
     * [php 环境配置 2.0版](MACphp环境配置2.0版.md)
         * [apapche 重启失败](apapche重启失败.md)
-        * [安装xdebug等模块](安装xdebug等模块.md)
+        * [手动/编译,安装xdebug等模块](安装xdebug等模块.md)
         * [pear/pecl的安装](pear-pecl的安装.md)
     * [Mac配置php环境](Mac配置php环境.md)
         * [phpstrom 配置 xdebug](phpstrom配置xdebug.md)
