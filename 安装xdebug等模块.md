@@ -1,4 +1,5 @@
 [TOC]
+> [pecl 官网](http://pecl.php.net/)
 
 ## xdebug
 > [参考网址](https://blog.csdn.net/maxsky/article/details/79788447)
@@ -52,4 +53,22 @@ make -j2
 # 稍等 10s 左右，在 modules 目录即可得到 xdebug.so 文件 
 之后的步骤与直接安装相同
 ```
+
+## redis
+
+> [参考网址](https://blog.csdn.net/joeson7456/article/details/79834176)
+
+```
+wget http://pecl.php.net/get/redis-3.1.6.tgz
+cd redis-3.1.6
+phpize
+./configure
+make && make install
+```
+生成 redis.so
+`extension=/usr/lib/php/extensions/no-debug-non-zts-20160303/redis.so`
+
+也可以讲`cd redis-3.1.6/modules/redis.so`放入指定位置,并手动添加位置
+如:
+放入`/usr/local/Cellar/php@7.1/7.1.16_1/lib/ext/redis.so`中
 
