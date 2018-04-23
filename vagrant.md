@@ -5,12 +5,12 @@
 # 推荐版本
 vagrant  1.8.6
 VirtualBox 5.1.8
-疑问:如果有任何疑问,可以打开gui为true  查看错误
 
 ### 流程
 1. 添加虚拟机
-    1. `vagrant box add centos/7` [官网下载  `centos/7` 为官网包
+    1. `vagrant box add centos/7` 官网下载  `centos/7` 为官网包
     2.  添加镜像 下载xxx.box  `vagrant box add centos_test /Downloads/centos7.box`  cetnos_test 名称可随意
+    
 3. `vagrant init  cetnos/7`   初始化
     * 新建**centos_7_64**目录
     *  在该目录下 `vagrant init  cetnos/7 `
@@ -21,7 +21,7 @@ VirtualBox 5.1.8
 4. `vagrant up` 启动
 5. 修改`Vagrantfile`文件的配置
 
-    ```
+    ```bash
  	config.vm.synced_folder ".","/vagrant",type:"virtualbox"
     
     //如果是没有同步没有权限的文件用如下方法 (适合window)
@@ -50,6 +50,8 @@ vagrant ssh
 
     在宿主机命令窗口安装 `vagrant plugin install vagrant-bindfs`
     
+2. 疑问:如果有任何疑问,可以打开gui为true  查看错具体错误
+
 ---
 
 ### 端口转发
