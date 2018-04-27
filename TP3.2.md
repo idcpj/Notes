@@ -142,26 +142,40 @@ function writelog($msg){
 }
 ```
 
-## 行为标签的使用方法
-在`application/Common/Behavior`中添加行为
-```
-class DemoBehavior extends Behavior {
+## 行为标签-Behavior
+1. 在已有标签中添加行为 ,如`app_init`
 
-    // 行为扩展的执行入口必须是run
-    public function run(&$content){
-    	print_r("hello word");
+
+3. 创建标签,并添加行为
+创建在应用模块的`Home/Behavior/TestBehavior.class.php`
+```
+namespace Home\Behavior;
+use Think\Behavior;
+
+class TestBehavior extends Behavior{
+    public function run(&$pram){
+        $pram.="Word";
     }
 }
 ```
-在`application/Common/Conf/tags.php`中添加标签
+
+在`Conf/tags.php`
 ```
-return array( // 添加下面一行定义即可
-    'app_init' => array(
-        'Common\Behavior\InitHookBehavior',
-        'Common\Behavior\DemoBehavior',
+return [
+    'my_tag' => array(
+        'Home\Behavior\TestBehavior',
     ),
-)
+];
 ```
+在控制器中写入代码
+```
+$params = 'Hello';
+Hook::listen('my_tag',$params);
+
+print_r($params); //Hello Word
+```
+> 注:由于run方法不返回值,但是由于是引用传值,所在run中所做的修改在控制器中依然会变
+
 
 ## 查询范围,可定义多个scope
 在model模型中
