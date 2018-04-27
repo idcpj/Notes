@@ -60,22 +60,6 @@ print_r($params); //Hello Word
 > 注:由于run方法不返回值,但是由于是引用传值,所在run中所做的修改在控制器中依然会变
 
 
-## 查询范围,可定义多个scope
-在model模型中
-```
-protected $_scope = array(
-     'normal'=>array(
-         'where'=>array('status'=>1),
-         'field'=>'id,title',
-         'limit'=>10,
-     ),
-);
-```
-调用
-`$Model->scope('normal')->limit(8)->order('id desc')->select();`
-
-
-
 
 ## 在模版中插入 include
 ```
