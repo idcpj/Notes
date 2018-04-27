@@ -8,7 +8,7 @@
 使用公共字段
 ![](images/Snipaste_2018-04-27_10-45-57.png)
 
-`用{{}}` 形式即可调用
+用 `{{}}` 形式即可调用
 
 ## Postman Interceptor 
 通过 Postman Interceptor 可以获取网页中已经登录的cookie  信息 
