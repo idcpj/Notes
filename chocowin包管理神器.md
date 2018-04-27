@@ -23,9 +23,9 @@
 11.adobe-creative-cloud
 12.boostnote   笔记
 13.wox  window的 Alfred
+14.filezilla  开源ftp
 
-
-choco install -y php composer tim jdk8 tim vagrant virtualbox googlechrome nodejs notepadplusplus wechat clover adobe-creative-cloud boostnote wox
+choco install -y php composer tim jdk8 tim vagrant virtualbox googlechrome nodejs notepadplusplus wechat clover adobe-creative-cloud boostnote wox filezilla
 
 ```
 
