@@ -12,20 +12,19 @@
 ```
 1.php7
 2.qq-tim	
-3.jdk8-java 环境
 4.vagrant	
 5.googlechrome	谷歌浏览器
 6.nodejs
 7.virtualbox
-8.notepadplusplus
+8.notepadplusplus  notepad++
 9.wechat 
 10.clover  四叶草
 11.adobe-creative-cloud
 12.boostnote   笔记
 13.wox  window的 Alfred
 14.filezilla  开源ftp
-
-choco install -y php composer tim jdk8 tim vagrant virtualbox googlechrome nodejs notepadplusplus wechat clover adobe-creative-cloud boostnote wox filezilla
+15. licecap   gif录制屏
+choco install -y php composer tim  tim vagrant virtualbox googlechrome nodejs notepadplusplus wechat clover adobe-creative-cloud boostnote wox filezilla licecap
 
 ```
 
