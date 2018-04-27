@@ -194,15 +194,6 @@ class BookModel extends RelationModel{
 }
 ```
 
-## T() 函数获取模版地址
-```
-T([资源://][模块@][主题/][控制器/]操作,[视图分层])
-T('Public/menu');  //当前模块
-
-$this->display(T('Admin@Public/menu'));
-```
-
-
 
 ## 在模版中插入 include
 ```
@@ -292,3 +283,16 @@ public function show(){
     $this->display();
 }
 ```
+
+## 生成Lite 文件,提升网站性能 
+1. 在入口文件 `index.php`
+`define('BUILD_LITE_FILE',true);`
+
+2. 替换框架入口文件
+```
+require './ThinkPHP/ThinkPHP.php';
+// 改成
+require 'Application/Runtime/lite.php';  //即在index.php  中引入lite 文件即可.
+```
+
+3.通过 `index.php` 访问即可
