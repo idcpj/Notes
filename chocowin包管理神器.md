@@ -1,8 +1,9 @@
 [TOC]
 
+> [查看如何提交包](https://xuanwo.org/2016/02/15/chocolatey-intro/)
 ## 安装
 [官网](https://chocolatey.org/install)
-[参考教程]
+
 以管理员权限
 
 安装choco：
