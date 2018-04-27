@@ -22,9 +22,10 @@
 10.clover  四叶草
 11.adobe-creative-cloud
 12.boostnote   笔记
+13.wox  window的 Alfred
 
 
-choco install -y php composer tim jdk8 tim vagrant virtualbox googlechrome nodejs notepadplusplus wechat clover adobe-creative-cloud boostnote
+choco install -y php composer tim jdk8 tim vagrant virtualbox googlechrome nodejs notepadplusplus wechat clover adobe-creative-cloud boostnote wox
 
 ```
 
