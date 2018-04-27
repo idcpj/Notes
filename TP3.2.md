@@ -295,4 +295,16 @@ require './ThinkPHP/ThinkPHP.php';
 require 'Application/Runtime/lite.php';  //即在index.php  中引入lite 文件即可.
 ```
 
-3.通过 `index.php` 访问即可
+3. 通过 `index.php` 访问即可
+
+## 使用 trace
+```
+'SHOW_PAGE_TRACE' =>true,  //开启
+
+//输出trace
+trace($_GET,'用户信息','debug');
+
+//显示
+用户信息:Array ( [p_reload] => 1 [reload_time] => 1524811491619 [bookcate] => 1 )
+
+```
