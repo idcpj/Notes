@@ -302,7 +302,7 @@ require 'Application/Runtime/lite.php';  //即在index.php  中引入lite 文件
 'SHOW_PAGE_TRACE' =>true,  //开启
 
 //输出trace
-trace($_GET,'用户信息','debug');
+trace($_GET,'用户信息');
 
 //显示
 用户信息:Array ( [p_reload] => 1 [reload_time] => 1524811491619 [bookcate] => 1 )
