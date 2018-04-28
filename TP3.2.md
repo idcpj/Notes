@@ -1,10 +1,8 @@
 [TOC]
 
 
-## 配置设置
-使用`C()`函数调用,可调用数组
-1.配置目录为`模块名/Conf/config.php`
-2.导入自定义的配置如`user.php等`
+## 导入自定义的配置如
+如`user.php等`
 ```
 #在模块名/Conf/config.php中
 return array(
