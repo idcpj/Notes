@@ -229,6 +229,12 @@ $user = User::get(function($query){
 });
 echo $user->name;
 
+// 获取某个列的所有值
+User::where('status',1)->column('name')
+
+// 以id为索引
+User::where('status',1)->column('name','id');
+
 
 ```
 
