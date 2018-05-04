@@ -207,7 +207,7 @@ User::update(['id' => 1, 'name' => 'thinkphp']);
 User::where(['status'=>1,'name'=>'cpj'])->update(['name' => 'thinkphp']);
 ```
 
-### 更新个别字段
+#### 更新个别字段
 ```
 $loan = LoanModel::get($id);
 $loan->show_app = $loan->getData('show_app')==1?0:1;
