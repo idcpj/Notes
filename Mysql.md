@@ -1,6 +1,6 @@
 [TOC]
 
-## 视图表
+## 创建视图表
 ```sql
 CREATE VIEW `tablename`AS select * from `wj_content`；
 ```
@@ -21,4 +21,13 @@ update `rb_carhome` SET `code_name`=replace(`code_name`,'NBRB0','NBRB') where co
 `LEFT JOIN`: 即使右表中没有匹配，也从左表返回所有的行
 `RIGHT JOIN`: 即使左表中没有匹配，也从右表返回所有的行
 `FULL JOIN`: 只要其中一个表中存在匹配，就返回行
->`user.id=info.id`  当这个等式
+
+> `user.id=info.id`  当这个等式
+
+
+## partition by  -  分组排序功能
+[参考网址](https://www.cnblogs.com/zhwbqd/p/4205821.html)
+
+如获取所有用户最近的一笔消费
+`select t.user_id, group_concat( t.money order by t.create_time desc ) moneys ... group by t.user_id
+`

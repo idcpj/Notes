@@ -335,3 +335,24 @@ if(true!==$result){
     halt($result);//用户名必须
 }
 ```
+
+## 操作连个数据库
+把其中一个模块选为第二个数据库 
+在模块中创建一个基本模型`base.php`  设置model参数为
+```
+ protected $connection=[
+	    // 服务器地址
+	    'hostname'        => 'localhost',
+	    // 数据库名
+	    'database'        => 'xsfenxiao',
+	    // 用户名
+	    'username'        => 'root',
+	    // 密码
+	    'password'        => 'root',
+	    // 端口
+	    'hostport'        => '3306',
+	    // 数据库表前缀
+	    'prefix'          => 'vv_',
+    ];
+    
+```
