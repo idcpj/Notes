@@ -35,7 +35,7 @@
 在编辑配置中  添加 **php web Application**
 
 **开启监听模式**
-![](images/Snipaste_2018-04-23_14-10-02_1524463944884.png)
+![](images/Snipaste_2018-05-07_17-55-37.png)
 如果图中开启了监听,则不需要点击debug .既可以进行监听
 
 ## compser
