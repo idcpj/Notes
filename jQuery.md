@@ -105,4 +105,11 @@ $(“input[name=’ch’]”).each(function(i){
             });
 		//输出：1   2  3  4  5	
 ```
-
+## 懒加载
+```
+<img src="img1" src="small.jpg" data-realsrc='abc.png'>
+<script type="text/javascript">
+	var img1 = document.getElementById('img1')
+	img1.src= img1.getAttribute('data-realsrc')
+</script>
+```

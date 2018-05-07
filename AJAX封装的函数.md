@@ -23,7 +23,7 @@ $(document).ready(function(){
 })
 ```
 
-## js-ajax-get-dialog  
+## js-ajax-get-dialog  - 异步前弹出对话框
 ```
 <a class="js-ajax-get-dialog" href="{:url('plinks/follow_chapter',['aid'=>$a['ji_no'],'nid'=>$books['id']])}">设为关注章节</a>
 
