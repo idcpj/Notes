@@ -172,3 +172,26 @@ trace($_GET,'用户信息');
 用户信息:Array ( [p_reload] => 1 [reload_time] => 1524811491619 [bookcate] => 1 )
 
 ```
+
+## 表单令牌
+> 防止表单的重复提交
+
+在`模块名/Conf/tags.php`中
+```
+return array(
+     // 添加下面一行定义即可
+     'view_filter' => array('Behavior\TokenBuild'),
+    // 如果是3.2.1以上版本 需要改成
+    // 'view_filter' => array('Behavior\TokenBuildBehavior'),
+);
+```
+添加配置参数
+`'TOKEN_ON'      =>    true,  // 是否开启令牌验证 默认关闭`
+验证
+```
+$User = D("User"); 
+ // 生成模型类的验证
+ if (!$User->create($_POST)){
+ // 令牌验证错误
+ }
+ ```
