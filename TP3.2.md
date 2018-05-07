@@ -195,3 +195,14 @@ $User = D("User");
  // 令牌验证错误
  }
  ```
+ 
+ ## 设置数据库缓存
+ 在`config.php`中配置
+ `DATA_CACHE_TIME和DATA_CACHE_TYPE`
+ ```
+ //不带标识符
+M('User')->where('id=5')->cache(true)->find();
+
+/带标识符
+M('User')->cache('key',60)->find();
+ ```
