@@ -1,7 +1,7 @@
 [TOC]
 
 `array array_map ( callable $callback , array $array1 [, array $... ] )`
-
+**主要针对多个数组操作,结果返回到第一个数组中**
 **执行结果是以第一个传入的数组键名为基础的**
 
 
