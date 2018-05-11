@@ -41,6 +41,8 @@
             * [异步文件系统IO](PHP/swoole/AsyncIO/异步文件系统IO.md)
             * [异步MySQL客户端](PHP/swoole/AsyncIO/异步MySQL客户端.md)
     * [PHP内置数组操作](PHP内置数组操作.md)
+        * [array_map](array_map.md)
+        * [array_multisort](array_multisort.md)
 * [Java](Java.md)
     * [java 数组](java数组.md)
     * [java 类](java类.md)
