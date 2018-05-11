@@ -79,3 +79,37 @@ $server->set([
 ]);
 ```
 然后直接访问静态文件即可,无需 http_server.php
+
+## 面向对象的 demo
+```
+ class ws{
+    const HOST = '0.0.0.0';
+    const PORT = 8812;
+
+    public $ws = null;
+
+    public function __construct(){
+        $this->ws = new swoole_websocket_server("0.0.0.0", 8812);
+        $this->ws->on('open',[$this,'onOpen']);
+        $this->ws->on('message',[$this,'onMsg']);
+        $this->ws->on('close',[$this,'onClose']);
+
+        $this->ws->start();
+    }
+
+    //监听连接事件
+    public function onOpen($ws, $request){
+        print_r($request->fd);
+    }
+
+    //监听ws消息事件
+    public function onMsg($ws,$frame){
+        echo "ser-push-message".$frame->data."\n";
+        $ws->push($frame->fd,'server-push'.date('Y-m-d H:i:s',time()));
+    }
+
+    public function onClose($ws,$fd){
+        echo "clientid:{$fd}\n";
+    }
+}
+```
