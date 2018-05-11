@@ -1,6 +1,7 @@
 [TOC]
 
 1. 如果某个函数中的变量需要多次调用,可以静态化属性
+因为静态化后,执行过程中只初始化一次
 ```
 function send_http_status($code) {
     static $_status = array(
