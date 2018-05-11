@@ -77,3 +77,24 @@ pingpp.createPayment(object, function(result, err){
     }
 });
 ```
+## 回调函数的4种使用方式
+
+```php
+// 方法一: 直接传入函数名
+array_map('my_callback_function'); 
+
+// 方法二: 在数组
+array_map(array('MyClass', 'myCallbackMethod')); 
+
+//方法三 : 传入实例化对象,加对象中的方法
+$obj = new MyClass();
+array_map(array($obj, 'myCallbackMethod'));
+
+//方法四 : 闯入静态方法
+array_map('MyClass::myCallbackMethod');
+
+//方法五 : 传入闭包函数
+$double = function($a) {
+    return $a * 2;
+};
+$new_numbers = array_map($double, $numbers);
