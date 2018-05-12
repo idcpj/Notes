@@ -39,6 +39,7 @@
         * [AsyncIO](PHP/swoole/AsyncIO.md)
             * [Swoole-Crontab](PHP/swoole/swoole工具/Swoole-Crontab.md)
             * [异步文件系统IO](PHP/swoole/AsyncIO/异步文件系统IO.md)
+            * [异步Redis](PHP/swoole/异步Redis.md)
             * [异步MySQL客户端](PHP/swoole/AsyncIO/异步MySQL客户端.md)
     * [PHP内置数组操作](PHP内置数组操作.md)
         * [array_map-针对多个数组](array_map.md)
