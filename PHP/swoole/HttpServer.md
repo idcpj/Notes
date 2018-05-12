@@ -30,6 +30,7 @@ $http->on('request',function ($request,$response){
     $response->header('Content-Type', 'application/php');
     $response->sendfile(__DIR__.'/tcp.php');
     
+    //发送给浏览器
     $response->end('<h1>HTTPserver</h1>');
 });
 ```
