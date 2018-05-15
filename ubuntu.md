@@ -107,4 +107,10 @@ sudo apt-get -f install
 再次安装。
 ```
 3. 搜狗输入法
-4. 
+
+5. 备份
+```
+sudo add-apt-repository ppa:nemh/systemback
+sudo apt-get update
+sudo apt-get install systemback
+```
