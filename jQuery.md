@@ -1,47 +1,7 @@
 [TOC]
 
 
-## 设置select 的默认值  
-只需要在select 属性添加`default `属性即可
-```
-<form action="./" method="get">
 
-<select name="type"  default="{$_GET['type']}">
-    <option value="1">11</option>
-    <option value="2">22</option>
-    <option value="3">333</option>
-</select>
-
-<input type="submit" value="提交">
-</form>
-
-<script>
-$(function(){
-    // 调整默认选择内容
-    $("select").each(function(index, element) {
-        $(element).find("option[value='"+$(this).attr('default')+"']").attr('selected','selected');
-    });
-});
-</script>
-
-```
-
-## 原生点击提示信息
-```
- function bh_msg_tips(msg){
-    var oMask = document.createElement("div");
-    oMask.id = "bh_msg_lay";
-    oMask.style.position="fixed";
-    oMask.style.left="0";
-    oMask.style.top="50%";
-    oMask.style.zIndex="100";
-    oMask.style.textAlign="center";
-    oMask.style.width="100%";
-    oMask.innerHTML =  "<span style='background: rgba(0, 0, 0, 0.65);color: #fff;padding: 10px 15px;border-radius: 3px; font-size: 14px;'>" + msg + "</span>";
-    document.body.appendChild(oMask);
-    setTimeout(function(){$("#bh_msg_lay").remove();},2000);
-}
-```
 
 ## 设置/获取内容
 ```js
