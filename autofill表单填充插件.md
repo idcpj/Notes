@@ -21,3 +21,8 @@
 ![](images/Snipaste_2018-05-15_18-32-34.png)
 --
 ![](images/Snipaste_2018-05-15_18-32-49.png)
+
+
+## 常用字段
+1. 网址
+`{http|https}://www.{$5}.{com|cn}`
