@@ -10,6 +10,7 @@
 2. 解压
 3. 安装
 ```
+phpize
 ./configure --enable-async-redis
 make clean
 make -j
