@@ -1,6 +1,20 @@
 [TOC]
 
 ## 创建http.php
+在导入 tp框架的时候有两种方式
+1.  放在 `WorkStart` 中,
+优点:只需要载入一次框架,速度快
+缺点:由于 tp5duiswoole 支持不好,所以需要更改一些 tp5 的源码
+2. 把 `define` 和 `require`直接在放在`request`的请求中
+```
+ define('APP_PATH', __DIR__ . '/../application/');
+//// 加载基础文件
+require __DIR__ . '/../thinkphp/base.php';
+```
+
+优点:不需要更改 tp5 的源码
+缺点:速度稍微慢与 `WorkStart`
+
 在根目录下创建 `server/http.php`
 ```
 $http = new swoole_http_server('0.0.0.0', 8811);
