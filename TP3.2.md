@@ -124,7 +124,7 @@ return array (
 
 
 ## 生成静态缓存
->[查考文档](https://www.kancloud.cn/manual/thinkphp/1839)
+> [查考文档](https://www.kancloud.cn/manual/thinkphp/1839)
 
 在模块或commom /Conf/config.php中配额,
 
