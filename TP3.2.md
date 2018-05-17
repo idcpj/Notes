@@ -199,7 +199,7 @@ $User = D("User");
 ## Widget扩展
 > 常用于需要在模版的foreach 循环中在进行复杂操作
 ```
-//创建widget
+//创建home/widget/DemoWidget.class.php
 namespace Home\Widget;
 	use Think\Controller;
 	
