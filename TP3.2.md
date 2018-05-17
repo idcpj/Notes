@@ -196,13 +196,39 @@ $User = D("User");
  }
  ```
  
- ## 设置数据库缓存
- 在`config.php`中配置
- `DATA_CACHE_TIME和DATA_CACHE_TYPE`
- ```
- //不带标识符
-M('User')->where('id=5')->cache(true)->find();
-
-/带标识符
-M('User')->cache('key',60)->find();
- ```
+## Widget扩展
+> 常用于需要在模版的foreach 循环中在进行复杂操作
+```
+//创建widget
+namespace Home\Widget;
+	use Think\Controller;
+	
+	class DemoWidget extends Controller{
+		public function menu($param1,$param2){
+        	//方式1. 直接删输出
+			return [$param1, $param2,]; //只能是数组索引才会被list
+            
+            
+            //方式2.支持模版
+            $menu = M('Cate')->getField('id,title');
+            $this->assign('menu',$menu);
+            $this->display('Cate:menu');
+        	//模版中
+            /*
+            <foreach name="menu" item="title">
+            {$key}:{$title}
+            </foreach>
+            */
+		}
+	}
+    
+    
+    
+//在home/view/index/index.html中
+<php>
+    list($name,$param) = W('demo/menu',[['name'=>'cpj'],['age'=>23,'user'=>'hello']]);  //w函数数组的形式传参
+    dump($name);
+    dump($param);
+</php>
+```
+    
