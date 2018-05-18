@@ -23,3 +23,7 @@ $a = ['name'=>'cpj','age'=>12];
 $mapArr = array_map($func, $a); //array ( 'name' => 'cpj-3', 'age' => '12-3', )
 
 ```
+## 使用自带函数
+```
+$c = array_map('trim', $a);
+```

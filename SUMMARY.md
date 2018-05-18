@@ -47,7 +47,7 @@
         * [swoole与tp5](PHP/swoole/swoole与tp5.md)
     * [PHP内置数组操作](PHP内置数组操作.md)
         * [array_map-针对多个数组](array_map.md)
-        * [array_multisort](array_multisort.md)
+        * [array_multisort  对二维数组进行排序](array_multisort.md)
         * [array_filter](array_filter.md)
         * [array_walk - 对一个数组操作](array_walk-对一个数组操作.md)
         * [array_walk_recursive  递归](array_walk_recursive递归.md)
