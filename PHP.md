@@ -81,14 +81,15 @@ pingpp.createPayment(object, function(result, err){
 
 ```php
 // 方法一: 直接传入函数名
-array_map('my_callback_function'); 
+array_map('my_callback_function',$arr); 
 
-// 方法二: 在数组
-array_map(array('MyClass', 'myCallbackMethod')); 
+// 方法二: 用数组[类名,类方法]
+array_map(array('MyClass', 'myCallbackMethod'),$arr); 
 
 //方法三 : 传入实例化对象,加对象中的方法
 $obj = new MyClass();
-array_map(array($obj, 'myCallbackMethod'));
+array_map(array($obj, 'myCallbackMethod'),$arr);
+array_map([$this,myCallbackMethod],$arr);
 
 //方法四 : 闯入静态方法
 array_map('MyClass::myCallbackMethod');
