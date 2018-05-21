@@ -12,7 +12,7 @@
 require __DIR__ . '/../thinkphp/base.php';
 ```
 
-优点:不需要更改 tp5 的源码
+优点:不需要更改 tp5 的源码,但是在 task任务中无法通过命名空间加载类
 缺点:速度稍微慢与 `WorkStart`
 
 在根目录下创建 `server/http.php`
