@@ -65,6 +65,7 @@
     * [Vim](vim.md)
     * [vagrant](vagrant.md)
     * [Mysql](Mysql.md)
+        * [性能优化](Mysql/性能优化.md)
     * [Tmux](Tmux.md)
     * [Bash](Bash.md)
     * [git](git.md)
