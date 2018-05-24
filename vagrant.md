@@ -2,11 +2,17 @@
 [TOC]
 > [vagrant box下载](https://app.vagrantup.com/boxes/search)
 
-# 推荐版本
+## 推荐版本
 vagrant  1.8.6
 VirtualBox 5.1.8
 
-### 流程
+## 插件
+1. vagrant-vbguest：自定义共享目录（建议安装）
+`vagrant plugin install vagrant-vbguest`
+有时候无法使用共享目录 可以安装此插件
+
+
+## 流程
 1. 添加虚拟机
     1. `vagrant box add centos/7` 官网下载  `centos/7` 为官网包
     2.  添加镜像 下载xxx.box  `vagrant box add centos_test /Downloads/centos7.box`  cetnos_test 名称可随意
@@ -61,7 +67,7 @@ VirtualBox 5.1.8
 
 ---
 
-### 端口转发
+## 端口转发
     方法一: 通过virtual Box  配置
                 在设置->网络/端口转发
     方法二: 在vagrant 配置文件中配置
@@ -74,7 +80,7 @@ VirtualBox 5.1.8
 
 ---
 
-### 优化
+## 优化
 1. 优化虚拟机
 ```
 config.vm.provider "virtualbox" do |vb|
@@ -114,14 +120,14 @@ SHELL
     EnableSendfile Off
 ```
 ---
-### 打包  
+## 打包  
 `vagrant package --output xxx.box --base 虚拟机名称`
 
         
 ----------
 
 
-### 常用命令 
+## 常用命令 
 
 |命令|说明|
 |---|---|
