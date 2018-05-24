@@ -139,8 +139,12 @@ SHELL
 |vagrant up|启动虚拟机|
 |vagrant ssh|登录虚拟机|
 |vagrant suspend|休眠|
+|vagrant resume|环形休眠|
 |vagrant halt|关闭虚拟机|
 |vagrant reload|重启,更新配置|
+
+> 实际使用过程中，通过 vagrant suspend/resume 来快速暂停 / 恢复最为方便。
+
 
 
   [1]: https://www.vagrantup.com/docs/synced-folders/virtualbox.html
