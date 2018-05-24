@@ -30,7 +30,7 @@ VirtualBox 5.1.8
     rsync__args: ["--verbose", "--rsync-path='sudo rsync'", "--archive", "--delete", "-z"]
     
      #这种方式可以用主机上的mysql管理软件连接虚拟机的mysql
-	config.vm.network "public_network", ip: "192.168.0.17"
+	config.vm.network "public_network", ip: "192.168.1.11"
     ``` 
     
 6. 连接虚拟机
