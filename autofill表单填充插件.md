@@ -47,3 +47,5 @@
 `{http|https}://www.{$5}.{com|cn}`
 2. 邮箱
 `{$8}@{qq|gmail|163|outlook}.com`
+3. 手机
+`1572{#7}`

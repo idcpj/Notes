@@ -34,16 +34,23 @@ VirtualBox 5.1.8
     ``` 
     
 6. 连接虚拟机
-```
-window 	用户登录
-主机：127.0.0.1
-端口号：2222
-用户名：vagrant
-密码：私钥
+- window 	用户登录
+  方法一
+     ```
+    主机：127.0.0.1
+    端口号：2222
+    用户名：vagrant
+    密码：私钥
+	```
+	方法二
+    ```
+    通过choco 安装 ssh
+    
+    vagrant ssh
+    ```
 
-mac 用户登录
-vagrant ssh
-```
+- mac 用户登录
+`vagrant ssh`
 
 **错误处理**
 1. `vagrant up` 时,`/sbin/mount.vboxsf: mounting failed with the error: No such device`
