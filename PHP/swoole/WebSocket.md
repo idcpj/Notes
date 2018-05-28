@@ -19,7 +19,7 @@ Websockett特点
 $server = new swoole_websocket_server("0.0.0.0", 8812);
 
 $server->on('open', function (swoole_websocket_server $server, $request) {
-    echo "server: handshake success with fd: {$request->fd}\n";
+    echo "server: handshake success with fd: ".$request->fd."\n";
 });
 $server->on('message', function (swoole_websocket_server $server, $frame) {
     echo "receive from {$frame->fd}:{$frame->data},opcode:{$frame->opcode},fin:{$frame->finish}\n";
@@ -113,3 +113,14 @@ $server->set([
     }
 }
 ```
+
+## 获取连接的 id 并放入 redis 中
+在 `open` 事件中用redis的 sAdd  存储有序集合 id
+```
+//存储 只是原来 demo
+redis()->sAdd('live_game_key',$id);
+//查看  在 redis-cli  
+SMEMBERS live_game_key
+```
+
+在` close` 中删除连接的 id
