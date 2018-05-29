@@ -28,6 +28,8 @@ update `rb_carhome` SET `code_name`=replace(`code_name`,'NBRB0','NBRB') where co
 ## partition by  -  分组排序功能
 [参考网址](https://www.cnblogs.com/zhwbqd/p/4205821.html)
 
-如获取所有用户最近的一笔消费
-`select t.user_id, group_concat( t.money order by t.create_time desc ) moneys ... group by t.user_id
-`
+如:获取所有用户最近的一笔消费
+```sql
+//通过对 money的create_time排序来获取最近一笔输出
+select t.user_id, group_concat( t.money order by t.create_time desc ) moneys ... group by t.user_id
+```
