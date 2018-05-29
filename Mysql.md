@@ -27,9 +27,28 @@ update `rb_carhome` SET `code_name`=replace(`code_name`,'NBRB0','NBRB') where co
 
 ## partition by  -  分组排序功能
 [参考网址](https://www.cnblogs.com/zhwbqd/p/4205821.html)
+1. 简单demo
+```sql
+#以id 进行分组 ,把相同id 的name 用 , 隔开
+select id,group_concat(name) as names from aa group by id;
++------+--------------------+
+| id| names |
++------+--------------------+
+|1 | 10,20,20|
+|2 | 20 |
+|3 | 200,500|
++------+--------------------+
 
-如:获取所有用户最近的一笔消费
+```
+
+
+2. 如:获取所有用户最近的一笔消费
 ```sql
 //通过对 money的create_time排序来获取最近一笔输出
 select t.user_id, group_concat( t.money order by t.create_time desc ) moneys ... group by t.user_id
+```
+## 对表中的字段进行替换
+```
+//对write_price表中所有phone的157 替换为168
+update write_price set phone=replace(phone, 157, 168);
 ```

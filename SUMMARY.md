@@ -30,7 +30,6 @@
     * [crontable 定时任务](crontable定时任务.md)
     * [常用正则](常用正则.md)
     * [PHP常用函数](PHP常用函数.md)
-    * [Mysql 教程](Mysql教程.md)
     * [PHP的优化之道](PHP的优化之道.md)
     * [swoole](PHP/swoole.md)
         * [HttpServer](PHP/swoole/HttpServer.md)

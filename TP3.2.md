@@ -231,4 +231,18 @@ namespace Home\Widget;
     dump($param);
 </php>
 ```
-    
+## cli模式(命令行模式)
+推荐使用绝对路径的形式
+在`index.php`中添加`__DIR__`
+```
+define('APP_PATH',__DIR__.'/../Application/');
+
+// 引入ThinkPHP入口文件
+require __DIR__.'/../ThinkPHP/ThinkPHP.php';
+```
+
+1.  无参运行
+`php index.php cli/index/demo`
+
+2. 有参数运行-参数可写在方法的参数中
+`php index.php statis/index/demo/name/cpj/age/12`
