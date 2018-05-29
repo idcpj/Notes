@@ -82,6 +82,7 @@
         * [HTML](HTML.md)
         * [CSS](CSS.md)
         * [jQuery](jQuery.md)
+            * [制作jquery 插件](制作jquery插件.md)
             * [表单提交插件](表单提交插件.md)
             * [lightBox-图片顺序预览](lightBox-图片顺序预览.md)
             * [jqzoom.js-类似淘宝的图片放大](jqzoom.js-类似淘宝的图片放大.md)

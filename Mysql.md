@@ -52,3 +52,4 @@ select t.user_id, group_concat( t.money order by t.create_time desc ) moneys ...
 //对write_price表中所有phone的157 替换为168
 update write_price set phone=replace(phone, 157, 168);
 ```
+
