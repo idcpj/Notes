@@ -3,8 +3,8 @@
 ## 是数据库可以远程登录
 ```
 
-mysql> GRANT ALL PRIVILEGES ON *.* TO 'username'@'%' IDENTIFIED BY 'password' WITH GRANT OPTION;
-mysql>flush privileges;
+mysql>  GRANT ALL PRIVILEGES ON *.* TO 'username'@'%' IDENTIFIED BY 'password' WITH GRANT OPTION;
+mysql>  flush privileges;
 
 username : 为mysql 的用户
 password: mysql的密码
