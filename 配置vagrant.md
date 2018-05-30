@@ -18,3 +18,5 @@ mysql>  flush privileges;
 username : 为mysql 的用户
 password: mysql的密码
 ```
+
+生成的路径为项目路径对应 虚拟机中的`\vagrant`中
