@@ -1,5 +1,15 @@
 [TOC]
 
+## 是数据库可以远程登录
+```
+
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'username'@'%' IDENTIFIED BY 'password' WITH GRANT OPTION;
+mysql>flush privileges;
+
+username : 为mysql 的用户
+password: mysql的密码
+```
+
 ## 创建视图表
 ```sql
 CREATE VIEW `tablename`AS select * from `wj_content`；
