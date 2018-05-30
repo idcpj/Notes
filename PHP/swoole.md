@@ -6,7 +6,7 @@
 
 ## 安装
 ### pecl 安装
-`pecl install swoole`
+`sudo pecl install swoole`
 重启 apache
 
 ### 源码安装
