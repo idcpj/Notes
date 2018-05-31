@@ -1,7 +1,8 @@
 [TOC]
 
 
-
+## 通过ip查地址接口
+`http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=json&ip=114.114.114.114`
 
 ## https双向认证
 查看我的[github](https://github.com/idcpj/phplib/blob/master/src/Phplib/Curl.php)
