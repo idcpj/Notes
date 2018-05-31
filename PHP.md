@@ -2,7 +2,11 @@
 
 
 ## 通过ip查地址接口
+1. 查询ip所在地
 `http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=json&ip=114.114.114.114`
+2. 查询当前所在地
+`http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=json`
+
 
 ## https双向认证
 查看我的[github](https://github.com/idcpj/phplib/blob/master/src/Phplib/Curl.php)
