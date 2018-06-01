@@ -3,14 +3,19 @@
 
 ## 激活地址
 新教程[教程地址](http://www.imsxm.com/jetbrains-license-server.html)
+
+
 ## 汉化和配置
 汉化替换lib下文件
 文件在oneDrive
-## mac 卡顿设置
+
+
 
 ## 连接Mysql
 >view->工具窗口->database
 >若无法下载驱动,在XML文件中mysql的地址:[下载](http://download.jetbrains.com/idea/jdbc-drivers/mysql-connector-java-5.1.35-bin.jar)
+
+
 
 ## 开启phpstorm调试模式
 
@@ -24,7 +29,7 @@
 		xdebug.remote_host= localhost
 		xdebug.remote_port = 9000
 		xdebug.idekey = PHPSTORM
->查看phpinfo  是否存在debug
+> 查看phpinfo  是否存在debug
     
 2. 下载chrome插件
 		[点击跳转](https://chrome.google.com/webstore/detail/jetbrains-ide-support/hmhgeddbohgjknpmjagkdomcpobmllji)
@@ -37,6 +42,8 @@
 **开启监听模式**
 ![](images/Snipaste_2018-05-07_17-55-37.png)
 如果图中开启了监听,则不需要点击debug .既可以进行监听
+
+
 
 ## compser
 
@@ -58,12 +65,24 @@
 ```
 5. 重启软件
 
- ## 其他技巧
-### 生成随机字母
-`lorem100 生成百个单词`
 
+
+
+ ## 其他技巧
+ 
 ### 分享配置好的运行配置
 在运行配置中,勾选分享,则可以把自己的通过 .idea  分享出去
+
+### 创建补丁
+`vcs(s) /创建补丁` 选择保存位置即可,
+`vcs(s) /应用补丁`  
+有两种应用方式:
+1. 选择直接应用到项目中 
+2. 选择`import to Shelf` 保存到搁置中,在`version Control / shelf` 中查看
+
+
+## 搁置更改
+``vcs(s) / 搁置更改` 可以保存到在`version Control / shelf` 的搁置中
 
 
 
@@ -78,9 +97,7 @@
 |  `Shift+F1`  |   查找外部文档 |
 |  `'hello word'.log`  |  按 table 变为  console.log('helloword'); |
 |  `CTRL+T ` |   翻译英文 |
-|  `Alt+Shift+D` |   与剪切板对比 |
-|  `Ctrl + Alt + ->` |   与剪切板对比 |
-|`ctrl+shift+n`| 搜索文件位置|
+|`ctrl+shift+n`| 通过文件名搜索文件位置|
 | `ctrl+n`|    更多功能,如给属性添加Getters and Setters |
 |`ctrl+shift+alt+n`| 快速打开指定的方法|
 
@@ -93,6 +110,8 @@
 |`command + control +  w`| 关闭所有选项卡  |
 |`optioon + j`| 添加下一匹配的选项|
 |`command +control+  j`| 匹配所有的选项|
+
+
 
 ## ide界面
 ### 选择主题

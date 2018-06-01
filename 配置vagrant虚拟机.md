@@ -28,4 +28,7 @@ config.vm.network "forwarded_port", guest: 81, host: 1181
  `config.vm.network "public_network",, ip: "192.168.33.10"`
  ip查看必须符合网关在同一网段
  
- > 桥接问题比较多,请自行google
+ ### 问题
+ 1. 虚拟机无法ping通主机
+ 在`控制面板\网络和 Internet\网络连接`中选择网络右键属性,共享网络
+ 
