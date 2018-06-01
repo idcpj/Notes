@@ -46,7 +46,8 @@ php -m |grep swoole 查找 swoole 是否安装成功
 
 > kill   pid
 ```
-3. phpstorm 支持 php
+
+## phpstorm 支持 php
 
 [参考网址](https://www.jianshu.com/p/4a43d23f38af)
 

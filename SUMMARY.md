@@ -93,7 +93,7 @@
         * [anyproxy 代理](anyproxy代理.md)
 * [软件](软件.md)
     * [PHPStorm](PHPStorm.md)
-        * [配置vagrant](配置vagrant.md)
+        * [配置vagrant虚拟机](配置vagrant虚拟机.md)
     * [PyCharm](PyCharm.md)
     * [Intellij IDEA](IntellijIDEA.md)
     * [Android Studio](AndroidStudio.md)
