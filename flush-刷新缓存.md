@@ -1,6 +1,7 @@
 [TOC]
 >在循环时,我们需要查看每次循环的值,还不想等全部循环完,在输出值,可以用此方法
 
+1. 每次都清空缓存
 demo.php
 ```
 header( 'Content-type: text/html; charset=utf-8' );
@@ -13,6 +14,15 @@ for( $i = 0 ; $i < 10 ; $i++ )
     sleep(1);
 }
 echo 'End ...<br />';
+```
+2. 保存并输出缓存
+```
+ob_start();
+echo "111111  ";
+$res  =ob_get_clean();
+echo "222222  ";
+echo $res;
+// 输出222222  111111
 ```
 
 
