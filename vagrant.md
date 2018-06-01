@@ -3,8 +3,8 @@
 > [vagrant box下载](https://app.vagrantup.com/boxes/search)
 
 ## 推荐版本
-vagrant  1.8.6
-VirtualBox 5.1.8
+vagrant   2.0.4
+VirtualBox 5.2.12
 
 ## 插件
 1. vagrant-vbguest：自定义共享目录（建议安装）
