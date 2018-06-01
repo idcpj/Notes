@@ -94,6 +94,7 @@
 * [软件](软件.md)
     * [PHPStorm](PHPStorm.md)
         * [配置vagrant虚拟机](配置vagrant虚拟机.md)
+        * [配置远程debug-可配合vagrant](配置远程debug-可配合vagrant.md)
     * [PyCharm](PyCharm.md)
     * [Intellij IDEA](IntellijIDEA.md)
     * [Android Studio](AndroidStudio.md)
