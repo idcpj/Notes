@@ -85,11 +85,16 @@ $server->set([
  class ws{
     const HOST = '0.0.0.0';
     const PORT = 8812;
+    const CHART_PORT = 8813;
 
     public $ws = null;
 
     public function __construct(){
         $this->ws = new swoole_websocket_server("0.0.0.0", 8812);
+        
+        //添加监听端口,用于 
+        $this->ws->listen(self::HOST, self::CHART_PORT, SWOOLE_SOCK_TCP);
+        
         $this->ws->on('open',[$this,'onOpen']);
         $this->ws->on('message',[$this,'onMsg']);
         $this->ws->on('close',[$this,'onClose']);
