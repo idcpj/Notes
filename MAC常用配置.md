@@ -86,14 +86,9 @@ source ~/.bashrc
 `defaults write com.apple.dock springboard-columns -int 8; defaults write com.apple.dock springboard-rows -int 7; defaults write com.apple.dock ResetLaunchPad -bool TRUE; killall Dock`
 
 ## 其他命令
-1. 让文件在后台运行
-在命令后加`&`
-如:
-` php thinkphp/script/bin/server/WebSocket.php &`
-2. 查看多少后台命令
-`jobs`
-3. 切换后台命令
-`fg %1`   1位 jobs 中的 id
-或者 直接 `fg` 加 tab自动补全
-4. 终端后台命令
-在`切换后台命令`后 `control +c` 中断
+```
+php index.php &   		#在命令后加 & 让进程在后台运行
+jobs –l 				#查看后台运行的进程
+fg %n 					#让后台运行的进程 n 到前台来
+bg %n 					#让进程 n 到后台去;
+```

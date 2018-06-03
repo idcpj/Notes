@@ -54,3 +54,9 @@ php -m |grep swoole 查找 swoole 是否安装成功
 `https://github.com/eaglewu/swoole-ide-helper`
 把 git 项目下载到本地
 在 phpstorm 左侧目录中的外部库中添加当 git 项目的路径
+
+
+## 基于 swoole 的框架
+1. swoft
+2. easyswoole
+3. fastd
