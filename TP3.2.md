@@ -231,6 +231,10 @@ namespace Home\Widget;
     dump($param);
 </php>
 ```
+## 在tp3.2 中使用 trait 的命名规范
+后缀必须因为`xxxx.class.php` 而非`xxx.php`
+
+
 ## cli模式(命令行模式)
 推荐使用绝对路径的形式
 在`index.php`中添加`__DIR__`

@@ -65,20 +65,9 @@ VirtualBox 5.2.12
     
 2. 疑问:如果有任何疑问,可以打开gui为true  查看错具体错误
 
----
+3. 如果发现无法进行实时同步,可更改虚拟机的同步目录
+`config.vm.synced_folder ".", "/vagrant_data"`
 
-## 端口转发
-    方法一: 通过virtual Box  配置
-                在设置->网络/端口转发
-    方法二: 在vagrant 配置文件中配置
-                在宿主对应文件夹下 的vagrant 
-    		    	Vagrant.configure("2") do |config|
-                      # ...
-                      config.vm.network "forwarded_port", guest: 80, host: 8080
-                    end
-    注意:host 的端口号 必须大于 1024
-
----
 
 ## 优化
 1. 优化虚拟机
@@ -123,9 +112,12 @@ SHELL
 ## 打包  
 `vagrant package --output xxx.box --base 虚拟机名称`
 
-        
-----------
-
+## 其他技能
+1. 设置同步文件的所有者
+```
+config.vm.synced_folder "src/", "/srv/website",
+  owner: "root", group: "root"
+  ```
 
 ## 常用命令 
 
