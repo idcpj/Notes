@@ -22,7 +22,7 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule .* index.php
 ```
 
-### 
+### nginx 的 Rewrite
 ```
 server {
   listen ****;
@@ -35,3 +35,7 @@ server {
   }
 }
 ```
+
+## php 代码补全
+1. 克隆 `https://github.com/xudianyang/yaf.auto.complete` 到本地
+2. 在 phpstrom 中引入文件`设置->语言&框架->php->include path`
