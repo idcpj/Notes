@@ -250,3 +250,13 @@ require __DIR__.'/../ThinkPHP/ThinkPHP.php';
 
 2. 有参数运行-参数可写在方法的参数中
 `php index.php statis/index/demo/name/cpj/age/12`
+
+
+## 子域名部署
+```
+'APP_SUB_DOMAIN_DEPLOY'   =>    1, // 开启子域名配置
+'APP_SUB_DOMAIN_RULES'    =>    array(   
+    'admin'        => 'Admin',   //admin.demo.com
+    'test'         => 'Test',  //test.demo.com
+),
+```
