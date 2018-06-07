@@ -39,3 +39,12 @@ server {
 ## php 代码补全
 1. 克隆 `https://github.com/xudianyang/yaf.auto.complete` 到本地
 2. 在 phpstrom 中引入文件`设置->语言&框架->php->include path`
+
+## 应用第三方库的命名
+如:
+```
+application/library/ThirdParty/Sms.php
+//类名
+class ThirdParty_Sms{}
+```
+类名为library 下的目录_文件名

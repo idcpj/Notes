@@ -29,8 +29,14 @@
 ## 使用composer
 
 ### 安装
-1. 局部安装
-将[下载composer.exe](https://getcomposer.org/download/)安装在自定义目录,平添加到环境路径
+1. 全局安装
+[各个版本的教程](https://pkg.phpcomposer.com/#how-to-install-composer)
+centos
+```
+curl -sS https://getcomposer.org/installer | php
+mv composer.phar /usr/local/bin/composer
+```
+
 2. 使用镜像-[参考网站](https://pkg.phpcomposer.com/)
 	1.在全局配置镜像(推荐)
 	在命令行中输入:
