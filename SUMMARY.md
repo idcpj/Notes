@@ -52,6 +52,7 @@
     * [yaf](PHP/yaf.md)
         * [yaf 开发 api](PHP/yaf/yaf.md)
         * [内置函数](PHP/yaf/内置函数.md)
+    * [ip 查询](PHP/ip查询.md)
 * [Java](Java.md)
     * [java 数组](java数组.md)
     * [java 类](java类.md)
