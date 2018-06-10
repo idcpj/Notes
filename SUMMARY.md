@@ -50,7 +50,6 @@
         * [array_walk - 对一个数组操作](array_walk-对一个数组操作.md)
         * [array_walk_recursive  递归](array_walk_recursive递归.md)
     * [yaf](PHP/yaf.md)
-        * [yaf 开发 api](PHP/yaf/yaf.md)
         * [内置函数](PHP/yaf/内置函数.md)
     * [ip 查询](PHP/ip查询.md)
 * [Java](Java.md)

@@ -104,3 +104,7 @@ $double = function($a) {
     return $a * 2;
 };
 $new_numbers = array_map($double, $numbers);
+```
+
+## 如果服务器出现500错误
+去找 php_error.slog日志

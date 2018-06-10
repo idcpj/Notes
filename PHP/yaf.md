@@ -47,4 +47,5 @@ application/library/ThirdParty/Sms.php
 //类名
 class ThirdParty_Sms{}
 ```
-类名为library 下的目录_文件名
+类名为library 下的`目录_文件名.php`
+
