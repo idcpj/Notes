@@ -6,17 +6,17 @@
 ### PHP Curl Class
 > [github](https://github.com/php-curl-class/php-curl-class)
 
-`composer require php-curl-class/php-curl-class`
+`composer require curl/curl"`
 ```
 //get
-$curl = new Curl();
-$curl->get('https://www.example.com/search', array(
+$curl = new Curl\Curl();
+$curl->get('http://www.example.com/search', array(
     'q' => 'keyword',
 ));
 
 //post
-$curl = new Curl();
-$curl->post('https://www.example.com/login/', array(
+$curl = new Curl\Curl();
+$curl->post('http://www.example.com/login/', array(
     'username' => 'myusername',
     'password' => 'mypassword',
 ));
