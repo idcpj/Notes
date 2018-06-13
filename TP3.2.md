@@ -6,7 +6,8 @@
 ```
 #在模块名/Conf/config.php中
 return array(
-		'LOAD_EXT_CONFIG' => 'user,email',
+		'LOAD_EXT_CONFI
+        ' => 'user,email',
 	);
 #即可自动加载模块名下的user.php和email.php
 ```
