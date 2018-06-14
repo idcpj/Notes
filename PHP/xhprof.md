@@ -48,6 +48,7 @@ echo "---------------\n".
      "---------------\n";
  ```
  
+ ## 显示性能文件
  **需要把github 项目中的 `xhprof_html` 目录 和`xhprof_lib` 放到项目的根目录中**
  
  此时生成的`xhprof_foo` 文件 可以通过`xhprof_html`访问到
