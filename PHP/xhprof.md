@@ -19,6 +19,7 @@ extension = xhprof.so
 xhprof.output_dir = /tmp/xhprof
 ```
 > 注意生成目录的权限问题
+> 配置好后重启nginx 和php-fpm
 
 ## demo
 ```
