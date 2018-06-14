@@ -29,7 +29,8 @@
 17. firefox
 18. openssh  可以使用ssh 连接服务器
 19. postman
-choco install -y php composer tim  tim vagrant virtualbox googlechrome nodejs notepadplusplus wechat clover adobe-creative-cloud boostnote wox filezilla licecap teamviewer firefox openssh postman
+20. git
+choco install -y php composer tim  tim vagrant virtualbox googlechrome nodejs notepadplusplus wechat clover adobe-creative-cloud boostnote wox filezilla licecap teamviewer firefox openssh postman git
 
 ```
 
