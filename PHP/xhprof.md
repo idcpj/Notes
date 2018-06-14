@@ -16,7 +16,7 @@ make && sudo make install
 ```
 [xhprof]
 extension = xhprof.so
-xhprof.output_dir = /tmp/xhprof
+xhprof.output_dir = /vagrant/xhprof/output
 ```
 > 注意生成目录的权限问题
 > 配置好后重启nginx 和php-fpm
