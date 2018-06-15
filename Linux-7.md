@@ -36,6 +36,8 @@ tail -f /data/www/run.log/   不断刷新日志输入
 
 chmod +x test.php   ->   ./test.php  给他执行权限,可直接执行
 
+px aux | grep redis     查看进程是否存在
+
 ```
 ## 设置别名 [alias]
 - 设置临时别名
