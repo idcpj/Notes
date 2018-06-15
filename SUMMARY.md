@@ -14,6 +14,8 @@
     * [Django框架](Django框架.md)
     * [easygui gui模块](easyguigui模块.md)
     * [tkinter gui模块](python/tkintergui模块.md)
+    * [工具类](python/工具类.md)
+        * [Supervisor-Linux/Unix进程管理工具](python/工具类/Supervisor.md)
 * [PHP](PHP.md)
     * [配置webhook.php](配置webhook.md)
     * [代码规范及技巧](PHP/代码规范及技巧.md)
