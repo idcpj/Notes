@@ -1,265 +1,138 @@
-# Vue
- 
----
 [TOC]
 
-简单引入
-```
-<script src="https://unpkg.com/vue"></script>
-```
-## 1.快速入门
-### 1.绑定前端
-```
-<div id="app">
-  {{message}}
-  {{message1}}
-	<p>{{message2}}</p>
-</div>
+## 简单安装
 
-<script>
+2. `<script >`引入
+```
+<!-- 开发环境版本，包含了用帮助的命令行警告 -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<!-- 生产环境版本，优化了尺寸和速度 -->
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+```
+1. npm 安装
+`npm install  [-g] vue`
+
+
+## 用命令行快速初始化项目
+```bash
+# 安装 vue-cli
+$ npm install --global vue-cli
+# 使用 "webpack" 模板创建一个新项目
+$ vue init webpack my-project
+# 安装依赖，然后开始！
+$ cd my-project
+$ npm run dev
+```
+通过 `run dev` 的项目 会自动进行更新
+
+## Vue 对象属性
+输出模板
+```js
 new Vue({
-  el: '#app',
-  data: {
-    message: 'Hello ',
-	message1:"word",
-	message2:"Vue"
-  }
-})
-</script>
+	el:"",
+    data:{},
+    methods:{},
+    watch:{}
+});
 ```
-### 2.绑定DOM属性
+模块化,输出模块
 ```
-<div id="app">
-  <input type="text" v-bind:value="message" v-bind:name="name">
-</div>
-
-<script>
-new Vue({
-  el: '#app',	
-  data: {
-    message: 'Hello ',
-	name:"word"
-  }
-})
-</script>
-```
-
-### 3.条件
-```javascript
-<div id="app">
-  <p v-if="seen===1">如果seen为true 就可以看到我</p>
-  <p v-else-if="seen===2">如果seen为true 就可以看到我</p>
-  <p v-else>No</p>
-  
-  //对整体进行判定
-  <template v-if="ok">
-      <h1>Title</h1>
-      <p>Paragraph 1</p>
-      <p>Paragraph 2</p>
- </template>
-
-  
-</div>
-
-
-
-<script>
-new Vue({
-  el: '#app',	
-  data: {
-	seen:false
-  }
-})
-</script>
-```
-### 4.循环
-#### 1.对数据渲染
-```js
-<div id="app">
-  <ol>
-    <li v-for="todo in todos"> //v-for="(item, index) in items"
-      {{ todo.text }}
-    </li>
-  </ol>
-</div>
-
-<script>
-var Vue3 = new Vue({
-  el: '#app',	
-  data: {
-	todos:[{text:"hello"},{text:"word"},{text:"Vue"}]
-  }
-})
-Vue3.todos.push({text:"!!!"}); //会增加一行
-</script>
-```
-#### 2.对数组属性渲染
-```js
-<ul id="v-for-object" class="demo">
-  <li v-for="value in object"> //v-for="(value, key) in object"
-    {{ value }}
-  </li>
-</ul>
-<script>
-new Vue({
-  el: '#v-for-object',
-  data: {
-    object: {
-      firstName: 'John',
-      lastName: 'Doe',
-      age: 30
-    }
-  }
-})
-</script>
-```
-
-### 5.绑定事件
-```
-<div id="app-5">
-  <p>{{ message }}</p>
-  <button v-on:click="reverseMessage">点击弹窗</button>
-</div>
-
-<script>
-var app5 = new Vue({
-  el: '#app-5',
-  data: {
-    message: 'Hello Vue.js!'
-  },
-  methods: {
-    reverseMessage: function () {
-      alert(this.message);//不需要this.data.message
-    }
-  }
-})
-</script>
-```
-### 6.表单输入和应用状态绑定信息
-```js
-<div id="app-6">
-  <p>{{ message }}</p>
-  <input type="text" v-model="message">
-</div>
-
-<script>
-var app6 = new Vue({
-  el: '#app-6',
-  data: {
-    message: 'Hello Vue!'
-  }
-})
-</script>
-```
-### 7.组件化
-```js
-<div id="app-7">
-  <ol>
-    <todo-item
-      v-for="item in groceryList"
-      v-bind:todo="item"
-      v-bind:key="item.id">
-    </todo-item>
-  </ol>
-</div>
-
-<script>
-Vue.component('todo-item', {
-  props: ['todo'],
-  template: '<li>{{ todo.text }}</li>'
-})
-
-var app7 = new Vue({
-  el: '#app-7',
-  data: {
-    groceryList: [
-      { id: 0, text: '蔬菜' },
-      { id: 1, text: '奶酪' },
-      { id: 2, text: '随便其他什么人吃的东西' }
-    ]
-  }
-})
-</script>
-```
-### 8.缩写
-```js
-<a v-bind:href="url"></a>
-<a :href="url"></a>  //缩写
-
-<a v-on:click="doSomething"></a>
-<a @click="doSomething"></a>  //缩写
-```
-### 9.computed 计算属性
-该属性会把计算结果进行缓存 而watch 不会
-```js
-<div id="demo">{{ fullNameF }}</div>
-
-<script>
-var vm = new Vue({
-  el: '#demo',
-  data: {
-    firstName: 'Foo',
-    lastName: 'Bar'
-  },
-  computed: {
-    fullNameF: function () {
-      return this.firstName + ' ' + this.lastName
-    }
-  }
-})
-<script/>
-```
-### 10.计算属性的 setter
-```
-computed: {
-  fullName: {
-    // getter
-    get: function () {
-      return this.firstName + ' ' + this.lastName
+export default {
+    data:function {
+        return{
+            msg:"helloaa",
+        }
     },
-    // setter
-    set: function (newValue) {
-      var names = newValue.split(' ')
-      this.firstName = names[0]
-      this.lastName = names[names.length - 1]
+    methods:{}
+}
+```
+
+## 模板指令
+
+### 数据渲染
+```html
+<p>{{ a }}</p>
+<p v-text="a"></p>
+<p v-html="a"></p>
+```
+### 控制模块隐藏
+```html
+<p v-if="isShow"></p>
+<p v-if="isShow"></p>
+```
+
+### 渲染列表
+```html
+<li v-for="item in items">
+	<p v-text="item.lable"></p>
+</li>
+```
+### 事件绑定
+```
+<button v-on:click="doThis"></button>
+<button @click="doThis"></button>  //简写
+```
+```js
+method:{
+	doTHis:function(param){ }
+}
+```
+
+### 属性赋值
+```
+<img v-bind:src="imageSrc" >
+<div :class="{red:isRed}"></div>   //是否有 通过 isRed 来判断是否添加 red 这个 class 
+<div :class="[classA,classB]"></div>  //添加 多个 class
+<div :class="[classA,{classB:isB,classC:isC}]"></div>  //混合
+```
+
+## 模块输出
+```
+export default {
+  name: 'HelloWorld',
+  data :function(){
+    return {
+      msg: 'Welcome to Your Vue.js App1111'
+    }
+  }
+}
+
+// data 的赋值  等同于
+export default {
+  name: 'HelloWorld',
+  data () {
+    return {
+      msg: 'Welcome to Your Vue.js App'
     }
   }
 }
 ```
-*现在再运行 vm.fullName = 'John Doe' 时，setter 会被调用，vm.firstName 和 vm.lastName 也相应地会被更新。*
-### 11.watch的用法
-watch  可用于执行异步操作,并设置操作频率 [链接][1]
-```js
-<div id="watch-example">
-  <p>
-    Ask a yes/no question:
-    <input v-model="question">
-  </p>
-  <p>{{ answer }}</p>
-  <p>newQuestion:{{ newQuestion }}</p>
-  <p>oldQuestion:{{ oldQuestion }}</p>
-</div>
-<script>
-var watchExampleVM = new Vue({
-  el: '#watch-example',
-  data: {
-    question: '',
-    answer: 'I cannot give you an answer until you ask a question!',
-	newQuestion:'',
-	oldQuestion:''
-  },
-  watch: {
-    // 如果 question 发生改变，这个函数就会运行
-    question: function (newQuestion,oldQuestion) {
-	this.newQuestion=newQuestion;
-	this.oldQuestion=oldQuestion;
-      this.answer = 'Waiting for you to stop typing...'
-    }
-  }
-})
-</script>
-</body>
+
+## 技巧
+1. 一个组件根 id 只有一个
 ```
-
-
-  [1]: https://cn.vuejs.org/v2/guide/computed.html#%E8%A7%82%E5%AF%9F%E8%80%85
+<template>
+  	<div id="app1">	</div>
+    <!--错误-->
+    <div></div>
+    <!--错误-->
+	<div id="test"></div>
+</template>
+```
+2. 结合 `v-for` 与`class`
+通过对 item 值的判断来是否添加 class
+```html
+<li v-for="item in items" v-bind:class="{red:item.isred}">
+</li>
+```
+```js
+items:[{
+    name:'test1',
+    isred:false
+},
+{
+    name:'test2',
+    isred:true
+}]
+```
