@@ -2,7 +2,7 @@
 
 ## 简单安装
 
-2. `<script >`引入
+1. `<script >`引入
 ```
 <!-- 开发环境版本，包含了用帮助的命令行警告 -->
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -10,7 +10,7 @@
 <!-- 生产环境版本，优化了尺寸和速度 -->
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 ```
-1. npm 安装
+2. npm 安装
 `npm install  [-g] vue`
 
 
