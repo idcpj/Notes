@@ -44,7 +44,7 @@ export default {
             msg:"helloaa",
         }
     },
-    methods:{}
+    methods:{},
 }
 ```
 
@@ -86,6 +86,27 @@ method:{
 <div :class="[classA,classB]"></div>  //添加 多个 class
 <div :class="[classA,{classB:isB,classC:isC}]"></div>  //混合
 ```
+### watch 监控属性值
+```js
+export default {
+    data() {
+        return {
+             items: ['seee', 'eee']
+        }
+    },
+    watch:{
+        items:{  //当items 变化是触发函数
+            console.log("items is change");
+        },
+     	c: {//如何 c 是具有[{},{}] 那么对象中的key或 vlue 要监听变化需要使用 deep:true
+          handler: function (val, oldVal) { /* ... */ },
+          deep: true
+    	},
+    }
+}
+``
+
+
 
 ## 模块输出
 ```
@@ -123,7 +144,7 @@ export default {
 2. 结合 `v-for` 与`class`
 通过对 item 值的判断来是否添加 class
 ```html
-<li v-for="item in items" v-bind:class="{red:item.isred}">
+<li v-for="item in items" v-bind:class="{red:item.isred}" v-on:click="functinname(item)">
 </li>
 ```
 ```js
@@ -136,3 +157,6 @@ items:[{
     isred:true
 }]
 ```
+2. 绑定 一个回车事件
+`      <input type="text"  v-on:keyup.enter="enterFun">
+`
