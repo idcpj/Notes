@@ -1,6 +1,7 @@
 [TOC]
 
 > [phpstorm 配置 nodejs](https://www.kancloud.cn/book/idcpj/python/preview/PHPStorm/%E9%85%8D%E7%BD%AEnodejs.md)
+> [七天学会NodeJS](http://nqdeng.github.io/7-days-nodejs/#3.2.3)
 ## require、exports、module
 1. require - 引入模块
 ```
@@ -78,3 +79,9 @@ function main(argv) {
 
 main(process.argv.slice(2));
 ```
+
+## 文本编码
+> [参考手册]()
+1. BOM的移除
+2. GBK转UTF8
+3. 单字节编码
