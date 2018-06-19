@@ -89,7 +89,7 @@
     * [google云 搭建shadowsocksR](搭建shadowsocksR.md)
     * [证书相关(如:ssl,pem 等)](证书相关如ssl,pem等.md)
     * [ab 测试工具](ab测试工具.md)
-    * [nodejs](服务器/nodejs.md)
+    * [NodejS](服务器/NodejS.md)
 * [前端](前端.md)
     * [微信小程序](微信小程序.md)
     * [Vue](Vue.md)
