@@ -54,6 +54,19 @@ VirtualBox 5.2.12
     
     vagrant ssh
     ```
+    方法三,通过修改虚拟机的登录方式,改为账号密码
+    > [参考](https://blog.csdn.net/trackle400/article/details/52755571/)
+    ```
+     > yum list installed | grep openssh-server
+     > sudo vim /etc/ssh/sshd_config
+     
+    Port 22
+	ListenAddress 0.0.0.0
+	ListenAddress ::
+	PermitRootLogin yes
+    PasswordAuthentication yes
+     
+    ```
 
 - mac 用户登录
 `vagrant ssh`
