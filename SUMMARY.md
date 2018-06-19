@@ -123,6 +123,7 @@
         * [配置vagrant虚拟机](配置vagrant虚拟机.md)
         * [配置远程debug-可配合vagrant](配置远程debug-可配合vagrant.md)
         * [配置SVN](配置SVN.md)
+        * [配置 nodejs](PHPStorm/配置nodejs.md)
     * [PyCharm](PyCharm.md)
     * [Intellij IDEA](IntellijIDEA.md)
     * [Android Studio](AndroidStudio.md)

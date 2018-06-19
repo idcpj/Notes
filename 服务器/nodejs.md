@@ -1,5 +1,6 @@
 [TOC]
 
+> [phpstorm 配置 nodejs]()
 ## require、exports、module
 1. require - 引入模块
 ```
@@ -44,6 +45,7 @@ console.log(Hello());
 ```
 
 ## 操作文件
+1. 小文件操作
 ```
 //main.js
 var fs = require('fs');
@@ -59,5 +61,20 @@ function main(argv) {
 main(process.argv.slice(2));
 ```
 ```
-node main.js  package-lock.json package-lock.json.1
+# 把package-lock.json 复制到 同级目录并改为package-lock.json.back	
+> node main.js  package-lock.json package-lock.json.back
+```
+2. 大文件操作
+```
+var fs = require('fs');
+
+function copy(src, dst) {
+    fs.createReadStream(src).pipe(fs.createWriteStream(dst));
+}
+
+function main(argv) {
+    copy(argv[0], argv[1]);
+}
+
+main(process.argv.slice(2));
 ```
