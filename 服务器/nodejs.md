@@ -1,6 +1,6 @@
 [TOC]
 
-> [phpstorm 配置 nodejs]()
+> [phpstorm 配置 nodejs](/python/preview/PHPStorm/%E9%85%8D%E7%BD%AEnodejs.md)
 ## require、exports、module
 1. require - 引入模块
 ```
