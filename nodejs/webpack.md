@@ -1,6 +1,6 @@
 [TOC]
 
-> [参考文档](https://www.jianshu.com/p/42e11515c10f)
+> [官网手册](https://webpack.docschina.org/concepts/)
 
 ## 安装
 ```
