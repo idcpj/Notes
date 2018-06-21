@@ -136,6 +136,7 @@
     * [postman](postman.md)
     * [常用软件列表](常用软件列表.md)
     * [autofill 表单填充插件](autofill表单填充插件.md)
+    * [CLion](软件/CLion.md)
 * [MAC](MAC常用配置.md)
     * [php 环境配置 2.0版](MACphp环境配置2.0版.md)
         * [apapche 重启失败](apapche重启失败.md)
