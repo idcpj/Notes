@@ -10,28 +10,27 @@
 `@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"`
 
 安装库
-```
-1.php7
-2.qq-tim	
-4.vagrant	
-5.googlechrome	谷歌浏览器
-6.nodejs
-7.virtualbox
-8.notepadplusplus  notepad++
-9.wechat 
-10.clover  四叶草
-11.adobe-creative-cloud
-12.boostnote   笔记
-13.wox  window的 Alfred
-14.filezilla  开源ftp
-15. licecap   gif录制屏
+1. php7
+2. tim	
+4. vagrant	
+5. googlechrome	
+6. nodejs
+7. virtualbox
+8. notepadplusplus  
+10. clover  
+11. adobe-creative-cloud
+12. boostnote   
+14. filezilla  
+15. licecap   
 16. teamviewer
 17. firefox
-18. openssh  可以使用ssh 连接服务器
+18. openssh  
 19. postman
 20. git
-choco install -y php composer tim  tim vagrant virtualbox googlechrome nodejs notepadplusplus wechat clover adobe-creative-cloud boostnote wox filezilla licecap teamviewer firefox openssh postman git
+21. ConEmu 
 
+```
+choco install -y php composer tim  vagrant virtualbox googlechrome nodejs notepadplusplus  clover adobe-creative-cloud boostnote  filezilla licecap teamviewer firefox openssh postman git ConEmu 
 ```
 
 ### 安装指定版本
