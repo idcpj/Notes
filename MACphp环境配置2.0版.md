@@ -49,7 +49,7 @@ LoadModule php7_module        /usr/local/opt/php71/libexec/apache2/libphp7.so
 
 ```
 #LoadModule php5_module        /usr/local/opt/php55/libexec/apache2/libphp5.so
-LoadModule php7_module        /usr/local/opt/php71/libexec/apache2/libphp7.so
+LoadModule php7_module        /usr/local/Cellar/php@7.1/7.1.17/lib/httpd/modules/libphp7.so
 ```
 ##配置 PHP 的主目录索引文件
 ```

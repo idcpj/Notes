@@ -124,6 +124,7 @@
             * [less-loader](nodejs/webpack/loader插件/less-loader.md)
             * [url-loader 过小生成 base64位图片](nodejs/webpack/loader插件/url-loader过小生成base64位图片.md)
             * [file-loader  引入图片](nodejs/webpack/loader插件/file-loader引入图片.md)
+            * [image-webpack-loader  图片压缩](nodejs/webpack/loader插件/image-webpack-loader图片压缩.md)
         * [引入模块-并对模板赋值](nodejs/webpack/引入模块.md)
     * [less](前端/less.md)
         * [z.less 库- 预定义常用函数](前端/less/z.less库-预定义常用函数.md)
