@@ -27,6 +27,7 @@ xdebug.remote_handler="dbgp"
 ![](images/Snipaste_2018-06-01_17-59-11.png)
 
 ## 添加一个Server
+注意需要配置Use Path
 ![](images/Snipaste_2018-06-01_18-00-55.png)
 
 

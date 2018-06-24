@@ -113,3 +113,14 @@ char *type_spec	 指定了函数期望的参数类型,例子中 是"sl",定义�
 |RETURN_RESOURCE(r) | 	RETVAL_RESOURCE(r) |	资源句柄。|
 
 
+## 函数声明(.def)
+在`ext`下创建创建函数声明如`myfunc.def`
+```
+int hello_add(int x,int y)  
+string hello(string x, string y)  
+```
+创建了两个将来可以被php调用的函数声明
+在编写`.c`文件时,就自动创建了`PHP_FUNCTION(hello_add)`和`PHP_FUNCTION(hello)`.
+且参数与返回值按照php的扩展标准
+`php ./ext_skel.php --extname=myfunc --proto=myfunc.def`
+> 编译时,需要带`-proto=myfunc.def` 参数
