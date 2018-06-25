@@ -14,3 +14,8 @@
 通过 Postman Interceptor 可以获取网页中已经登录的cookie  信息 
 
 ![](images/111.png)
+
+## 如果接口需要先登录
+把Cookie 存入 postman 的Header 中
+如
+`Cookie : PHPSESSID=rd6rshpcp2lk1clbv7afu2q4i4`

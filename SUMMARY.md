@@ -110,6 +110,7 @@
             * [lightBox-图片顺序预览](lightBox-图片顺序预览.md)
             * [jqzoom.js-类似淘宝的图片放大](jqzoom.js-类似淘宝的图片放大.md)
             * [头部进度条](头部进度条.md)
+            * [tree 分组](jQuery/tree分组.md)
     * [微信 jssdk](微信jssdk.md)
     * [nodejs](nodejs.md)
         * [anyproxy 代理](anyproxy代理.md)
