@@ -261,3 +261,44 @@ require __DIR__.'/../ThinkPHP/ThinkPHP.php';
     'test'         => 'Test',  //test.demo.com
 ),
 ```
+
+## block 模板继承
+>  [手册](https://www.kancloud.cn/manual/thinkphp/1800)
+
+
+基础模板
+```html
+<head>
+	<meta charset="utf-8">
+    <!--基础模板需要写的head-->
+	<block name="style"></block>
+</head>
+<html>
+<body>
+	 <!--基础模板需要写的内容-->
+	<div class="main-content">
+			<block name="main">文章内容(这段注释会被覆盖掉) </block>
+    </div>
+
+ <!--基础模板需要写的script-->
+    
+<block name="script"></block>
+</body>
+<html/>
+```
+继承
+```html
+<extend name="Public/base" />
+
+<block name="style">
+ <!--针对这个页面的css,link等-->
+</block>
+
+<block name="main">
+ <!--针对这个页面的内容-->
+</block>
+
+<block name="script">
+ <!--写正对这个页面的 script-->
+</block>
+```

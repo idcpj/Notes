@@ -1,6 +1,6 @@
 [TOC]
 
-> [插件网站]
+> [插件网站](http://www.jq22.com/jquery-info15811)
 
 
 ##  自定义需求
