@@ -8,6 +8,11 @@
 $ sudo apachectl stop
 $ sudo launchctl unload -w /System/Library/LaunchDaemons/org.apache.httpd.plist 2>/dev/null
 ```
+## kill 系统自带 apache 占用的端口
+通过系统自带的活动监控器查找 http,查看root 用户的 `pid`
+`kill -9 xxx`
+`-9` 表示强制关闭
+
 ### 并安装apache
 ` brew install httpd24 --with-privileged-ports --with-http2`
 

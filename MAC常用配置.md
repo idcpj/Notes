@@ -94,3 +94,5 @@ bg %n 					#让进程 n 到后台去;
 ```
 ## 查看端口占用
 `lsof -i:80`
+ 查看所有端口
+ `netstat -nat |grep LISTEN`

@@ -356,3 +356,42 @@ if(true!==$result){
     ];
     
 ```
+
+## block 模板继承
+>  [手册](https://www.kancloud.cn/manual/thinkphp/1800)
+
+
+基础模板
+```
+<head>
+	<meta charset="utf-8">
+	<block name="style"></block>
+</head>
+<html>
+<body>
+	<div id="header" class="navbar">
+    	菜单的内容
+	</div >
+	<div class="main-content">
+			<block name="main">文章内容(这段注释会被覆盖掉) </block>
+    </div>
+
+<script src="__PUBLIC__/static/ie8/js/jquery.min.js"></script>
+
+<block name="script"></block>
+
+</body>
+<html/>
+```
+继承
+```
+<extend name="Public/base" />
+
+<block name="main">
+//针对这个页面的内容
+</block>
+
+<block name="script">
+//写正对这个页面的 script
+</block>
+```
