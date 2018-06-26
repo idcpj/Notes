@@ -129,6 +129,7 @@
         * [引入模块-并对模板赋值](nodejs/webpack/引入模块.md)
     * [less](前端/less.md)
         * [z.less 库- 预定义常用函数](前端/less/z.less库-预定义常用函数.md)
+    * [百度地图 api](前端/百度地图api.md)
 * [软件](软件.md)
     * [PHPStorm](PHPStorm.md)
         * [配置vagrant虚拟机](配置vagrant虚拟机.md)
