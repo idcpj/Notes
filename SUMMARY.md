@@ -130,6 +130,7 @@
     * [less](前端/less.md)
         * [z.less 库- 预定义常用函数](前端/less/z.less库-预定义常用函数.md)
     * [百度地图 api](前端/百度地图api.md)
+        * [百度离线地图](前端/百度地图api/百度离线地图.md)
 * [软件](软件.md)
     * [PHPStorm](PHPStorm.md)
         * [配置vagrant虚拟机](配置vagrant虚拟机.md)
