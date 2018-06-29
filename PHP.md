@@ -113,8 +113,7 @@ $new_numbers = array_map($double, $numbers);
 ## 如何判断php的版本位数
 去`phpinfo()` 找  `Architecture`  
 ## 如何判断PHP 是ts还是nts版的
-`phpinfo(`)的 `Thread Safety` 项，
-`enabled`，一般来说应该是`ts`版，否则是`nts`版。
+`phpinfo(`)的 `Thread Safety` 项，`enabled`，一般来说应该是`ts`版，否则是`nts`版。
 
 >Non Thread Safe就是非线程安全，在执行时不进行线程（Thread）安全检查；
 Non Thread Safe 是线程安全，执行时会进行线程（Thread）安全检查，以防止有新要求就启动新线程的 CGI 执行方式而耗尽系统资源；

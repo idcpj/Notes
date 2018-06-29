@@ -1,8 +1,8 @@
 [TOC]
 
 > [百度地图api](http://lbsyun.baidu.com/jsdemo.htm#c2_4)
-
-
+> [百度地图清除指定覆盖物（Overlay）的方法](https://www.jianshu.com/p/e6ab36f85b5b)
+> [地图接口方法,参数说明](http://lbsyun.baidu.com/cms/jsapi/reference/jsapi_reference.html)
 ## 添加详细信息
 
 详情查看 查看 百度地图官网的**信息窗口示例**
