@@ -64,6 +64,7 @@
     * [编写C的扩展](PHP/编写C的扩展.md)
         * [引用 加载动态库(.so) 文件](PHP/编写C的扩展/引用加载动态库.so文件.md)
         * [参数、数组和Zvals](PHP/编写C的扩展/参数、数组和Zvals.md)
+    * [WebSocket](PHP/WebSocket.md)
 * [Java](Java.md)
     * [java 数组](java数组.md)
     * [java 类](java类.md)
