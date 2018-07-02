@@ -1,5 +1,7 @@
 [TOC]
 
+
+
 ## 1. 在httpd.conf中加载重写模块
 
     `LoadModule rewrite_module modules/mod_rewrite.so`
@@ -226,4 +228,19 @@ RewriteRule ^ - [F]
 RewriteCond %{HTTP_USER_AGENT} 2.0.50727 [NC,OR]  --如果是迅雷在HTTP_USER_AGNET中就有2.0.50727 
 RewrtieCond %{HTTP_USER_AGENT} ^BlackWido  ^BlackWido [NC,OR]
 RewriteRule   .     /demo.txt
+```
+
+
+## 12.开启关闭Apache显示目录列表功能
+在`http.conf` 或者 `http-vhosts.conf`
+```
+<Directory "D:/Apa/blabla"> 
+Options Indexes FollowSymLinks  
+AllowOverride None
+Order allow,deny
+Allow from all
+</Directory>
+
+去掉Indexes不显示目录
+加入Indexes显示目录
 ```
