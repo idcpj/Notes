@@ -17,3 +17,12 @@
 `options > choose language > chinese `
 
 
+## 开始
+![](images/Snipaste_2018-07-04_17-42-02.png)
+
+![](images/Snipaste_2018-07-04_17-42-29.png)
+
+![](images/Snipaste_2018-07-04_17-43-14.png)
+
+![](images/Snipaste_2018-07-04_17-43-46.png)
+

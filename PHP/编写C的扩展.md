@@ -123,4 +123,5 @@ string hello(string x, string y)
 在编写`.c`文件时,就自动创建了`PHP_FUNCTION(hello_add)`和`PHP_FUNCTION(hello)`.
 且参数与返回值按照php的扩展标准
 `php ./ext_skel.php --extname=myfunc --proto=myfunc.def`
-> 编译时,需要带`-proto=myfunc.def` 参数
+
+>  编译时,需要带`-proto=myfunc.def` 参数
