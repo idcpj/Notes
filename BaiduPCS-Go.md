@@ -8,12 +8,12 @@
 [下载地址](https://github.com/iikira/BaiduPCS-Go/releases)
 
 ## 登录
-`BaiduPCS-Go login`
+`BaiduPCS-Go > login`
 
 ## 下载
 ```
-BaiduPCS-Go d [网盘的路径]
-BaiduPCS-Go d /我的资源
+BaiduPCS-Go > d [网盘的路径]
+BaiduPCS-Go > d /我的资源
 ```
 
 ## 上传
