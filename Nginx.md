@@ -20,15 +20,16 @@ server {
 ## 负载均衡
 
 ### RR（默认）
-每个请求按时间顺序逐一分配到不同的后端服务器，如果后端服务器down掉，能自动剔除
+1. 每个请求按时间顺序逐一分配到不同的后端服务器，如果后端服务器down掉，能自动剔除
+2. 可以配置在虚拟站点下, 但是此时只会走8080 或者8081 81端口本身不会成为站点
 ```
 upstream test {
-    server localhost:8080;
-    server localhost:8081;
+    server 127.0.0.1:8080;
+    server 127.0.0.1:8081;
 }
 server {
     listen       81;                                                         
-    server_name  localhost;                                               
+    server_name  127.0.0.1;                                               
     client_max_body_size 1024M;
 
     location / {
