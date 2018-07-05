@@ -1,4 +1,5 @@
 [TOC]
+> [官方镜像列表](https://hub.docker.com/explore/)
 
 ## 安装
 1. mac
@@ -10,30 +11,42 @@
 
 2.Linux
 ```
-sudo wget -g0- https://getdocker.com/ | sh
-sudo usermod -aG docker xxx      #xxx为 whoami的结果
+yum -y install docker-io
 ```
+
+
+## 镜像加速器
+> [点击跳转](https://bingohuang.gitbooks.io/docker_practice/content/install/mirror.html)
+
+
+
 ## 镜像
-列出镜像
-`docker images `
-获取新镜像
-`docker pull php`
+
 查找镜像
-`docker search httpd`
+`sudo docker search httpd`
+
+列出镜像
+`sudo docker images `
+
+获取新镜像
+格式:`sudo docker pull [选项] [Docker Registry地址]<仓库名>:<标签>`
+如:`sudo docker pull training/webap`
+
 使用镜像
-`docker run httpd`
+`sudo docker run httpd`
+docker run -d -P training/webapp python app.py
+
+## 启动 docker
+```bash
+$ service docker start
+$ ps aux | grep docker  #检查是否开启
+$ sudo docker info  #查看docke 消息
+```
 
 
 
 ## 常用命令
-
-|命令| 用途|
-|---|---|
-|  `docker pull`	|   获取 Image |
-|  `docker build`   |创建mage   |
-|  `docker images` | 列出mage |
-|  `docker run` | 运行 container |
-|  `docker ps ` |  列出 container |
+> 提示: 可能所有消息都需要sudo权限
 
 |命令| 用途|
 |---|---|
