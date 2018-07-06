@@ -3,6 +3,7 @@
 
 ## SQLAlchemy 
 `pip install SQLAlchemy`
+
 >window 需要安装 `pip install mysqlclient`
 
 ### 连接
