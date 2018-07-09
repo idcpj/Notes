@@ -43,14 +43,25 @@ $ ps aux | grep docker  #检查是否开启
 $ sudo docker info  #查看docke 消息
 ```
 
-
+## 使用镜像来创建一个容器
+运行后就会进入ubuntu 的容器
+```
+runoob@runoob:~$ docker run -t -i ubuntu:15.10 /bin/bash
+root@e218edb10161:/# 
+```
 
 ## 常用命令
 > 提示: 可能所有消息都需要sudo权限
-
-|命令| 用途|
-|---|---|
-|  `docker rm `  |  删除 container  |
-|  `docker  rmi ` |  删除mage  |
-|  `docker cp `    |  在hos和 container之间拷贝文件  |
-|  `docker commit `  |  保存改动为新的mage  |
+```
+docker ps 		//查看系统中运行的docker容器
+docker kill [container] 	//删除docker容器
+docker stop [container] 	//停止正在运行的docker容器
+docker attach/exec [container] 		//进入容器
+docker run 		//运行镜像，生成容器
+docker images 		//查看系统中存在的docker镜像
+docker rmi [image] 	//删除镜像
+docker build 	//生成镜像
+docker pull 	//拉取镜像
+docker push 	//上传镜像 
+docker search 	//搜索镜像
+```
