@@ -66,7 +66,7 @@ update write_price set phone=replace(phone, 157, 168);
 ## 开启全局日志
 ```
 mysql>  SHOW VARIABLES LIKE 'general%';  //查看是否开启
-set GLOBAL general_log='ON';   //开启
+mysql>  set GLOBAL general_log='ON';   //开启
 ```
 > 日志路径为  `SHOW VARIABLES LIKE 'general%'` 显示的目录
 
