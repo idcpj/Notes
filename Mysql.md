@@ -63,3 +63,44 @@ select t.user_id, group_concat( t.money order by t.create_time desc ) moneys ...
 update write_price set phone=replace(phone, 157, 168);
 ```
 
+## 开启全局日志
+```
+mysql>  SHOW VARIABLES LIKE 'general%';  //查看是否开启
+set GLOBAL general_log='ON';   //开启
+```
+> 日志路径为  `SHOW VARIABLES LIKE 'general%'` 显示的目录
+
+
+## 开启慢查询
+
+1. 查看慢查询的状态和保存位置
+```
+mysql> show variables like 'slow_query%';
+```
+
+2. 查看 慢查询事件
+```
+mysql> show variables like 'long_query_time';
+```
+
+3. 设置慢查询
+方法一:
+```
+mysql> set global slow_query_log='ON';  //设置慢查询日志存放的位置
+
+mysql> set global slow_query_log_file='/usr/local/mysql/data/slow.log'; //查询超过1秒就记录
+
+mysql> set global long_query_time=1;
+```
+方法二:
+`my.ini`
+```
+slow_query_log = ON
+slow_query_log_file = /usr/local/mysql/data/slow.log
+long_query_time = 1
+```
+
+4. 重启 mysqk
+
+5. 测试
+`select sleep(2);`
