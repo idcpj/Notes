@@ -16,11 +16,6 @@ CREATE VIEW `tablename`AS select * from `wj_content`；
 ```
 
 
-## 更新字段内容
-```mysql
-update `rb_carhome` SET `code_name`=replace(`code_name`,'NBRB0','NBRB') where code_name like 'NBRB0'
-```
-
 ## HAVING 用法
 用于配合group方法完成从分组的结果中筛选
 
@@ -104,3 +99,8 @@ long_query_time = 1
 
 5. 测试
 `select sleep(2);`
+
+
+## 关闭查询缓存
+添加`SQL_NO_CACHE`
+`SELECT SQL_NO_CACHE * form table_name`

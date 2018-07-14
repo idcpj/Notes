@@ -3,6 +3,7 @@
 
 ## 激活地址
 新教程[教程地址](http://www.imsxm.com/jetbrains-license-server.html)
+`http://idea.imsxm.com`
 
 
 ## 汉化和配置
