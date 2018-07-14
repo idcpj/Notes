@@ -191,4 +191,5 @@
         * [shell](shell.md)
     * [ubuntu-界面版](ubuntu.md)
 * [go](go.md)
+    * [数据类型](go/数据类型.md)
     * [变量](go/变量.md)
