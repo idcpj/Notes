@@ -84,10 +84,29 @@ End.
 ```
 
 ## 异常处理
+1. 方式一
 ```
 parentPath, err := os.Getwd()
 if err != nil {
     return nil, err
 }
 //todo
+```
+2. 方式二
+```
+func innerFunc() {
+	//panic  接收错误信息  让recover() 去处理
+	panic(errors.New("Occur a panic!"))
+}
+
+func main() {
+	//recover() 接受全局的异常
+	defer func() {
+		if p := recover(); p != nil {
+			fmt.Printf("Fatal error: %s\n", p)
+		}
+	}()
+
+	innerFunc()
+}
 ```
