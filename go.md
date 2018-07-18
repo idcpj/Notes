@@ -93,6 +93,21 @@ func main() {
 	 fmt.Print(unsafe.Sizeof(abc)) //2 
 }
 ```
+## 打印结构类型或自动打印类型
+使用** `%v`**
+```
+a := [][]int{
+    {1,2,3},
+    {1,2,3},
+}
+fmt.Printf("%v",a) //[[1 2 3] [1 2 3]]
+
+//识别 字符串和整形
+b :=1
+c :="a"
+fmt.Printf("%v",b) 
+fmt.Printf("%v",c)
+```
 
 
 ## 常用命令

@@ -154,6 +154,7 @@
         * [配置远程debug-可配合vagrant](配置远程debug-可配合vagrant.md)
         * [配置SVN](配置SVN.md)
         * [配置 nodejs](PHPStorm/配置nodejs.md)
+        * [git 和svn 共存](PHPStorm/git和svn共存.md)
     * [PyCharm](PyCharm.md)
     * [Intellij IDEA](IntellijIDEA.md)
     * [Android Studio](AndroidStudio.md)

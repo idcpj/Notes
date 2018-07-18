@@ -5,7 +5,7 @@
 > [参考一-纯js操作](http://www.cnblogs.com/chris-shao/archive/2012/12/27/2835986.html)
 > [参考二返回jsonp](https://blog.csdn.net/hedong37518585/article/details/6591762)
 
-
+>  目前还需要对session 存在数据库中,方便不同域名同一个sessionid 能找到相同的数据
 ## 纯js 原理
 1.`1.html`  登录需要获取cookie 的网址,在其中嵌入`iframe`
 ```

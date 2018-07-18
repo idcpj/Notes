@@ -38,6 +38,8 @@ chmod +x test.php   ->   ./test.php  给他执行权限,可直接执行
 
 px aux | grep redis     查看进程是否存在
 
+php artisan &  在命令后面加 & 可以让命令在后台执行
+
 ```
 ## 设置别名 [alias]
 - 设置临时别名

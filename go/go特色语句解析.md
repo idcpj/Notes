@@ -1,7 +1,7 @@
 
 [TOC]
 
-##  创建不非类型的数组和 map
+##  创建不分类型的数组和 map
 ```
 //interface 可创任意类型的数组
 a :=[]interface{}{"a",1,"b"}
@@ -31,31 +31,23 @@ default:
 
 ## 结构体与指针用法
 ```
-//创建结构体
-type MyInt struct {
-    n int
-}
-//添加方法
-func (myInt *MyInt) Increase() {
-	myInt.n++
+type Books struct {
+    title string
+    author string
+    subject string
+    book_id int
 }
 
-func (myInt *MyInt) Decrease() {
-	myInt.n--
-}
+var book Books
 
-func main() {
-	mi := MyInt{}
-	mi.Increase()
-	mi.Increase()
-	mi.Decrease()
-	mi.Decrease()
-	mi.Increase()
-	fmt.Print(mi.n) //1
-}
+/* book 1 描述 */
+book.title = "Go 语言"
+book.author = "www.runoob.com"
+book.subject = "Go 语言教程"
+book.book_id = 6495407
 ```
 
-# select 用法
+## select 用法
 ```
 func main() {
     ch4 := make(chan int, 1)
@@ -108,5 +100,14 @@ func main() {
 	}()
 
 	innerFunc()
+}
+```
+
+
+## range 用法
+```
+nums := []int{2, 3, 4}
+for k, v:= range nums {
+    //code k=0,1,2,v=2,3,4
 }
 ```
