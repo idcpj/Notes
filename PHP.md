@@ -52,11 +52,11 @@ set_time_limit(0);
 ignore_user_abort(true);
 ini_set('memory_limit', '128M');
 ```
-
-## 商城框架
-[Opencart](http://www.opencartchina.com/)
-[prestashop](http://doc.prestashop.com/display/PS17/Getting+started+with+theme+development)
-
+## 开启端口
+> 至少 5.6以上都可以,其他待测试
+` php -S localhost:8000`
+指定根目录
+`php -S localhost:8000 -t foo/`
 
 ## ping++ 网页支付技巧
 把[\Pingpp\Charge::create()](https://github.com/PingPlusPlus/pingpp-php/blob/master/example/recharge/recharge.php) 方法生成的json对象[pingpp.createPayment](https://www.pingxx.com/docs/client/web)
@@ -112,6 +112,7 @@ $new_numbers = array_map($double, $numbers);
 
 ## 如何判断php的版本位数
 去`phpinfo()` 找  `Architecture`  
+
 ## 如何判断PHP 是ts还是nts版的
 `phpinfo(`)的 `Thread Safety` 项，`enabled`，一般来说应该是`ts`版，否则是`nts`版。
 
