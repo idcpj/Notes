@@ -198,4 +198,4 @@
     * [go 特色语句解析](go/go特色语句解析.md)
     * [库](go/库.md)
         * [ORM](go/库/ORM.md)
-            * [gorose](go/库/ORM/gorose.md)
+            * [gorose -链式调用](go/库/ORM/gorose.md)

@@ -17,17 +17,21 @@ import (
 )
 
 //配置
+package main
+
+import (
+	"fmt"
+	_ "github.com/go-sql-driver/mysql"
+	"github.com/gohouse/gorose"
+)
+
 var DbConfig = map[string]interface{}{
-	// Default database configuration
 	"Default": "mysql_dev",
-	// (Connection pool) Max open connections, default value 0 means unlimit.
 	"SetMaxOpenConns": 300,
-	// (Connection pool) Max idle connections, default value is 1.
 	"SetMaxIdleConns": 10,
 
-	// Define the database configuration character "mysql_dev".
-	"Connections":map[string]map[string]string{
-		"mysql_dev": map[string]string{
+	"Connections": map[string]map[string]string{
+		"mysql_dev": {
 			"host":     "192.168.0.70",
 			"username": "root",
 			"password": "www.upsoft01.com",
@@ -40,7 +44,6 @@ var DbConfig = map[string]interface{}{
 		},
 	},
 }
-
 func main() {
 	//连接
 	connection, err := gorose.Open(DbConfig)
@@ -56,6 +59,10 @@ func main() {
 
 
 ## 查
+```
+//对table 进行复制
+user := db.Table("users")
+```
 ### 原生语句查询
 ```
 //直接查询
@@ -104,12 +111,117 @@ db.Table("user").Fields("name ").Where("id > 49").Chunk(100, func(data []map[str
     }
 })
 ```
+### 其他查询
+```
+res, err := db.Table("users").Count()
+min, err := db.Table("users").Min("age")
+avg, err := db.Table("users").Avg("age")
+sum, err := db.Table("users").Sum("age")
+
+```
+## 插入
+### 插入一条
+```
+//方法一,初始化并赋值
+data := map[string]interface{}{
+    "name":"abc",
+    "create_at":"1235454",
+}
+//方法二 初始化 后赋值
+ //var data []map[string]interface{}
+//data["name"]="ceswasd"
+//data["create_at"]="1235454"
 
 
-## 处理事务
+res, err := db.Table("user").Data(data).Insert()
+if err != nil {
+    panic(err)
+}
+//判断是否插入成功
+if res > 0 {
+    fmt.Printf("RowsAffected: %v \n", res)  //受影响行数
+}
+
+fmt.Printf("LastInsertId: %d", db.LastInsertId)  //返回受影响的id
+fmt.Printf("SqlLogs: %v", db.SqlLogs)  //日志记录
+```
+## 更新
+```
+data := map[string]interface{}{
+    "name":"update",
+    "created_at":1324563,
+}
+where :=map[string]interface{}{
+    "id":53,
+}
+
+res,err :=db.Table("user").Data(data).Where(where).Update()
+if err !=nil{
+    panic(err)
+}
+
+fmt.Println(res)
+```
+## 删除
+```
+where := map[string]interface{}{
+    "id": 17,
+}
+res, err := db.Table("user").Where(where).Delete()
+if err != nil {
+    panic(err)
+}
+fmt.Println(res)//1
+
+```
+
+## 其他
+### 多条件语句
+```
+where := [][]interface{}{
+    {"id", ">", 1},
+    {"name", "=", "salamander"},
+}
+res, err := db.Table("user").Where(where).Get()
+if err != nil {
+    panic(err)
+}
+
+fmt.Println(res)
+```
+
+### 处理事务
 ```
 db.Transaction(func(){
     db.Table("user").Data(map[string]interface{}{"name":"fizz"}).Insert()
     db.Table("user").Data(map[string]interface{}{"name":"fizz2"}).Where("id",1).Update()
 })
+```
+或
+```
+trans,err := db.Transaction(func() error {
+
+    res2, err2 := db.Table("users").Data(data2).Insert()
+    if err2 != nil {
+        return err2
+    }
+    if res2 == 0 {
+        return errors.New("Insert failed")
+    }
+    fmt.Println(res2)
+
+    res1, err := db.Table("users").Data(data2).Where(where).Update()
+    if err != nil {
+        return err
+    }
+    if res1 == 0 {
+        return errors.New("update failed")
+    }
+    fmt.Println(res1)
+
+    return nil
+    })
+
+    fmt.Println(trans, err)
+}
 ```
