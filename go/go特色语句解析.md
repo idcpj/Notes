@@ -102,6 +102,27 @@ func main() {
 	innerFunc()
 }
 ```
+3. 方式三 统一走报错流程 
+```
+//全局接受异常
+defer func() {
+    if p := recover(); p != nil {
+        fmt.Printf("Fatal error: %s\n", p)
+    }
+}()
+
+connection, err := gorose.Open(DbConfig)
+//只有有错才接受异常
+if err != nil {
+    panic(err)
+}
+
+res,err := db.Table("user1").First()
+//只有有错才接受异常
+if err != nil {
+    panic(err)
+}
+```
 
 
 ## range 用法

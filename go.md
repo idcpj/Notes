@@ -128,3 +128,9 @@ eg: `go get http://xxxxx/test.go`
 -fix : 在下载代码包后先执行修正动作,而后再进行编译和安装
 -u : 利用网络来更新已有的代码包及其依赖包
 ```
+
+
+## go get 如何下载太慢
+1. 先通过 `go get github.com/go-sql-driver/mysql` 生成目录即可
+2. 在目录下 使用`git clone https://github.com/go-sql-driver/mysql` 下载代码,注意,此时,目录为需上移动
+3. 在自己项目中 直接`import` 路径即可

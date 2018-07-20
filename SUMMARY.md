@@ -196,3 +196,6 @@
     * [变量与赋值,常量](go/变量与赋值,常量.md)
     * [指针类型](go/指针类型.md)
     * [go 特色语句解析](go/go特色语句解析.md)
+    * [库](go/库.md)
+        * [ORM](go/库/ORM.md)
+            * [gorose](go/库/ORM/gorose.md)
