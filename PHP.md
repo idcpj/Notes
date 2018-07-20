@@ -55,8 +55,10 @@ ini_set('memory_limit', '128M');
 ## 开启端口
 > 至少 5.6以上都可以,其他待测试
 ` php -S localhost:8000`
-指定根目录
+1. 指定根目录
 `php -S localhost:8000 -t foo/`
+2. 是局域网可访问
+`php -S 192.168.0.70:8000`
 
 ## ping++ 网页支付技巧
 把[\Pingpp\Charge::create()](https://github.com/PingPlusPlus/pingpp-php/blob/master/example/recharge/recharge.php) 方法生成的json对象[pingpp.createPayment](https://www.pingxx.com/docs/client/web)
