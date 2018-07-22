@@ -118,8 +118,8 @@ a :  强制编译相关代码,不论它们的编译结果是否已是最新的
 n :  打印编译过程中所需运行的命令,但不真正执行它们
 p n: 并行编译,其中n为并行的数量,为cpu 核数
 ```
-4. `go get` : 命令主要是用来动态获取远程代码包的
-eg: `go get http://xxxxx/test.go`
+4. `go get -v` : 命令主要是用来动态获取远程代码包的
+eg: `go get -v http://xxxxx/test.go`
 注意: `go get` 下载的文件是放在 `GOPATH`中
 可通过 `go env | grep GOPATH ` 查看
 可在`goLand`中设置全局和项目的的 `GOPATH`

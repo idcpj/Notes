@@ -162,6 +162,7 @@
     * [postman](postman.md)
     * [autofill 表单填充插件](autofill表单填充插件.md)
     * [CLion](软件/CLion.md)
+    * [Goland](软件/Goland.md)
     * [github](软件/github.md)
         * [gource 通过 git 生成 动画](软件/github/gource通过git生成动画.md)
         * [thefuck 出现错误使用 fuck](软件/github/thefuck出现错误使用fuck.md)
@@ -203,3 +204,4 @@
             * [gorose -链式调用](go/库/ORM/gorose.md)
             * [GORM](go/库/ORM/GORM.md)
     * [并发](go/并发.md)
+    * [常用函数](go/常用函数.md)
