@@ -54,6 +54,8 @@ func main() {
 	// 关闭 DB
 	defer connection.Close()
 
+	db := connection.GetInstance()
+}
 ```
 
 
