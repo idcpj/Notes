@@ -9,9 +9,13 @@ goland 打开配置选项
 `go  -> no save  ->file watch跳转 -> 添加 -> 选中`
 ![](../images/1CCE8E8A-D96D-4670-B715-664866717B6F.jpg)
 
- 此时运行时,就会自动过滤不加载的 import 
+此时点击保存或运行时,就会自动过滤
  若没有效果 ,在`工具 -> gotool `中先运行一次 `goimport` 即可
 
+## 其他
+1. 在 `struct` 类型声明的名字上 按`alt + enter` 可以快速创建集成在 struct 的 接口
+如:
+![](../images/7ACF00B0-B137-40BA-8B61-CEAE07881E6E.jpg)
 
 ## 快捷键
 mac 
