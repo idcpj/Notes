@@ -8,6 +8,7 @@
 >  目前还需要对session 存在数据库中,方便不同域名同一个sessionid 能找到相同的数据
 ## 纯js 原理
 1.`1.html`  登录需要获取cookie 的网址,在其中嵌入`iframe`
+2.
 ```
 <body>
 <!--需要去拿cookie的网站-->
