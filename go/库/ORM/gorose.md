@@ -16,14 +16,6 @@ import (
 
 )
 
-//配置
-package main
-
-import (
-	"fmt"
-	_ "github.com/go-sql-driver/mysql"
-	"github.com/gohouse/gorose"
-)
 
 var DbConfig = map[string]interface{}{
 	"Default": "mysql_dev",
