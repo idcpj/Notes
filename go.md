@@ -4,12 +4,12 @@
 ##  安装配置
 ### 类linux 配置 go
 有4个环境变量需要设置: GOROOT、 GOPATH、 GOBIN,以及PATH
-需要设置到某一个 profile文件中(~/bash_ profile或/etc/ profile)
+需要设置到某一个 profile文件中(`~/bash_ profile`或`/etc/ profile`)
 ```
-export GOROOT=/usr/local/go  //该环境变量的值应该为Go语言的当前安装目录
-export GOPATH=-/golib: /goproject  //该环境变量的值应该为Go语言的工作区的集合
-export GOBIN=-/gobin  //它的值应该是你想存放Go程序的可执行文件的目录
-export PATH=$PATH: SGOROOT/bin: SGOBIN  //为了方便使用Go语言命令和Go程序的可执行文件,需要追加其值
+export GOROOT=/usr/local/go
+export GOBIN=$GOROOT/bin
+export PATH=$PATH:$GOBIN
+export GOPATH=/var/opt/wwwroot/goblin
 ```
 添加到对应的`profile` 配置文件中
 eg:
