@@ -39,3 +39,23 @@ func main() {
 }
 
 ```
+## 配置文件
+1. 输出到控制台
+```
+//file
+log.SetLogger("console", "")
+```
+2. 输出到文件
+```
+log.SetLogger("file", `{"filename":"test.log"}`)
+```
+3. 发送到邮箱
+```
+log.SetLogger("smtp", `{"username":"beegotest@gmail.com","password":"xxxxxxxx","host":"smtp.gmail.com:587","sendTos":["xiemengjun@gmail.com"]}`)
+
+```
+4. 多类型进行分类
+```
+log.SetLogger("multifile", `{"filename":"test.log","separate":["emergency", "alert", "critical", "error", "warning", "notice", "info", "debug"]}`)
+```
+>生成的文件为`2018-7-30.error.log`,`2018-7-30.info.log`
