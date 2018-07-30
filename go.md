@@ -1,5 +1,6 @@
 [TOC]
 
+> [git快速入门指南](https://github.com/astaxie/build-web-application-with-golang/blob/master/zh/01.0.md)
 
 ##  安装配置
 ### 类linux 配置 go
