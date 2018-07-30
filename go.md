@@ -61,7 +61,7 @@ package show2
 
 import "fmt"
 
-func init() {//调用包时,会进行初始化
+func init() {
 	fmt.Print("my name is show2")
 }
 
@@ -94,7 +94,7 @@ func main() {
 }
 ```
 ## 打印结构类型或自动打印类型
-使用** `%v`**
+使用`%v`
 ```
 a := [][]int{
     {1,2,3},
@@ -134,3 +134,7 @@ eg: `go get -v http://xxxxx/test.go`
 1. 先通过 `go get github.com/go-sql-driver/mysql` 生成目录即可
 2. 在目录下 使用`git clone https://github.com/go-sql-driver/mysql` 下载代码,注意,此时,目录为需上移动
 3. 在自己项目中 直接`import` 路径即可
+
+## 程序从后台运行，不出现dos窗口
+`go build -ldflags "-H windowsgui`
+文件为当前目录对应的文件
