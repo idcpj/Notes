@@ -79,21 +79,31 @@ mysql> show variables like 'long_query_time';
 ```
 
 3. 设置慢查询
-方法一:
-```
-mysql> set global slow_query_log='ON';  //设置慢查询日志存放的位置
 
-mysql> set global slow_query_log_file='/usr/local/mysql/data/slow.log'; //查询超过1秒就记录
+> 慢日志输出的内容有两个，第一执行时间过长（大于设置的long_query_time阈值）；第二未使用索引，或者未使用最优的索引。
 
-mysql> set global long_query_time=1;
-```
-方法二:
-`my.ini`
-```
-slow_query_log = ON
-slow_query_log_file = /usr/local/mysql/data/slow.log
-long_query_time = 1
-```
+    方法一:
+    mysql> set global slow_query_log='ON';  //设置慢查询日志存放的位置
+
+    mysql> set global slow_query_log_file='/usr/local/mysql/data/slow.log'; //查询超过1秒就记录
+
+    mysql> set global long_query_time=1;
+
+    方法二:
+    `my.ini`
+    
+    slow_query_log = ON
+    slow_query_log_file = /usr/local/mysql/data/slow.log
+    long_query_time = 1
+    
+   	//================================//
+	分析慢查询语句
+    分析出使用频率最高的前50条慢sql：
+    /usr/local/services/mysql/bin/mysqldumpslow -s c -t 50 VM_166_154-slow.log
+
+    如只需分析处理速度最慢的10条sql：
+    /usr/local/services/mysql/bin/mysqldumpslow -t 10 VM_166_154-slow.
+    
 
 4. 重启 mysqk
 
