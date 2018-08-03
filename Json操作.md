@@ -19,5 +19,41 @@ b, err := json.Marshal(tree)
 fmt.Println("json:", string(b))  //需要在此处 添加string才能转为字符串
 ```
 
+## 处理位置的json
+```
+//如何处理一个位置的json
+a := `{"Servers":[{"serverName":"Shanghai_VPN","serverIP":"127.0.0.1"},{"serverName":"Beijing_VPN","serverIP":"127.0.0.2"}]}`
 
+var s interface{}
+err := json.Unmarshal([]byte(a), &s)
+if err != nil {
+    panic(err)
+}
+
+m := s.(map[string]interface{})
+
+for k, v := range m {
+    switch vv := v.(type) {
+    case string:
+        fmt.Println(k, "is string", vv)
+    case int:
+        fmt.Println(k, "is int", vv)
+    case float64:
+        fmt.Println(k, "is float64", vv)
+    case []interface{}:  //核心代码
+        fmt.Println(k, "is an array:")
+        for i, u := range vv {
+            fmt.Println(i, u)
+        }
+    default:
+        fmt.Println(k, "is of a type I don't know how to handle")
+    }
+}
+/**
+Servers is an array:
+0 map[serverName:Shanghai_VPN serverIP:127.0.0.1]
+1 map[serverName:Beijing_VPN serverIP:127.0.0.2]
+map[Servers:[map[serverName:Shanghai_VPN serverIP:127.0.0.1] map[serverName:Beijing_VPN serverIP:127.0.0.2]]]
+ */
+ ```
 

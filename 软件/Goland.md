@@ -1,6 +1,11 @@
 
 [TOC]
 
+## 激活
+
+`http://idea.youbbs.org`
+
+
 ## 配置 - 使运行时,自动过滤 多余的 import
 下载
 `go get golang.org/x/tools/cmd/goimports`
