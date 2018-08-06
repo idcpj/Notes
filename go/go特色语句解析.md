@@ -49,23 +49,21 @@ book.book_id = 6495407
 
 ## select 用法
 ```
-func main() {
-    ch4 := make(chan int, 1)
-	for i := 0; i < 4; i++ {
-		select {
-		case e, ok := <-ch4:
-			if !ok {
-				fmt.Println("End.")
-				return
-			}
-			fmt.Println(e)
-			close(ch4)    
+ch4 := make(chan int, 1)
+for i := 0; i < 4; i++ {
+    select {
+    case e, ok := <-ch4:
+        if !ok {
+            fmt.Println("End.")
+            return
+        }
+        fmt.Println(e)
+        close(ch4)    //关闭 channel
 
-		default:
-			fmt.Println("No Data!")
-			ch4<-1
-		}
-	}
+    default:
+        fmt.Println("No Data!")
+        ch4<-1
+    }
 }
 
 /*输出
@@ -77,10 +75,28 @@ End.
 
 
 
-## range 用法
+## var 与 new 区别
+```go
+p := new(person)
+err := xml.Unmarshal(str, p)
 ```
-nums := []int{2, 3, 4}
-for k, v:= range nums {
-    //code k=0,1,2,v=2,3,4
-}
+同
+```go
+var p person
+err := xml.Unmarshal(str, &p)
 ```
+> 对于new 相当于分配引用类型的内存地址,并且赋值,而 var 只分配内存,没有赋值
+
+```
+var c *int
+*c = 10
+fmt.Println(*c)  //会报错
+
+/*====*/
+
+b := new(int)
+*b = 10
+fmt.Println(*b)  //10 
+```
+## new 与 make 的区别
+`make` 只创建 `chan`、`map`以及切片的内存创建

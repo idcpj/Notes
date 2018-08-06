@@ -46,7 +46,7 @@ import (
 ```
 
 ## package 包说明
-1. 在同一个目录只能由一个` main `包,即开头为`package main`
+1. 在同一个目录只能由一个` main `包,即开头为`package main`,不然编译会报错
 2. `package` 的包名 最好与目录名相同 eg: test 目录下则包名为`package test`
 ### 如何导入自定义包
 ```
