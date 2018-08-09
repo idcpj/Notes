@@ -17,7 +17,7 @@ Worker 线程无法读取本地文件，即不能打开本机的文件系统 `fi
 # 简单demo
  `Public/Admin/js/work.js`内容
 ```
-console.log("hello word");
+console.log("hello word"); 
 ```
 
 `index.html` 内容
