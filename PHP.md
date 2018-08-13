@@ -54,9 +54,9 @@ ini_set('memory_limit', '128M');
 ```
 ## 开启端口
 > 至少 5.6以上都可以,其他待测试
-` php -S localhost:8000`
+` php -S 127.0.0.1:8000`
 1. 指定根目录
-`php -S localhost:8000 -t foo/`
+`php -S 127.0.0.1:8000 -t foo/`
 2. 是局域网可访问
 `php -S 192.168.0.70:8000`
 
