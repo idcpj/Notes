@@ -21,3 +21,10 @@ function findCherries(fruit) {
 
 console.log(inventory.find(findCherries)); // { name: 'cherries', quantity: 5 }
 ```
+
+3. 原生js 添加事件
+```js
+var a = document.querySelector('body')
+//添加触摸事件
+a.addEventListener('touchstart',()=>{console.log("asd")},false)
+```
