@@ -28,3 +28,7 @@ var a = document.querySelector('body')
 //添加触摸事件
 a.addEventListener('touchstart',()=>{console.log("asd")},false)
 ```
+
+4. 使图层调动 GPU 的加速
+在css 中加入`transform`
+`transform: translate3d(0,0,0)`
