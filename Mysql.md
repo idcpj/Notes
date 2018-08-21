@@ -114,3 +114,6 @@ mysql> show variables like 'long_query_time';
 ## 关闭查询缓存
 添加`SQL_NO_CACHE`
 `SELECT SQL_NO_CACHE * form table_name`
+
+## cpu 占用过高
+`show full processlist  查看慢查询` 
