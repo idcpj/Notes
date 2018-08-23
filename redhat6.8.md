@@ -15,7 +15,10 @@ wget http://soft.8090st.com/redhat/yum/python-iniparse-0.3.1-2.1.el6.noarch.rpm
 wget http://soft.8090st.com/redhat/yum/python-urlgrabber-3.9.1-11.el6.noarch.rpm
 ```
 3. 进行安装yum
-4. 更改yum源 #我们使用网易的CentOS镜像源
+```
+rpm -ivh --force yum-3.2.29-73.el6.centos.noarch.rpm yum-plugin-fastestmirror-1.1.30-37.el6.noarch.rpm python-iniparse-0.3.1-2.1.el6.noarch.rpm python-urlgrabber-3.9.1-11.el6.noarch.rpm yum-metadata-parser-1.1.2-16.el6.x86_64.rpm
+```
+5. 更改yum源 #我们使用网易的CentOS镜像源
 ```
 cd /etc/yum.repos.d/
 wget http://mirrors.163.com/.help/CentOS6-Base-163.repo
@@ -77,3 +80,20 @@ gpgkey=http://mirror.centos.org/centos/RPM-GPG-KEY-CentOS-6
 `yum clean all`
 6.  加载缓存：
 `yum makecache`
+
+### 升级 glibc
+> [参考网站](http://movingon.cn/2017/05/05/CentOS-6-x-%E5%A6%82%E4%BD%95%E5%8D%87%E7%BA%A7-glibc-2-17/)
+
+创建 `glibc.sh` 文件,并执行 
+```
+#! /bin/sh
+# update glibc to 2.17 for CentOS 6
+wget http://copr-be.cloud.fedoraproject.org/results/mosquito/myrepo-el6/epel-6-x86_64/glibc-2.17-55.fc20/glibc-2.17-55.el6.x86_64.rpm
+wget http://copr-be.cloud.fedoraproject.org/results/mosquito/myrepo-el6/epel-6-x86_64/glibc-2.17-55.fc20/glibc-common-2.17-55.el6.x86_64.rpm
+wget http://copr-be.cloud.fedoraproject.org/results/mosquito/myrepo-el6/epel-6-x86_64/glibc-2.17-55.fc20/glibc-devel-2.17-55.el6.x86_64.rpm
+wget http://copr-be.cloud.fedoraproject.org/results/mosquito/myrepo-el6/epel-6-x86_64/glibc-2.17-55.fc20/glibc-headers-2.17-55.el6.x86_64.rpm
+sudo rpm -Uvh glibc-2.17-55.el6.x86_64.rpm \
+glibc-common-2.17-55.el6.x86_64.rpm \
+glibc-devel-2.17-55.el6.x86_64.rpm \
+glibc-headers-2.17-55.el6.x86_64.rpm
+```

@@ -40,6 +40,8 @@ px aux | grep redis     查看进程是否存在
 
 php artisan &  在命令后面加 & 可以让命令在后台执行
 
+vim  `which phpize`  输出 反引号的数据 
+
 ```
 ## 设置别名 [alias]
 - 设置临时别名

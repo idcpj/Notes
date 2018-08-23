@@ -34,4 +34,4 @@ echo $res;
 |`ob_end_clean()` |	清空ob缓存内容，并关闭ob缓存|
 |`ob_flush()` |	将ob缓存的内容强制输出到程序缓存，不关闭ob缓存,不在ob_get_content中|
 |`ob_end_flush()` |	将ob缓存的内容强制输出到程序缓存，并关闭ob缓存|
-|`flush()` |	 ob_flush()后使用flush(),可以强制输出内容|
+|`flush()` |	将数据强制输出至客户端 |
