@@ -1,6 +1,6 @@
 [TOC]
 
-## 是数据库可以远程登录
+## 数据库可以远程登录
 ```
 
 mysql>  GRANT ALL PRIVILEGES ON *.* TO 'username'@'%' IDENTIFIED BY 'password' WITH GRANT OPTION;

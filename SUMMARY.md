@@ -137,6 +137,7 @@
         * [创建并引入组件](Vue/创建并引入组件.md)
         * [项目流程](Vue/项目流程.md)
         * [json-server 伪造 json 接口](Vue/json-server伪造json接口.md)
+        * [Vue-router](Vue/Vue-router.md)
     * [微信 jssdk](微信jssdk.md)
     * [electron -js的界面化工具](electron-界面界面化工具.md)
     * [webpack](nodejs/webpack.md)
