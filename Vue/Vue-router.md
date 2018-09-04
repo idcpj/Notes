@@ -36,6 +36,7 @@ new Vue({
 ```
 <template>
     <div>
+	    <router-link to="/goods">商品</router-link>
         <!-- 留坑，非常重要 -->
         <router-view></router-view>
     </div>

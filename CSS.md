@@ -64,7 +64,21 @@
 ```
 
 ## 类的命名技巧
-    具体的物品_item
-        物品中的图片_item_img
-        物品中的文字_item_text
-    用xx_box 里面放置左右浮动
+具体的物品_item
+物品中的图片_item_img
+物品中的文字_item_text
+用xx_box 里面放置左右浮动
+
+##  inline-block 等顶部对齐
+`vertical-align:top`
+
+## 产生空白间隙的原因
+eg:
+```
+<span></span>
+<span></span>
+```
+两个 `span` 进行换行的话,就会产生空白间隙
+处理方法两个
+1. 在span 的父级写`font-size:0`
+2. 取消回车`<span></span><span></span>`
