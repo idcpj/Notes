@@ -131,7 +131,7 @@ export default {
 ```
 
 ## 技巧
-1. 一个组件根 id 只有一个
+### 一个组件根 id 只有一个
 ```
 <template>
   	<div id="app1">	</div>
@@ -141,7 +141,7 @@ export default {
 	<div id="test"></div>
 </template>
 ```
-2. 结合 `v-for` 与`class`
+### 结合 `v-for` 与`class`
 通过对 item 值的判断来是否添加 class
 ```html
 <li v-for="item in items" v-bind:class="{red:item.isred}" v-on:click="functinname(item)">
@@ -157,6 +157,56 @@ items:[{
     isred:true
 }]
 ```
-2. 绑定 一个回车事件
-`      <input type="text"  v-on:keyup.enter="enterFun">
-`
+### 绑定 一个回车事件
+```      
+<input type="text"  v-on:keyup.enter="enterFun">
+```
+
+### 获取DOM元素
+旧版:
+```
+<div class="menu-wrapper"  v-el:food-wrapepr></div>
+
+//通过 v-el 绑定元素,在通过 this.$els.foodWrapper 获取绑定的元素
+ this.menuScroll = new BScroll(this.$els.foodWrapper)
+```
+
+新版
+```
+<div class="menu-wrapper"  ref="menuWrapper">
+
+
+this.menuScroll = new BScroll(this.$refs.menuWrapper, {})
+```
+
+###  使用 `Vue.nextTick()` 异步获取数据后,计算 dom 元素
+```js
+created(){
+  this.$http.get(config.apiHost.goods).then((response)=>{
+    if (response.status === ERR_OK){
+        this.goods = response.body
+        // 由于 goods 的渲染是异步方式,所以加入 nextTick 时,使其可精确计算DOM 高度
+        this.$nextTick(()=>{
+            //在 dom 渲染完成后计算 dom 的高度
+          this._initScroll()
+          this._calculateHeight()
+        })
+    }
+
+  })
+}
+```
+### ` Vue.set` 向响应式对象中添加一个属性，并确保这个新属性同样是响应式的，且触发视图更新
+```
+//引入 vue
+import Vue from "vue"
+
+addCart(){
+    if (!this.food.count){
+    	//像 this.food  添加 count 元素 ,且赋值为一
+      Vue.set(this.food, 'count', 1)
+    } else {
+      this.food.count++
+    }
+}
+```

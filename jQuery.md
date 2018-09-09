@@ -1,5 +1,86 @@
 [TOC]
 
+## form表单ajax 提交
+```js
+$(".ajax_form").submit(function(e){
+        e.preventDefault();
+        var data = $(this).serializeArray()
+        var url = $(this).attr('action');
+
+        $.post(url,data,function(result){
+            if (result.code == 200){
+                alert(result.message);
+            }else{
+                alert(result.message);
+            }
+        },'JSON');
+
+    });
+```
+
+## 设置select 的默认值  
+只需要在select 属性添加`default `属性即可
+```
+<form action="./" method="get">
+
+<select name="type"  default="{$_GET['type']}">
+    <option value="1">11</option>
+    <option value="2">22</option>
+    <option value="3">333</option>
+</select>
+
+<input type="submit" value="提交">
+</form>
+
+<script>
+$(function(){
+    // 调整默认选择内容
+    $("select").each(function(index, element) {
+        $(element).find("option[value='"+$(this).attr('default')+"']").attr('selected','selected');
+    });
+});
+</script>
+
+```
+## js-ajax-get
+```
+<a class="js-ajax-get" href="{:url('plinks/follow_chapter',['aid'=>$a['ji_no'],'nid'=>$books['id']])}">设为关注章节</a>
+
+$(document).ready(function(){
+
+//无弹框
+    $('a.js-ajax-get').click(function(event){
+        event.preventDefault();
+        var url = $(this).attr('href');
+        $.getJSON(url,function(res){
+            if (res.code == 1) {
+                alert("设置成功！");
+                window.location.reload();
+            }
+        });
+    });
+})
+```
+## js-ajax-get-dialog  - 异步前弹出对话框
+```
+<a class="js-ajax-get-dialog" href="{:url('plinks/follow_chapter',['aid'=>$a['ji_no'],'nid'=>$books['id']])}">设为关注章节</a>
+
+
+$('a.js-ajax-get-dialog').click(function(event){
+    event.preventDefault();
+    if (confirm("确认操作吗?")) {
+        event.preventDefault();
+        var url = $(this).attr('href');
+        $.getJSON(url,function(res){
+            if (res.code == 1) {
+                alert("设置成功！");
+                window.location.reload();
+            }
+        });
+    }
+});
+```
+
 
 
 

@@ -38,7 +38,8 @@ new Vue({
     <div>
 	    <router-link to="/goods">商品</router-link>
         <!-- 留坑，非常重要 -->
-        <router-view></router-view>
+        <router-view :seller="seller"></router-view>
     </div>
 </template>
 ```
+路由也允许使用 props 传值

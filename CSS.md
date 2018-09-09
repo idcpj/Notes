@@ -82,3 +82,21 @@ eg:
 处理方法两个
 1. 在span 的父级写`font-size:0`
 2. 取消回车`<span></span><span></span>`
+
+## `box-sizing`更改用于计算元素宽度和高度的默认的 CSS 盒子模型
+```
+box-sizing: content-box;
+box-sizing: border-box;
+```
+> `content-box`(默认值): `width` 与 `height` 只会应用到这个元素的内容区`border` 或 `padding`不再 `width`中
+> `border-box`: width = border + padding + 内容的  width，
+
+在响应式布局中,推荐使用`border-box`
+
+## 元素硬件加速
+给元素添加
+``
+.demo{
+	translate3D(0,0,0,)
+}
+```

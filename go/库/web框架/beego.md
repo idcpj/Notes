@@ -22,5 +22,43 @@ orm.RegisterDataBase("default", "mysql", "root:www.upsoft01.com@tcp(192.168.0.71
 
 //需要添加这一步才能查找对应的数据表,不然会报错,找不到改表
 orm.RegisterModel(new(HsDept))
+```
+
+## 对接口进行 `gzip` 压缩
+ 创建基础控制器  并处理 gzip逻辑
+ ```
+ package controllers
+
+import (
+	"bytes"
+	"compress/gzip"
+
+	"github.com/astaxie/beego"
+)
+
+/**
+基础控制器
+*/
+type BaseController struct {
+	beego.Controller
+}
+
+/*
+对数据进行压缩
+*/
+func (this *BaseController) HandleGzip(json string) {
+	var b bytes.Buffer
+	w := gzip.NewWriter(&b)
+    //设置压缩级别
+    //w, e := gzip.NewWriterLevel(&b, 1)
+    
+	defer w.Close()
+	w.Write([]byte(json))
+	w.Flush()
+
+	this.Ctx.Output.Header("Content-Type", "text/html; charset=utf8")
+	this.Ctx.Output.Header("Content-Encoding", "gzip")
+	this.Ctx.WriteString(b.String())
+}
 
 ```
