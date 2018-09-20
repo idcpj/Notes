@@ -60,5 +60,6 @@ func (this *BaseController) HandleGzip(json string) {
 	this.Ctx.Output.Header("Content-Encoding", "gzip")
 	this.Ctx.WriteString(b.String())
 }
-
 ```
+## linux 后台启动并不输出内容
+`nohup ./beepkg  > /dev/null 2>&1 &`

@@ -43,3 +43,24 @@ new Vue({
 </template>
 ```
 路由也允许使用 props 传值
+
+## 设置 url 的显示
+### hash 值
+url :`http://127.0.0.1:8080/#/ratings`
+```
+const router = new VueRouter({
+  mode: 'hash',
+  lineActiveClass: 'active',
+  routes // (缩写) 相当于 routes: routes
+})
+```
+### 
+url:`http://127.0.0.1:8080/goods`
+```
+const router = new VueRouter({
+  mode: 'history',
+  lineActiveClass: 'active',
+  routes // (缩写) 相当于 routes: routes
+})
+```
+

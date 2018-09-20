@@ -1,40 +1,5 @@
 [TOC]
 
-## flex弹性布局
-
-```css
-.partent{
-    display:flex; 
-    flex-direction: row | row-reverse | column | column-reverse;
-    align-items:center;//垂直居中显示
-   // justify-content:center;水平显示
-}
-
-
-```
-### 主轴属性
-**flex-direction   主轴方向**
-`row | row-reverse | column | column-reverse;`
-
-**flex-wrap   换行**
-
-`nowrap | wrap | wrap-reverse;`
-
-**justify-content   项目在主轴的方向**
-`flex-start | flex-end | center | space-between (两端对齐) | space-around(每个项目两侧的间隔相等);`
-![justify-content](images/20171229_135448.jpg =200x300)
-
----
-
-**align-items  项目在交叉轴上如何对齐**
-`flex-start | flex-end | center | baseline | stretch;`
-![align-items](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071011.png =200x200)
-### 项目属性
-**flex-grow 所占比例**
-`flex-grow: <number>; /* default 0 */`
-
->参考阮一峰[网址](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
-
 
 ## 水平居中
  **图片垂直据居中**
@@ -95,8 +60,56 @@ box-sizing: border-box;
 
 ## 元素硬件加速
 给元素添加
-``
+```
 .demo{
 	translate3D(0,0,0,)
 }
 ```
+
+##  长宽相等的 div
+如合适一个长宽相等的一个.用于显示如图片等信息
+```
+width:100%
+height:0
+padding-top:100%
+```
+> 原理: 把高度设置为0 用 `padding-top:100%` 100%所代表的是宽度的大小
+
+demo:
+```
+.image-header
+    position:relative
+    width:100%
+    height:0
+    padding-top:100%
+    img
+        position:absolute
+        top:0
+        left:0
+        width:100%
+        height:100%
+```
+## media
+~~~css
+//页面大于960px 像素
+@media screen and (min-width:960px){ 
+    body{background:orange;}
+}
+
+//大于960px小于1200px
+@media screen and (min-width:960px) and (max-width:1200px){
+    body{background:yellow;}
+}
+~~~
+
+## 固定标签的宽高
+即离最顶部有距离的 div, 如标签分页等
+```
+position:absolute
+top:174px
+bottom:0
+left:0
+width:100%
+overflow:hidden
+```
+
