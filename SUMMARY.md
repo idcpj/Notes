@@ -143,7 +143,7 @@
         * [json-server 伪造 json 接口](Vue/json-server伪造json接口.md)
         * [Vue-router](Vue/Vue-router.md)
         * [Vue-resource ajax 请求数据](Vue/Vue-resourceajax请求数据.md)
-        * [存储 data 的方式](Vue/存储data的方式.md)
+        * [data 相关操作](Vue/存储data的方式.md)
         * [动态改变 class 值](Vue/动态改变class值.md)
         * [stylus](Vue/stylus.md)
         * [生产与测试环境配置不同请求地址](Vue/生产与测试环境配置不同请求地址.md)

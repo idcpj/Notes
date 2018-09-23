@@ -210,3 +210,9 @@ addCart(){
     }
 }
 ```
+### 切换路由(选项卡) 保留数据
+```
+<keep-alive>
+    <router-view :seller="seller" ></router-view>
+</keep-alive>
+```
