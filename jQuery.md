@@ -154,3 +154,54 @@ $(“input[name=’ch’]”).each(function(i){
 	img1.src= img1.getAttribute('data-realsrc')
 </script>
 ```
+## jquery 获取下载进度条参数
+//使用了`progressJs` 插件
+```
+ $.ajax({
+    type:'GET',
+    url: res.info,
+    xhrFields:{
+        onprogress:function(event){
+            // console.log(event);
+            if(event.lengthComputable){
+                // console.log(event.total);
+                // console.log(event.loaded);
+                var percent =(event.loaded/event.total)*100;
+                var percent = percent.toFixed(2);
+                progressJs().set(percent)  //按百分之5加载
+            }
+        }
+    },
+    complete: function() {
+        progressJs().end()
+    },
+})
+```
+## jquery文件上传显示进度
+```
+ $.ajax({
+    url:uploadUrl + "?flag=input",
+    type: 'POST',
+    cache: false,
+    data: new FormData($('#form_input')[0]),
+    processData: false,
+    contentType: false,
+    beforeSend: function(){
+        progressJs().start();
+    },
+    success: function(result) {
+        progressJs().end();
+
+    },
+    error: function (result) {
+    },
+    xhr: function(){
+        var xhr = $.ajaxSettings.xhr();
+        if(onprogress && xhr.upload) {
+            xhr.upload.addEventListener("progress" , onprogress, false);
+            return xhr;
+        }
+    }
+    });
+```
+
