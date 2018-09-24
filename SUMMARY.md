@@ -167,6 +167,7 @@
         * [引入模块-并对模板赋值](nodejs/webpack/引入模块.md)
     * [百度地图 api](前端/百度地图api.md)
         * [百度离线地图](前端/百度地图api/百度离线地图.md)
+    * [weex 扩平台vue 开发](前端/weex扩平台vue开发.md)
 * [软件](软件.md)
     * [PHPStorm](PHPStorm.md)
         * [配置vagrant虚拟机](配置vagrant虚拟机.md)
