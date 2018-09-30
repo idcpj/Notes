@@ -122,6 +122,8 @@
         * [js](前端/HTML & CSS & jQuery/js.md)
             * [多线程 work](前端/HTML & CSS & jQuery/js/多线程work.md)
             * [跨域获取cookie(单点登录)](前端/HTML & CSS & jQuery/js/跨域获取cookie单点登录.md)
+            * [js es5 的面向对象编程](前端/HTML & CSS & jQuery/js/jses5的面向对象编程.md)
+            * [layui.laytpl 前端模板](前端/HTML & CSS & jQuery/js/layui.laytpl前端模板.md)
         * [HTML](HTML.md)
         * [CSS](CSS.md)
             * [less](前端/less.md)
