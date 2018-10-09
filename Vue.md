@@ -216,3 +216,7 @@ addCart(){
     <router-view :seller="seller" ></router-view>
 </keep-alive>
 ```
+
+## slot 插槽
+> [参考文档](https://cn.vuejs.org/v2/guide/components-slots.html)
+可以在逐渐中写入自定义的内容

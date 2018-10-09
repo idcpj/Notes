@@ -46,4 +46,30 @@ axios.get('/user?ID=12345')
     // always executed
   });
 ```
+### interceptors 拦截器
+对所有请求做些 统一的前置操作
+```
+ mounted:function () {
+    Vue.http.interceptors.push(function(request) {
+        console.log("进入前置操作);
+        // modify method
+        request.method = 'POST';
+        // modify headers
+        request.headers.set('X-CSRF-TOKEN', 'TOKEN11111');
+        return function(response) {
+            // modify response
+            response.body = '修改返回值'
+        };
+    });
+},
+methods:{
+  get:function () {
+      this.$http.get("package.json").then(function (res) {
+          console.log(res.data);
+          this.getData = res.data
+      })
+  }
+}
+```
+
 

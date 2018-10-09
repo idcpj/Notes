@@ -1,7 +1,14 @@
 
 [TOC]
+## 切换选中状态
+根据索引
+```
+<dd v-for="(price,index) in priceFilter" @click="currentPrice=index" >
+   <a :class="{'current-price':currentPrice==index}"></a>
+</dd>
+```
 
-## demo
+## 已拼接形式动态改变 class
 > [官网 computed 例子](https://cn.vuejs.org/v2/guide/computed.html)
 ```
 <template>
