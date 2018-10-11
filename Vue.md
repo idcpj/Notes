@@ -1,33 +1,17 @@
 [TOC]
 
-## 简单安装
 
-1. `<script >`引入
+## 快速构建
 ```
-<!-- 开发环境版本，包含了用帮助的命令行警告 -->
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-
-<!-- 生产环境版本，优化了尺寸和速度 -->
-<script src="https://cdn.jsdelivr.net/npm/vue"></script>
-```
-2. npm 安装
-`npm install  [-g] vue`
-
-
-## 用命令行快速初始化项目
-```bash
-# 安装 vue-cli
 $ npm install --global vue-cli
-# 使用 "webpack" 模板创建一个新项目
 $ vue init webpack my-project
-# 安装依赖，然后开始！
 $ cd my-project
 $ npm run dev
 ```
-通过 `run dev` 的项目 会自动进行更新
+
 
 ## Vue 对象属性
-输出模板
+输出模板,用于多页面
 ```js
 new Vue({
 	el:"",
@@ -36,7 +20,7 @@ new Vue({
     watch:{}
 });
 ```
-模块化,输出模块
+模块化,输出模块,用于单页面
 ```
 export default {
     data:function {
@@ -48,44 +32,7 @@ export default {
 }
 ```
 
-## 模板指令
 
-### 数据渲染
-```html
-<p>{{ a }}</p>
-<p v-text="a"></p>
-<p v-html="a"></p>
-```
-### 控制模块隐藏
-```html
-<p v-if="isShow"></p>
-<p v-if="isShow"></p>
-```
-
-### 渲染列表
-```html
-<li v-for="item in items">
-	<p v-text="item.lable"></p>
-</li>
-```
-### 事件绑定
-```
-<button v-on:click="doThis"></button>
-<button @click="doThis"></button>  //简写
-```
-```js
-method:{
-	doTHis:function(param){ }
-}
-```
-
-### 属性赋值
-```
-<img v-bind:src="imageSrc" >
-<div :class="{red:isRed}"></div>   //是否有 通过 isRed 来判断是否添加 red 这个 class 
-<div :class="[classA,classB]"></div>  //添加 多个 class
-<div :class="[classA,{classB:isB,classC:isC}]"></div>  //混合
-```
 ### watch 监控属性值
 ```js
 export default {
@@ -108,39 +55,8 @@ export default {
 
 
 
-## 模块输出
-```
-export default {
-  name: 'HelloWorld',
-  data :function(){
-    return {
-      msg: 'Welcome to Your Vue.js App1111'
-    }
-  }
-}
-
-// data 的赋值  等同于
-export default {
-  name: 'HelloWorld',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
-  }
-}
-```
 
 ## 技巧
-### 一个组件根 id 只有一个
-```
-<template>
-  	<div id="app1">	</div>
-    <!--错误-->
-    <div></div>
-    <!--错误-->
-	<div id="test"></div>
-</template>
-```
 ### 结合 `v-for` 与`class`
 通过对 item 值的判断来是否添加 class
 ```html
@@ -163,23 +79,22 @@ items:[{
 ```
 
 ### 获取DOM元素
-旧版:
+
 ```
+//旧版
 <div class="menu-wrapper"  v-el:food-wrapepr></div>
 
-//通过 v-el 绑定元素,在通过 this.$els.foodWrapper 获取绑定的元素
- this.menuScroll = new BScroll(this.$els.foodWrapper)
-```
+//script
+ this.$els.foodWrapper
 
-新版
-```
+//新版
 <div class="menu-wrapper"  ref="menuWrapper">
-
-
-this.menuScroll = new BScroll(this.$refs.menuWrapper, {})
+//script
+this.$refs.menuWrapper
 ```
 
-###  使用 `Vue.nextTick()` 异步获取数据后,计算 dom 元素
+
+###  使用 `Vue.nextTick(functon)` 渲染完后执行
 ```js
 created(){
   this.$http.get(config.apiHost.goods).then((response)=>{
@@ -217,6 +132,33 @@ addCart(){
 </keep-alive>
 ```
 
-## slot 插槽
+### slot 插槽
 > [参考文档](https://cn.vuejs.org/v2/guide/components-slots.html)
-可以在逐渐中写入自定义的内容
+可以在组件中写入自定义的内容
+
+### 导出并引入自定义模块
+在`src/store.js`
+```
+const STOREGE_KEY = 'todo-vuejs'
+export default{
+    fetch(){
+        alert(STOREGE_KEY);
+    },
+    save(items){
+        alert(items);
+    }
+}
+```
+
+在`src/App.vue`
+```
+import store from './store'; //引入
+
+export default {
+    methods: {
+        enterFun: function () {
+            store.save(this.tiems);
+        }
+    }
+}
+```

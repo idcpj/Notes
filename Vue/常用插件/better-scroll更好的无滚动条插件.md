@@ -3,7 +3,8 @@
 
 > [github](https://github.com/ustbhuangyi/better-scroll/blob/master/README_zh-CN.md)
 
-
+注意：如果想要滚动生效,必须父类`wrapper`元素小于子类`content`
+`wrapper`或其父类 不需要有 `position:absolute;top:50px;bottom:50px`
 ```
 <div class="wrapper" ref="menuWrapper">
   <ul class="content">

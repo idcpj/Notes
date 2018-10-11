@@ -15,10 +15,10 @@ export GOPATH=/var/opt/wwwroot/goblin
 添加到对应的`profile` 配置文件中
 eg:
 `source .zshrc` 或`source .bashrc`
-## mac
+### mac
 1. 安装
 `brew install go`
-2. 如何 goland 无法调试
+2. 如果 goland 编辑器 无法调试
 `https://developer.apple.com/download/more/` 
 下载 `Command Line tools(macoS 10.13) for Xcode 9.1`
 
@@ -66,7 +66,7 @@ func init() {
 	fmt.Print("my name is show2")
 }
 
-func Show2(){} ///要与目录名保持一直,且首字母大写
+func Show2(){} 
 ```
 导入 包
 ```

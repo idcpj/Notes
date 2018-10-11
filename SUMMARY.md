@@ -144,7 +144,6 @@
             * [Vue-resource ajax 请求数据](Vue/Vue-resourceajax请求数据.md)
             * [axios [推荐]](Vue/请求处理/axios.md)
         * [创建并引入组件](Vue/创建并引入组件.md)
-        * [项目流程](Vue/项目流程.md)
         * [json-server 伪造 json 接口](Vue/json-server伪造json接口.md)
         * [Vue-router](Vue/Vue-router.md)
         * [data 相关操作](Vue/存储data的方式.md)
