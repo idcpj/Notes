@@ -44,6 +44,8 @@ import (
 	_ "./show2"  //只调用 show2包的 init() 函数 包中的其他方法不可调用
 )
 ```
+## 工作目录最好是在src 中创建项目
+这样自定义包可以编辑器可以识别并导入
 
 ## package 包说明
 1. 在同一个目录只能由一个` main `包,即开头为`package main`,不然编译会报错
@@ -129,7 +131,11 @@ eg: `go get -v http://xxxxx/test.go`
 -fix : 在下载代码包后先执行修正动作,而后再进行编译和安装
 -u : 利用网络来更新已有的代码包及其依赖包
 ```
+## 初始化模块的函数 `init`
 
+如某个目录下有 多个`*.go` 文件,
+在引入`xxx/model` 时
+每个文件的 `func init()` 都会执行
 
 ## go get 如何下载太慢
 1. 先通过 `go get github.com/go-sql-driver/mysql` 生成目录即可
@@ -169,3 +175,39 @@ go build main.go
 GOOS：目标平台的操作系统（darwin、freebsd、linux、windows） 
 GOARCH：目标平台的体系架构（386、amd64、arm） 
 ```
+
+## 要有全局概念
+即在启动程序中只启动一次 ,在使用框架时候尤其如何.某些全局的配置,可以在main 函数中进行设置
+以beego为例
+```
+import (
+	_ "antbiz/routers"
+
+	_ "antbiz/lib" //  main函数中 初始化
+
+	"github.com/astaxie/beego"
+	"github.com/astaxie/beego/orm"
+)
+
+func main() {
+	//是否开启debug
+	orm.Debug = false
+
+	beego.Run()
+
+}
+```
+
+在 `lib/cache`
+```
+var Bm cache.Cache
+
+func init() {
+	var err error
+	Bm, err = cache.NewCache("memory", `{"interval":60}`)
+	if err != nil {
+		beego.Debug("缓存加载失败")
+	}
+}
+```
+这样 在全局中就可以使用 Bm这个函数了
