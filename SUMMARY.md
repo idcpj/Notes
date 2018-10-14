@@ -118,6 +118,7 @@
     * [搭建 shandowsocks](服务器/搭建shandowsocks.md)
         * [google云 搭建shadowsocksR](搭建shadowsocksR.md)
         * [亚马逊云 搭建](服务器/搭建shandowsocks/亚马逊云搭建.md)
+    * [MongoDB](服务器/MongoDB.md)
 * [前端](前端.md)
     * [HTML & CSS & & JS &jQuery](前端/HTML & CSS & jQuery.md)
         * [js](前端/HTML & CSS & jQuery/js.md)
