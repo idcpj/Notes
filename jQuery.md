@@ -154,28 +154,63 @@ $(“input[name=’ch’]”).each(function(i){
 	img1.src= img1.getAttribute('data-realsrc')
 </script>
 ```
-## jquery 获取下载进度条参数
-//使用了`progressJs` 插件
+## 异步文件下载
+[bh_msg_tips() 方法详情](https://www.kancloud.cn/idcpj/python/770267#_53)
 ```
- $.ajax({
-    type:'GET',
-    url: res.info,
-    xhrFields:{
-        onprogress:function(event){
-            // console.log(event);
-            if(event.lengthComputable){
-                // console.log(event.total);
-                // console.log(event.loaded);
-                var percent =(event.loaded/event.total)*100;
-                var percent = percent.toFixed(2);
-                progressJs().set(percent)  //按百分之5加载
-            }
+$(".downfile").click(function () {
+    //显示等待效果
+    bh_msg_tips("下载中...");
+    var url = $(this).data('href');
+    $.getJSON(url,function (res) {
+        if(res.status===0){
+            alert("请求出错"+res.msg);
+            return ;
         }
-    },
-    complete: function() {
-        progressJs().end()
-    },
-})
+        var showname  =res.data.showname;
+        var filename  =res.data.filename;
+        var down_url = "{:U('down_file')}?showname="+showname+"&filename="+filename;
+        
+        var a = document.createElement('a');
+        a.download = showname;
+        a.href = down_url;
+        $("body").append(a);    // 修复firefox中无法触发click
+        a.click();
+        $(a).remove();
+        
+        remove_tips();//取消提示
+    });
+
+    return false;
+});
+```
+
+## jquery 获取下载进度条参数
+异步下载文件需要在嵌套一层异步
+
+```js
+//使用了 progressJs 插件
+$.post(url,data,function(res){
+ var res.info=res.downurl
+     $.ajax({
+        type:'GET',
+        url: res.info,
+        xhrFields:{
+            onprogress:function(event){
+                // console.log(event);
+                if(event.lengthComputable){
+                    // console.log(event.total);
+                    // console.log(event.loaded);
+                    var percent =(event.loaded/event.total)*100;
+                    var percent = percent.toFixed(2);
+                    progressJs().set(percent)  //按百分之5加载
+                }
+            }
+        },
+        complete: function() {
+            progressJs().end()
+        },
+    });
+},"JSON");
 ```
 ## jquery文件上传显示进度
 ```
