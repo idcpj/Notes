@@ -171,7 +171,7 @@ $(".downfile").click(function () {
         var down_url = "{:U('down_file')}?showname="+showname+"&filename="+filename;
         
         var a = document.createElement('a');
-        a.download = showname;
+//        a.download = showname;  //自定义文件名
         a.href = down_url;
         $("body").append(a);    // 修复firefox中无法触发click
         a.click();

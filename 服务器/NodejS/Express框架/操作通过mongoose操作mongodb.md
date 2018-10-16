@@ -1,5 +1,6 @@
 [TOC]
 [mongoose 官网](https://mongoosejs.com/docs/validation.html)
+[简书参考](https://www.jianshu.com/p/9b20c1e2f373)
 ## 安装
 `npm i -S mongoose`
 

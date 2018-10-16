@@ -5,6 +5,15 @@
 > [官方文档](https://beego.me/docs/quickstart/)
 > [github]()
 
+## 常用命令
+```
+go get github.com/beego/bee    //获取beego
+bee [new/api ] apiproject      //新建web 项目或api 项目
+bee run                        //运行项目
+bee pack                //打包项目
+bee generate model [modelname] [-fields="name:type"]
+bee generate controller [controllerfile]
+```
 
 ## init 函数
 beego 在运行时候会先加载,涉及到的所有 所有 `.go`文件中的init
@@ -51,4 +60,30 @@ func (this *BaseController) HandleGzip(json string) {
 ```
 ## linux 后台启动并不输出内容
 `nohup ./beepkg  > /dev/null 2>&1 &`
+
+## 前置后置操作
+
+```
+var FilterUser = func(ctx *context.Context) {
+	beego.Debug("BeforeRouter")
+}
+/**
+BeforeStatic
+BeforeRouter
+BeforeExec
+AfterExec
+FinishRouter
+*/
+beego.InsertFilter("/*", beego.BeforeRouter, FilterUser)
+```
+
+
+
+
+
+
+
+
+
+
 
