@@ -22,3 +22,9 @@ var ejs = require("ejs");
 app.set('view engine', 'html');  
 app.engine('.html',ejs.__express)
 ```
+## 技巧
+### res.end 用法
+如果是在回调函数内部,则`res.end()`也必须写在回调函数中
+
+
+
