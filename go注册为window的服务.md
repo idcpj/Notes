@@ -151,3 +151,10 @@ sc create go_server binPath= "D:\go\api\src\demo\demo.exe” type= share start= 
  第三参数为服务名,
  通过`服务->属性->服务名称`  并非显示名称
 `sc delete godemo.exe` 
+
+### widow 编译为不显示 dos 界面
+`go build -ldflags "-H windowsgui"`
+
+### nssm 安装go 编译的 exe
+[下载](https://nssm.cc/download)
+`nssm install`

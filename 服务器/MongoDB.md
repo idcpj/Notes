@@ -41,3 +41,17 @@ use test
 db.集合名.drop()
 ```
 
+###  复杂查询
+```
+let params = {
+    salePrice: {
+        $gt: priceGt,  //gt 大于
+        $lte: priceLte,  //lte 小于等于
+    }
+};
+goodsModel = goods.find(params);
+goodsModel.sort({salePrice:param.sort}).skip(0).limit(10);
+goodsModel.exec((err,doc)=>{
+    //todo
+});
+```
