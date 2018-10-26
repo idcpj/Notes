@@ -141,6 +141,7 @@
             * [jqzoom.js-类似淘宝的图片放大](jqzoom.js-类似淘宝的图片放大.md)
             * [头部进度条](头部进度条.md)
             * [tree 分组](jQuery/tree分组.md)
+            * [多文件上传进度条 Huploadify](jQuery/多文件上传进度条Huploadify.md)
     * [微信小程序](微信小程序.md)
     * [Vue](Vue.md)
         * [常用插件](Vue/常用插件.md)

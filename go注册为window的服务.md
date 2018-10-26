@@ -7,113 +7,78 @@
 package main
 
 import (
-	"fmt"
+	_ "antbiz/routers"
 	"log"
-	"net/http"
+
+	_ "antbiz/lib" 
 
 	"os"
 
+	"github.com/astaxie/beego"
+	"github.com/astaxie/beego/orm"
 	"github.com/kardianos/service"
 )
 
-var serviceConfig = &service.Config{
-	Name:        "go_serviceName1",
-	DisplayName: "go_service Display Name",
-	Description: "go_service description",
+type program struct{}
+
+func (p *program) Start(s service.Service) error {
+	log.Println("开始服务")
+	go p.run()
+	return nil
+}
+func (p *program) Stop(s service.Service) error {
+	log.Println("停止服务")
+	return nil
+}
+func (p *program) run() {
+	// 这里放置程序要执行的代码……
+
+	//是否开启debug
+	orm.Debug = false
+
+	beego.Run()
 }
 
 func main() {
-
+	//服务的配置信息
+	cfg := &service.Config{
+		Name:        "UpAntBiz",
+		DisplayName: "UpAntBiz",
+		Description: "UpAntBiz",
+	}
+	// Interface 接口
+	prg := &program{}
 	// 构建服务对象
-	prog := &Program{}
-	s, err := service.New(prog, serviceConfig)
+	s, err := service.New(prg, cfg)
 	if err != nil {
 		log.Fatal(err)
 	}
-
-	// 用于记录系统日志
+	// logger 用于记录系统日志
 	logger, err := s.Logger(nil)
 	if err != nil {
 		log.Fatal(err)
 	}
-
-	if len(os.Args) < 2 {
+	if len(os.Args) == 2 { //如果有命令则执行
+		err = service.Control(s, os.Args[1])
+		if err != nil {
+			log.Fatal(err)
+		}
+	} else { //否则说明是方法启动了
 		err = s.Run()
 		if err != nil {
 			logger.Error(err)
 		}
-		return
 	}
-
-	//方法 一.
-	//cmd := os.Args[1]
-	//if cmd == "install" {
-	//	err = s.Install()
-	//	if err != nil {
-	//		log.Fatal(err)
-	//	}
-	//	fmt.Println("安装成功")
-	//}
-	//if cmd == "uninstall" {
-	//	err = s.Uninstall()
-	//	if err != nil {
-	//		log.Fatal(err)
-	//	}
-	//	fmt.Println("卸载成功")
-	//}
-
-	////方法 一. install, uninstall, start, stop
-	cmd := os.Args[1]
-	if cmd == "help" {
-		fmt.Println("可以使用的命令有 [install | uninstall | start | stop]")
-		return
-	}
-
-	err = service.Control(s, cmd)
 	if err != nil {
-		log.Fatal(err)
-	} else {
-		fmt.Println(cmd, " 成功")
+		logger.Error(err)
 	}
 }
-
-type Program struct{}
-
-func (p *Program) Start(s service.Service) error {
-	log.Println("开始服务")
-	go p.run() //调用run 方法
-	return nil
-}
-
-func (p *Program) Stop(s service.Service) error {
-	log.Println("停止服务")
-	return nil
-}
-
-func (p *Program) run() {
-	// 此处编写具体的服务代码
-	startHttp()
-}
-
-//============为测试功能代码 创建一个9090的web服务 start=======  
-func sayhelloName(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hello astaxie!") //这个写入到w的是输出到客户端的
-}
-
-func startHttp() {
-	http.HandleFunc("/", sayhelloName)       //设置访问的路由
-	err := http.ListenAndServe(":9090", nil) //设置监听的端口
-	if err != nil {
-		log.Fatal("ListenAndServe: ", err)
-	}
-}
-//============为测试功能代码 end=======
 
 ```
 运行
 ```
 > go build main.go
-> main.exe install    //[install | uninstall | stop | start]
+> main.exe install    //[install | ****************9999999999| stop | start]
 
 ```
 
