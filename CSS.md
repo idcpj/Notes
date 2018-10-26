@@ -112,4 +112,20 @@ left:0
 width:100%
 overflow:hidden
 ```
+## 滚动条演示(chrome)
+```
+ ::-webkit-scrollbar
+{
+    width: 6px; /*滚动条宽度*/
+}
+
+
+/*定义滑块 内阴影+圆角*//* 滚动条滑块 */
+::-webkit-scrollbar-thumb
+{
+    border-radius: 10px; /*滚动条*/
+    -webkit-box-shadow: inset 0 0 6px rgba(177, 255, 11, 0.3);
+    background-color: #80a4f9; /*滚动条颜色*/
+}
+```
 
