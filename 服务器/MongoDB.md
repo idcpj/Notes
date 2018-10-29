@@ -40,6 +40,7 @@ db.dropDatabase()
 use test
 db.集合名.drop()
 ```
+## 查询
 
 ###  复杂查询
 ```

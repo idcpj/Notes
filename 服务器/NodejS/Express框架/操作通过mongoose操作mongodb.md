@@ -5,7 +5,27 @@
 `npm i -S mongoose`
 
 ## demo使用
+在`model/base.js `中
+连接数据库
+```
+const mongoose = require("mongoose");
+// 若是带账号密码的：'mongodb://root:123456@127.0.0.1:27017/dumall'
+const connStr= "mongodb://127.0.0.1:27017/imoocsell";
+mongoose.connect(connStr,{ useNewUrlParser: true });
+mongoose.connection.on("connected",()=>{
+    console.log("MongoDB connected success.")
+});
+mongoose.connection.on("error",()=>{
+    console.log("MongoDB connected fail.")
+});
+mongoose.connection.on("disconnected",()=>{
+    console.log("MongoDB connected disconnected.")
+});
+
+```
+
 在`model/goods.js`中
+创建 映射关系
 ```
 const mongoose = require("mongoose");
 let Schema = mongoose.Schema;
@@ -18,53 +38,39 @@ var productSchema = new Schema({
     'productImage':String,
 });
 
-// 输出(导出)w
-module.exports = mongoose.model('good',productSchema); ```
+// 输出(导出)
+module.exports = mongoose.model('good',productSchema,"goods");//第三参数对应表名 
 ```
-`routers/goods.js`
+
+在 `routers/goods.js` 中
 ```
-const express = require("express");
-const router = express.Router();
-const mongoose = require("mongoose");
 const goods = require("../models/goods");
 
-const connStr= "mongodb://127.0.0.1:27017/imoocsell";
+//复杂条件查询
+params.salePrice={
+    $gt: priceGt,
+    $lte: priceLte,
+}
+goodsModel = goods.find(params);
+goodsModel.sort({salePrice:param.sort}).skip(skip).limit(param.pageSize);
+goodsModel.exec((err,doc)=>{}
 
-// 若是带账号密码的：'mongodb://root:123456@127.0.0.1:27017/dumall'
-mongoose.connect(connStr);
+//单条查询
+User.findOne({userName:userName},(err1,userDoc)=>{
+    //保存
+    userDoc.userName="ccc";
+    userDoc.save((err4,doc3)=>{})
+}
+//删除用户下购物车中的某个物品
+ userModel.update({userId: userId}, 
+                {$pull: {cartList: 
+                            {productId: productId}
+                        }
+                }, (err, doc) => {})
 
-mongoose.connection.on("connected",()=>{
-    console.log("MongoDB connected success.")
-});
-
-mongoose.connection.on("error",()=>{
-    console.log("MongoDB connected fail.")
-});
-
-mongoose.connection.on("disconnected",()=>{
-    console.log("MongoDB connected disconnected.")
-});
-
-router.get("/list",(req,res,err)=>{
-    goods.find({},(err,doc)=>{
-        if(err){
-            res.json({
-                status:1,
-                msg:err.message
-            })
-        }else{
-            res.json({
-                status:0,
-                msg:"",
-                result:doc
-            })
-        }
-
-        res.end();
-    })
-
-});
-
-module.exports=router;
+//更新 购物车下的某个物品数量
+userModel.update({
+userId:userId,"cartList.productId":productId},
+{"cartList.$.productNum":productNum},(err,doc)=>{});
 ```
 ## 

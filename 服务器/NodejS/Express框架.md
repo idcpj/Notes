@@ -26,5 +26,21 @@ app.engine('.html',ejs.__express)
 ### res.end() 用法
 如果是在回调函数内部,则`res.end()`也必须写在回调函数中
 
+### 一级路由 在 `app.js ` 中的位置
+```
+app.use(cookieParser());
+
+//配置路由
+app.use('/', indexRouter);
+const indexRouter = require('./routes/index');
+
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+    next(createError(404));
+});
+
+```
+
+
 
 
