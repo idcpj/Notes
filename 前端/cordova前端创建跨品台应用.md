@@ -20,3 +20,23 @@ ANDROID_HOME C:\Dev\Android\adt-bundle-windows-x86-20140702\sdk
 %ANDROID_HOME%\platform-tools
 %ANDROID_HOME%\tools
 ```
+
+## 安装 cordova
+`npm install -g cordova`
+## 创建项目
+```
+cordova create MyApp
+cordova platform add browser  [ios,android,]
+cordova run [ios,android]
+```
+
+
+## 错误解决
+安装证书
+ Before building your project, you need to accept the license agreements ...
+```
+mkdir "%ANDROID_HOME%\licenses"
+echo |set /p="8933bad161af4178b1185d1a37fbf41ea5269c55" > "%ANDROID_HOME%\licenses\android-sdk-license"
+```
+
+
