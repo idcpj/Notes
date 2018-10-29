@@ -162,3 +162,27 @@ export default {
     }
 }
 ```
+### keep-alive 缓存
+手机应用缓存实例
+```
+<template>
+    <div id="app">
+        <v-header :seller="seller"></v-header>
+        <div class="tab border-1px">
+            <div class="tab-item">
+                <router-link to="/goods">商品</router-link>
+            </div>
+            <div class="tab-item">
+                <router-link to="/ratings">评论</router-link>
+            </div>
+        </div>
+        <keep-alive>
+            <router-view :seller="seller" ></router-view>
+        </keep-alive>
+    </div>
+</template>
+```
+根据router 针对性缓存
+> [参考网址](https://www.jianshu.com/p/0b0222954483)
+
+
