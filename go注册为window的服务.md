@@ -78,7 +78,7 @@ func main() {
 运行
 ```
 > go build main.go
-> main.exe install    //[install | ****************9999999999| stop | start]
+> main.exe [install| stop | start] 
 
 ```
 
