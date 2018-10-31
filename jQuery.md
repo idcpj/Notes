@@ -239,4 +239,15 @@ $.post(url,data,function(res){
     }
     });
 ```
-
+## 全选与全部选
+```
+//切换全选与全不选
+$("#checkAll").click(function() {
+    $('input[name="ids[]"]').prop("checked",this.checked);
+});
+//如果手动全不选中,则显示全选
+var $subBox = $("input[name='ids[]']");
+$subBox.click(function(){
+    $("#checkAll").prop("checked",$subBox.length == $("input[name='ids[]']:checked").length ? true : false);
+});
+```

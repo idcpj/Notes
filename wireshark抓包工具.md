@@ -8,6 +8,6 @@
 ![](images/Snipaste_2018-10-30_11-44-34.png)
 
 ## 过滤规则
-### 对 ip 端口 和http 进行过滤
+### 对 ip , port 和http 进行过滤
 `(ip.src == 192.168.0.91) && (tcp.srcport == 8000) and http`
 
