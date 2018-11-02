@@ -207,6 +207,7 @@
     * [Proxifier -让影梭在 shell 中走代理](软件/Proxifier-让影梭在shell中走代理.md)
     * [一键安装dll缺失的文件](一键安装dll缺失的文件.md)
     * [wireshark  抓包工具](wireshark抓包工具.md)
+    * [sokit 端口监听 转发. socket 测试工具](sokit端口监听转发.socket测试工具.md)
 * [MAC](MAC常用配置.md)
     * [php 环境配置 2.0版](MACphp环境配置2.0版.md)
         * [手动/编译,安装xdebug等模块](安装xdebug等模块.md)
