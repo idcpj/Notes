@@ -162,6 +162,13 @@ const router = new VueRouter({
   ]
 })
 ```
+## 链接
+`<router-link tag="li" to="/about">Next<router-link>`
+### 动态链接, url 中传值跳转
+生成的 url 为 `orderConfirm?addressId=100005`
+```
+<router-link    :to="{path:'orderConfirm',query:{'addressId':checkIndex}}" >Next</router-link>
+```
 
 
 

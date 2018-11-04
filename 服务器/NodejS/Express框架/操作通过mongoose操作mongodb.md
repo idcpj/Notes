@@ -72,5 +72,11 @@ User.findOne({userName:userName},(err1,userDoc)=>{
 userModel.update({
 userId:userId,"cartList.productId":productId},
 {"cartList.$.productNum":productNum},(err,doc)=>{});
+
+//类更改默认值
+userModel.findOne({userId:userId},(err,doc)=>{
+    doc.addressList.forEach(item=>{}) //进行循环
+    doc.save((err,doc)=>{})
+});
 ```
 ## 

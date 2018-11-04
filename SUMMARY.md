@@ -168,6 +168,8 @@
         * [js 模块化编程,引入自定义的 js 函数](Vue/js.md)
         * [跨域请求](Vue/跨域请求.md)
         * [vue 与 cordova 跨平台](vue与cordova跨平台.md)
+        * [vuex](Vue/vuex.md)
+            * [在多页面中使用](Vue/vuex/在多页面中使用.md)
     * [微信 jssdk](微信jssdk.md)
     * [electron -js的界面化工具](electron-界面界面化工具.md)
     * [webpack](nodejs/webpack.md)
