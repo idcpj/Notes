@@ -170,6 +170,7 @@
         * [vue 与 cordova 跨平台](vue与cordova跨平台.md)
         * [vuex](Vue/vuex.md)
             * [在多页面中使用](Vue/vuex/在多页面中使用.md)
+            * [创建 store.js](Vue/vuex/创建store.js.md)
     * [微信 jssdk](微信jssdk.md)
     * [electron -js的界面化工具](electron-界面界面化工具.md)
     * [webpack](nodejs/webpack.md)
