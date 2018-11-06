@@ -10,7 +10,7 @@ npm install stylus-loader --save-dev
 ```
 在`..vue`文件中使用
 ```
-<style scoped lang="stylus" type="stylesheet/stylus">
+<style scoped lang="stylus" type="text/stylus">
     #app
         .tab
             display:flex
