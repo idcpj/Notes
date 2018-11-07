@@ -251,3 +251,39 @@ $subBox.click(function(){
     $("#checkAll").prop("checked",$subBox.length == $("input[name='ids[]']:checked").length ? true : false);
 });
 ```
+## bind() on() click() 区别
+1. `click` 不支持 动态扩展的元素
+
+2. `on`  [推荐]
+可监听动态扩展的元素,通过第二个`selector`参数,但必须 其父元素不是动态添加的
+```
+格式:   .on(events [,selector] [,data], handler)
+$('ul').on('click', 'li', function(){console.log('click');}
+```
+3. `bind`
+`格式 .bind(events [,eventData], handler)`
+缺点: 
+1. 性能问题,会绑定到所有选择元素上,
+2. 不会绑定到动态添加的元素上
+3. 页面加载完,才能使用bind. 存在效率问题
+优点:
+1. 兼容性好,
+2.  `.click(),.hover()` 是其简化处理结果
+3. 如果使用 绑定的是`id`唯一等元素,可优先考虑`bind`
+
+on,与bind 方法对data 参数的使用
+```
+ function bindClick( event ) {
+        var type = event.data.type; //可在事件参数的data属性中获取
+        if (type=="1") {
+            alert(event.data.msg)
+        }else if(type =="2"){
+            alert(event.data.msg)
+        }
+    };
+    $( "p" ).on( "click",{type:"1",msg:"hello"},bindClick );
+    $( "p" ).on( "click",{type:"2",msg:"word"},bindClick );
+```
+
+
+
