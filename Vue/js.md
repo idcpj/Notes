@@ -5,7 +5,7 @@
 export function formatDate (date) {  
   return "1212"  
 }
-
+// =========//
 //调用
 import { formatDate } from '@/common/js/date.js'
 
@@ -17,6 +17,7 @@ import { formatDate } from '@/common/js/date.js'
 export  default function formatDate (date) {  
   return "1212"  
 }
+// =========//
 // 调用
 import  formatDate  from '@/common/js/date.js'
 ```

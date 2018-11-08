@@ -57,7 +57,20 @@ treeNode: {
 }
 ```
 ## 提示
-1.如果想显示内容为所有的文件夹,修改icon
+
+### 节点单击操作
+```
+function onClick(e, treeId, treeNode) {
+    if (treeNode.isParent)  //如果不是叶子结点，结束
+        return;
+    alert(treeNode.name);   //获取当前结点上的相关属性数据，执行相关逻辑
+};
+```
+###  节点复选框事件
+[跳转查看](https://www.cnblogs.com/fonour/p/zTree.html)
+### 实现zTree的右键增删改操作
+[跳转查看](https://www.cnblogs.com/fonour/p/zTree.html)
+### 如果想显示内容为所有的文件夹,修改icon
 ```
 for(var i=0;i<json.length;i++){
 	json[i].icon = "/Public/Admin/img/folder.png";//修改所有图片为 文佳夹
