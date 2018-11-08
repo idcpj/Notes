@@ -61,7 +61,7 @@ $(".change").changeStyle({
 
 ```
 
-3. 通过 `$.extend`参数设置默认值
+3. 通过 `$.extend`参数设置默认值   [推荐方案]
 ```
 (function ($) {
 

@@ -285,5 +285,45 @@ on,与bind 方法对data 参数的使用
     $( "p" ).on( "click",{type:"2",msg:"word"},bindClick );
 ```
 
+## 双击修改,失去焦点后提交
 
+```
+//html
+<p class="js-check-order"  data-user_order_id="{$row['user_order_id']}" data-user_id="{$row['user_id']}" data-url="{:U('org/set_order_post')}" >{$row['user_order_id']}</p>
+
+ $('.js-check-order').on("dblclick",function(){
+  
+         $('.js-check-order').on("dblclick",function(){
+             var text = $(this).text(); //先获取排序值
+             var input=$('<input class="dblclick" type="text"  style="width: 30px;" autofocus="autofocus" value="'+text+'">');
+             $(this).html( input );
+
+             var dblclick = $(".dblclick");
+             dblclick.val(text);
+             dblclick.focus();
+             var td =$(this);
+             dblclick.blur(function(){
+                 var url = td.data("url");
+                 var data={};
+                 data.user_id=td.data('user_id');
+                 data.user_order_id=dblclick.val(); //最新排序号
+                 var user_order_id  = td.data("user_order_id");//原始排序号
+
+                 if (user_order_id ==data.user_order_id){
+                     td.text(user_order_id);
+                     return ;
+                 }
+                 $.post(url,data,function (res) {
+                     if (res.status===0){
+                         myAlert(res.info);
+                         td.text(user_order_id)
+                     }else{
+                         myAlert(res.info);
+                         td.text(data.user_order_id)
+                     }
+                 });
+             });
+
+         });
+```
 
