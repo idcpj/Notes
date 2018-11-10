@@ -29,6 +29,21 @@ p.then(function (text) { // 如果AJAX成功，获得响应内容
     console.log(text);
 });
 ```
+在es6 中使用
+```
+new Promise((resolve,reject)=>{
+    fs.readFile("./demo.html", (err, data)=> {
+        if (err) reject(err)
+        else resolve(data)
+    })
+
+}).then(data=>{
+    console.log(data);
+}).catch((err)=>{
+    console.log(err);
+});
+```
+
 ###  `Promise.all()` 与`Promise.race()`
 ```
 var p1 = new Promise(function (resolve, reject) {
