@@ -5,15 +5,10 @@
 
 ## 常用快捷键
 ```
-cd -    进入上次目录(在目录中切换)
-
-crtl+r  **在历史命令中搜索**/再次按搜索下一个匹配的命令
+lsof -i:8000 查看端口占用的进程
+kill -9 pid 值   强制删除进程
 
 crtl+u  从光标所在位置删除到行首
-
-ps      查看进程
-
-man ls  查看帮助手册
 
 Ctrl+z/  切到后台
 jobs	 查看
@@ -24,17 +19,9 @@ cat /etc/group | grep -E "shiyanlou"	搜索并打印某个文件
 echo "test" >> file1		把test 写入file1 文件中已追加的形式
 echo "test" > file1      已重新写入的形式
 
-whereis php		包所在路径
-
-which php		执行命令所在目录
-
 commad ; commad    多条命令之间用 ;  连接
 
 tail -f /data/www/run.log/   不断刷新日志输入
-
-[vagrant@localhost src]$ LANG="zh_CN.UTF-8"	#临时切换为中文环境
-
-chmod +x test.php   ->   ./test.php  给他执行权限,可直接执行
 
 px aux | grep redis     查看进程是否存在
 
