@@ -185,4 +185,10 @@ export default {
 根据router 针对性缓存
 > [参考网址](https://www.jianshu.com/p/0b0222954483)
 
+## 搭建在生产环境中
+1. 搭建在 node 项目中
+指定一个目录,如 `views`,在`app.js`中配置,可直接访问
+```
+app.use(express.static(path.join(__dirname, 'views')));
+```
 
