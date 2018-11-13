@@ -6,7 +6,7 @@
 
 ## 对数组修改键值  ,引用形式
 ```
- $fruits = array("d" => "lemon", "a" => "orange", "b" => "banana", "c" => "apple");
+$fruits = array("d" => "lemon", "a" => "orange", "b" => "banana", "c" => "apple");
 $func_walk =function (&$v,$k,$pre){
     $v=$v.'-'.$pre['name'];
 };
