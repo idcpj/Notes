@@ -87,32 +87,6 @@ func main() {
 2. 小写字母开头的就是不可导出的,是私有变量。
 
 
-## 类型别名
-类型别名不能进行计算
-```
-type a int16  //定义 a 为 int16 
-func main() {
-	 var abc a  //定义 abc 为 a 类型
-	 fmt.Print(unsafe.Sizeof(abc)) //2 
-}
-```
-## 打印结构类型或自动打印类型
-使用`%v`
-```
-a := [][]int{
-    {1,2,3},
-    {1,2,3},
-}
-fmt.Printf("%v",a) //[[1 2 3] [1 2 3]]
-
-//识别 字符串和整形
-b :=1
-c :="a"
-fmt.Printf("%v",b) 
-fmt.Printf("%v",c)
-```
-
-
 ## 常用命令
 1. `go build` : 用于编译源码文件、代码包、依赖包
 2. `go run` : 可以编译并运行Go源码文件
@@ -174,6 +148,20 @@ go build main.go
 ```
 GOOS：目标平台的操作系统（darwin、freebsd、linux、windows） 
 GOARCH：目标平台的体系架构（386、amd64、arm） 
+```
+## 自动编译linux 和window 的多个文件
+```
+SET GOOS=linux
+go build antbiz.go
+cd proxy
+go build antzoo.go
+cd ../
+
+SET GOOS=windows
+go build antbiz.go
+cd proxy
+go build antzoo.go
+cd ../
 ```
 
 ## 要有全局概念
