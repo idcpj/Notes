@@ -213,6 +213,7 @@ $.post(url,data,function(res){
 },"JSON");
 ```
 ## jquery文件上传显示进度
+new FormData($('#form_input')[0])  可以把 $_POST和$_FILE 一起提交
 ```
  $.ajax({
     url:uploadUrl + "?flag=input",
@@ -237,7 +238,16 @@ $.post(url,data,function(res){
             return xhr;
         }
     }
-    });
+});
+
+function onprogress(evt){
+    if (evt.lengthComputable) {
+        //evt.loaded：文件上传的大小   evt.total：文件总的大小
+        var percentComplete = Math.round((evt.loaded) * 100 / evt.total);
+        //加载进度条，同时显示信息
+        progressJs().set(percentComplete);
+    }
+}
 ```
 ## 全选与全部选
 ```
