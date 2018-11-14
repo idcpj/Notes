@@ -1,6 +1,6 @@
 [TOC]
 
-## 快速入门
+## 常用断言快速入门
 ```
 package hello_test
 import (
@@ -27,6 +27,52 @@ func (s *MySuite) TestHelloWorld(c *C) {
 	c.Assert(err1, IsNil)
 }
 ```
+## 文件操作相关的单元测试
+```
+package main
+
+import (
+	"testing"
+	"io/ioutil"
+
+	. "gopkg.in/check.v1"
+)
+
+const txt = "adfagaggafaf"
+
+func Test(t *testing.T) { TestingT(t) }
+
+type MySuite struct {
+	dir string   // 测试用的临时目录
+	f   string   // 测试用的临时文件
+}
+
+var _ = Suite(&MySuite{})
+
+// Setupsuite 准备测试用的临时文件
+func (s *MySuite) SetUpSuite(c *C) {
+	dir := c.MkDir()    // Suite结束后会自动销毁c.MkDir()创建的目录
+
+	tmpfile, err := ioutil.TempFile(dir, "")
+	if err != nil {
+		c.Errorf("Fail to create test file: %v\n", tmpfile.Name(), err)
+	}
+
+	err = ioutil.WriteFile(tmpfile.Name(), []byte(txt),0777) //tmpfile.Name() C:\Users\idcpj\AppData\Local\Temp\check-6334824724549167320\0\143714611
+	if err != nil {
+		c.Errorf("Fail to prepare test file.%v\n", tmpfile.Name(), err)
+	}
+	//把创建的文件和目录保存到 MySuite下
+	s.dir = dir
+	s.f = tmpfile.Name()
+}
+
+func (s *MySuite) TestFoo(c *C) {
+	// ... 实际测试代码
+	c.Assert(bkpName, Matches, s.f+".ops_agent_bkp.+")
+}
+```
+## 
 
 ## 创建一个用例组
 ```

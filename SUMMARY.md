@@ -193,6 +193,7 @@
     * [weex 扩平台vue 开发](前端/weex扩平台vue开发.md)
     * [cordova   前端创建跨品台应用](前端/cordova前端创建跨品台应用.md)
     * [npm 插件制作发布](前端/npm插件制作发布.md)
+    * [chrome 插件](chrome插件.md)
 * [软件](软件.md)
     * [PHPStorm](PHPStorm.md)
         * [配置vagrant虚拟机](配置vagrant虚拟机.md)
