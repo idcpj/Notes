@@ -1,3 +1,4 @@
+[TOC]
 
 ## 修改php.ini
 ```bash

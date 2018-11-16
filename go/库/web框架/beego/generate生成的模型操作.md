@@ -7,6 +7,8 @@
 
 ### 如果主键不是int 可手动设置
 `UserId      string `orm:"pk"`` 
+不能使用下面方式
+`UserId      string `orm:"size(128),pk"`` 
 
 并修改模型中对应的字段与类型
 ###  对单个添加索引
