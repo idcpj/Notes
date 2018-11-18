@@ -11,6 +11,7 @@ go get github.com/beego/bee    //获取beego
 bee [new/api ] apiproject      //新建web 项目或api 项目
 bee run                        //运行项目
 bee pack                //打包项目
+bee generate scaffold user -fields="id:int64,name:string" ..
 bee generate model [modelname] [-fields="name:type"]
 bee generate controller [controllerfile]
 ```
@@ -18,7 +19,17 @@ bee generate controller [controllerfile]
 ## init 函数
 beego 在运行时候会先加载,涉及到的所有 所有 `.go`文件中的init
 可用于初始化 mysql,redis 等操作
+## bee generate  用法
+```
+bee generate scaffold user -fields="id:int64,name:string,gender:int" -driver=mysql -conn="root:@tcp(127.0.0.1:3306)/dbname"
+```
+自动生成 models,controller,views,需要配置注解路由,如
+```
+beego.Include(&controllers.UserControllert)
 
+在控制器中配置
+// @router /staticblock/:key [get]
+```
 
 
 ## 对接口进行 `gzip` 压缩
@@ -76,7 +87,26 @@ FinishRouter
 */
 beego.InsertFilter("/*", beego.BeforeRouter, FilterUser)
 ```
+## healthcheck 健康检查
+eg:检查数据库连接是否正常
+```
+type DatabaseCheck struct {
 
+}
+
+//固定名称与格式a
+func (s *DatabaseCheck) Check()error {
+	_,err :=sql.Open("mysql","root:@tcp/dbname?charset=utf8")
+	if err != nil {
+		return err
+	}
+	return nil
+}
+func init() {
+	toolbox.AddHealthCheck("database",&DatabaseCheck{})
+}
+```
+访问 : http://beego.me:8088/healthcheck
 
 
 
