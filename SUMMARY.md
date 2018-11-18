@@ -255,6 +255,8 @@
         * [ORM](go/库/ORM.md)
             * [gorose -链式调用](go/库/ORM/gorose.md)
             * [GORM](go/库/ORM/GORM.md)
+            * [xorm](go/库/ORM/xorm+xormcmd.md)
+            * [cmd 数据表自动生成结构](go/库/ORM/cmd数据表自动生成结构.md)
         * [web 框架](go/库/web框架.md)
             * [beego](go/库/web框架/beego.md)
                 * [模型操作](模型操作.md)
