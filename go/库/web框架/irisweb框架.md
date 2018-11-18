@@ -1,6 +1,6 @@
 [TOC]
 
-> [github 近百案例](https://github.com/kataras/iris/tree/master/_examples)
+> [github的官方提供案例](https://github.com/kataras/iris/tree/master/_examples)
 ## 安装
 ` go get -u github.com/kataras/iris`
 
