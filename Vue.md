@@ -191,4 +191,16 @@ export default {
 ```
 app.use(express.static(path.join(__dirname, 'views')));
 ```
+## v-cloak 防止界面闪烁
+```
+//css
+[v-cloak] {
+  display: none;
+}
+//html
+<div v-cloak>
+  {{ message }}
+</div>
+
+```
 
