@@ -117,3 +117,13 @@ mysql> show variables like 'long_query_time';
 
 ## cpu 占用过高
 `show full processlist  查看慢查询` 
+
+## 时间字段|日期时间类型	
+
+|占用空间	|日期格式	|最小值	|最大值	|零值表示|
+|---|---|---|---|---|---|
+|DATETIME	 |8 bytes	 |YYYY-MM-DD |HH:MM:SS |1000-01-01| 00:00:00| 9999-12-31 23:59:59|0000-00-00 00:00:00|
+|TIMESTAMP	 |4 bytes	 |YYYY-MM-DD |HH:MM:SS	 |19700101080001 |2038 |年的某个时刻 |00000000000000|
+|DATE	| 4 bytes| YYYY-MM-DD|	1000-01-01|9999-12-31| 0000-00-00|
+|TIME	| 3 bytes| HH:MM:SS|	 -838:59:59	|838:59:59| 00:00:00|
+|EAR	| 1 bytes| YYYY|	1901| 2155 |0000|
