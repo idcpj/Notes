@@ -120,3 +120,12 @@ $new_numbers = array_map($double, $numbers);
 
 >Non Thread Safe就是非线程安全，在执行时不进行线程（Thread）安全检查；
 Non Thread Safe 是线程安全，执行时会进行线程（Thread）安全检查，以防止有新要求就启动新线程的 CGI 执行方式而耗尽系统资源；
+
+##  用2倍数 判断是否开启某个功能
+```
+//如功能值为 8
+$op = 8;
+return ($val & $op) == $op ; //true 开启  false 关闭
+
+```
+ 
