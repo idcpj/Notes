@@ -13,7 +13,6 @@
 `csrutil disable`   关闭
 `csrutil enable`    开启
 
-
 ## MAC软件
 **Homebrew**
 [官网](https://brew.sh/index_zh-cn.html)
