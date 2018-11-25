@@ -126,6 +126,8 @@
         * [google云 搭建shadowsocksR](搭建shadowsocksR.md)
         * [亚马逊云 搭建](服务器/搭建shandowsocks/亚马逊云搭建.md)
     * [MongoDB](服务器/MongoDB.md)
+    * [influxdb  数据库(用于日志存储)](服务器/influxdb数据库.md)
+    * [grafana 图形分析器](服务器/grafana图形分析器.md)
 * [前端](前端.md)
     * [微信小程序](微信小程序.md)
     * [HTML](HTML.md)

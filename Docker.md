@@ -65,3 +65,16 @@ docker pull 	//拉取镜像
 docker push 	//上传镜像 
 docker search 	//搜索镜像
 ```
+## 常年标签
+```
+docker run  -d -p 8086:8086 --name my_influxdb influxdb
+-p : 映射端口
+-d  : 后台运行
+--name : 指定容器名称
+```
+
+
+
+
+
+
