@@ -145,7 +145,7 @@
         * [undersocre 工具库-让ie等使用map等犯法](undersocre工具库-让ie等使用map等犯法.md)
     * [jQuery](jQuery.md)
         * [制作jquery 插件](制作jquery插件.md)
-            * [自制 图片方法插件](自制图片方法插件.md)
+            * [自制 图片方大插件](自制图片方大插件.md)
         * [zTree -- jQuery 树插件](zTree--jQuery树插件.md)
         * [tree 分组](jQuery/tree分组.md)
         * [表单提交插件](表单提交插件.md)
