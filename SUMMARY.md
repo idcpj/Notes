@@ -234,6 +234,7 @@
     * [brew](brew.md)
 * [Window](Window.md)
     * [choco win包管理神器](chocowin包管理神器.md)
+    * [vs code](vscode.md)
 * [App端](App端.md)
     * [react-native-配置](react-native.md)
         * [基础知识](基础知识.md)
