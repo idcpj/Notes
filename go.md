@@ -114,6 +114,8 @@ eg: `go get -v http://xxxxx/test.go`
 ## go get 如何下载太慢
 1. 先通过 `go get github.com/go-sql-driver/mysql` 生成目录即可
 2. 在目录下 使用`git clone https://github.com/go-sql-driver/mysql` 下载代码,注意,此时,目录为需上移动
+2.5 如果有些需要执行命令 如`goimports`,则`go install golang.org/x/tools/cmd/goimports
+`
 3. 在自己项目中 直接`import` 路径即可
 
 ## 程序从后台运行，不出现dos窗口
