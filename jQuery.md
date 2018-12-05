@@ -339,7 +339,7 @@ on,与bind 方法对data 参数的使用
 
 ## checkbox 当作开关  勾选传1 不够选传0
 
-// 需要注意给 checkbox 添加  `checkbox-switch` 的class 并且在`data-value` 中传入 实际的值
+// 需要注意给 checkbox 添加  `checkbox-switch` 的class 并且在`data-value` 中传入实际的值
 
 ```
 <input type="checkbox" class="checkbox-switch" data-value="{$dept_build_group}" value="1" <eq name="dept_build_group" value="1">checked="checked"</eq> name="dept_build_group" >
