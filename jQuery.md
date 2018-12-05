@@ -337,3 +337,25 @@ on,与bind 方法对data 参数的使用
          });
 ```
 
+## checkbox 当作开关  勾选传1 不够选传0
+```
+<input type="checkbox" class="checkbox-switch" data-value="{$dept_build_group}" value="1" <eq name="dept_build_group" value="1">checked="checked"</eq> name="dept_build_group" >
+
+//如果没有使用 thinkphp 框架的 eq  则开启 遍历
+//$(".checkbox-switch").each(function () {
+//    var ison = $(this).data("value");
+//    if(ison){
+//        $(this).attr("checked","checked")
+//    }else{
+//        $(this).removeAttr("checked")
+//    }
+//});
+
+$(".checkbox-switch").on("click",function () {
+    var ischeck = $(this).attr("checked");
+    var name = $(this).attr("name");
+    var value=ischeck?1:0;
+    $(this).html('<input type="hidden" name="'+name+'" value="'+value+'" />')
+})
+
+```
