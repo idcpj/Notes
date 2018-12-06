@@ -13,3 +13,5 @@ slmgr /ipk W269N-WFGWX-YVC9B-4J6C9-T83GX
 slmgr /skms zh.us.to
 slmgr /ato
 ```
+## chrome 浏览器的 复制bash 功能
+![](images/Snipaste_2018-12-06_12-56-50.png)
