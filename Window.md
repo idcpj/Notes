@@ -15,3 +15,6 @@ slmgr /ato
 ```
 ## chrome 浏览器的 复制bash 功能
 ![](images/Snipaste_2018-12-06_12-56-50.png)
+
+如果复制的是`Copy as Curl(baash)`,且电脑安装git bash
+则可在git bash 中执行
