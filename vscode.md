@@ -34,3 +34,7 @@ Settings Sync    同步设置到 gitgist
 Git History Diff
 Git Patch
 ```
+技巧一: 查看当前文件的历史文件
+1. 在当前文件右键,选择`GitHD : View FIle History`
+2. 在弹出的页面选择历史commit 
+3. 在左边列出来的文件的`Focus` 就是次文件的历史文件
