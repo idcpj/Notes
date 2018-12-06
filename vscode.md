@@ -41,3 +41,16 @@ Git Patch
 1. 在当前文件右键,选择`GitHD : View FIle History`
 2. 在弹出的页面选择历史commit 
 3. 在左边列出来的文件的`Focus` 就是次文件的历史文件
+
+###  导出(应用)补丁
+1. 导出补丁
+在分支选项中. 点击`...` 按钮,选择`Git:Createes a patch fron unstages files` 即可把 当前改动文件导出为一个补丁
+2. 应用补丁
+在同一地方点击`...` 选择`Git:Apply a patch from existing path file`
+ 
+
+
+
+
+
+
