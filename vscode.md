@@ -14,7 +14,7 @@ Settings Sync    同步设置到 gitgist
 `Ctrl+Shift+p`-> `>sync 上传配置`
 3. 下载配置
 `Ctrl+Shift+p` ->`sync 下载配置`
-
+4. 我的 gist id`7570c2b639e9b86254a8bd7f4a1bf370`
 
 ## 安装java环境
 1. `choco install java`
