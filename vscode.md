@@ -48,6 +48,31 @@ Git Patch
 2. 应用补丁
 在同一地方点击`...` 选择`Git:Apply a patch from existing path file`
  
+## go配置
+安装 go 插件
+在`setting.json`中添加
+主要添加 `go.formatTool`,`go.goroot`,`go.toolsGopath`
+```
+ {
+  "go.buildOnSave": "workspace",
+    "go.lintOnSave": "package",
+    "go.vetOnSave": "package",
+    "go.buildTags": "",
+    "go.buildFlags": [],
+    "go.lintFlags": [],
+    "go.vetFlags": [],
+    "go.coverOnSave": false,
+    "go.useCodeSnippetsOnFunctionSuggest": false,
+    "go.formatOnSave": true,
+    "go.formatTool": "goreturns",
+    "go.goroot": "/usr/local/Cellar/go/1.11.2/libexec",
+    "go.gopath": "/Users/idcpj/go/", 
+    "go.toolsGopath":"/usr/local/Cellar/go/1.11.2/libexec/pkg/tool/darwin_amd64",
+    "go.gocodeAutoBuild": false,
+}
+```
+### 用Delve调试Go项目
+
 
 
 
