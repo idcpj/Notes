@@ -154,6 +154,7 @@
         * [头部进度条](头部进度条.md)
         * [多文件上传进度条 Huploadify](jQuery/多文件上传进度条Huploadify.md)
         * [表单验证 jQuery Validate](表单验证.md)
+            * [demo](demo.md)
     * [Vue](Vue.md)
         * [常用插件](Vue/常用插件.md)
             * [better-scroll  更好的无滚动条插件](Vue/常用插件/better-scroll更好的无滚动条插件.md)
