@@ -160,4 +160,66 @@ resize( event, ui )	在调整尺寸期间当调整手柄拖拽时触发。
 start( event, ui )	当调整尺寸操作开始时触发。
 stop( event, ui )	当调整尺寸操作停止时触发。
 ```
-##  鼠标选择单个元素或一组元素
+###  鼠标选择单个元素或一组元素
+获取选中的值
+```
+//style
+  #selectable .ui-selecting { background: #FECA40; }
+  #selectable .ui-selected { background: #F39814; color: white; }
+  #selectable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+  #selectable li { margin: 3px; padding: 0.4em; font-size: 1.4em; height: 18px; }
+
+//js
+ $("#selectable").selectable({
+    stop:function(){
+      //.ui-selected  选择的类
+      //.ui-selecting  选择中的类的类
+      var selectArr=[];
+      $(this).find(".ui-selected").each(function(){
+        selectArr.push($(this).html())
+        console.log(selectArr); //["2", "3", "6", "7"]
+      })            
+    },
+  })
+```
+### 排序
+```
+$(function () {
+  $("#sortable").sortable({
+    stop:function(){
+      var  orderArr=[];
+      $(this).children("li").each(function(){
+        orderArr.push($(this).data("order"))
+        console.log(orderArr); //[1, 3, 2, 4, 5, 7, 6]
+      })
+    }
+  });
+  $("#sortable").disableSelection();
+});    
+```
+### 折叠面板
+```
+//html
+<div id="accordion">
+  <h3> 标题1 </h3>
+  <div> 标题一内容标题一内容标题一内容标题一内容标题一内容标题一内容 </div>
+  <h3> 标题2 </h3>
+  <div> 标题一内容标题一内容标题一内容标题一内容标题一内容标题一内容 </div>
+  <h3> 标题3 </h3>
+  <div> 标题一内容标题 <br/> 一内容标题<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>一内容标题一内容标题一内容标题一内容 </div>
+</div>
+
+//js
+var icons = {
+    header: "ui-icon-circle-arrow-e",//关闭
+    activeHeader: "ui-icon-circle-arrow-s" //打开
+};
+
+$("#accordion").accordion({
+    collapsible: true, //默认false,至少有一个不折叠
+    icons:icons, //图片
+    heightStyle :"fill", //设置fill 则不能超过父级的高度,设置 content 则显示内容的高度
+});
+
+
+
