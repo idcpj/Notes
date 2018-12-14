@@ -16,6 +16,9 @@
 .hide()  
 .show()
 .toggle()  //切换元素时使用
+.toggleClass()  
+.addClass()
+.removeClass()
 ```
 
 ###  .addClass() 特效
@@ -38,11 +41,6 @@ $(".foo").addClass( "big-blue", 1000, "easeInOutBounce" );
 ```
 给foo 添加 big-blue类
 
-### .removeClass() 特效
-`.removeClass( className [, duration ] [, easing ] [, complete ] )`
-```
-$( this ).removeClass( "big-blue", 1000, "easeInBack" );
-```
 
 ### .effect()
 ```
@@ -56,6 +54,7 @@ demo
 ```
 $( "div" ).effect( "bounce", "easeInOutBack" );
 ```
+
 ### 其他特效
 1. 百叶窗特效
 `$( "#toggle" ).toggle( "blind" );`
@@ -94,8 +93,71 @@ $(".demo").toggle("scale",[{direction:"vertical",percent:200}])
 ```
 12. 震动特效
 ```
+$(".demo").effect("shake",{direction:"up",distance:200,times:10})
+```
+13. 尺寸特效
+```
+$(".demo").effect("size",{
+    to:{width:200,height:60}
+},1000)
+```
+14. 滑动特效
+`$(".demo").effect("slide",{distance:"50%",direction:"up"})`
+15. 转移特效
+```
+//style
+ .ui-effects-transfer {
+    border: 1px dotted black;
+  }
+
+//js
+ $(".demo").effect("transfer",{
+  to:$(".demo3")
+},1000)
+```
+## 实例
+### 拖拽和放置
+```
+$( "#draggable" ).draggable();
+$( "#droppable" ).droppable({
+  drop: function() {
+    alert( "dropped" );
+  }
+});
+```
+### 可调整尺寸小部件
+demo
+```
+//style
+  .ui-resizable-helper { border: 1px dotted gray; }  //给拖动的部件添加虚线
+
+$(".demo").resizable({
+          animate: true,
+        aspectRatio: 16 / 9 , //保持纵横比
+        containment: "#container",  //限制缩放区域
+        helper: "ui-resizable-helper",  //默认 ui-resizable-helper  拖动时自动添加的类
+        ghost: true,//一个半透明视觉框
+})
 
 ```
-
-
-
+选项
+```
+alsoResize:Selector            同步调整其他 部件
+animate:Boolean                设置动画
+aspectRatio:Boolean,Number     限制长宽比
+autoHide:Boolean               当用户鼠标没有悬浮在元素上时是否隐藏手柄
+delay:Number                   鼠标按下调整按钮的生效时间
+disabled:Boolean               禁用拖拽
+ghost:Boolean                  为调整尺寸显示一个半透明的辅助元素
+grid:Array                     可调整尺寸元素对齐到网格，每个 x 和 y 像素。数组形式必须是 [ x, y ]
+minHeight-maxHeight            设置元素的高界限
+minWidth-maxWidth              设置元素的高界限
+```
+事件
+```
+create( event, ui )	当 resizable 被创建时触发。
+resize( event, ui )	在调整尺寸期间当调整手柄拖拽时触发。
+start( event, ui )	当调整尺寸操作开始时触发。
+stop( event, ui )	当调整尺寸操作停止时触发。
+```
+##  鼠标选择单个元素或一组元素
