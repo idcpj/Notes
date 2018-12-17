@@ -157,6 +157,7 @@
         * [表单验证 jQuery Validate](表单验证.md)
             * [demo](demo.md)
         * [jQueryUI](jQueryUI.md)
+            * [autocomplete 自动完成](autocomplete自动完成.md)
     * [Vue](Vue.md)
         * [常用插件](Vue/常用插件.md)
             * [better-scroll  更好的无滚动条插件](Vue/常用插件/better-scroll更好的无滚动条插件.md)
