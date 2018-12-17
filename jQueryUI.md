@@ -220,6 +220,27 @@ $("#accordion").accordion({
     icons:icons, //图片
     heightStyle :"fill", //设置fill 则不能超过父级的高度,设置 content 则显示内容的高度
 });
+```
 
+### 进度条
+```
+
+<div id="progress"></div>
+$("#progress").progressbar({value:10})
+```
+
+###  标签页
+```
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-1">Nunc tincidunt</a></li>
+  </ul>
+  <div id="tabs-1">
+    <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+  </div>
+  </div>
+</div>
+ $( "#tabs" ).tabs()
+```
 
 
