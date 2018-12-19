@@ -6,6 +6,7 @@
 `http://idea.youbbs.org`
 
 
+
 ## 配置 - 使运行时,自动过滤 多余的 import
 下载
 `go get golang.org/x/tools/cmd/goimports`
@@ -30,3 +31,6 @@ ctrl + shift + p	查看表达式类型
 ctrl + alt + v		自动生成表达式返回值	
 ctrl + shift + space	智能类型推断式返回
 ```
+
+## 调试测试
+若设置到读取本地文件的情况,则需要在调试设置中,指定输出的文件位置为当前项目下
