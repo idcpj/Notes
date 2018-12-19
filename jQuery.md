@@ -360,5 +360,15 @@ $(".checkbox-switch").on("click",function () {
     var value=ischeck?1:0;
     $(this).html('<input type="hidden" name="'+name+'" value="'+value+'" />')
 })
+```
+##  $( "li" ).eq( 2 )
+```
+<ul>
+  <li>list item 1</li>
+  <li>list item 2</li>
+</ul>
+//js
+$("li").eq(0).css("color","red")
+$("li").eq(-1).css("color","red")
 
 ```
