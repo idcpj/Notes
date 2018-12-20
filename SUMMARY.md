@@ -292,6 +292,7 @@
         * [Json 操作](Json操作.md)
         * [xml 操作](go/序列化/xml操作.md)
     * [压力与用例测试](测试用例.md)
+        * [httptest 测试](httptest测试.md)
         * [gocheck 测试框架](gocheck测试框架.md)
     * [定时器](定时器.md)
     * [本土化](本土化.md)

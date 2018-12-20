@@ -44,6 +44,12 @@ func main() {
 }
 ```
 ## 原生获取get post 参数
+```
+Form：存储了post、put和get参数，在使用之前需要调用ParseForm方法。
+PostForm：存储了post、put参数，在使用之前需要调用ParseForm方法。(x-www-form-urlencode)
+MultipartForm：存储了包含了文件上传的表单的post参数，在使用前需要调用ParseMultipartForm方法。(foram-data)
+```
+
 ### 获取get 参数
 ```
 //获取多个参数
@@ -70,6 +76,7 @@ log.Println(values["name"])
 name = values.Get("name")
 log.Println(name)
 ```
+
 
 ## request.Form 参数格式
 ```
