@@ -27,10 +27,15 @@ func TestApi(t *testing.T) {
 	data := url.Values{}
 	data.Add("name","cpj")
 	data.Add("age","1")
-	r := httptest.NewRequest(http.MethodPost, "/health-check", strings.NewReader(data.Encode()),
-	)
+    //post  ====
+	r := httptest.NewRequest(http.MethodPost, "/health-check", strings.NewReader(data.Encode()),)
 	//在测试时,或 api 接口 必须声明 是 x-www-form-urlencoded
 	r.Header.Add("Content-Type", "application/x-www-form-urlencoded")
+    //post  ====
+
+    //get   ====
+	r := httptest.NewRequest(http.MethodGet, "/health-check?"+data.Encode(),nil)
+    //get   ====
 	r.Header.Set("commpay", "brk")
 
 	w := httptest.NewRecorder()
