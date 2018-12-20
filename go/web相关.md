@@ -64,7 +64,9 @@ log.Println(name)
 r.ParseForm()
 values := r.PostForm
 log.Println(values)
-//格式化后获取单个参数
+// 方式一.获取单个
+log.Println(values["name"])
+//方式二.获取单个
 name = values.Get("name")
 log.Println(name)
 ```
