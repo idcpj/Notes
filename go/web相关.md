@@ -43,6 +43,31 @@ func main() {
 	}
 }
 ```
+## 原生获取get post 参数
+### 获取get 参数
+```
+//获取多个参数
+values := r.URL.Query()
+log.Println(values) //map[age:[1] ip:[127.0.0.1]]
+
+//获取单个
+age := values.Get("age") //1
+log.Println(age)
+```
+### 获取post 参数
+```
+//获取单个
+name := r.PostFormValue("name")
+log.Println(name)
+
+//获取多个
+r.ParseForm()
+values := r.PostForm
+log.Println(values)
+//格式化后获取单个参数
+name = values.Get("name")
+log.Println(name)
+```
 
 ## request.Form 参数格式
 ```
