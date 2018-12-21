@@ -7,7 +7,7 @@ expvar.NewFloat()
 expvar.NewString()
 expvar.NewMap()
 ```
-
+通过访问`/debug/vars` 接口可以打印所有的值
 
 ### 用法
 ```
