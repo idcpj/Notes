@@ -25,7 +25,9 @@ _H "Content-Type:application/json"  增加头信息
 ### 携带 cookie
 `curl -b "name=xxx"`
 ### 文件上传
-`curl --form upload=@localfilename --form press=OK [URL]`
+`curl --form file=@localfilename --form press=OK [URL]`
+`file 为input:name 的值`
+
 
 
 
