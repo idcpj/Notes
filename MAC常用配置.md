@@ -36,15 +36,11 @@ brew cask install launchrocket      //在系统偏好设置即可启动apache,my
 
 **ndm**    查看本地`npm`安装的包客户端软件 [官网](https://720kb.github.io/ndm/)
 
-**Sparkle**    可视化网页设计工具。	 [官网](https://sparkleapp.com/)  
-
 **Klib**   全新的 Kindle、iBooks 标注管理工具。  [官网](http://klib.me/cn/)
 
 **AppCleaner**  彻底卸载不需要的应用程序 [官网](http://freemacsoft.net/appcleaner/)
 
 **Alfred**   效率神器
-
-**CodeRunner**   无需安装环境直接运行各种语言代码
 
 **让电脑识别 NTFS**  [简书地址](https://www.jianshu.com/p/6abf7946f56b) 推荐第三个
 
@@ -73,10 +69,10 @@ source ~/.bashrc
 
 
 ## mac 命令
-1. Finder 卡死了？用 `killall Finder` 「重启」它；
-4. 下载大文件时不希望电脑自动休眠，但需要关闭屏幕？用 `pmset displaysleep` ；
-5. 演示 PPT、设计稿时，想让屏幕多亮一会儿：`caffeinate -t 3600`；
-6. 让通知快点消失：`defaults write com.apple.notificationcenterui bannerTime 3；`
+4. 下载大文件时不希望电脑自动休眠，但需要关闭屏幕？
+用 `pmset displaysleep` ；
+6. 让通知快点消失：
+`defaults write com.apple.notificationcenterui bannerTime 3；`
 7. 使不活动的图标进入半透明状态：
 `defaults write com.apple.dock showhidden -bool TRUE; killall Dock`
 7. 让 Dock 瞬间出现/消失：
@@ -95,3 +91,8 @@ bg %n 					#让进程 n 到后台去;
 `lsof -i:80`
  查看所有端口
  `netstat -nat |grep LISTEN`
+## 复制文件路径
+1.方法一
+`option + command + C`
+2.方法二
+文件右键,在按住option
