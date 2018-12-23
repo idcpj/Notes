@@ -5,14 +5,6 @@
 
 mysql>  GRANT ALL PRIVILEGES ON *.* TO 'username'@'%' IDENTIFIED BY 'password' WITH GRANT OPTION;
 mysql>  flush privileges;
-
-username : 为mysql 的用户
-password: mysql的密码
-```
-
-## 创建视图表
-```sql
-CREATE VIEW `tablename`AS select * from `wj_content`；
 ```
 
 
@@ -21,19 +13,10 @@ CREATE VIEW `tablename`AS select * from `wj_content`；
 
 `$this->field('username,max(score)')->group('user_id')->having('count(test_time)>3')->select(); `
 
-## join用法
-`INNER JOIN`: 等同于 JOIN（默认的JOIN类型）,如果表中有至少一个匹配，则返回行
-`LEFT JOIN`: 即使右表中没有匹配，也从左表返回所有的行
-`RIGHT JOIN`: 即使左表中没有匹配，也从右表返回所有的行
-`FULL JOIN`: 只要其中一个表中存在匹配，就返回行
-
-> `user.id=info.id`  当这个等式
-
-
-## partition by  -  分组排序功能
+## group_concat  -  分组排序功能
 [参考网址](https://www.cnblogs.com/zhwbqd/p/4205821.html)
 1. 简单demo
-```sql
+```
 #以id 进行分组 ,把相同id 的name 用 , 隔开
 select id,group_concat(name) as names from aa group by id;
 +------+--------------------+
@@ -114,6 +97,9 @@ mysql> show variables like 'long_query_time';
 ## 关闭查询缓存
 添加`SQL_NO_CACHE`
 `SELECT SQL_NO_CACHE * form table_name`
+
+## 不精确的count
+`SHOW TABLE STATUS`
 
 ## cpu 占用过高
 `show full processlist  查看慢查询` 
