@@ -1,8 +1,9 @@
-
 [TOC]
 
 ## redis 连接池
+
 > [参考文档](https://blog.csdn.net/stevefang/article/details/40474827)
+
 ```
 //通过redis struct已对象形式构建
 import (
@@ -72,13 +73,14 @@ func ByteToString(inter interface{}) string {
 	}
 	return str
 }
-
 ```
 
 ## 其他redis 的操作
+
 > [参考路径](https://github.com/astaxie/build-web-application-with-golang/blob/master/zh/05.6.md)
 
-1. https://github.com/garyburd/redigo
+1. [https://github.com/garyburd/redigo](https://github.com/garyburd/redigo)
+
 ```
 package main
 
@@ -154,7 +156,9 @@ func main() {
 	fmt.Println(test, err)
 }
 ```
-2. https://github.com/astaxie/goredis
+
+1. [https://github.com/astaxie/goredis](https://github.com/astaxie/goredis)
+
 ```
 package main
 
