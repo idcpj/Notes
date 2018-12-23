@@ -296,6 +296,7 @@
         * [gocheck 测试框架](gocheck测试框架.md)
     * [官方包](官方包.md)
         * [expvar - 线性安全全局变量](expvar-线性安全全局变量.md)
+        * [sync 并发安全数据](官方包/sync并发安全数据.md)
     * [定时器](定时器.md)
     * [本土化](本土化.md)
     * [websocket](go/websocket.md)
