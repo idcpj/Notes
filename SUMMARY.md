@@ -297,6 +297,8 @@
     * [官方包](官方包.md)
         * [expvar - 线性安全全局变量](expvar-线性安全全局变量.md)
         * [sync 并发安全数据](官方包/sync并发安全数据.md)
+        * [time 包](官方包/time包.md)
+        * [ioutil 包](官方包/ioutil包.md)
     * [定时器](定时器.md)
     * [本土化](本土化.md)
     * [websocket](go/websocket.md)
