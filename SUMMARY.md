@@ -93,6 +93,7 @@
         * [mysql 分区](mysql分区.md)
         * [MySQL备份](MySQL备份.md)
         * [主从复制](主从复制.md)
+        * [主主复制](主主复制.md)
     * [Tmux](Tmux.md)
     * [Bash](Bash.md)
     * [git](git.md)
