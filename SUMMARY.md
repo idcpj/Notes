@@ -108,7 +108,6 @@
     * [Apache](Apache.md)
         * [重定向场景](重定向场景.md)
         * [window 安装apache](味道浓雾.md)
-    * [证书相关(如:ssl,pem 等)](证书相关如ssl,pem等.md)
     * [ab 测试工具](ab测试工具.md)
     * [NodejS](服务器/NodejS.md)
         * [npm 插件](服务器/NodejS/npm插件.md)
@@ -315,3 +314,4 @@
     * [基础知识](C++/基础知识.md)
 * [其他](其他.md)
     * [RESTAPI规范](其他/RESTAPI.md)
+    * [证书相关(如:ssl,pem 等)](证书相关如ssl,pem等.md)
