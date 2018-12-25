@@ -166,7 +166,6 @@
             * [stylus](Vue/stylus.md)
             * [vue-infinite-scroll 下拉加载](Vue/常用插件/vue-infinite-scroll.md)
             * [vue-infinite-loading 上拉刷新,功能强](Vue/常用插件/vue-infinite-loading上拉刷新,功能强.md)
-        * [npm 制作](前端/npm制作.md)
         * [创建并映入js模块的方法](Vue/创建并映入模块的方法.md)
         * [创建并引入组件](Vue/创建并引入组件.md)
         * [json-server 伪造 json 接口](Vue/json-server伪造json接口.md)
