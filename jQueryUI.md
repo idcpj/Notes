@@ -160,7 +160,7 @@ resize( event, ui )	在调整尺寸期间当调整手柄拖拽时触发。
 start( event, ui )	当调整尺寸操作开始时触发。
 stop( event, ui )	当调整尺寸操作停止时触发。
 ```
-###  鼠标选择单个元素或一组元素
+###  selectabe 滑动选择
 获取选中的值
 ```
 //style
@@ -182,6 +182,27 @@ stop( event, ui )	当调整尺寸操作停止时触发。
     },
   })
 ```
+table 列表勾选
+```
+.ui-selecting td {  background: #c9cac9;  }
+
+ //滑动选择
+$(".selectable").selectable({
+    filter: 'tr',
+    delay:150,
+    distance:30,
+    selected:function( event, ui ){
+        //判断如果选中,则取消
+        var check = $(ui.selected).find("input[type='checkbox']");
+        if(!check.attr('checked')){
+            check.attr('checked','checked');//选中
+        }else{
+            check.attr('checked',null);//取消选中
+        }
+    }
+});
+```
+
 ### 排序
 ```
 $(function () {
