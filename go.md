@@ -30,24 +30,11 @@ eg:
 
 ## import 用法
 
-### 设置别名
+## 出现undefined 错误
+设置编辑器用 包的形式编译
+或者 指定需要的包
+`go run main.go hub.go `
 
-```
-import (
-	abc "fmt"
-)
-```
-
-### 直接调用(不推荐)
-
-```
-import (
-	. "fmt"  //添加点
-)
-func main() {
-	Print("hello word")
-}
-```
 
 ### `_`(下划线) 用法,初始化 `init` 函数
 
