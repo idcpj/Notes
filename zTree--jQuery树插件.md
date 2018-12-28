@@ -58,6 +58,12 @@ treeNode: {
 ```
 ## 提示
 
+### 添加新属性
+```
+如果除了 id,pid 等之外,还有额外的值,则,在treeNode 中依然可以访问到这些值
+
+```
+
 ### 节点单击操作
 ```
 function onClick(e, treeId, treeNode) {
