@@ -142,7 +142,7 @@
         * [js es5 的面向对象编程](前端/HTML&CSSjQuery/js/jses5的面向对象编程.md)
         * [layui.laytpl 前端模板](前端/HTML&CSSjQuery/js/layui.laytpl前端模板.md)
         * [es6语法](es6语法.md)
-        * [undersocre 工具库-让ie等使用map等犯法](undersocre工具库-让ie等使用map等犯法.md)
+        * [下划线 库,有两个](undersocre工具库-让ie等使用map等犯法.md)
     * [jQuery](jQuery.md)
         * [制作jquery 插件](制作jquery插件.md)
             * [自制 图片方大插件](自制图片方大插件.md)

@@ -1,6 +1,7 @@
 [TOC]
 > [undersocre官网](http://www.bootcss.com/p/underscore/)
 > [undersocre.min.js 文件](https://underscorejs.org/underscore-min.js)
+> [lodash 新](https://lodash.com/docs/4.17.11)
 ## 优点
 让低版本浏览器支持 js 的高级函数
 Array有map()和filter()方法，可是Object没有这些方法。
