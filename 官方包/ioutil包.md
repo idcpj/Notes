@@ -4,7 +4,8 @@
 ioutil.WriteFile(filename, data, 0666)
 ```
 
-## Read(p []byte) (n int, err error) 函数 获取全部数据
+## 获取实现`Read`接口的全部数据
 ```
+// Read(p []byte) (n int, err error)  
 ioutil.ReadAll(r.Body.Read())
 ```
