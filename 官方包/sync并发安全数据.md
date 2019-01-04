@@ -14,3 +14,15 @@ lock := sync.Mutex{}
 lock.Lock()
 lock.Unlock()
 ```
+## 并发组
+```
+
+ws := sync.WaitGroup{}
+ws.Add(3)
+for(){
+//code
+ws.Done()
+}
+ws.Wait()
+
+```
