@@ -300,7 +300,7 @@
     * [本土化](go/本土化.md)
     * [websocket](go/websocket.md)
     * [反向代理](go/反向代理.md)
-    * [RPC](RPC.md)
+    * [RPC](go/RPC.md)
     * [原生mysql 操作](go/原生mysql操作.md)
 * [Linux](Linux.md)
     * [Linux/7](Linux/Linux-7.md)
