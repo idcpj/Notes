@@ -1,6 +1,6 @@
 * [目录](default.md)
 * [Python](python.md)
-    * [常用包](python/常用包.md)
+    * [常用包](Python/常用包.md)
         * [urllib包](Python/常用包/urllib包.md)
         * [requests-比urllib2简洁](Python/常用包/requests-比urllib2简洁.md)
         * [BeautifulSoup-解析html](Python/常用包/BeautifulSoup-解析html.md)
