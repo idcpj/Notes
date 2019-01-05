@@ -299,7 +299,7 @@
     * [定时器](go/定时器.md)
     * [本土化](go/本土化.md)
     * [websocket](go/websocket.md)
-    * [反向代理](go/代理.md)
+    * [反向代理](go/反向代理.md)
     * [RPC](RPC.md)
     * [原生mysql 操作](go/原生mysql操作.md)
 * [Linux](Linux.md)
