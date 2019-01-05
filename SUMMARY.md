@@ -241,6 +241,7 @@
     * [sokit 端口监听 转发. socket 测试工具](Window/sokit端口监听转发.socket测试工具.md)
     * [utools  类mac 搜索栏](Window/utools类mac搜索栏.md)
     * [SpaceSniffer 检查磁盘文件暂用大小](SpaceSniffer检查磁盘文件暂用大小.md)
+    * [chocowin包管理神器](Window/chocowin包管理神器.md)
 * [App端](App端.md)
     * [react-native-配置](App端/react-native.md)
         * [基础知识](App端/react-native/基础知识.md)
