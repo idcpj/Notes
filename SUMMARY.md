@@ -122,7 +122,7 @@
             * [mongoose 操作 mongodb](服务器/NodejS/Express框架/操作通过mongoose操作mongodb.md)
         * [模块化编程](服务器/NodejS/模块化编程.md)
         * [Koa web 框架](服务器/NodejS/Koaweb框架.md)
-        * [nodemon 监控文件变化自动重启](nodemon监控文件变化自动重启.md)
+        * [nodemon 监控文件变化自动重启](服务器/NodejS/nodemon监控文件变化自动重启.md)
     * [Redis](服务器/Redis.md)
     * [MongoDB](服务器/MongoDB.md)
     * [influxdb  数据库(用于日志存储)](服务器/influxdb数据库.md)
