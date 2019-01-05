@@ -116,7 +116,7 @@
         * [文件操作](服务器/NodejS/文件操作.md)
         * [网络操作](服务器/NodejS/网络操作.md)
         * [进程管理](服务器/NodejS/进程管理.md)
-        * [anyproxy 代理](anyproxy代理.md)
+        * [anyproxy 代理](服务器/NodejS/anyproxy代理.md)
         * [cnpm - 淘宝的 npm 镜像](nodejs/cnpm-淘宝的npm镜像.md)
         * [Express 框架](服务器/NodejS/Express框架.md)
             * [mongoose 操作 mongodb](服务器/NodejS/Express框架/操作通过mongoose操作mongodb.md)
