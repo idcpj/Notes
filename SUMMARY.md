@@ -294,6 +294,7 @@
         * [sync 并发安全数据](官方包/sync并发安全数据.md)
         * [time 包](官方包/time包.md)
         * [ioutil 包](官方包/ioutil包.md)
+        * [C包 go 执行 c](官方包/C包go执行c.md)
     * [定时器](定时器.md)
     * [本土化](本土化.md)
     * [websocket](go/websocket.md)
