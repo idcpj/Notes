@@ -292,7 +292,7 @@
     * [官方包](go/官方包.md)
         * [expvar - 线性安全全局变量](go/官方包/expvar-线性安全全局变量.md)
         * [sync 并发安全数据](go/官方包/sync并发安全数据.md)
-        * [time包](官方包/time包.md)
+        * [time包](go/官方包/time包.md)
         * [ioutil 包](go/官方包/ioutil包.md)
         * [C包 go 执行 c](go/官方包/C包go执行c.md)
         * [reflect 反射包](go/官方包/reflect反射包.md)
