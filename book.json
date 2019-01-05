@@ -5,6 +5,7 @@
         "navigation",
         "copy-code",
         "sql-table",
-        "sequence"
+        "sequence",
+        "comment"
     ]
 }
