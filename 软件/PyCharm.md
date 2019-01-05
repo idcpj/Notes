@@ -12,3 +12,4 @@
 >设置->工具集->Python External Docuemtation
 
 ## 如果github创建失败, 先卸载git插件,在重新启动即可
+.
