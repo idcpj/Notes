@@ -86,7 +86,5 @@ for(var i=0;i<json.length;i++){
 		json[i].open = 1 ;
   //默认打开第一层
 }
-``
 ```
 
-测试 文字
