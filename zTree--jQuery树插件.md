@@ -79,8 +79,14 @@ function onClick(e, treeId, treeNode) {
 ### 如果想显示内容为所有的文件夹,修改icon
 ```
 for(var i=0;i<json.length;i++){
-	json[i].icon = "/Public/Admin/img/folder.png";//修改所有图片为 文佳夹
-	if (i == 0) 
-		json[i].open = 1 ;  //默认打开第一层
+	json[i].icon = "/Public/Admin/img/folder.png";
+//修改所有图片为 文佳夹
+	if (i == 0)
+ 
+		json[i].open = 1 ;
+  //默认打开第一层
 }
 ``
+```
+
+测试 文字
