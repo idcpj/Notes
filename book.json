@@ -1,4 +1,5 @@
 {
+    "theme": "gitscm",
     "plugins": [
         "highlight",
         "navigation",
